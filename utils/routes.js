@@ -1,0 +1,17 @@
+const bodyParser = require("body-parser");
+module.exports = (endPoint,app)=>{
+    // Body Parser Settings: 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+    // Required Headers: 
+app.use((req,res,next)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods','OPTIONS, GET, POST, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
+    // Routes: 
+    app.get(`${endPoint}/test`,(req,res,next)=>{
+        res.json("jhdhjd");
+    });
+}
