@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const db = require("../../utils/db");
+const {db} = require("../../utils/db");
 
 
 const users = db.define("users", {
@@ -41,3 +41,8 @@ const users = db.define("users", {
         allowNull: false,
     },
 });
+
+
+module.exports = {
+    usersModel: users,
+}

@@ -1,6 +1,7 @@
 const express = require("express");
 const routes = require("./utils/routes");
 const {initDatabase} = require("./utils/db");
+const models = require("./utils/models");
 const RoutesSettings = require("./utils/RoutesSettings");
 const mainErrorHandler = require("./utils/mainErrorHandler");
 const app = express();

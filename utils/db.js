@@ -23,6 +23,6 @@ const initDatabase = async ()=>{
 };
 
 module.exports = {
+  db: sequelize,
     initDatabase,
-    sequelize
 };
