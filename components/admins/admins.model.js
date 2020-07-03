@@ -23,6 +23,9 @@ const admins = db.define("admins", {
     type: Sequelize.TEXT,
     allowNull: false,
   },
+  role:{
+      type:Sequelize.ENUM("admin", "superadmin")
+  }
 });
 
 module.exports = {
