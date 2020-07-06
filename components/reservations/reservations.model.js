@@ -5,7 +5,7 @@ const reservationsModel = db.define("reservations", {
   reservation_id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
-    allowNull: false,
+    primaryKey: true,
   },
   user_id: {
     type: Sequelize.INTEGER,

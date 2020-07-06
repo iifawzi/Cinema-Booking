@@ -5,7 +5,7 @@ const slotsModel = db.define("slots", {
   slot_id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
-    allowNull: false,
+    primaryKey: true,
   },
   movie_id: {
     type: Sequelize.INTEGER,

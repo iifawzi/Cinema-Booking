@@ -5,7 +5,7 @@ const hallsModel = db.define("halls", {
   hall_id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
-    allowNull: false,
+    primaryKey: true,
   },
   hall_name: {
     type: Sequelize.TEXT,
