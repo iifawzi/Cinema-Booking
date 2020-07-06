@@ -31,10 +31,12 @@ const users = db.define("users", {
     latitude : {
         type:Sequelize.DECIMAL,
         allowNull: false,
+        defaultValue: 0,
     },
     longitude : {
         type:Sequelize.DECIMAL,
         allowNull: false,
+        defaultValue: 0,
     },
     wallet : {
         type:Sequelize.INTEGER,
