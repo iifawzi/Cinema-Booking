@@ -1,4 +1,4 @@
-const {slotsModel} = require("./halls.model");
+const {slotsModel} = require("./slots.model");
 module.exports = {
     slotsModel,
 }
