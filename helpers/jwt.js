@@ -8,7 +8,7 @@ exports.createToken = (payload)=>{
         const token = jwt.sign(payload,config.get("jwt.secret"),{expiresIn: config.get("jwt.expiresIn")});
         return token;
     }catch(err){
-        throw new ErrorHandler(401,"Error while making the token, Please Try again");
+        throw new ErrorHandler(401,err);
     }
 };
 
@@ -18,7 +18,6 @@ exports.checkToken = (token)=>{
         const checkingResult = jwt.verify(token,config.get("jwt.secret"));
         return checkingResult;
     }catch(err){
-        throw new ErrorHandler(401,"Token isn't valid");
+        throw new ErrorHandler(401,err);
     }
-
 };
