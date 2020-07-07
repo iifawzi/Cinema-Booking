@@ -21,6 +21,4 @@ const reservationsModel = db.define("reservations", {
     }
 });
 
-module.exports = {
-    reservationsModel,
-};
+module.exports = reservationsModel;

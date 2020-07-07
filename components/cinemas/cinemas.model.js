@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const { db } = require("../../startup/db");
 
-const cinemas = db.define("cinemas", {
+const cinemasModel = db.define("cinemas", {
     cinema_id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -45,6 +45,4 @@ const cinemas = db.define("cinemas", {
     },
 });
 
-module.exports = {
-    cinemasModel: cinemas,
-};
+module.exports = cinemasModel;

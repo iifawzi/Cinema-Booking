@@ -1,4 +1,4 @@
-const {adminsModel} = require("./admins.model");
+const adminsModel = require("./admins.model");
 module.exports = {
     adminsModel,
 };

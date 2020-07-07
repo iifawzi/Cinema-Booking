@@ -29,6 +29,4 @@ const moviesModel = db.define("movies", {
     },
 });
 
-module.exports = {
-    moviesModel,
-};
+module.exports = moviesModel;

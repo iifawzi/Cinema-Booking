@@ -26,6 +26,4 @@ const hallsModel = db.define("halls", {
     }
 });
 
-module.exports = {
-    hallsModel,
-};
+module.exports = hallsModel;

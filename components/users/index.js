@@ -1,4 +1,4 @@
-const {usersModel} = require("./users.model");
+const usersModel = require("./users.model");
 const usersRouter = require("./users.route");
 module.exports = {
     usersModel,

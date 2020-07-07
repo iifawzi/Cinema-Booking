@@ -37,6 +37,4 @@ const slotsModel = db.define("slots", {
     },
 });
 
-module.exports = {
-    slotsModel,
-};
+module.exports = slotsModel;
