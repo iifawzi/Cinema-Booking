@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const {usersRouter} = require("../components/users/index");
+const {usersRouter} = require("../services/users/index");
 // Routes:
 router.get("/welcome", (req, res) => {
     res.json("Welcome, We are working!");
