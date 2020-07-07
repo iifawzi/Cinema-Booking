@@ -1,8 +1,11 @@
 const {handleError,ErrorHandler} = require("../../helpers/error");
-
-const signup = (req,res,next)=>{
+const {checkIfPhoneExists} = require("./users.service");
+const signup = async (req,res,next)=>{
     try {
-        console.log(req);
+        const userExist = await checkIfPhoneExists(req.body.phone_number);
+        if (userExist){
+            throw new ErrorHandler(409, "Phone number already registered");
+        }
     }catch(err) {
         next(err);
     }
