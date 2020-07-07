@@ -1,5 +1,5 @@
 module.exports = (app)=>{
-    app.use((err,req,res,next)=>{
+    app.use(()=>{
         console.log("i'm here!!");
     });
-}
+};

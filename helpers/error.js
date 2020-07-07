@@ -9,14 +9,14 @@ class ErrorHandler extends Error {
 const handleError = (err, res) => {
     const { statusCode = 500, message } = err;
     res.status(statusCode).json({
-      status: false,
-      message,
-      data: {},
+        status: false,
+        message,
+        data: {},
     });
-  };
+};
   
-  module.exports = {
+module.exports = {
     ErrorHandler,
     handleError,
-  };
+};
   
