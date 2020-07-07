@@ -1,4 +1,4 @@
-const {handleError,ErrorHandler} = require("../../helpers/error");
+const {ErrorHandler} = require("../../helpers/error");
 const userService = require("./users.service");
 const signup = async (req,res,next)=>{
     try {
