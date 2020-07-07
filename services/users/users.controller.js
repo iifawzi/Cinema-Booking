@@ -1,6 +1,7 @@
 const {ErrorHandler} = require("../../helpers/error");
 const respond = require("../../helpers/respond");
 const userService = require("./users.service");
+const jwt = require("../../helpers/jwt");
 const signup = async (req,res,next)=>{
     try {
         const userData = req.body;
@@ -10,7 +11,12 @@ const signup = async (req,res,next)=>{
         }
         const createdUser = await userService.createNewUser(userData);
         if (createdUser){
-            return respond(true,201,"done",res);
+            const tokenPayload = {
+                phone_number: createdUser.phone_number,
+                user_id: createdUser.user_id,
+            };
+            const token = jwt.createToken(tokenPayload);
+            return respond(true,201,{...createdUser,token},res);
         }
     }catch(err) {
         next(err);
