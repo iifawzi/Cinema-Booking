@@ -41,6 +41,7 @@ const users = db.define("users", {
     wallet : {
         type:Sequelize.INTEGER,
         allowNull: false,
+        defaultValue: 0,
     },
 });
 

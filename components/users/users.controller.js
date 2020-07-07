@@ -1,11 +1,10 @@
 const {handleError,ErrorHandler} = require("../../helpers/error");
 
-const signup = (req,res)=>{
+const signup = (req,res,next)=>{
     try {
-        throw new ErrorHandler(500,"hala wallah bitch");
-
+        console.log(req);
     }catch(err) {
-        handleError(err, res);
+        next(err);
     }
 };
 
