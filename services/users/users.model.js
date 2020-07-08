@@ -43,6 +43,14 @@ const usersModel = db.define("users", {
         allowNull: false,
         defaultValue: 0,
     },
+    firebase_token : {
+        type:Sequelize.TEXT,
+        allowNull: false,
+    },
+    refresh_token : {
+        type:Sequelize.TEXT,
+        allowNull: false,
+    },
 });
 
 

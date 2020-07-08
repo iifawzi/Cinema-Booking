@@ -6,6 +6,7 @@ const signup = Joi.object({
     country: Joi.string().required(),
     city: Joi.string().required(),
     firebase_token: Joi.string().required(),
+    refresh_token: Joi.string().required(),
 });
 
 
