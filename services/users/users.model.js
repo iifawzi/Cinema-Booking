@@ -51,6 +51,10 @@ const usersModel = db.define("users", {
         type:Sequelize.TEXT,
         allowNull: false,
     },
+    blocked : {
+        type:Sequelize. BOOLEAN,
+        allowNull: false,
+    },
 });
 
 
