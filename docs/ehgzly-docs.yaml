@@ -5,9 +5,41 @@ info:
   description: >-
     Ehgzly application is one of the most succeeded startups in egypt, developed
     with love by Fawzi E. Abdulfattah. 
-host: "localhost:3000"
-basePath: "/api"
 paths:
+  /signin:
+    post:
+      tags:
+      - "users"
+      summary: "Signin a user"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Required Information to sign a user"
+        required: true
+        schema:
+          $ref: "#/definitions/signin_body"
+      responses:
+        '200':
+          description: 200 (Created - User logined Successfully)
+          schema:
+            $ref: '#/definitions/signin_response'
+        '401':
+          description: 401 (Unauthorized - Phone number is not registered)
+          schema:
+            $ref: '#/definitions/error_401'
+        '403':
+          description: 403 (Forbidden - Phone number is blocked)
+          schema:
+            $ref: '#/definitions/error_403'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
   /signup:
     post:
       tags:
@@ -39,6 +71,27 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+ signin_body:
+    type: "object"
+    example: 
+      phone_number: 01090243795
+ signin_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        user_id: 13
+        phone_number: 01090243795
+        first_name: fawzi
+        last_name: essam
+        country: egypt
+        city: portsaid
+        wallet: 0
+        firebase_token: '93484893983498'
+        refresh_token: 41e553cbd60fe02aec0e575e350b3982
+        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEzLCJpYXQiOjE1OTQzMzIyOTEsImV4cCI6MTU5NDM3NTQ5MX0.EUgO0wpAQNjiieE40EzqdTLewEqf5OWibt99-U1U5HI
+      
  signup_body:
     type: "object"
     example: 
@@ -54,25 +107,22 @@ definitions:
       status: true
       message: success
       data:
-        status: true
-        message: success
-        data:
-          user_id: 1
-          phone_number: 01090243795
-          first_name: fawzi
-          last_name: essam
-          country: egypt
-          city: portsaid
-          wallet: 0
-          firebase_token: '93484893983498'
-          refresh_token: 0a2eb08bf0c7caf5d27412fbe75ab4c4
-          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjEsImlhdCI6MTU5NDMzMDk0MSwiZXhwIjoxNTk0Mzc0MTQxfQ.i1g7IC0s1XpLDoiOCGu64lhinD3deQmmSERk5StjHjI
-        
+        user_id: 13
+        phone_number: 01090243795
+        first_name: fawzi
+        last_name: essam
+        country: egypt
+        city: portsaid
+        wallet: 0
+        firebase_token: '93484893983498'
+        refresh_token: 41e553cbd60fe02aec0e575e350b3982
+        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEzLCJpYXQiOjE1OTQzMzIyOTEsImV4cCI6MTU5NDM3NTQ5MX0.EUgO0wpAQNjiieE40EzqdTLewEqf5OWibt99-U1U5HI
+      
  error_409:
     type: "object"
     description: "CONFLICT"
     example:
-      status: true
+      status: false
       message: "Error explaniation will be shown here"
       data: []
   
@@ -80,13 +130,20 @@ definitions:
     type: "string"
     description: "Unauthorized"
     example:
-      status: true
+      status: false
       message: "Error explaniation will be shown here"
       data: []
  error_400:
     type: "string"
     description: "Bad Request"
     example:
-      status: true
+      status: false
+      message: "Error explaniation will be shown here"
+      data: []
+ error_403:
+    type: "string"
+    description: "Forbidden"
+    example:
+      status: false
       message: "Error explaniation will be shown here"
       data: []
