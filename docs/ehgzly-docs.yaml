@@ -54,20 +54,20 @@ definitions:
       status: true
       message: success
       data:
-        user_id: 44
-        phone_number: 01090243795
-        first_name: fawzi
-        last_name: essam
-        country: egypt
-        city: portsaid
-        firebase_token: '93484893983498'
-        refresh_token: 9336763ce1bb99f2706cecaf0f4d0324
-        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjQ0LCJpYXQiOjE1OTQzMjUxNzYsImV4cCI6MTU5NDM2ODM3Nn0.pagVw5VMRVi2m4c7EeaZyYwdPgtTffoUSCYYUce8tcw
-        latitude: 0
-        longitude: 0
-        wallet: 0
-        updatedAt: '2020-07-09T20:06:16.912Z'
-        createdAt: '2020-07-09T20:06:16.912Z'
+        status: true
+        message: success
+        data:
+          user_id: 1
+          phone_number: 01090243795
+          first_name: fawzi
+          last_name: essam
+          country: egypt
+          city: portsaid
+          wallet: 0
+          firebase_token: '93484893983498'
+          refresh_token: 0a2eb08bf0c7caf5d27412fbe75ab4c4
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjEsImlhdCI6MTU5NDMzMDk0MSwiZXhwIjoxNTk0Mzc0MTQxfQ.i1g7IC0s1XpLDoiOCGu64lhinD3deQmmSERk5StjHjI
+        
  error_409:
     type: "object"
     description: "CONFLICT"
