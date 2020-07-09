@@ -5,7 +5,7 @@ let expect = require("chai").expect;
 let server;
 
 describe("/api/users",async()=>{
-    describe("users", () => {
+    describe("/signup", () => {
         it("Should return 400 if schema validation fails", async () => {
             const res = await request(app)
                 .post("/api/users/signup")
