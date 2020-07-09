@@ -19,6 +19,11 @@ const signup = async (req,res,next)=>{
                 phone_number: createdUser.phone_number,
                 user_id: createdUser.user_id,
             };
+            delete createdUser.updatedAt;
+            delete createdUser.createdAt;
+            delete createdUser.blocked; 
+            delete createdUser.latitude; // not used untill now.
+            delete createdUser.longitude; // not used untill now.
             const token = createToken(tokenPayload);
             return respond(true,201,{...createdUser,token},res);
         }
@@ -27,7 +32,33 @@ const signup = async (req,res,next)=>{
     }
 };
 
+const signin = async (req,res,next)=>{
+    try {
+        const userData = req.body;
+        const userExist = await userService.checkIfPhoneExists(userData.phone_number);
+        if (!userExist) {
+            throw new ErrorHandler(401,"Phone number is incorrect");
+        }
+        if (userExist.blocked === true) {
+            throw new ErrorHandler(403,"User with this Phone number is blocked");
+        }
+        const tokenPayload = {
+            phone_number: userExist.phone_number,
+            user_id: userExist.user_id,
+        };
+        delete userExist.updatedAt;
+        delete userExist.createdAt;
+        delete userExist.blocked; 
+        delete userExist.latitude; // not used untill now.
+        delete userExist.longitude; // not used untill now.
+        const token = createToken(tokenPayload);
+        return respond(true,201,{...userExist,token},res);
+    }catch(err){
+        next(err);
+    }
+};
 
 module.exports = {
     signup,
+    signin
 };

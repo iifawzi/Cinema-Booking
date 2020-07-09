@@ -7,9 +7,12 @@ const signup = Joi.object({
     city: Joi.string().required(),
     firebase_token: Joi.string().required(),
 });
-
+const signin = Joi.object({
+    phone_number: Joi.string().required(),
+});
 
 
 module.exports = {
     signup,
+    signin
 };
