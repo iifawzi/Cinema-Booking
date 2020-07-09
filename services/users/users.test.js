@@ -1,14 +1,10 @@
 const request = require("supertest");
 const app = require("../../server");
 const userService = require("./users.service");
-var expect = require("chai").expect;
+let expect = require("chai").expect;
 let server;
 
 describe("/api/users",async()=>{
-    beforeEach(()=>{
-        server = require("../../app");
-    });
-
     describe("users", () => {
         it("Should return 400 if schema validation fails", async () => {
             const res = await request(app)
