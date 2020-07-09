@@ -42,4 +42,40 @@ describe("/api/users",async()=>{
             await userService.deleteUser("01090243795");
         });
     });
+
+    describe("/signin", () => {
+        it("Should return 400 if schema validation fails", async () => {
+            const res = await request(app)
+                .post("/api/users/signup");
+            expect(res.statusCode).equals(400);
+        });
+        it("Should return 401 if Phone number is not registered", async () => {
+            const res = await request(app)
+                .post("/api/users/signup")
+                .send({
+                    "phone_number":"01090243799",
+                });
+            expect(res.statusCode).equals(401);
+        });
+        it("Should return 200 if logined successfully", async () => {
+            const res = await request(app)
+                .post("/api/users/signup")
+                .send({
+                    "phone_number":"01090243795",
+                    "first_name":"fawzi",
+                    "last_name":"essam",
+                    "country":"egypt",
+                    "city":"portsaid",
+                    "firebase_token":"93484893983498"
+                });
+            expect(res.statusCode).equals(201);
+            const res2 = await request(app)
+                .post("/api/users/signup")
+                .send({
+                    "phone_number":"01090243795",
+                });
+            expect(res2.statusCode).equals(200);
+            await userService.deleteUser("01090243795");
+        });
+    });
 });
