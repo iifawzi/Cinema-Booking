@@ -1,5 +1,6 @@
 const request = require("supertest");
 const app = require("../../server");
+const userService = require("./users.service");
 var expect = require("chai").expect;
 let server;
 
@@ -42,6 +43,7 @@ describe("/api/auth",async()=>{
                     "firebase_token":"93484893983498"
                 });
             expect(res.statusCode).equals(409);
+            await userService.deleteUser("01090243795");
         });
     });
 });
