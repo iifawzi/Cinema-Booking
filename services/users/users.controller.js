@@ -52,7 +52,7 @@ const signin = async (req,res,next)=>{
         delete userExist.latitude; // not used untill now.
         delete userExist.longitude; // not used untill now.
         const token = createToken(tokenPayload);
-        return respond(true,201,{...userExist,token},res);
+        return respond(true,200,{...userExist,token},res);
     }catch(err){
         next(err);
     }

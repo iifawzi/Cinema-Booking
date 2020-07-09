@@ -18,7 +18,7 @@ describe("/api/users",async()=>{
             const res = await request(app)
                 .post("/api/users/signup")
                 .send({
-                    "phone_number":"01090243795",
+                    "phone_number":"01090243796",
                     "first_name":"fawzi",
                     "last_name":"essam",
                     "country":"egypt",
@@ -31,7 +31,7 @@ describe("/api/users",async()=>{
             const res = await request(app)
                 .post("/api/users/signup")
                 .send({
-                    "phone_number":"01090243795",
+                    "phone_number":"01090243796",
                     "first_name":"fawzi",
                     "last_name":"essam",
                     "country":"egypt",
@@ -39,21 +39,21 @@ describe("/api/users",async()=>{
                     "firebase_token":"93484893983498"
                 });
             expect(res.statusCode).equals(409);
-            await userService.deleteUser("01090243795");
+            await userService.deleteUser("01090243796");
         });
     });
 
     describe("/signin", () => {
         it("Should return 400 if schema validation fails", async () => {
             const res = await request(app)
-                .post("/api/users/signup");
+                .post("/api/users/signin");
             expect(res.statusCode).equals(400);
         });
         it("Should return 401 if Phone number is not registered", async () => {
             const res = await request(app)
-                .post("/api/users/signup")
+                .post("/api/users/signin")
                 .send({
-                    "phone_number":"01090243799",
+                    "phone_number":"01090243796",
                 });
             expect(res.statusCode).equals(401);
         });
@@ -61,7 +61,7 @@ describe("/api/users",async()=>{
             const res = await request(app)
                 .post("/api/users/signup")
                 .send({
-                    "phone_number":"01090243795",
+                    "phone_number":"01090243796",
                     "first_name":"fawzi",
                     "last_name":"essam",
                     "country":"egypt",
@@ -70,12 +70,12 @@ describe("/api/users",async()=>{
                 });
             expect(res.statusCode).equals(201);
             const res2 = await request(app)
-                .post("/api/users/signup")
+                .post("/api/users/signin")
                 .send({
-                    "phone_number":"01090243795",
+                    "phone_number":"01090243796",
                 });
             expect(res2.statusCode).equals(200);
-            await userService.deleteUser("01090243795");
+            await userService.deleteUser("01090243796");
         });
     });
 });

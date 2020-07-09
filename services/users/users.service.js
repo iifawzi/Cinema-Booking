@@ -2,7 +2,11 @@ const usersModel = require("./users.model");
 // This service is used to check if phone is already exists:
 exports.checkIfPhoneExists = async (phone_number)=>{
     const userWithThisPhone =  await usersModel.findOne({where: {phone_number}});
-    return userWithThisPhone.dataValues;
+    if (userWithThisPhone){
+        return userWithThisPhone.dataValues;
+    }else {
+        return userWithThisPhone;
+    }
 };
 // This service is used to create a new user:
 exports.createNewUser = async (data)=>{
