@@ -4,7 +4,7 @@ const userService = require("./users.service");
 var expect = require("chai").expect;
 let server;
 
-describe("/api/auth",async()=>{
+describe("/api/users",async()=>{
     beforeEach(()=>{
         server = require("../../app");
     });
