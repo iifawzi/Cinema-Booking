@@ -81,6 +81,10 @@ paths:
       produces:
       - "application/json"
       parameters:
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"
       - in: "body"
         name: "body"
         description: "Required Information to update the token"
