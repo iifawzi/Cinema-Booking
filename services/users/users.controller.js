@@ -63,7 +63,7 @@ const refresh_userToken = async (req,res,next)=>{
         const token = req.headers.authorization;
         const {refresh_token} = req.body;
         if (!token) {
-            throw new ErrorHandler(401, "User is not Authenticated");
+            throw new ErrorHandler(401, "User is not Authenticated - token not provided");
         } else {
             let splicedToken;
             if (token.startsWith("Bearer ")) {
