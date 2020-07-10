@@ -31,7 +31,7 @@ const signup = async (req,res,next)=>{
         next(err);
     }
 };
-
+// To Login new user: 
 const signin = async (req,res,next)=>{
     try {
         const userData = req.body;
@@ -57,8 +57,7 @@ const signin = async (req,res,next)=>{
         next(err);
     }
 };
-
-
+// To refresh user's token (will be called once the application opened if user is logined): 
 const refresh_userToken = async (req,res,next)=>{
     try {
         const token = req.headers.authorization;
