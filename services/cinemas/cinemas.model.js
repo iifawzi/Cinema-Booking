@@ -8,23 +8,23 @@ const cinemasModel = db.define("cinemas", {
         primaryKey: true,
     },
     cinema_name: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: false,
     },
     username: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: false,
     },
     password: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: false,
     },
     country: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: false,
     },
     city: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: false,
     },
     latitude : {
@@ -36,7 +36,7 @@ const cinemasModel = db.define("cinemas", {
         allowNull: false,
     },
     cinema_status : {
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull: false,
     },
     last_checkout : {
