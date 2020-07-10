@@ -6,7 +6,7 @@ let server;
 
 describe("/api/users",async()=>{
     describe("/signup", () => {
-        it("Should return 400 if schema validation fails", async () => {
+        it("Should respond 400 if schema validation fails", async () => {
             const res = await request(app)
                 .post("/api/users/signup")
                 .send({
@@ -14,7 +14,7 @@ describe("/api/users",async()=>{
                 });
             expect(res.statusCode).equals(400);
         });
-        it("Should return 201 if user registered successfully", async () => {
+        it("Should respond 201 if user registered successfully", async () => {
             const res = await request(app)
                 .post("/api/users/signup")
                 .send({
@@ -27,7 +27,7 @@ describe("/api/users",async()=>{
                 });
             expect(res.statusCode).equals(201);
         });
-        it("Should return 409 if Phone is already registered", async () => {
+        it("Should respond 409 if Phone is already registered", async () => {
             const res = await request(app)
                 .post("/api/users/signup")
                 .send({
@@ -44,12 +44,12 @@ describe("/api/users",async()=>{
     });
 
     describe("/signin", () => {
-        it("Should return 400 if schema validation fails", async () => {
+        it("Should respond 400 if schema validation fails", async () => {
             const res = await request(app)
                 .post("/api/users/signin");
             expect(res.statusCode).equals(400);
         });
-        it("Should return 401 if Phone number is not registered", async () => {
+        it("Should respond 401 if Phone number is not registered", async () => {
             const res = await request(app)
                 .post("/api/users/signin")
                 .send({
@@ -57,7 +57,7 @@ describe("/api/users",async()=>{
                 });
             expect(res.statusCode).equals(401);
         });
-        it("Should return 200 if logined successfully", async () => {
+        it("Should respond 200 if logined successfully", async () => {
             const res = await request(app)
                 .post("/api/users/signup")
                 .send({
