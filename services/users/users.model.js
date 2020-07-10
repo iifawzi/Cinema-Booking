@@ -9,23 +9,23 @@ const usersModel = db.define("users", {
         primaryKey: true,
     },
     phone_number : {
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull: false,
     },
     first_name : {
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull: false,
     },
     last_name : {
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull: false,
     },
     country : {
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull: false,
     },
     city : {
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull: false,
     },
     latitude : {
@@ -44,11 +44,11 @@ const usersModel = db.define("users", {
         defaultValue: 0,
     },
     firebase_token : {
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull: false,
     },
     refresh_token : {
-        type:Sequelize.TEXT,
+        type:Sequelize.STRING,
         allowNull: false,
     },
     blocked : {
@@ -56,6 +56,17 @@ const usersModel = db.define("users", {
         allowNull: false,
         defaultValue: false,
     },
+}, {
+    indexes: [
+        {
+            fields: ["phone_number"],
+            unique: true,
+        },
+        {
+            fields: ["user_id", "phone_number"],
+            unique: true,
+        },
+    ],
 });
 
 
