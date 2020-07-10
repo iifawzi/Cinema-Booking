@@ -8,7 +8,7 @@ const hallsModel = db.define("halls", {
         primaryKey: true,
     },
     hall_name: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: true,
     },
     cinema_id: {
