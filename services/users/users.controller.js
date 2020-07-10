@@ -1,7 +1,7 @@
 const {ErrorHandler} = require("../../helpers/error");
 const respond = require("../../helpers/respond");
 const userService = require("./users.service");
-const {createToken} = require("../../helpers/jwt");
+const {createToken, decodeToken} = require("../../helpers/jwt");
 const crypto = require("crypto");
 // For adding new User: 
 const signup = async (req,res,next)=>{
@@ -58,7 +58,42 @@ const signin = async (req,res,next)=>{
     }
 };
 
+
+const refresh_userToken = async (req,res,next)=>{
+    try {
+        const token = req.headers.authorization;
+        const {refresh_token} = req.body;
+        if (!token) {
+            throw new ErrorHandler(401, "User is not Authenticated");
+        } else {
+            let splicedToken;
+            if (token.startsWith("Bearer ")) {
+                // Remove Bearer from string
+                const spliced = token.split(" ");
+                splicedToken = spliced[1];
+            }else {
+                splicedToken = token;
+            }
+            let user_data =  decodeToken(splicedToken);
+            // check if user with the id given in the token matchs the refresh token, will return the phone_number, user_id
+            const user = await userService.checkRefreshToken(user_data.user_id,refresh_token);
+            if (!user){
+                throw new ErrorHandler(401, "User is not Authenticated");
+            }
+            const tokenPayload = {
+                phone_number: user.phone_number,
+                user_id: user.user_id,
+            };
+            const newToken = createToken(tokenPayload);
+            return respond(true,200,{token: newToken},res);
+        }
+    }catch(err){
+        next(err);
+    }
+};
+
 module.exports = {
     signup,
-    signin
+    signin, 
+    refresh_userToken
 };

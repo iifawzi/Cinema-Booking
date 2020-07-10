@@ -21,3 +21,12 @@ exports.checkToken = (token)=>{
         throw new ErrorHandler(401,err);
     }
 };
+
+exports.decodeToken = (token)=>{
+    try {
+        const user_data = jwt.decode(token);
+        return user_data;
+    }catch(err){
+        throw new ErrorHandler(401,err);
+    }
+};

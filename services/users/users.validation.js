@@ -10,9 +10,12 @@ const signup = Joi.object({
 const signin = Joi.object({
     phone_number: Joi.string().required(),
 });
-
+const refresh_token = Joi.object({
+    refresh_token: Joi.string().required(),
+});
 
 module.exports = {
     signup,
-    signin
+    signin, 
+    refresh_token
 };

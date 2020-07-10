@@ -9,4 +9,6 @@ const isAuth = require("../../middlewares/is-auth");
 
 router.post("/signup",validate(usersSchema.signup,"body") ,usersController.signup);
 router.post("/signin",validate(usersSchema.signin,"body") ,usersController.signin);
+router.post("/signin",validate(usersSchema.signin,"body") ,usersController.signin);
+router.post("/refresh_token",validate(usersSchema.refresh_token,"body") ,usersController.refresh_userToken);
 module.exports = router;
