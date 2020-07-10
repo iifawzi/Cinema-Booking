@@ -27,6 +27,6 @@ exports.decodeToken = (token)=>{
         const user_data = jwt.decode(token);
         return user_data;
     }catch(err){
-        throw new ErrorHandler(401,err);
+        throw new ErrorHandler(401,"Token is invalid");
     }
 };

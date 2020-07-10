@@ -78,4 +78,14 @@ describe("/api/users",async()=>{
             await userService.deleteUser("01090243796");
         });
     });
+    describe("/refresh_token", ()=>{
+        it("Should respond 401 if no token was found", async ()=>{
+            const res = await request(app)
+                .post("/api/users/refresh_token")
+                .send({
+                    "refresh_token":"4987478947894879jydkhjdkjhdkjh",
+                });
+            expect(res.statusCode).equals(401);
+        });
+    });
 });
