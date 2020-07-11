@@ -3,8 +3,9 @@ const router = Router();
 const isAuth = require("../middlewares/is-auth");
 const {usersRouter} = require("../services/users/index");
 const { moviesRouter } = require("../services/movies");
+const isAllowed = require("../middlewares/is-allowed");
 // Routes:
-router.get("/welcome", isAuth(),(req, res) => {
+router.get("/welcome", isAuth(),isAllowed(["admin","moderator"]),(req, res) => {
     res.json("Welcome, We are working!");
 });
 router.use("/users", usersRouter);

@@ -23,7 +23,7 @@ describe("/moddilewares/is-auth", async()=>{
         expect(res.statusCode).equals(401);
     });
     it("Should return 200 if authorization token is correct and not expired", async () => { 
-        const token = createToken({phone_number: "01090243795"});
+        const token = createToken({phone_number: "01090243795", admin_id: 5,role:"admin"});
         const res = await request(app)
             .get("/api/welcome")
             .set({authorization: "Bearer "+token});
