@@ -1,6 +1,7 @@
 const request = require("supertest");
 const app = require("../../server");
 const { createToken } = require("../../helpers/jwt");
+const {deleteMovie} = require("./movies.service");
 let expect = require("chai").expect;
 
 
@@ -30,7 +31,9 @@ describe("/api/movies", async()=>{
                     "description": "The best movie ever2", 
                     "rate": 4
                 });
-            expect(res.statusCode).equals(400);
+            expect(res.statusCode).equals(201);
+            const movie_id = res.body.data.movie_id;
+            await deleteMovie(movie_id);
         });
     });
 });
