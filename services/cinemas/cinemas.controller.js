@@ -19,6 +19,7 @@ const add_cinema = async (req,res,next)=>{
             delete cinema.createdAt;
             delete cinema.updatedAt;
             delete cinema.refresh_token;
+            delete cinema.password;
             delete cinema.latitude; // not used untill now.
             delete cinema.longitude; // not used untill now.
             return respond(true,201,cinema,res);
