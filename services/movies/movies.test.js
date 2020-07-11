@@ -33,5 +33,4 @@ describe("/api/movies", async()=>{
             expect(res.statusCode).equals(400);
         });
     });
-    });
 });
