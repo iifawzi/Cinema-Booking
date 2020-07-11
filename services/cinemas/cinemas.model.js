@@ -47,6 +47,10 @@ const cinemasModel = db.define("cinemas", {
         allowNull: false,
         defaultValue: "1999-03-20T23:00:00",
     },
+    refresh_token: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    }
 });
 
 module.exports = cinemasModel;
