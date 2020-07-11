@@ -18,6 +18,7 @@ const signup = async (req,res,next)=>{
             const tokenPayload = {
                 phone_number: createdUser.phone_number,
                 user_id: createdUser.user_id,
+                role:"user"
             };
             delete createdUser.updatedAt;
             delete createdUser.createdAt;
@@ -45,6 +46,7 @@ const signin = async (req,res,next)=>{
         const tokenPayload = {
             phone_number: userExist.phone_number,
             user_id: userExist.user_id,
+            role:"user",
         };
         delete userExist.updatedAt;
         delete userExist.createdAt;
@@ -83,6 +85,7 @@ const refresh_userToken = async (req,res,next)=>{
                 const tokenPayload = {
                     phone_number: user.phone_number,
                     user_id: user.user_id,
+                    role:"user"
                 };
                 const newToken = createToken(tokenPayload);
                 return respond(true,200,{token: newToken},res);

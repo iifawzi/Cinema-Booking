@@ -1,5 +1,4 @@
 const request = require("supertest");
-process.env.NODE_ENV = "test";
 const app = require("../../server");
 const { createToken } = require("../../helpers/jwt");
 let expect = require("chai").expect;
