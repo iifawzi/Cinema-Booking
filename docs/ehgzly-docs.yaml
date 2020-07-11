@@ -62,8 +62,8 @@ paths:
         schema:
           $ref: "#/definitions/signin_body"
       responses:
-        '200':
-          description: 200 (Success - User logined Successfully)
+        '201':
+          description: 201 (Success - User logined Successfully)
           schema:
             $ref: '#/definitions/signin_response'
         '401':
