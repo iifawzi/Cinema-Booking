@@ -30,18 +30,22 @@ const cinemasModel = db.define("cinemas", {
     latitude : {
         type:Sequelize.DECIMAL,
         allowNull: false,
+        defaultValue: 0,
     },
     longitude : {
         type:Sequelize.DECIMAL,
         allowNull: false,
+        defaultValue: 0,
     },
     cinema_status : {
-        type:Sequelize.STRING,
+        type:Sequelize.BOOLEAN,
         allowNull: false,
+        defaultValue: false,
     },
     last_checkout : {
         type:Sequelize.DATE,
         allowNull: false,
+        defaultValue: "1999-03-20T23:00:00",
     },
 });
 
