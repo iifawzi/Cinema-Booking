@@ -1,19 +1,19 @@
 const {ErrorHandler} = require("../../helpers/error");
 const respond = require("../../helpers/respond");
-const userService = require("./users.service");
+const usersServices = require("./users.service");
 const {createToken, decodeToken} = require("../../helpers/jwt");
 const crypto = require("crypto");
 // For adding new User: 
 const signup = async (req,res,next)=>{
     try {
         const userData = req.body;
-        const userExist = await userService.checkIfPhoneExists(userData.phone_number);
+        const userExist = await usersServices.checkIfPhoneExists(userData.phone_number);
         if (userExist){
             throw new ErrorHandler(409, "Phone number is already registered");
         }
         const refresh_token = crypto.randomBytes(16).toString("hex");
         userData.refresh_token = refresh_token;
-        const createdUser = await userService.createNewUser(userData);
+        const createdUser = await usersServices.createNewUser(userData);
         if (createdUser){
             const tokenPayload = {
                 phone_number: createdUser.phone_number,
@@ -35,7 +35,7 @@ const signup = async (req,res,next)=>{
 const signin = async (req,res,next)=>{
     try {
         const userData = req.body;
-        const userExist = await userService.checkIfPhoneExists(userData.phone_number);
+        const userExist = await usersServices.checkIfPhoneExists(userData.phone_number);
         if (!userExist) {
             throw new ErrorHandler(401,"Phone number is incorrect");
         }
@@ -76,7 +76,7 @@ const refresh_userToken = async (req,res,next)=>{
             let user_data =  decodeToken(splicedToken);
             if (user_data && user_data.user_id && user_data.phone_number){
                 // check if user with the id given in the token matchs the refresh token, will return the phone_number, user_id
-                const user = await userService.checkRefreshToken(user_data.user_id,refresh_token);
+                const user = await usersServices.checkRefreshToken(user_data.user_id,refresh_token);
                 if (!user){
                     throw new ErrorHandler(401, "User is not Authenticated - No matching");
                 }
