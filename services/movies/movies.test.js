@@ -10,7 +10,7 @@ describe("/api/movies", async()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
             const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
             const res = await request(app)
-                .post("/api/movies/add")
+                .post("/api/movies/addMovie")
                 .set({authorization: "Bearer "+token})
                 .send({
                     "movie_name":"The biggest one2",
@@ -22,7 +22,7 @@ describe("/api/movies", async()=>{
         it ("Should respond 201 if created successfully", async()=>{
             const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
             const res = await request(app)
-                .post("/api/movies/add")
+                .post("/api/movies/addMovie")
                 .set({authorization: "Bearer "+token})
                 .send({
                     "movie_name":"The biggest one2",

@@ -10,7 +10,7 @@ describe("/api/cinemas", async()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
             const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
             const res = await request(app)
-                .post("/api/cinemas/add")
+                .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
                     "cinema_name": "El Crwan",
@@ -22,7 +22,7 @@ describe("/api/cinemas", async()=>{
         it ("Should respond 201 if created successfully", async()=>{
             const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
             const res = await request(app)
-                .post("/api/cinemas/add")
+                .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
                     "cinema_name": "El Crwan",
@@ -38,7 +38,7 @@ describe("/api/cinemas", async()=>{
         it ("Should respond 409 if username already registered", async()=>{
             const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
             let res = await request(app)
-                .post("/api/cinemas/add")
+                .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
                     "cinema_name": "El Crwan",
@@ -50,7 +50,7 @@ describe("/api/cinemas", async()=>{
             expect(res.statusCode).equals(201);
             const cinema_id = res.body.data.cinema_id;
             res = await request(app)
-                .post("/api/cinemas/add")
+                .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
                     "cinema_name": "El Crwan",

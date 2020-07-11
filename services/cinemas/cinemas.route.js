@@ -7,6 +7,6 @@ const cinemasSchemas = require("./cinemas.validation");
 const router = express.Router();
 
 
-router.post("/add", isAuth(), isAllowed(["admin"]), validate(cinemasSchemas.addCinema,"body"), cinemasController.add_cinema);
+router.post("/addCinema", isAuth(), isAllowed(["admin"]), validate(cinemasSchemas.addCinema,"body"), cinemasController.add_cinema);
 
 module.exports = router;

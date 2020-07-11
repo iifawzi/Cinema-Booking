@@ -8,6 +8,6 @@ const router = express.Router();
 
 
 
-router.post("/add", isAuth(), isAllowed(["admin"]), validate(moviesSchema.addMovie,"body"), moviesController.addMovie);
+router.post("/addMovie", isAuth(), isAllowed(["admin"]), validate(moviesSchema.addMovie,"body"), moviesController.addMovie);
 
 module.exports = router;
