@@ -7,6 +7,6 @@ const hallsSchemas = require("./halls.validation");
 const router = express.Router();
 
 
-router.post("/addHall", validate(hallsSchemas.addHall,"body"), hallsController.add_hall);
+router.post("/addHall", isAuth(), isAllowed(["cinema"]), validate(hallsSchemas.addHall,"body"), hallsController.add_hall);
 
 module.exports = router;
