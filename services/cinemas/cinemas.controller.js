@@ -1,8 +1,10 @@
 const cinemasServices  = require("./cinemas.service");
 const respond = require("../../helpers/respond");
-const {encryptPassword} = require("../../helpers/bcrypt");
+const {encryptPassword, decryptPassword} = require("../../helpers/bcrypt");
+const {createToken} = require("../../helpers/jwt");
 const { ErrorHandler } = require("../../helpers/error");
 const crypto = require("crypto");
+
 const add_cinema = async (req,res,next)=>{
     try {
         const cinemaData = req.body;
@@ -29,7 +31,35 @@ const add_cinema = async (req,res,next)=>{
     }
 };
 
+const signin = async (req,res,next)=>{
+    try {
+        const {username, password} = req.body;
+        const cinemaUser = await cinemasServices.isCinemaUserExists(username);
+        if (!cinemaUser){
+            throw new ErrorHandler(401, "Username is not registered");
+        }
+        const passwordIsSame = await decryptPassword(password,cinemaUser.password);
+        if (passwordIsSame){
+            const tokenPayload = {
+                username: cinemaUser.username,
+                cinema_id: cinemaUser.user_id,
+                role:"cinema"
+            };
+            delete cinemaUser.updatedAt;
+            delete cinemaUser.createdAt;
+            delete cinemaUser.password; 
+            delete cinemaUser.latitude; // not used untill now.
+            delete cinemaUser.longitude; // not used untill now.
+            const token = createToken(tokenPayload);
+            return respond(true,200,{...cinemaUser,token},res);
+        }
+    }catch(err){
+        next(err);
+    }
+};
+
 
 module.exports = {
-    add_cinema
+    add_cinema,
+    signin
 };

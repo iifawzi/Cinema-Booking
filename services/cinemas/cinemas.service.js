@@ -3,7 +3,7 @@ const  cinemasModel  = require("./cinemas.model");
 // To check if username is already exists or not
 exports.isCinemaUserExists = async (username)=>{
     const cinemaUser = await cinemasModel.findOne({where:{username}});
-    return cinemaUser;
+    return cinemaUser.dataValues;
 };
 // To add new cinema will be used from control panel
 exports.addCinema = async (cinemaData)=>{

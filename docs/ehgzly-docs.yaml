@@ -189,6 +189,7 @@ definitions:
     type: "object"
     example: 
      cinema_name: El Crwan
+     contact_number: 01090243795
      username: crowan
      password: 12qwaszx
      country: Egypt
