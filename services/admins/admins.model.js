@@ -7,7 +7,7 @@ const adminsModel = db.define("admins", {
         autoIncrement: true,
         primaryKey: true,
     },
-    phone_number: {
+    username: {
         type: Sequelize.STRING,
         allowNull: false,
     },
