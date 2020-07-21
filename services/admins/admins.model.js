@@ -25,6 +25,7 @@ const adminsModel = db.define("admins", {
     },
     role: {
         type: Sequelize.ENUM("admin", "superadmin"),
+        allowNull: false,
     },
 });
 
