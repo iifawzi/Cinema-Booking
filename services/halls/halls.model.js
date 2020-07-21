@@ -18,14 +18,18 @@ const hallsModel = db.define("halls", {
     left_chairs: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        defaultValue: 0,
     },
     right_chairs: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        defaultValue: 0,
     },
     center_chairs: {        
         type: Sequelize.INTEGER,
         allowNull: false,
+        defaultValue: 0,
+
     },
     hall_stauts: {
         type: Sequelize.BOOLEAN,
