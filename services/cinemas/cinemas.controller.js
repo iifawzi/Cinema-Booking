@@ -1,6 +1,7 @@
 const cinemasServices  = require("./cinemas.service");
 const respond = require("../../helpers/respond");
 const {encryptPassword, decryptPassword} = require("../../helpers/bcrypt");
+const {cinemaTokenPayLoad} = require("../../helpers/tokens");
 const {createToken} = require("../../helpers/jwt");
 const { ErrorHandler } = require("../../helpers/error");
 const crypto = require("crypto");
@@ -40,17 +41,13 @@ const signin = async (req,res,next)=>{
         }
         const passwordIsSame = await decryptPassword(password,cinemaUser.password);
         if (passwordIsSame){
-            const tokenPayload = {
-                username: cinemaUser.username,
-                cinema_id: cinemaUser.user_id,
-                role:"cinema"
-            };
             delete cinemaUser.updatedAt;
             delete cinemaUser.createdAt;
             delete cinemaUser.password; 
             delete cinemaUser.latitude; // not used untill now.
             delete cinemaUser.longitude; // not used untill now.
-            const token = createToken(tokenPayload);
+            const payLoad = cinemaTokenPayLoad(cinemaUser.username,cinemaUser.cinema_id,"cinema");
+            const token = createToken(payLoad);
             return respond(true,200,{...cinemaUser,token},res);
         }
     }catch(err){

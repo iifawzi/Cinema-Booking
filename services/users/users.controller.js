@@ -3,6 +3,7 @@ const respond = require("../../helpers/respond");
 const usersServices = require("./users.service");
 const {createToken, decodeToken} = require("../../helpers/jwt");
 const crypto = require("crypto");
+const { userTokenPayLoad } = require("../../helpers/tokens");
 // For adding new User: 
 const signup = async (req,res,next)=>{
     try {
@@ -15,17 +16,13 @@ const signup = async (req,res,next)=>{
         userData.refresh_token = refresh_token;
         const createdUser = await usersServices.createNewUser(userData);
         if (createdUser){
-            const tokenPayload = {
-                phone_number: createdUser.phone_number,
-                user_id: createdUser.user_id,
-                role:"user"
-            };
             delete createdUser.updatedAt;
             delete createdUser.createdAt;
             delete createdUser.blocked; 
             delete createdUser.latitude; // not used untill now.
             delete createdUser.longitude; // not used untill now.
-            const token = createToken(tokenPayload);
+            const payLoad = userTokenPayLoad(createdUser.phone_number, createdUser.user_id,"user")
+            const token = createToken(payLoad);
             return respond(true,201,{...createdUser,token},res);
         }
     }catch(err) {
@@ -43,17 +40,13 @@ const signin = async (req,res,next)=>{
         if (userExist.blocked === true) {
             throw new ErrorHandler(403,"User with this Phone number is blocked");
         }
-        const tokenPayload = {
-            phone_number: userExist.phone_number,
-            user_id: userExist.user_id,
-            role:"user",
-        };
         delete userExist.updatedAt;
         delete userExist.createdAt;
         delete userExist.blocked; 
         delete userExist.latitude; // not used untill now.
         delete userExist.longitude; // not used untill now.
-        const token = createToken(tokenPayload);
+        const payLoad = userTokenPayLoad(userExist.phone_number, userExist.user_id,"user")
+        const token = createToken(payLoad);
         return respond(true,200,{...userExist,token},res);
     }catch(err){
         next(err);
@@ -82,12 +75,8 @@ const refresh_userToken = async (req,res,next)=>{
                 if (!user){
                     throw new ErrorHandler(401, "User is not Authenticated - No matching");
                 }
-                const tokenPayload = {
-                    phone_number: user.phone_number,
-                    user_id: user.user_id,
-                    role:"user"
-                };
-                const newToken = createToken(tokenPayload);
+                const payLoad = userTokenPayLoad(user.phone_number, user.user_id,"user")
+                const newToken = createToken(payLoad);
                 return respond(true,200,{token: newToken},res);
             }else {
                 throw new ErrorHandler(401, "User is not Authenticated - invalid token");

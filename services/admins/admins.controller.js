@@ -4,6 +4,7 @@ const {encryptPassword, decryptPassword} = require("../../helpers/bcrypt");
 const {createToken} = require("../../helpers/jwt");
 const { ErrorHandler } = require("../../helpers/error");
 const crypto = require("crypto");
+const { adminTokenPayLoad } = require("../../helpers/tokens");
 
 const add_admin = async (req,res,next)=>{
     try {
@@ -38,16 +39,12 @@ const signin = async (req,res,next)=>{
         } 
         const passwordIsSame = await decryptPassword(password,admin.password);
         if (passwordIsSame){
-            const tokenPayload = {
-                username: admin.username,
-                cinema_id: admin.user_id,
-                role:"cinema"
-            };
             delete admin.updatedAt;
             delete admin.createdAt;
             delete admin.password; 
             delete admin.refresh_token;
-            const token = createToken(tokenPayload);
+            const payLoad = adminTokenPayLoad(admin.username,admin.admin_id,"admin");
+            const token = createToken(payLoad);
             return respond(true,200,{...admin,token},res);
         }
     }catch(err){
