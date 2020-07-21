@@ -15,7 +15,15 @@ const hallsModel = db.define("halls", {
         type: Sequelize.INTEGER,
         allowNull: false,
     },
-    chairs_number: {
+    left_chairs: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    },
+    right_chairs: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    },
+    center_chairs: {        
         type: Sequelize.INTEGER,
         allowNull: false,
     },
