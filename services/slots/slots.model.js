@@ -31,6 +31,10 @@ const slotsModel = db.define("slots", {
         type: Sequelize.TIME,
         allowNull: false,
     },
+    end_time: {
+        type: Sequelize.TIME,
+        allowNull: false,
+    },
     slot_status: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
