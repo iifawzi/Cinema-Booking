@@ -29,7 +29,6 @@ const hallsModel = db.define("halls", {
         type: Sequelize.INTEGER,
         allowNull: false,
         defaultValue: 0,
-
     },
     hall_status: {
         type: Sequelize.BOOLEAN,
