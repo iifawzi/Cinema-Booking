@@ -9,7 +9,12 @@ const addMovie = Joi.object({
     rate: Joi.number().required(),
 });
 
+const moviesInCity = Joi.object({
+    city: Joi.string().required(),
+    country: Joi.string().required(),
+})
 
 module.exports = {
     addMovie,
+    moviesInCity
 };
