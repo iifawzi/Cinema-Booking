@@ -4,6 +4,7 @@ const {initDatabase} = require("./startup/db");
 const models = require("./startup/models");
 const RoutesSettings = require("./startup/RoutesSettings");
 const mainErrorHandler = require("./startup/mainErrorHandler");
+const addSystemUser = require("./startup/systemUser");
 const app = express();
 // init Settings: 
 RoutesSettings(app);
@@ -13,6 +14,7 @@ app.use("/api", routes);
 mainErrorHandler(app);
 // Connect to Database
 initDatabase();
-
+// add System's user
+addSystemUser();
 
 module.exports = app;

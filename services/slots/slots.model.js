@@ -11,10 +11,6 @@ const slotsModel = db.define("slots", {
         type: Sequelize.INTEGER,
         allowNull: false,
     },
-    cinema_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-    },
     hall_id: {
         type: Sequelize.INTEGER,
         allowNull: false,

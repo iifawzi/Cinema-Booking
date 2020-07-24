@@ -2,8 +2,8 @@ const express = require("express");
 const isAuth = require("../../middlewares/is-auth");
 const isAllowed = require("../../middlewares/is-allowed");
 const validate = require("../../helpers/validation");
-const slotsController = require("./halls.controller");
-const slotsSchemas = require("./halls.validation");
+const slotsController = require("./slots.controller");
+const slotsSchemas = require("./slots.validation");
 const router = express.Router();
 
 
