@@ -55,6 +55,13 @@ const cinemasModel = db.define("cinemas", {
         type: Sequelize.STRING,
         allowNull: false,
     }
+}, {
+    indexes: [
+        {
+            fields: ["username"],
+            unique: true,
+        },
+    ]
 });
 
 module.exports = cinemasModel;
