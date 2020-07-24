@@ -44,6 +44,9 @@ const hallsModel = db.define("halls", {
             fields: ["cinema_id", "hall_name"],
             unique: true,
         },
+        {
+            fields: ["hall_status"],
+        },
     ]
 });
 

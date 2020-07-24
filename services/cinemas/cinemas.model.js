@@ -62,7 +62,7 @@ const cinemasModel = db.define("cinemas", {
             unique: true,
         },
         {
-            fields: ["country","city"],
+            fields: ["country","city", "cinema_status"],
         },
     ]
 });
