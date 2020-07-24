@@ -27,6 +27,13 @@ const adminsModel = db.define("admins", {
         type: Sequelize.ENUM("admin", "superadmin"),
         allowNull: false,
     },
+}, {
+    indexes: [
+        {
+            fields: ["username"],
+            unique: true,
+        },
+    ]
 });
 
 module.exports = adminsModel;
