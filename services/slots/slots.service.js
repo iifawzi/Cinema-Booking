@@ -15,8 +15,6 @@ exports.checkIfBusy = async (hall_id, start_date,start_time, end_time)=>{
         {hall_id: {
             [Op.eq]: hall_id,
         }},
-
-
         {[Op.or]: [
             {[Op.and]: [
                 {start_time: {
