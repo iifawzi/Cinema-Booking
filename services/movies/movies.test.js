@@ -37,10 +37,10 @@ describe("/api/movies", async()=>{
         });
     });
 
-    describe("/moviesInCity", ()=>{
+    describe("/getMoviesInCity", ()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
             const res = await request(app)
-                .post("/api/movies/moviesInCity")
+                .post("/api/movies/getMoviesInCity")
                 .send({
                     "city": "port said",
                 });
@@ -48,7 +48,7 @@ describe("/api/movies", async()=>{
         });
         it ("Should respond 200 if got movies successfully", async()=>{ // will return empty data if no movies found in this city, country
             const res = await request(app)
-                .post("/api/movies/moviesInCity")
+                .post("/api/movies/getMoviesInCity")
                 .send({
                     "city": "port said",
                     "country": "egypt"
