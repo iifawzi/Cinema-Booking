@@ -4,6 +4,7 @@ const { createToken } = require("../../helpers/jwt");
 const {deleteSlot} = require("./slots.service");
 const {deleteHall} = require("../halls");
 const { deleteCinema } = require("../cinemas/");
+const { deleteMovie } = require("../movies/");
 let expect = require("chai").expect;
 
 describe("/api/slots", async()=>{
@@ -54,10 +55,22 @@ describe("/api/slots", async()=>{
             expect(res.statusCode).equals(201);
             const hallId = res.body.data.hall_id;
             res = await request(app)
+            .post("/api/movies/addMovie")
+            .set({authorization: "Bearer "+adminToken})
+            .send({
+                "movie_name":"The biggest one2",
+                "cover": "https://www.google.com2", 
+                "category": "action", 
+                "description": "The best movie ever2", 
+                "rate": 4
+            });
+        expect(res.statusCode).equals(201);
+        const movieId = res.body.data.movie_id;
+            res = await request(app)
                 .post("/api/slots/addSlot")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
-                    "movie_id": 1,
+                    "movie_id": movieId,
                     "hall_id": hallId,
                     "start_date": "2020-07-24",
                     "end_date": "2020-07-30",
@@ -68,6 +81,7 @@ describe("/api/slots", async()=>{
             expect(res.statusCode).equals(201);
             await deleteSlot(res.body.data.slot_id);
             await deleteHall(hallId);
+            await deleteMovie(movieId);
             await deleteCinema(cinemaId);
         });
 
@@ -101,10 +115,22 @@ describe("/api/slots", async()=>{
             expect(res.statusCode).equals(201);
             const hallId = res.body.data.hall_id;
             res = await request(app)
+            .post("/api/movies/addMovie")
+            .set({authorization: "Bearer "+adminToken})
+            .send({
+                "movie_name":"The biggest one2",
+                "cover": "https://www.google.com2", 
+                "category": "action", 
+                "description": "The best movie ever2", 
+                "rate": 4
+            });
+        expect(res.statusCode).equals(201);
+        const movieId = res.body.data.movie_id;
+            res = await request(app)
                 .post("/api/slots/addSlot")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
-                    "movie_id": 1,
+                    "movie_id": movieId,
                     "hall_id": hallId,
                     "start_date": "2020-07-24",
                     "end_date": "2020-07-30",
@@ -119,7 +145,7 @@ describe("/api/slots", async()=>{
                 .post("/api/slots/addSlot")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
-                    "movie_id": 1,
+                    "movie_id": movieId,
                     "hall_id": hallId,
                     "start_date": "2020-07-25",
                     "end_date": "2020-07-30",
@@ -132,7 +158,7 @@ describe("/api/slots", async()=>{
             .post("/api/slots/addSlot")
             .set({authorization: "Bearer "+cinemaToken})
             .send({
-                "movie_id": 1,
+                "movie_id": movieId,
                 "hall_id": hallId,
                 "start_date": "2020-07-24",
                 "end_date": "2020-07-30",
@@ -145,7 +171,7 @@ describe("/api/slots", async()=>{
             .post("/api/slots/addSlot")
             .set({authorization: "Bearer "+cinemaToken})
             .send({
-                "movie_id": 1,
+                "movie_id": movieId,
                 "hall_id": hallId,
                 "start_date": "2020-07-24",
                 "end_date": "2020-07-30",
@@ -157,6 +183,7 @@ describe("/api/slots", async()=>{
             await deleteSlot(slotId);
             await deleteHall(hallId);
             await deleteCinema(cinemaId);
+            await deleteMovie(movieId);
         });
     });
 

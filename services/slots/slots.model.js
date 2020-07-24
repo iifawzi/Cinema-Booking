@@ -22,6 +22,7 @@ const slotsModel = db.define("slots", {
             model: 'halls',
             key: 'hall_id'
           },
+          onDelete:"CASCADE"
     },
     start_date: {
         type: Sequelize.DATEONLY,
