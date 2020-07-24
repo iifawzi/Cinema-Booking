@@ -6,6 +6,32 @@ info:
     Ehgzly application is one of the most succeeded startups in egypt, developed
     with love by Fawzi E. Abdulfattah. 
 paths:
+  /getMoviesInCity:
+    post:
+      tags:
+      - "movies"
+      summary: "to get the movies in specific city"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to get the movies"
+        required: true
+        schema:
+          $ref: "#/definitions/getMoviesInCity_body"
+      responses:
+        '200':
+          description: 200 (Success - will return empty array if didn't find movies)
+          schema:
+            $ref: '#/definitions/getMoviesInCity_response'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
   /addSlot:
     post:
       tags:
@@ -371,6 +397,23 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   getMoviesInCity_body:
+    type: "object"
+    example: 
+     city: port said
+     country: egypt
+   getMoviesInCity_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        - movie_id: 7
+          movie_name: The biggest one2
+          cover: 'https://www.image.com'
+          category: action
+          description: The best movie ever2
+          rate: 4
    addSlot_body:
     type: "object"
     example: 
