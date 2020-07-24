@@ -63,7 +63,7 @@ const usersModel = db.define("users", {
             unique: true,
         },
         {
-            fields: ["user_id", "phone_number"],
+            fields: ["refresh_token","user_id"],
             unique: true,
         },
     ],

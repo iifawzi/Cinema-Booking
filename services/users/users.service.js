@@ -24,7 +24,7 @@ exports.deleteUser = async (phone_number)=>{
 
 // This service to check if refresh token belongs to user_id (getting user's data by user_id and refresh_token): 
 exports.checkRefreshToken = async (user_id, refresh_token)=>{
-    const userData =  await usersModel.findOne({where: {user_id, refresh_token}, attributes: ["user_id", "phone_number"]});
+    const userData =  await usersModel.findOne({where: {refresh_token,user_id}, attributes: ["user_id", "phone_number"]});
     if (userData){
         return userData.dataValues;
     }else {
