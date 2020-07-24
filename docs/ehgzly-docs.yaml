@@ -399,7 +399,6 @@ definitions:
     type: "object"
     example: 
      hall_name: "VIP-1"
-     cinema_id: 14
      left_chairs: 30
      right_chairs: 30
      center_chairs: 40
