@@ -35,6 +35,13 @@ const hallsModel = db.define("halls", {
         type: Sequelize.BOOLEAN,
         allowNull: false,
     }
+}, {
+    indexes: [
+        {
+            fields: ["cinema_id", "hall_name"],
+            unique: true,
+        },
+    ]
 });
 
 module.exports = hallsModel;
