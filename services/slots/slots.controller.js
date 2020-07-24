@@ -7,7 +7,7 @@ const add_slot = async (req,res,next)=>{
     const slotData = req.body;
     const checkIfHallBusy = await slotsServices.checkIfBusy(slotData.hall_id, slotData.start_date,slotData.start_time, slotData.end_time);
     if(checkIfHallBusy){
-        throw new ErrorHandler(409, "There's an slot at that time, please change the start time");
+        throw new ErrorHandler(409, "There's an slot at the entered duration");
     }
     const slot = await slotsServices.createSlot(slotData);
     if(slot){

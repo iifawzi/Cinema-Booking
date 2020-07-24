@@ -54,3 +54,10 @@ exports.createSlot = async (slotData)=>{
     const slot = await slotsModel.create(slotData);
     return slot.dataValues;
 }
+
+
+// to delete a slot, mostly used in tests
+exports.deleteSlot = async (slot_id)=>{
+    const slot = await slotsModel.destroy({where: {slot_id}});
+    return slot;
+}
