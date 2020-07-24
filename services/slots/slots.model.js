@@ -35,6 +35,12 @@ const slotsModel = db.define("slots", {
         type: Sequelize.BOOLEAN,
         allowNull: false,
     },
+}, {
+    indexes: [
+        {
+            fields: ["start_date", "end_date", "hall_id", "start_time", "end_time"],
+        },
+    ]
 });
 
 module.exports = slotsModel;
