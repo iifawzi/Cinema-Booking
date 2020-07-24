@@ -6,7 +6,7 @@ let expect = require("chai").expect;
 
 
 describe("/api/movies", async()=>{
-    describe("/add", ()=>{
+    describe("/addMovie", ()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
             const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
             const res = await request(app)
@@ -35,5 +35,26 @@ describe("/api/movies", async()=>{
             const movie_id = res.body.data.movie_id;
             await deleteMovie(movie_id);
         });
+    });
+
+    describe("/moviesInCity", ()=>{
+        it ("Should respond 400 if schema validation fails", async()=>{
+            const res = await request(app)
+                .post("/api/movies/moviesInCity")
+                .send({
+                    "city": "port said",
+                });
+            expect(res.statusCode).equals(400);
+        });
+        it ("Should respond 200 if got movies successfully", async()=>{ // will return empty data if no movies found in this city, country
+            const res = await request(app)
+                .post("/api/movies/moviesInCity")
+                .send({
+                    "city": "port said",
+                    "country": "egypt"
+                });
+            expect(res.statusCode).equals(200);
+        });
+
     });
 });
