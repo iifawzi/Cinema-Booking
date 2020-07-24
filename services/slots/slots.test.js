@@ -19,7 +19,8 @@ describe("/api/slots", async()=>{
                     "hall_id": 1,
                     "start_date": "2020-07-24",
                     "end_date": "2020-07-30",
-                    "start_time": "23:30:00"
+                    "start_time": "23:30:00",
+                    "hall_status": false
                 });
             expect(res.statusCode).equals(400);
         });
@@ -48,6 +49,7 @@ describe("/api/slots", async()=>{
                     "left_chairs": 30,
                     "right_chairs": 30,
                     "center_chairs": 40,
+                    "hall_status": false
                 });
             expect(res.statusCode).equals(201);
             const hallId = res.body.data.hall_id;
@@ -94,6 +96,7 @@ describe("/api/slots", async()=>{
                     "left_chairs": 30,
                     "right_chairs": 30,
                     "center_chairs": 40,
+                    "hall_status": false
                 });
             expect(res.statusCode).equals(201);
             const hallId = res.body.data.hall_id;

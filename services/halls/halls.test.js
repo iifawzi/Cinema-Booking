@@ -44,6 +44,7 @@ describe("/api/halls", async()=>{
                     "left_chairs": 30,
                     "right_chairs": 30,
                     "center_chairs": 40,
+                    "hall_status": false
                 });
             expect(res.statusCode).equals(201);
             await deleteHall(res.body.data.hall_id);
@@ -75,6 +76,7 @@ describe("/api/halls", async()=>{
                     "left_chairs": 30,
                     "right_chairs": 30,
                     "center_chairs": 40,
+                    "hall_status": false
                 });
             expect(res.statusCode).equals(201);
             const hall_id = res.body.data.hall_id;
@@ -87,6 +89,7 @@ describe("/api/halls", async()=>{
                 "left_chairs": 30,
                 "right_chairs": 30,
                 "center_chairs": 40,
+                "hall_status": false
             });
         expect(res.statusCode).equals(409);
             await deleteHall(hall_id);

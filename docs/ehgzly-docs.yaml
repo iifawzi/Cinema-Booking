@@ -403,6 +403,7 @@ definitions:
      left_chairs: 30
      right_chairs: 30
      center_chairs: 40
+     hall_status: false
    addHall_response:
     type: "object"
     example: 
