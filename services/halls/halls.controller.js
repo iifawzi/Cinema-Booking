@@ -5,6 +5,8 @@ const { ErrorHandler } = require("../../helpers/error");
 const add_hall = async (req,res,next)=>{
     try {
         const hallData = req.body;
+        const cinema_id = req.requester.cinema_id;
+        hallData.cinema_id = cinema_id;
         const isExist = await hallsServices.getHallByCinemaAndName(hallData.cinema_id,hallData.hall_name);
         if (isExist) {
             throw new ErrorHandler(409,"This name is already exist");

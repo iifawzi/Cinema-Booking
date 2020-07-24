@@ -34,13 +34,12 @@ describe("/api/halls", async()=>{
                 });
             expect(res.statusCode).equals(201);
             const cinemaId = res.body.data.cinema_id;
-            const cinemaToken = createToken({username: "crownn", cinema_id: 1,role:"cinema"});
+            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"cinema"});
             res = await request(app)
                 .post("/api/halls/addHall")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
                     "hall_name": "VIP-1", 
-                    "cinema_id": cinemaId,
                     "left_chairs": 30,
                     "right_chairs": 30,
                     "center_chairs": 40,
@@ -66,13 +65,12 @@ describe("/api/halls", async()=>{
                 });
             expect(res.statusCode).equals(201);
             const cinemaId = res.body.data.cinema_id;
-            const cinemaToken = createToken({username: "crownn", cinema_id: 1,role:"cinema"});
+            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"cinema"});
             res = await request(app)
                 .post("/api/halls/addHall")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
                     "hall_name": "VIP-1", 
-                    "cinema_id": cinemaId,
                     "left_chairs": 30,
                     "right_chairs": 30,
                     "center_chairs": 40,
@@ -85,7 +83,6 @@ describe("/api/halls", async()=>{
             .set({authorization: "Bearer "+cinemaToken})
             .send({
                 "hall_name": "VIP-1", 
-                "cinema_id": cinemaId,
                 "left_chairs": 30,
                 "right_chairs": 30,
                 "center_chairs": 40,
