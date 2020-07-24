@@ -10,10 +10,18 @@ const slotsModel = db.define("slots", {
     movie_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {    
+            model: 'movies',
+            key: 'movie_id'
+          },
     },
     hall_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {    
+            model: 'halls',
+            key: 'hall_id'
+          },
     },
     start_date: {
         type: Sequelize.DATEONLY,

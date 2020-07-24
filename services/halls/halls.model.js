@@ -14,6 +14,10 @@ const hallsModel = db.define("halls", {
     cinema_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {    
+            model: 'cinemas',
+            key: 'cinema_id'
+          },
     },
     left_chairs: {
         type: Sequelize.INTEGER,
