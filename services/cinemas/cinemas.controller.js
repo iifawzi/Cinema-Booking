@@ -56,7 +56,20 @@ const signin = async (req,res,next)=>{
 };
 
 
+const getCinemas = async (req,res,next)=>{
+    try {
+        const {city,country,movie_id} = req.body;
+        const cinemas = await cinemasServices.getCinemasForMovie(country,city,movie_id);
+        if (cinemas){
+            return respond(true,200,cinemas,res);
+        }
+    }catch(err){
+        next(err);
+    }
+}
+
 module.exports = {
     add_cinema,
-    signin
+    signin,
+    getCinemas
 };
