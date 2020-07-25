@@ -121,4 +121,27 @@ describe("/api/cinemas", async()=>{
             expect(res.statusCode).equals(401);
         });
     });
+
+
+    describe("/getCinemasForMovie", ()=>{
+        it ("Should respond 400 if schema validation fails", async()=>{
+            const res = await request(app)
+                .post("/api/cinemas/getCinemasForMovie")
+                .send({
+                    "city": "port said",
+                });
+            expect(res.statusCode).equals(400);
+        });
+        it ("Should respond 200 if got cinemas successfully", async()=>{ // will return empty data if no cinemas found for this movie:
+            const res = await request(app)
+                .post("/api/cinemas/getCinemasForMovie")
+                .send({
+                    "city": "Port Said", 
+                    "country": "Egypt",
+                    "movie_id": 16
+                });
+            expect(res.statusCode).equals(200);
+        });
+
+    });
 });
