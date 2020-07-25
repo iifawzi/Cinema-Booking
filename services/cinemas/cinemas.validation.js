@@ -15,7 +15,14 @@ const signin = Joi.object({
     password: Joi.string().required()
 })
 
+const getCinemas = Joi.object({
+    city: Joi.string().required(),
+    country: Joi.string().required(),
+    movie_id: Joi.number().required(),
+});
+
 module.exports = {
     addCinema,
-    signin
+    signin,
+    getCinemas
 };
