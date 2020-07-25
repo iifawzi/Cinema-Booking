@@ -5,6 +5,10 @@ info:
   description: >-
     Ehgzly application is one of the most succeeded startups in egypt, developed
     with love by Fawzi E. Abdulfattah. 
+  contact:
+    email: iifawzie@gmail.com
+host: www.google.com
+basePath: /api
 paths:
   /getCinemasForMovie:
     post:
