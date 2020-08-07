@@ -1,0 +1,1397 @@
+{
+	"info": {
+		"_postman_id": "44ab3c9f-57c4-495f-aa76-eeab93363b6a",
+		"name": "Cinema",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admins",
+			"item": [
+				{
+					"name": "addAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjg0LCJyb2xlIjoidXNlciIsImlhdCI6MTU5NDQ3MTQxNiwiZXhwIjoxNTk0NTE0NjE2fQ.O0dat9CHz4FRdbnz-kYZj0uwP0IoMY4xJCF3xq3In5c"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Fawzi\",\n    \"last_name\": \"Abdulfattah\",\n    \"username\": \"iifawzi\",\n    \"password\": \"qwaszx\",\n    \"role\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/admins/addAdmin",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"admins",
+								"addAdmin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addAdmin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjg0LCJyb2xlIjoidXNlciIsImlhdCI6MTU5NDQ3MTQxNiwiZXhwIjoxNTk0NTE0NjE2fQ.O0dat9CHz4FRdbnz-kYZj0uwP0IoMY4xJCF3xq3In5c"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"Fawzi\",\n    \"last_name\": \"Abdulfattah\",\n    \"username\": \"iifawzi\",\n    \"password\": \"qwaszx\",\n    \"role\": \"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/admins/addAdmin",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"admins",
+										"addAdmin"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8c-laJ9lmdDfPuTUiJuW8mdrB8tfg0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:57:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"admin_id\": 1,\n        \"first_name\": \"Fawzi\",\n        \"last_name\": \"Abdulfattah\",\n        \"username\": \"iifawzi\",\n        \"role\": \"admin\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "signinAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"system\", \n    \"password\": \"qwaszx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/admins/signinAdmin",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"admins",
+								"signinAdmin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signinAdmin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"type": "text",
+										"value": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"iifawzi\", \n    \"password\": \"qwaszx\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/admins/signinAdmin",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"admins",
+										"signinAdmin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "328"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"148-8b+3uF4RnIRm0Zy6zRXsFgAd6dA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 01:57:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"admin_id\": 1,\n        \"username\": \"iifawzi\",\n        \"first_name\": \"Fawzi\",\n        \"last_name\": \"Abdulfattah\",\n        \"role\": \"admin\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlpZmF3emkiLCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1Mjk2NjY4LCJleHAiOjE1OTUzMzk4Njh9.7IQTVPUO3czW-sisdgoY9f4Hu-HGNJRYJZZ2pDvPIH8\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone_number\":\"01090243799\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/users/signin",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signin user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"type": "text",
+										"value": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone_number\":\"01090243799\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/users/signin",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "454"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c6-mwp42hPEI9tk8bidEnAWTBpjEjI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 22:04:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"user_id\": 13,\n        \"phone_number\": \"01090243799\",\n        \"first_name\": \"fawzi\",\n        \"last_name\": \"essam\",\n        \"country\": \"egypt\",\n        \"city\": \"portsaid\",\n        \"wallet\": 0,\n        \"firebase_token\": \"93484893983498\",\n        \"refresh_token\": \"41e553cbd60fe02aec0e575e350b3982\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEzLCJpYXQiOjE1OTQzMzIyOTEsImV4cCI6MTU5NDM3NTQ5MX0.EUgO0wpAQNjiieE40EzqdTLewEqf5OWibt99-U1U5HI\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone_number\":\"01090243799\",\n    \"first_name\":\"fawzi\",\n    \"last_name\":\"essam\",\n    \"country\":\"egypt\",\n    \"city\":\"portsaid\",\n    \"firebase_token\":\"93484893983498\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/users/signup",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone_number\":\"01090243795\",\n    \"first_name\":\"fawzi\",\n    \"last_name\":\"essam\",\n    \"country\":\"egypt\",\n    \"city\":\"portsaid\",\n    \"firebase_token\":\"93484893983498\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/users/signup",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "559"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22f-7HISzp22kJtWk5+gNHqVxhqr2OY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jul 2020 20:06:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"latitude\": 0,\n        \"longitude\": 0,\n        \"wallet\": 0,\n        \"user_id\": 44,\n        \"phone_number\": \"01090243795\",\n        \"first_name\": \"fawzi\",\n        \"last_name\": \"essam\",\n        \"country\": \"egypt\",\n        \"city\": \"portsaid\",\n        \"firebase_token\": \"93484893983498\",\n        \"refresh_token\": \"9336763ce1bb99f2706cecaf0f4d0324\",\n        \"updatedAt\": \"2020-07-09T20:06:16.912Z\",\n        \"createdAt\": \"2020-07-09T20:06:16.912Z\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjQ0LCJpYXQiOjE1OTQzMjUxNzYsImV4cCI6MTU5NDM2ODM3Nn0.pagVw5VMRVi2m4c7EeaZyYwdPgtTffoUSCYYUce8tcw\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "refresh_token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjE0LCJpYXQiOjE1OTQ0MDYzNzgsImV4cCI6MTU5NDQ0OTU3OH0.g7-SYpqAWWaD5P1RejiXj0epFAAXchQpcEp07bvhkdA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"refresh_token\":\"56f27c5deb1a20cf8a294957ab38a973\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/users/refresh_token",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"refresh_token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "refresh token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjE0LCJpYXQiOjE1OTQ0MDYzNzgsImV4cCI6MTU5NDQ0OTU3OH0.g7-SYpqAWWaD5P1RejiXj0epFAAXchQpcEp07bvhkdA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"refresh_token\":\"56f27c5deb1a20cf8a294957ab38a973\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/users/refresh_token",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"refresh_token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "239"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ef-Nl+MWqLn4k9d+I/jZ4wDm2sVJ/g\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jul 2020 18:40:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjE0LCJpYXQiOjE1OTQ0MDY0MjAsImV4cCI6MTU5NDQ0OTYyMH0.Yj17JbFzYN_ychUrlarqZMp0VUt1DDTwtg1f7Vt6b3g\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "cinemas",
+			"item": [
+				{
+					"name": "addCinema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTU1NTE4MzksImV4cCI6MTU5NTU5NTAzOX0.O_OTU79dOwn5ukIyPEECMUpFUqqGjLB1uB3cuMjLVo0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\",\n    \"country\":\"Egypt\",\n    \"city\": \"Port Said\",\n    \"contact_number\": \"01090243795\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/cinemas/addCinema",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"cinemas",
+								"addCinema"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addCinema",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTU1NTE4MzksImV4cCI6MTU5NTU5NTAzOX0.O_OTU79dOwn5ukIyPEECMUpFUqqGjLB1uB3cuMjLVo0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\",\n    \"country\":\"Egypt\",\n    \"city\": \"Port Said\",\n    \"contact_number\": \"01090243795\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/cinemas/addCinema",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"cinemas",
+										"addCinema"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "233"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e9-m/dZbaclDgA7S713X7TTFp8czUo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Jul 2020 00:51:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_status\": false,\n        \"last_checkout\": \"1999-03-20T23:00:00\",\n        \"cinema_id\": 61,\n        \"cinema_name\": \"El Crwan\",\n        \"username\": \"crowann\",\n        \"country\": \"Egypt\",\n        \"city\": \"Port Said\",\n        \"contact_number\": \"01090243795\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "signinCinema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/cinemas/signinCinema",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"cinemas",
+								"signinCinema"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signinCinema",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"type": "text",
+										"value": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/cinemas/signinCinema",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"cinemas",
+										"signinCinema"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "476"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1dc-WccKd4IHEKdOPXVaeOO3I587l0M\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 00:02:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 1,\n        \"cinema_name\": \"El Crwan\",\n        \"contact_number\": \"01090243795\",\n        \"username\": \"crowann\",\n        \"country\": \"Egypt\",\n        \"city\": \"Port Said\",\n        \"cinema_status\": false,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"refresh_token\": \"7421ab7f50ef37a34cc63883f5f485fc\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1Mjg5NzQ0LCJleHAiOjE1OTUzMzI5NDR9.fLD6ezsuQx4U_VfhorbgIx0C6rmbgRF3Yix3UjZzUr0\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getCinemasForMovie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"city\": \"Port Said\", \n    \"country\": \"Egypt\",\n    \"movie_id\": 16\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/cinemas/getCinemasForMovie",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"cinemas",
+								"getCinemasForMovie"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getCinemasForMovie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"type": "text",
+										"value": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"city\": \"Port Said\", \n    \"country\": \"Egypt\",\n    \"movie_id\": 16\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/cinemas/getCinemasForMovie",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"cinemas",
+										"getCinemasForMovie"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9a-18B9BGbqq5rVfi5DxRpS6S96+B8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jul 2020 03:06:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 36,\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"country\": \"Egypt\",\n            \"city\": \"Port Said\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "halls",
+			"item": [
+				{
+					"name": "addHall",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE1LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1NTk3MDc0LCJleHAiOjE1OTU2NDAyNzR9.GlMTTwoL-nvlZ_HJbOisDnYF_n3wp6eUYOjobhlR8ns"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"left_chairs\": 30,\n                \"right_chairs\": 30,\n                \"center_chairs\": 40,\n                \"hall_status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/halls/addHall",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"halls",
+								"addHall"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addHall",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEsImlhdCI6MTU5NDQ2MTM4MywiZXhwIjoxNTk0NTA0NTgzfQ.0UHLdughgLnF66vFif6VozEsm1fwAew1lUvBGtQTv_M"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"left_chairs\": 30,\n                \"right_chairs\": 30,\n                \"center_chairs\": 40,\n                \"hall_status\": false\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/halls/addHall",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"halls",
+										"addHall"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "166"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a6-uaRhFoWr+vyId+4JuhG74vF//24\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jul 2020 17:31:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_stauts\": false,\n        \"hall_id\": 14,\n        \"hall_name\": \"VIP-1\",\n        \"cinema_id\": 14,\n        \"left_chairs\": 30,\n        \"right_chairs\": 30,\n        \"center_chairs\": 40\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "slots",
+			"item": [
+				{
+					"name": "addSlot",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjYxLCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1NTUxOTI2LCJleHAiOjE1OTU1OTUxMjZ9._eSr5OlqG4vkES4G2bEIcK_bWqyVGO0GdePmzCpMKJo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_id\": 1,\n    \"hall_id\": 1,\n    \"start_date\": \"2020-07-24\",\n    \"end_date\": \"2020-07-30\",\n    \"start_time\": \"23:30:00\",\n    \"end_time\": \"23:55:00\",\n    \"slot_status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/slots/addSlot",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"slots",
+								"addSlot"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addSlot",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjYxLCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1NTUxOTI2LCJleHAiOjE1OTU1OTUxMjZ9._eSr5OlqG4vkES4G2bEIcK_bWqyVGO0GdePmzCpMKJo"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"movie_id\": 1,\n    \"hall_id\": 1,\n    \"start_date\": \"2020-07-24\",\n    \"end_date\": \"2020-07-30\",\n    \"start_time\": \"23:30:00\",\n    \"end_time\": \"23:55:00\",\n    \"slot_status\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/slots/addSlot",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"slots",
+										"addSlot"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c6-anLyMhp7bXdnq3lVjgcStpOVvG4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Jul 2020 02:52:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"slot_id\": 22,\n        \"movie_id\": 1,\n        \"hall_id\": 1,\n        \"start_date\": \"2020-07-24\",\n        \"end_date\": \"2020-07-30\",\n        \"start_time\": \"23:30:00\",\n        \"end_time\": \"23:55:00\",\n        \"slot_status\": false\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "addMovie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTU2MzQzNzksImV4cCI6MTU5NTY3NzU3OX0.7yQ5NPZXhIUvqmsbvJTKtJyH97lhPw3aTXLiHn5EJdo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_name\":\"The biggest one2\",\n    \"cover\": \"https://www.google.com2\", \n    \"category\": \"action\", \n    \"description\": \"The best movie ever2\", \n    \"rate\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/movies/addMovie",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"addMovie"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add Movie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEsImlhdCI6MTU5NDQ2MTM4MywiZXhwIjoxNTk0NTA0NTgzfQ.0UHLdughgLnF66vFif6VozEsm1fwAew1lUvBGtQTv_M"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"movie_name\":\"The biggest one2\",\n    \"cover\": \"https://www.google.com2\", \n    \"category\": \"action\", \n    \"description\": \"The best movie ever2\", \n    \"rate\": 4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/movies/addMovie",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"movies",
+										"addMovie"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-6iyGUk4LWnUB3FyO7VOq9AoI+ww\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Jul 2020 09:58:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"movie_id\": 1,\n        \"movie_name\": \"The biggest one2\",\n        \"cover\": \"https://www.google.com2\",\n        \"category\": \"action\",\n        \"description\": \"The best movie ever2\",\n        \"rate\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getMoviesInCity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEsImlhdCI6MTU5NDQ2MTM4MywiZXhwIjoxNTk0NTA0NTgzfQ.0UHLdughgLnF66vFif6VozEsm1fwAew1lUvBGtQTv_M",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"city\": \"Port Said\",\n\"country\": \"Egypt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/movies/getMoviesInCity",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"getMoviesInCity"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getMoviesInCity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEsImlhdCI6MTU5NDQ2MTM4MywiZXhwIjoxNTk0NTA0NTgzfQ.0UHLdughgLnF66vFif6VozEsm1fwAew1lUvBGtQTv_M",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"city\": \"port said\",\n\"country\": \"egypt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/movies/getMoviesInCity",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"movies",
+										"getMoviesInCity"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "191"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bf-jS9B0dJRhwExNeuqi9YOfFFkByg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Jul 2020 22:58:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"movie_id\": 7,\n            \"movie_name\": \"The biggest one2\",\n            \"cover\": \"https://www.google.com2\",\n            \"category\": \"action\",\n            \"description\": \"The best movie ever2\",\n            \"rate\": 4\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "205ea21d-7d33-441c-a373-451fc51177aa",
+			"key": "BASE",
+			"value": "localhost:3000"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
