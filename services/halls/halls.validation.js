@@ -8,8 +8,14 @@ const addHall = Joi.object({
     center_chairs: Joi.number(),
 });
 
+const getHallsForMovie = Joi.object({
+    cinema_id: Joi.number().required(), 
+    movie_id: Joi.number().required(), 
+})
+
 module.exports = {
     addHall,
+    getHallsForMovie
 }
 
 

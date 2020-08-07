@@ -22,7 +22,18 @@ const add_hall = async (req,res,next)=>{
     }
 }
 
-
+const getHallsForMovie = async (req,res,next)=>{
+    try {
+        const {movie_id, cinema_id} = req.body;
+        const halls = await hallsServices.hallsForMovie(cinema_id, movie_id);
+        if (halls) {
+            return respond(true,200,halls,res);
+        }
+    }catch(err){
+        next(err);
+    }
+}
 module.exports = {
     add_hall,
+    getHallsForMovie
 }

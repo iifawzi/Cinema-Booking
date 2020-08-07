@@ -8,5 +8,5 @@ const router = express.Router();
 
 
 router.post("/addHall", isAuth(), isAllowed(["cinema"]), validate(hallsSchemas.addHall,"body"), hallsController.add_hall);
-
+router.post("/getHallsForMovie", validate(hallsSchemas.getHallsForMovie, "body"), hallsController.getHallsForMovie)
 module.exports = router;
