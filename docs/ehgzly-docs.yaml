@@ -7,7 +7,7 @@ info:
     with love by Fawzi E. Abdulfattah. 
   contact:
     email: iifawzie@gmail.com
-host: www.google.com
+host: ehgzly.herokuapp.com
 basePath: /api
 paths:
   /getCinemasForMovie:
