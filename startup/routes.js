@@ -12,7 +12,7 @@ const isAllowed = require("../middlewares/is-allowed");
 router.get("/welcome", isAuth(),isAllowed(["admin","moderator"]),(req, res) => {
     res.json("Welcome, We are working!");
 });
-router.get("/test", isAuth(),(req, res) => {
+router.get("/test",(req, res) => {
     res.json("Test, server's working!");
 });
 router.use("/users", usersRouter);
