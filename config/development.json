@@ -1,0 +1,15 @@
+{
+    "database": {
+        "host": "localhost",
+        "name": "cinema",
+        "username": "root",
+        "password": "rootroot"
+      }, 
+      "jwt":{
+        "secret":"FAWZI_ENCRYPT_JWI_SECRET",
+        "expiresIn":"12h"
+      }, 
+      "bcrypt": {
+        "saltRounds": 6
+      }
+}
