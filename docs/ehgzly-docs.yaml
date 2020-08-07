@@ -10,6 +10,32 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /getHallsForMovie:
+    post:
+      tags:
+      - "halls"
+      summary: "to get the halls of cinema that have the choosed movie"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to get the halls"
+        required: true
+        schema:
+          $ref: "#/definitions/getHallsForMovie_body"
+      responses:
+        '200':
+          description: 200 (Success - will return empty array if didn't find movies)
+          schema:
+            $ref: '#/definitions/getHallsForMovie_response'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
   /getCinemasForMovie:
     post:
       tags:
@@ -427,6 +453,19 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   getHallsForMovie_body:
+    type: "object"
+    example: 
+     cinema_id: 15
+     movie_id: 7
+   getHallsForMovie_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        - hall_id: 9
+          hall_name: VIP-1
    getCinemasForMovie_body:
     type: "object"
     example: 
