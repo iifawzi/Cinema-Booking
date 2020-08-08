@@ -14,6 +14,7 @@ const slotsModel = db.define("slots", {
             model: 'movies',
             key: 'movie_id'
           },
+          onDelete:"CASCADE" // untill this moment, this related to the deleteMovie api which will be edited later.
     },
     hall_id: {
         type: Sequelize.INTEGER,
