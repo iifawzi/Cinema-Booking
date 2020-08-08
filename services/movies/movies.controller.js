@@ -14,6 +14,16 @@ const addMovie = async (req,res,next)=>{
     }
 };
 
+const deleteMovie = async (req,res,next)=>{
+    try {
+       const {movie_id} = req.body;
+       const deleted = await moviesServices.deleteMovie(movie_id);
+       return respond(true,200,deleted,res);
+    }catch(err){
+        next(err);
+    }
+};
+
 const moviesInCity = async (req,res,next)=>{
     try {
         const {country, city} = req.body;
@@ -28,5 +38,6 @@ const moviesInCity = async (req,res,next)=>{
 
 module.exports = {
     addMovie,
+    deleteMovie,
     moviesInCity
 };
