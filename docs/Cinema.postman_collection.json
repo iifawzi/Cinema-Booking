@@ -1284,7 +1284,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"movie_name\":\"The biggest one2\",\n    \"cover\": \"https://www.google.com2\", \n    \"category\": \"action\", \n    \"description\": \"The best movie ever2\", \n    \"rate\": 4\n}",
+							"raw": "{\n    \"movie_name\":\"The biggest one2\",\n    \"cover\": \"https://www.google.com2\",\n    \"duration\": 150,\n    \"category\": \"action\", \n    \"description\": \"The best movie ever2\", \n    \"rate\": 4\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1378,9 +1378,44 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"movie_id\": 1,\n        \"movie_name\": \"The biggest one2\",\n        \"cover\": \"https://www.google.com2\",\n        \"category\": \"action\",\n        \"description\": \"The best movie ever2\",\n        \"rate\": 4\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"movie_id\": 1,\n        \"movie_name\": \"The biggest one2\",\n        \"duration\": 160,\n        \"cover\": \"https://www.google.com2\",\n        \"category\": \"action\",\n        \"description\": \"The best movie ever2\",\n        \"rate\": 4\n    }\n}"
 						}
 					]
+				},
+				{
+					"name": "deleteMovie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"movie_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/movies/deleteMovie",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"movies",
+								"deleteMovie"
+							]
+						}
+					},
+					"response": []
 				},
 				{
 					"name": "getMoviesInCity",
@@ -1501,7 +1536,7 @@
 	],
 	"variable": [
 		{
-			"id": "238c18c9-bfa3-412a-b09b-236ba21dd048",
+			"id": "bd00ce89-3907-4aa0-aa52-391993c82d32",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}
