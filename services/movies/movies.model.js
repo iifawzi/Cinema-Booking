@@ -11,6 +11,10 @@ const moviesModel = db.define("movies", {
         type: Sequelize.STRING,
         allowNull: false,
     },
+    duration: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
     cover: {
         type: Sequelize.STRING,
         allowNull: false,

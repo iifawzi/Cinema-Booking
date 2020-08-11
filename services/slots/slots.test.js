@@ -59,6 +59,7 @@ describe("/api/slots", async()=>{
             .send({
                 "movie_name":"The biggest one2",
                 "cover": "https://www.google.com2", 
+                "duration": 160,
                 "category": "action", 
                 "description": "The best movie ever2", 
                 "rate": 4
@@ -118,6 +119,7 @@ describe("/api/slots", async()=>{
             .send({
                 "movie_name":"The biggest one2",
                 "cover": "https://www.google.com2", 
+                "duration": 160,
                 "category": "action", 
                 "description": "The best movie ever2", 
                 "rate": 4

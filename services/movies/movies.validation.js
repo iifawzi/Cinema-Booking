@@ -7,6 +7,7 @@ const addMovie = Joi.object({
     category: Joi.string().required(),
     description: Joi.string().required(),
     rate: Joi.number().required(),
+    duration: Joi.string().required()
 });
 
 const moviesInCity = Joi.object({
