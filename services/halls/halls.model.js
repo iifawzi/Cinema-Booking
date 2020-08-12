@@ -37,6 +37,7 @@ const hallsModel = db.define("halls", {
     hall_status: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
+        defaultValue: 0,
     }
 }, {
     indexes: [

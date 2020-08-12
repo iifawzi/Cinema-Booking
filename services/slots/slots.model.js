@@ -44,6 +44,7 @@ const slotsModel = db.define("slots", {
     slot_status: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
+        defaultValue: 0,
     },
 }, {
     indexes: [
