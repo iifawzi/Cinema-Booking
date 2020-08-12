@@ -22,7 +22,7 @@ exports.deleteCinema = async (cinema_id)=>{
 };
 // Get the cinemas which has specific movie, in specific city.
 exports.getCinemasForMovie = async (country,city,movie_id)=>{
-    const getCinemas = await db.query("SELECT cinemas.cinema_id, cinemas.cinema_name, cinemas.contact_number,cinemas.country,cinemas.city FROM movies INNER JOIN slots ON movies.movie_id = slots.movie_id INNER JOIN halls ON halls.hall_id = slots.hall_id INNER JOIN cinemas ON cinemas.cinema_id = halls.cinema_id where cinemas.country = ? AND cinemas.city = ? AND movies.movie_id = ? AND cinemas.cinema_status = true AND halls.hall_status = true AND slots.slot_status = true", {
+    const getCinemas = await db.query("SELECT cinemas.cinema_id, cinemas.cinema_logo, cinemas.cinema_description cinemas.cinema_name, cinemas.contact_number,cinemas.country,cinemas.city FROM movies INNER JOIN slots ON movies.movie_id = slots.movie_id INNER JOIN halls ON halls.hall_id = slots.hall_id INNER JOIN cinemas ON cinemas.cinema_id = halls.cinema_id where cinemas.country = ? AND cinemas.city = ? AND movies.movie_id = ? AND cinemas.cinema_status = true AND halls.hall_status = true AND slots.slot_status = true", {
         replacements: [country,city, movie_id],
         type: Sequelize.QueryTypes.SELECT,
     });
