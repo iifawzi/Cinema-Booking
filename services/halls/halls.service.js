@@ -22,7 +22,7 @@ exports.deleteHall = async (hall_id)=>{
 }
 // to Get the halls which associated with an movie for specific cinema: 
 exports.hallsForMovie = async (cinema_id, movie_id)=>{
-    const getHalls = await db.query("SELECT halls.hall_id, halls.hall_name، halls.hall_description FROM movies INNER JOIN slots ON movies.movie_id = slots.movie_id INNER JOIN halls ON halls.hall_id = slots.hall_id INNER JOIN cinemas ON cinemas.cinema_id = halls.cinema_id where halls.cinema_id = ? AND movies.movie_id = ? AND cinemas.cinema_status = true AND halls.hall_status = true AND slots.slot_status = true", {
+    const getHalls = await db.query("SELECT halls.hall_id, halls.hall_name, halls.hall_description FROM movies INNER JOIN slots ON movies.movie_id = slots.movie_id INNER JOIN halls ON halls.hall_id = slots.hall_id INNER JOIN cinemas ON cinemas.cinema_id = halls.cinema_id where halls.cinema_id = ? AND movies.movie_id = ? AND cinemas.cinema_status = true AND halls.hall_status = true AND slots.slot_status = true", {
         replacements: [cinema_id,movie_id],
         type: Sequelize.QueryTypes.SELECT,
     });

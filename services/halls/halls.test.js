@@ -108,7 +108,7 @@ describe("/api/halls", async()=>{
                 });
             expect(res.statusCode).equals(400);
         });
-        it ("Should respond 200 if got cinemas successfully", async()=>{ // will return empty data if no halls found for this movie (which is something not expected)
+        it ("Should respond 200 if got halls successfully", async()=>{ // will return empty data if no halls found for this movie (which is something not expected)
             const res = await request(app)
                 .post("/api/halls/getHallsForMovie")
                 .send({
