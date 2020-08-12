@@ -52,7 +52,7 @@ const cinemasModel = db.define("cinemas", {
     cinema_status : {
         type:Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: false,
+        defaultValue: 0,
     },
     last_checkout : {
         type:Sequelize.DATE,
