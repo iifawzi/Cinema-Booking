@@ -13,7 +13,6 @@ const hallsModel = db.define("halls", {
     },
     hall_description: {
         type: Sequelize.STRING,
-        allowNull: false,
         defaultValue: null,
     },
     cinema_id: {

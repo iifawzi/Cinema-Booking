@@ -17,7 +17,6 @@ const cinemasModel = db.define("cinemas", {
     },
     cinema_description: {
         type: Sequelize.STRING,
-        allowNull: false,
         defaultValue: null,
     },
     contact_number:{
