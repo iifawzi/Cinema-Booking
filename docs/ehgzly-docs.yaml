@@ -629,7 +629,7 @@ definitions:
     example: 
       movie_name: The biggest one2
       cover: 'https://www.google.com2'
-      duration: 160,
+      duration: 160
       category: action
       description: The best movie ever2
       rate: 4
