@@ -11,7 +11,7 @@ host: ehgzly.herokuapp.com
 basePath: /api
 paths:
   /deleteMovie:
-    post:
+    delete:
       tags:
       - "movies"
       summary: "to delete specific movie"
