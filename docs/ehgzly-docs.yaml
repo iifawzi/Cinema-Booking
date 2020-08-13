@@ -10,6 +10,44 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /toggleHallStatus:
+    patch:
+      tags:
+      - "halls"
+      summary: "to toggle the status of a hall"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to toggle the status of a hall"
+        required: true
+        schema:
+          $ref: "#/definitions/toggleHallStatus_body"
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"   
+      responses:
+        '200':
+          description: 200 (Success)
+          schema:
+            $ref: '#/definitions/toggleHallStatus_response'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
+        '401':
+          description: 401 (Unauthorized - token's error)
+          schema:
+            $ref: '#/definitions/error_401'
+        '404':
+          description: 404 (Not Found - cinema is not found)
+          schema:
+            $ref: '#/definitions/error_404'
   /toggleCinemaStatus:
     patch:
       tags:
@@ -525,6 +563,19 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   toggleHallStatus_body:
+    type: "object"
+    example: 
+      hall_id: 50
+   toggleHallStatus_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        hall_id: 50
+        hall_status: true
+        updatedAt: '2020-08-13T08:26:14.943Z'
    toggleCinemaStatus_body:
     type: "object"
     example: 

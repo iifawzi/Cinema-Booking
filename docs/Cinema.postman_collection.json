@@ -1043,7 +1043,7 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE1LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1NTk3MDc0LCJleHAiOjE1OTU2NDAyNzR9.GlMTTwoL-nvlZ_HJbOisDnYF_n3wp6eUYOjobhlR8ns"
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE0Mywicm9sZSI6ImNpbmVtYSIsImlhdCI6MTU5NzMxMzA5NiwiZXhwIjoxNTk3MzU2Mjk2fQ.HTI5draGumY-Ir0lixTjnX0Yn2QZnD7BiEW4Sk3w0qs"
 							}
 						],
 						"body": {
@@ -1076,12 +1076,12 @@
 									{
 										"key": "authorization",
 										"type": "text",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEsImlhdCI6MTU5NDQ2MTM4MywiZXhwIjoxNTk0NTA0NTgzfQ.0UHLdughgLnF66vFif6VozEsm1fwAew1lUvBGtQTv_M"
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE0Mywicm9sZSI6ImNpbmVtYSIsImlhdCI6MTU5NzMxMzA5NiwiZXhwIjoxNTk3MzU2Mjk2fQ.HTI5draGumY-Ir0lixTjnX0Yn2QZnD7BiEW4Sk3w0qs"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"left_chairs\": 30,\n                \"right_chairs\": 30,\n                \"center_chairs\": 40,\n                \"hall_status\": false\n\n}",
+									"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"left_chairs\": 30,\n                \"right_chairs\": 30,\n                \"center_chairs\": 40,\n                \"hall_status\": false\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1126,15 +1126,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "166"
+									"value": "215"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"a6-uaRhFoWr+vyId+4JuhG74vF//24\""
+									"value": "W/\"d7-p2Y30tbLEuNxpVj4XVTrNiZ5gKg\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 21 Jul 2020 17:31:16 GMT"
+									"value": "Thu, 13 Aug 2020 10:06:23 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1142,7 +1142,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_stauts\": false,\n        \"hall_id\": 14,\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"cinema_id\": 14,\n        \"left_chairs\": 30,\n        \"right_chairs\": 30,\n        \"center_chairs\": 40\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": 74,\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"left_chairs\": 30,\n        \"right_chairs\": 30,\n        \"center_chairs\": 40,\n        \"hall_status\": false,\n        \"cinema_id\": 143\n    }\n}"
 						}
 					]
 				},
@@ -1256,6 +1256,117 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"hall_id\": 9,\n            \"hall_name\": \"VIP-1\",\n            \"hall_description\": \"the best hall in the world\"\n\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "toggleHallStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE0Mywicm9sZSI6ImNpbmVtYSIsImlhdCI6MTU5NzMxMzA5NiwiZXhwIjoxNTk3MzU2Mjk2fQ.HTI5draGumY-Ir0lixTjnX0Yn2QZnD7BiEW4Sk3w0qs"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"hall_id\": 74\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/halls/toggleHallStatus",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"halls",
+								"toggleHallStatus"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "toggleHallStatus",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE0Mywicm9sZSI6ImNpbmVtYSIsImlhdCI6MTU5NzMxMzA5NiwiZXhwIjoxNTk3MzU2Mjk2fQ.HTI5draGumY-Ir0lixTjnX0Yn2QZnD7BiEW4Sk3w0qs"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"hall_id\": 74\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/halls/toggleHallStatus",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"halls",
+										"toggleHallStatus"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"74-RXKcj39y81JiN38LZ/zbA4Hi+/A\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Aug 2020 10:06:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": 74,\n        \"hall_status\": false,\n        \"updatedAt\": \"2020-08-13T10:06:38.193Z\"\n    }\n}"
 						}
 					]
 				}
@@ -1723,7 +1834,7 @@
 	],
 	"variable": [
 		{
-			"id": "4b7389b3-f0bc-40b4-883f-ea5f4cf07267",
+			"id": "766a9777-b606-4907-9db7-e9707180bd88",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}
