@@ -27,4 +27,14 @@ exports.getCinemasForMovie = async (country,city,movie_id)=>{
         type: Sequelize.QueryTypes.SELECT,
     });
     return getCinemas;
+};
+// This will be used to toggle the status of cinema, from controlPanel
+exports.toggleStatus = async (cinema_id)=>{
+    const cinema = await cinemasModel.findOne({where: {cinema_id}, attributes: ['cinema_id', "cinema_status"]});
+    if(cinema){
+        const previousStatus = cinema.cinema_status;
+        cinema.cinema_status = !previousStatus;
+        cinema.save();
+    }
+    return cinema;
 }

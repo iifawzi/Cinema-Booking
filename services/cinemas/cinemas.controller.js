@@ -3,7 +3,7 @@ const respond = require("../../helpers/respond");
 const {encryptPassword, decryptPassword} = require("../../helpers/bcrypt");
 const {cinemaTokenPayLoad} = require("../../helpers/tokens");
 const {createToken} = require("../../helpers/jwt");
-const { ErrorHandler } = require("../../helpers/error");
+const { ErrorHandler, handleError } = require("../../helpers/error");
 const crypto = require("crypto");
 
 const add_cinema = async (req,res,next)=>{
@@ -68,8 +68,23 @@ const getCinemas = async (req,res,next)=>{
     }
 }
 
+const toggleCinemaStatus = async (req,res,next)=>{
+    try {
+        const {cinema_id} = req.body;
+        const toggleCinema = await cinemasServices.toggleStatus(cinema_id);
+        if(toggleCinema){
+            return respond(true,200,toggleCinema,res);
+        }else {
+            throw new ErrorHandler(404, "Cinema is not found");
+        }
+    }catch(err){
+        next(err);
+    }
+}
+
 module.exports = {
     add_cinema,
     signin,
-    getCinemas
+    getCinemas, 
+    toggleCinemaStatus
 };

@@ -23,8 +23,13 @@ const getCinemas = Joi.object({
     movie_id: Joi.number().required(),
 });
 
+const toggleCinemaStatus= Joi.object({
+    cinema_id: Joi.number().required(),
+});
+
 module.exports = {
     addCinema,
     signin,
-    getCinemas
+    getCinemas, 
+    toggleCinemaStatus
 };
