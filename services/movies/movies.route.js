@@ -9,7 +9,7 @@ const router = express.Router();
 
 
 router.post("/addMovie", isAuth(), isAllowed(["admin"]), validate(moviesSchema.addMovie,"body"), moviesController.addMovie);
-router.post("/deleteMovie", validate(moviesSchema.deleteMovie,"body"), moviesController.deleteMovie); // will be deleted later
+router.post("/deleteMovie", isAuth(), isAllowed(["admin"]), validate(moviesSchema.deleteMovie,"body"), moviesController.deleteMovie); // will be deleted later
 router.post("/getMoviesInCity", validate(moviesSchema.moviesInCity,"body"), moviesController.moviesInCity);
 
 module.exports = router;
