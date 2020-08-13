@@ -6,6 +6,7 @@ const addHall = Joi.object({
     left_chairs: Joi.number(),
     right_chairs: Joi.number(),
     center_chairs: Joi.number(),
+    hall_description: Joi.string(),
 });
 
 const getHallsForMovie = Joi.object({
