@@ -4,7 +4,7 @@ const { Op } = require("sequelize");
 // Check if the hall is busy in that date and start time (used when adding new slot)
 exports.checkIfBusy = async (hall_id, start_date,start_time, end_time)=>{
     console.log(start_time);
-    const hall = await slotsModel.findOne({where:{
+    const slot = await slotsModel.findOne({where:{
         [Op.and]:[
             {start_date: {
             [Op.lte]: start_date,
@@ -43,7 +43,11 @@ exports.checkIfBusy = async (hall_id, start_date,start_time, end_time)=>{
             ]},
     ]
     }});
-    return hall;
+    if (slot){
+        return slot.dataValues;
+    }else {
+        return slot;
+    }
 };
 
 exports.createSlot = async (slotData)=>{

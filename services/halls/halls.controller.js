@@ -33,7 +33,22 @@ const getHallsForMovie = async (req,res,next)=>{
         next(err);
     }
 }
+
+const toggleHallStatus = async (req,res,next)=>{
+    try {
+        const {hall_id} = req.body;
+        const toggleHall = await hallsServices.toggleStatus(hall_id);
+        if(toggleHall){
+            return respond(true,200,toggleHall,res);
+        }else {
+            throw new ErrorHandler(404, "Hall is not found");
+        }
+    }catch(err){
+        next(err);
+    }
+}
 module.exports = {
     add_hall,
-    getHallsForMovie
+    getHallsForMovie,
+    toggleHallStatus
 }

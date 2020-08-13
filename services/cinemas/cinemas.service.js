@@ -4,7 +4,11 @@ const Sequelize = require("sequelize");
 // To check if username is already exists or not
 exports.isCinemaUserExists = async (username)=>{
     const cinemaUser = await cinemasModel.findOne({where:{username}});
-    return cinemaUser;
+    if (cinemaUser){
+        return cinemaUser.dataValues;
+    }else {
+        return cinemaUser;
+    }
 };
 // To add new cinema will be used from control panel
 exports.addCinema = async (cinemaData)=>{
