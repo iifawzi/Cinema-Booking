@@ -917,6 +917,40 @@
 							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 36,\n            \"cinema_name\": \"El Crwan\",\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in the world\",\n            \"contact_number\": \"01090243795\",\n            \"country\": \"Egypt\",\n            \"city\": \"Port Said\"\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "toggleCinemaStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTczMDY0MzAsImV4cCI6MTU5NzM0OTYzMH0.jp2xUh3u0bNRawIUh92HmhrmPfQlCKSNQvWJYK6_2gY"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"cinema_id\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/cinemas/toggleCinemaStatus",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"cinemas",
+								"toggleCinemaStatus"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -1612,7 +1646,7 @@
 	],
 	"variable": [
 		{
-			"id": "36ac6167-3811-4864-9c37-bd82dcf5f80c",
+			"id": "52379875-8c13-4e3d-8525-118227cf5001",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}

@@ -10,6 +10,44 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /toggleCinemaStatus:
+    patch:
+      tags:
+      - "cinemas"
+      summary: "to toggle the status of cinema"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to toggle the status of cinema"
+        required: true
+        schema:
+          $ref: "#/definitions/toggleCinemaStatus_body"
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"   
+      responses:
+        '200':
+          description: 200 (Success)
+          schema:
+            $ref: '#/definitions/toggleCinemaStatus_response'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
+        '401':
+          description: 401 (Unauthorized - token's error)
+          schema:
+            $ref: '#/definitions/error_401'
+        '404':
+          description: 404 (Not Found - cinema is not found)
+          schema:
+            $ref: '#/definitions/error_404'
   /deleteMovie:
     delete:
       tags:
@@ -27,6 +65,10 @@ paths:
         required: true
         schema:
           $ref: "#/definitions/deleteMovie_body"
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"   
       responses:
         '200':
           description: 200 (Success - with "1 in data key")
@@ -483,6 +525,19 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   toggleCinemaStatus_body:
+    type: "object"
+    example: 
+      cinema_id: 50
+   toggleCinemaStatus_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        cinema_id: 50
+        cinema_status: true
+        updatedAt: '2020-08-13T08:26:14.943Z'
    deleteMovie_body:
     type: "object"
     example: 
@@ -775,6 +830,13 @@ definitions:
    error_403:
     type: "string"
     description: "Forbidden"
+    example:
+      status: false
+      message: "Error explaniation will be shown here"
+      data: []
+   error_404:
+    type: "string"
+    description: "Not Found"
     example:
       status: false
       message: "Error explaniation will be shown here"
