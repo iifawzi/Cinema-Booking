@@ -10,6 +10,44 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /toggleSlotStatus:
+    patch:
+      tags:
+      - "slots"
+      summary: "to toggle the status of a slot"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to toggle the status of a slot"
+        required: true
+        schema:
+          $ref: "#/definitions/toggleSlotStatus_body"
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"   
+      responses:
+        '200':
+          description: 200 (Success)
+          schema:
+            $ref: '#/definitions/toggleSlotStatus_response'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
+        '401':
+          description: 401 (Unauthorized - token's error)
+          schema:
+            $ref: '#/definitions/error_401'
+        '404':
+          description: 404 (Not Found - cinema is not found)
+          schema:
+            $ref: '#/definitions/error_404'
   /toggleHallStatus:
     patch:
       tags:
@@ -563,6 +601,19 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   toggleSlotStatus_body:
+    type: "object"
+    example: 
+      slot_id: 50
+   toggleSlotStatus_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        slot_id: 50
+        slot_status: true
+        updatedAt: '2020-08-13T08:26:14.943Z'
    toggleHallStatus_body:
     type: "object"
     example: 
@@ -645,9 +696,17 @@ definitions:
       data:
         - movie_id: 7
           movie_name: The biggest one2
-          cover: 'https://www.image.com'
+          duration: 150
+          cover: 'cover.png'
           category: action
           description: The best movie ever2
+          rate: 4
+        - movie_id: 8
+          movie_name: Homeland
+          duration: 180
+          cover: 'cover.png'
+          category: action
+          description: The best movie everrrrrrrr
           rate: 4
    addSlot_body:
     type: "object"

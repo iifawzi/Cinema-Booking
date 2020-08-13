@@ -1486,6 +1486,117 @@
 							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"slot_id\": 22,\n        \"movie_id\": 1,\n        \"hall_id\": 1,\n        \"start_date\": \"2020-07-24\",\n        \"end_date\": \"2020-07-30\",\n        \"start_time\": \"23:30:00\",\n        \"end_time\": \"23:55:00\",\n        \"slot_status\": false\n    }\n}"
 						}
 					]
+				},
+				{
+					"name": "toggleSlotStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE0Mywicm9sZSI6ImNpbmVtYSIsImlhdCI6MTU5NzMxMzA5NiwiZXhwIjoxNTk3MzU2Mjk2fQ.HTI5draGumY-Ir0lixTjnX0Yn2QZnD7BiEW4Sk3w0qs"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"slot_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/slots/toggleSlotStatus",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"slots",
+								"toggleSlotStatus"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "toggleSlotStatus",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE0Mywicm9sZSI6ImNpbmVtYSIsImlhdCI6MTU5NzMxMzA5NiwiZXhwIjoxNTk3MzU2Mjk2fQ.HTI5draGumY-Ir0lixTjnX0Yn2QZnD7BiEW4Sk3w0qs"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"slot_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/slots/toggleSlotStatus",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"slots",
+										"toggleSlotStatus"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-nE89n6tTmwigOmm/uRm7ysTb1HM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Aug 2020 11:57:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"slot_id\": 74,\n        \"slot_status\": false,\n        \"updatedAt\": \"2020-08-13T10:06:38.193Z\"\n    }\n}"
+						}
+					]
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -1824,7 +1935,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"movie_id\": 7,\n            \"movie_name\": \"The biggest one2\",\n            \"cover\": \"https://www.google.com2\",\n            \"category\": \"action\",\n            \"description\": \"The best movie ever2\",\n            \"rate\": 4\n        }\n    ]\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"movie_id\": 7,\n            \"movie_name\": \"The biggest one2\",\n            \"duration\": 150,\n            \"cover\": \"https://www.google.com2\",\n            \"category\": \"action\",\n            \"description\": \"The best movie ever2\",\n            \"rate\": 4\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -1834,7 +1945,7 @@
 	],
 	"variable": [
 		{
-			"id": "766a9777-b606-4907-9db7-e9707180bd88",
+			"id": "ae16fb12-4b65-4efc-b33d-6fbd143953dd",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}
