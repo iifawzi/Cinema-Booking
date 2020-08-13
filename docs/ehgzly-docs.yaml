@@ -10,6 +10,36 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /deleteMovie:
+    post:
+      tags:
+      - "movies"
+      summary: "to delete specific movie"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to delete specific movie"
+        required: true
+        schema:
+          $ref: "#/definitions/deleteMovie_body"
+      responses:
+        '200':
+          description: 200 (Success - with "1 in data key")
+          schema:
+            $ref: '#/definitions/deleteMovie_response'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
+        '401':
+          description: 401 (Unauthorized - token's error)
+          schema:
+            $ref: '#/definitions/error_401'
   /getHallsForMovie:
     post:
       tags:
@@ -453,6 +483,16 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   deleteMovie_body:
+    type: "object"
+    example: 
+     movie_id: 26
+   deleteMovie_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data: 1
    getHallsForMovie_body:
     type: "object"
     example: 
