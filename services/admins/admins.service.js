@@ -4,11 +4,7 @@ const {encryptPassword} = require("../../helpers/bcrypt");
 // To check if username is already exists or not
 exports.isAdminExists = async (username)=>{
     const admin = await adminsModel.findOne({where:{username}});
-    if (admin){
-        return admin.dataValues;
-    }else {
     return admin;
-    }
 };
 // To add new cinema will be used from control panel
 exports.addAdmin = async (adminData)=>{
