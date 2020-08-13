@@ -8,5 +8,7 @@ const router = express.Router();
 
 
 router.post("/addSlot", isAuth(), isAllowed(["cinema"]), validate(slotsSchemas.addSlot,"body"), slotsController.add_slot);
+router.patch("/toggleSlotStatus", isAuth(), isAllowed(['cinema']), validate(slotsSchemas.toggleSlotStatus, 'body'), slotsController.toggleSlotStatus)
+
 
 module.exports = router;

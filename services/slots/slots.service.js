@@ -61,3 +61,14 @@ exports.deleteSlot = async (slot_id)=>{
     const slot = await slotsModel.destroy({where: {slot_id}});
     return slot;
 }
+
+// This will be used to toggle the status of slot
+exports.toggleStatus = async (slot_id)=>{
+    const slot = await slotsModel.findOne({where: {slot_id}, attributes: ['slot_id', "slot_status"]});
+    if(slot){
+        const previousStatus = slot.slot_status;
+        slot.slot_status = !previousStatus;
+        slot.save();
+    }
+    return slot;
+}

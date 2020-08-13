@@ -20,7 +20,22 @@ const add_slot = async (req,res,next)=>{
     }
 }
 
+const toggleSlotStatus = async (req,res,next)=>{
+    try {
+        const {slot_id} = req.body;
+        const toggleSlot = await slotsServices.toggleStatus(slot_id);
+        if(toggleSlot){
+            return respond(true,200,toggleSlot,res);
+        }else {
+            throw new ErrorHandler(404, "Slot is not found");
+        }
+    }catch(err){
+        next(err);
+    }
+}
+
 
 module.exports = {
     add_slot,
+    toggleSlotStatus
 }

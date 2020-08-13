@@ -11,7 +11,11 @@ end_time: Joi.string().regex(/^([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/).r
 slot_status: Joi.boolean().required()
 });
 
+const toggleSlotStatus= Joi.object({
+    slot_id: Joi.number().required(),
+});
 
 module.exports = {
     addSlot,
+    toggleSlotStatus
 }
