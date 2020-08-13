@@ -589,7 +589,7 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTU1NTE4MzksImV4cCI6MTU5NTU5NTAzOX0.O_OTU79dOwn5ukIyPEECMUpFUqqGjLB1uB3cuMjLVo0"
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTczMDgxMzYsImV4cCI6MTU5NzM1MTMzNn0.ACay0efj1l6Ka5cjkXikjZJw5ZzRPTitYHT1NruohCU"
 							}
 						],
 						"body": {
@@ -931,7 +931,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"cinema_id\": 50\n}",
+							"raw": "{\n\"cinema_id\": 165\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -950,7 +950,84 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "toggleCinemaStatus",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTczMDY0MzAsImV4cCI6MTU5NzM0OTYzMH0.jp2xUh3u0bNRawIUh92HmhrmPfQlCKSNQvWJYK6_2gY"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"cinema_id\": 165\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/cinemas/toggleCinemaStatus",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"cinemas",
+										"toggleCinemaStatus"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"78-10No6RLXRlC+P5G2CvrPm4d2qP8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Aug 2020 08:57:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 165,\n        \"cinema_status\": true,\n        \"updatedAt\": \"2020-08-13T08:57:31.404Z\"\n    }\n}"
+						}
+					]
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -1646,7 +1723,7 @@
 	],
 	"variable": [
 		{
-			"id": "52379875-8c13-4e3d-8525-118227cf5001",
+			"id": "4b7389b3-f0bc-40b4-883f-ea5f4cf07267",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}
