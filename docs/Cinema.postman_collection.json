@@ -1147,119 +1147,6 @@
 					]
 				},
 				{
-					"name": "getHallsForMovie",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "",
-								"type": "text",
-								"value": "",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\"cinema_id\": 15,\n\"movie_id\": 7\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{BASE}}/api/halls/getHallsForMovie",
-							"host": [
-								"{{BASE}}"
-							],
-							"path": [
-								"api",
-								"halls",
-								"getHallsForMovie"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "getHallsForMovie",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "",
-										"type": "text",
-										"value": "",
-										"disabled": true
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"cinema_id\": 15,\n\"movie_id\": 7\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE}}/api/halls/getHallsForMovie",
-									"host": [
-										"{{BASE}}"
-									],
-									"path": [
-										"api",
-										"halls",
-										"getHallsForMovie"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Access-Control-Allow-Methods",
-									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-								},
-								{
-									"key": "Access-Control-Allow-Headers",
-									"value": "Content-Type, Authorization"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "78"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"4e-IAFYuk/IsFgzZsMEUcL72h5yCJA\""
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 07 Aug 2020 15:40:36 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"hall_id\": 9,\n            \"hall_name\": \"VIP-1\",\n            \"hall_description\": \"the best hall in the world\"\n\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
 					"name": "toggleHallStatus",
 					"request": {
 						"method": "PATCH",
@@ -1945,7 +1832,7 @@
 	],
 	"variable": [
 		{
-			"id": "ae16fb12-4b65-4efc-b33d-6fbd143953dd",
+			"id": "cab5b44b-1b6f-4787-a2c8-ef5281e852c1",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}

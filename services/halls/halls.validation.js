@@ -9,11 +9,6 @@ const addHall = Joi.object({
     hall_description: Joi.string(),
 });
 
-const getHallsForMovie = Joi.object({
-    cinema_id: Joi.number().required(), 
-    movie_id: Joi.number().required(), 
-});
-
 const toggleHallStatus= Joi.object({
     hall_id: Joi.number().required(),
 });
@@ -21,7 +16,6 @@ const toggleHallStatus= Joi.object({
 
 module.exports = {
     addHall,
-    getHallsForMovie,
     toggleHallStatus
 }
 

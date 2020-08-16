@@ -101,27 +101,6 @@ describe("/api/halls", async()=>{
         });
     });
 
-
-    describe("/getHallsForMovie", ()=>{
-        it ("Should respond 400 if schema validation fails", async()=>{
-            const res = await request(app)
-                .post("/api/halls/getHallsForMovie")
-                .send({
-                    "cinema_id": 1,
-                });
-            expect(res.statusCode).equals(400);
-        });
-        it ("Should respond 200 if got halls successfully", async()=>{ // will return empty data if no halls found for this movie (which is something not expected)
-            const res = await request(app)
-                .post("/api/halls/getHallsForMovie")
-                .send({
-                    "cinema_id": 1,
-                    "movie_id": 16
-                });
-            expect(res.statusCode).equals(200);
-        });
-    });
-
     describe("/toggleHallStatus", ()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
             const token = createToken({phone_number: "01090243795", cinema_id: 1,role:"cinema"});
