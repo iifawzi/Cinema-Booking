@@ -1,5 +1,6 @@
 const usersModel = require("./users.model");
-
+const {db} = require("../../startup/db");
+const Sequelize = require("sequelize");
 // This service is used to check if phone is already exists:
 exports.checkIfPhoneExists = async (phone_number)=>{
     const userWithThisPhone =  await usersModel.findOne({where: {phone_number}});
@@ -9,6 +10,14 @@ exports.checkIfPhoneExists = async (phone_number)=>{
         return userWithThisPhone;
     }
 };
+
+exports.getUserData = async (phone_number)=>{
+    const userData = await db.query("SELECT users.*, areas.area_ar,areas.area_en,countries.country_ar,countries.country_en from users INNER JOIN areas ON areas.area_id = users.area_id INNER JOIN countries ON countries.country_id = areas.country_id WHERE users.phone_number = ?", {
+        replacements: [phone_number],
+        type: Sequelize.QueryTypes.SELECT,
+    });
+    return userData[0];
+}
 
 // This service is used to create a new user:
 exports.createNewUser = async (data)=>{

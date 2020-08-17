@@ -973,16 +973,19 @@ definitions:
       status: true
       message: success
       data:
-        user_id: 13
-        phone_number: 01090243795
+        user_id: 41
+        phone_number: 01090243799
         first_name: fawzi
         last_name: essam
-        country: egypt
-        city: portsaid
         wallet: 0
         firebase_token: '93484893983498'
-        refresh_token: 41e553cbd60fe02aec0e575e350b3982
-        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEzLCJpYXQiOjE1OTQzMzIyOTEsImV4cCI6MTU5NDM3NTQ5MX0.EUgO0wpAQNjiieE40EzqdTLewEqf5OWibt99-U1U5HI
+        refresh_token: 32c424abbf557b258c787bc3bf350e6a
+        area_ar: بورسعيد
+        area_en: Port Said
+        country_ar: مصر
+        country_en: Egypt
+        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjQxLCJyb2xlIjoidXNlciIsImlhdCI6MTU5NzY4OTQ1NSwiZXhwIjoxNTk3NzMyNjU1fQ.8G0k-0tmXkjybt6lE_Oj5UGORabPjk0vETJEH1B7D-Q
+      
    signup_body:
     type: "object"
     example: 

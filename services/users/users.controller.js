@@ -16,24 +16,26 @@ const signup = async (req,res,next)=>{
         userData.refresh_token = refresh_token;
         const createdUser = await usersServices.createNewUser(userData);
         if (createdUser){
-            delete createdUser.updatedAt;
-            delete createdUser.createdAt;
-            delete createdUser.blocked; 
-            delete createdUser.latitude; // not used untill now.
-            delete createdUser.longitude; // not used untill now.
-            const payLoad = userTokenPayLoad(createdUser.phone_number, createdUser.user_id,"user")
+            const getUserData = await usersServices.getUserData(userData.phone_number);
+            delete getUserData.updatedAt;
+            delete getUserData.createdAt;
+            delete getUserData.blocked; 
+            delete getUserData.area_id; 
+            delete getUserData.latitude; // not used untill now.
+            delete getUserData.longitude; // not used untill now.
+            const payLoad = userTokenPayLoad(getUserData.phone_number, getUserData.user_id,"user")
             const token = createToken(payLoad);
-            return respond(true,201,{...createdUser,token},res);
+            return respond(true,201,{...getUserData,token},res);
         }
     }catch(err) {
         next(err);
     }
 };
-// To Login new user: 
+// To Login a user: 
 const signin = async (req,res,next)=>{
     try {
         const userData = req.body;
-        const userExist = await usersServices.checkIfPhoneExists(userData.phone_number);
+        const userExist = await usersServices.getUserData(userData.phone_number);
         if (!userExist) {
             throw new ErrorHandler(401,"Phone number is incorrect");
         }
@@ -43,6 +45,7 @@ const signin = async (req,res,next)=>{
         delete userExist.updatedAt;
         delete userExist.createdAt;
         delete userExist.blocked; 
+        delete userExist.area_id; 
         delete userExist.latitude; // not used untill now.
         delete userExist.longitude; // not used untill now.
         const payLoad = userTokenPayLoad(userExist.phone_number, userExist.user_id,"user")
