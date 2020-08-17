@@ -589,12 +589,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTczMDgxMzYsImV4cCI6MTU5NzM1MTMzNn0.ACay0efj1l6Ka5cjkXikjZJw5ZzRPTitYHT1NruohCU"
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc2OTE3ODIsImV4cCI6MTU5NzczNDk4Mn0.qKULvEIgJa-4A9HAoVxtMLJ-ApQPD3pFaewZXs6UvCI"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\",\n    \"country\":\"Egypt\",\n    \"city\": \"Port Said\",\n    \"contact_number\": \"01090243795\"\n}",
+							"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\",\n    \"area_id\": 1,\n    \"contact_number\": \"01090243795\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -622,12 +622,12 @@
 									{
 										"key": "authorization",
 										"type": "text",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTU1NTE4MzksImV4cCI6MTU5NTU5NTAzOX0.O_OTU79dOwn5ukIyPEECMUpFUqqGjLB1uB3cuMjLVo0"
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc2OTE3ODIsImV4cCI6MTU5NzczNDk4Mn0.qKULvEIgJa-4A9HAoVxtMLJ-ApQPD3pFaewZXs6UvCI"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\",\n    \"country\":\"Egypt\",\n    \"city\": \"Port Said\",\n    \"contact_number\": \"01090243795\"\n}",
+									"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\",\n    \"area_id\": 1,\n    \"contact_number\": \"01090243795\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -672,15 +672,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "233"
+									"value": "359"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"e9-m/dZbaclDgA7S713X7TTFp8czUo\""
+									"value": "W/\"167-1UGTSdNt2rImfzfexw2opoRZeZc\""
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 24 Jul 2020 00:51:46 GMT"
+									"value": "Mon, 17 Aug 2020 19:18:01 GMT"
 								},
 								{
 									"key": "Connection",
@@ -688,7 +688,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_status\": false,\n        \"last_checkout\": \"1999-03-20T23:00:00\",\n        \"cinema_id\": 61,\n        \"cinema_name\": \"El Crwan\",\n        \"cinema_description\": \"the best in thew world\",\n        \"cinema_logo\": \"logo.png\",\n        \"username\": \"crowann\",\n        \"country\": \"Egypt\",\n        \"city\": \"Port Said\",\n        \"contact_number\": \"01090243795\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 3,\n        \"cinema_name\": \"El Crwan\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"username\": \"crowann\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\"\n    }\n}"
 						}
 					]
 				},
@@ -785,15 +785,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "476"
+									"value": "617"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"1dc-WccKd4IHEKdOPXVaeOO3I587l0M\""
+									"value": "W/\"269-OvvAD0TPJ0p8vFkO8RJBNLJJ0WU\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 21 Jul 2020 00:02:24 GMT"
+									"value": "Mon, 17 Aug 2020 19:19:27 GMT"
 								},
 								{
 									"key": "Connection",
@@ -801,7 +801,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 1,\n        \"cinema_name\": \"El Crwan\",\n        \"contact_number\": \"01090243795\",\n        \"username\": \"crowann\",\n        \"country\": \"Egypt\",\n        \"city\": \"Port Said\",\n        \"cinema_status\": false,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"refresh_token\": \"7421ab7f50ef37a34cc63883f5f485fc\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1Mjg5NzQ0LCJleHAiOjE1OTUzMzI5NDR9.fLD6ezsuQx4U_VfhorbgIx0C6rmbgRF3Yix3UjZzUr0\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 3,\n        \"cinema_name\": \"El Crwan\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"username\": \"crowann\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"refresh_token\": \"2f1f54555820ddd4ed96e56e7723f9f1\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjMsInJvbGUiOiJjaW5lbWEiLCJpYXQiOjE1OTc2OTE5NjcsImV4cCI6MTU5NzczNTE2N30.__cWFq09eHcqcHzIue9plTxExrhihUcRLP9MiT2GLIM\"\n    }\n}"
 						}
 					]
 				},
@@ -819,7 +819,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"city\": \"Port Said\", \n    \"country\": \"Egypt\",\n    \"movie_id\": 7\n}",
+							"raw": "{\n    \"area_id\": 1,\n    \"movie_id\": 1,\n    \"date\": \"2020-08-28\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -853,7 +853,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"city\": \"Port Said\", \n    \"country\": \"Egypt\",\n    \"movie_id\": 16\n}",
+									"raw": "{\n    \"area_id\": 1,\n    \"movie_id\": 1,\n    \"date\": \"2020-08-28\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -898,15 +898,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "154"
+									"value": "516"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"9a-18B9BGbqq5rVfi5DxRpS6S96+B8\""
+									"value": "W/\"204-IccLFVnXojctUFXImO1g/5EhJ0Q\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 25 Jul 2020 03:06:05 GMT"
+									"value": "Mon, 17 Aug 2020 22:09:46 GMT"
 								},
 								{
 									"key": "Connection",
@@ -914,7 +914,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 36,\n            \"cinema_name\": \"El Crwan\",\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in the world\",\n            \"contact_number\": \"01090243795\",\n            \"country\": \"Egypt\",\n            \"city\": \"Port Said\"\n        }\n    ]\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"2\": {\n            \"cinema_id\": 2,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-1\",\n                    \"hall_descripton\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"hall_descripton\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T19:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"hall_descripton\": \"The best hall in the world\"\n                }\n            ]\n        }\n    }\n}"
 						}
 					]
 				},
@@ -1948,7 +1948,7 @@
 					]
 				},
 				{
-					"name": "getMoviesInCity",
+					"name": "getMoviesInArea",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -1961,7 +1961,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"city\": \"Port Said\",\n\"country\": \"Egypt\"\n}",
+							"raw": "{\n\"area_id\": 1\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1969,20 +1969,20 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE}}/api/movies/getMoviesInCity",
+							"raw": "{{BASE}}/api/movies/getMoviesInArea",
 							"host": [
 								"{{BASE}}"
 							],
 							"path": [
 								"api",
 								"movies",
-								"getMoviesInCity"
+								"getMoviesInArea"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "getMoviesInCity",
+							"name": "getMoviesInArea",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
@@ -1995,7 +1995,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"city\": \"port said\",\n\"country\": \"egypt\"\n}",
+									"raw": "{\n\"area_id\": 1\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2003,14 +2003,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{BASE}}/api/movies/getMoviesInCity",
+									"raw": "{{BASE}}/api/movies/getMoviesInArea",
 									"host": [
 										"{{BASE}}"
 									],
 									"path": [
 										"api",
 										"movies",
-										"getMoviesInCity"
+										"getMoviesInArea"
 									]
 								}
 							},
@@ -2040,15 +2040,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "191"
+									"value": "208"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"bf-jS9B0dJRhwExNeuqi9YOfFFkByg\""
+									"value": "W/\"d0-oBXX1TLXZOynkr3Kra5RMd50nCE\""
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 24 Jul 2020 22:58:33 GMT"
+									"value": "Mon, 17 Aug 2020 20:32:13 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2056,7 +2056,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"movie_id\": 7,\n            \"movie_name\": \"The biggest one2\",\n            \"duration\": 150,\n            \"cover\": \"https://www.google.com2\",\n            \"category\": \"action\",\n            \"description\": \"The best movie ever2\",\n            \"rate\": 4\n        }\n    ]\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"movie_id\": 1,\n            \"movie_name\": \"The biggest one2\",\n            \"duration\": \"150\",\n            \"cover\": \"https://www.google.com2\",\n            \"category\": \"action\",\n            \"description\": \"The best movie ever2\",\n            \"rate\": 4\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -2066,7 +2066,7 @@
 	],
 	"variable": [
 		{
-			"id": "6a2bad4a-cb07-4d24-ac41-914c70b83a49",
+			"id": "ee7c5dd6-b8fe-446a-9c67-bea5e7685755",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}

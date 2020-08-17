@@ -81,7 +81,7 @@ describe("/api/movies", async()=>{
                 .post("/api/movies/getMoviesInArea")
             expect(res.statusCode).equals(400);
         });
-        it ("Should respond 200 if got movies successfully", async()=>{ // will return empty data if no movies found in this city, country
+        it ("Should respond 200 if got movies successfully", async()=>{ // will return empty data if no movies found in this area
             const res = await request(app)
                 .post("/api/movies/getMoviesInArea")
                 .send({

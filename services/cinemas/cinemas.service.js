@@ -30,9 +30,9 @@ exports.deleteCinema = async (cinema_id)=>{
     return deletedCinema;
 };
 // Get the cinemas which has specific movie, in specific city.
-exports.getCinemasForMovie = async (country,city,movie_id)=>{
-    const getCinemas = await db.query("SELECT cinemas.cinema_id, cinemas.cinema_logo, cinemas.cinema_description, cinemas.cinema_name, cinemas.contact_number,cinemas.country,cinemas.city FROM movies INNER JOIN slots ON movies.movie_id = slots.movie_id INNER JOIN halls ON halls.hall_id = slots.hall_id INNER JOIN cinemas ON cinemas.cinema_id = halls.cinema_id where cinemas.country = ? AND cinemas.city = ? AND movies.movie_id = ? AND cinemas.cinema_status = true AND halls.hall_status = true AND slots.slot_status = true GROUP BY cinemas.cinema_id", {
-        replacements: [country,city, movie_id],
+exports.getCinemasForMovie = async (area_id,movie_id,date)=>{
+    const getCinemas = await db.query("SELECT CONCAT(:insertedDate,'T', slots.start_time,'Z') as start_time,halls.hall_name,halls.hall_description,cinemas.cinema_id, cinemas.cinema_logo, cinemas.cinema_description, cinemas.cinema_name, cinemas.contact_number FROM cinemas INNER JOIN halls ON halls.cinema_id = cinemas.cinema_id INNER JOIN slots ON halls.hall_id = slots.hall_id INNER JOIN movies ON movies.movie_id = slots.movie_id where cinemas.area_id = :area_id AND movies.movie_id = :movie_id AND cinemas.cinema_status = true AND halls.hall_status = true AND slots.slot_status = true AND slots.start_date <= :insertedDate AND slots.end_date >= :insertedDate AND CONCAT(:insertedDate,'T', slots.start_time,'Z') > :currentDate ", {
+        replacements: {insertedDate: date,area_id,movie_id,currentDate: new Date().toISOString()},
         type: Sequelize.QueryTypes.SELECT,
     });
     return getCinemas;

@@ -59,12 +59,38 @@ const signin = async (req,res,next)=>{
 };
 
 
-const getCinemas = async (req,res,next)=>{
+const getCinemasForMovie = async (req,res,next)=>{
     try {
-        const {city,country,movie_id} = req.body;
-        const cinemas = await cinemasServices.getCinemasForMovie(country,city,movie_id);
+        const {area_id,movie_id, date} = req.body;
+        const cinemas = await cinemasServices.getCinemasForMovie(area_id,movie_id, date);
         if (cinemas){
-            return respond(true,200,cinemas,res);
+            const sortedCinemas = {};
+            cinemas.forEach(cinema => {
+                if (sortedCinemas[cinema.cinema_id] === undefined){
+                    sortedCinemas[cinema.cinema_id] = {
+                        ...cinema,
+                        slots: [{
+                            start_time: cinema.start_time,
+                            end_time: cinema.end_time,
+                            hall_name: cinema.hall_name,
+                            hall_descripton: cinema.hall_description,
+                        }
+                        ]
+                    }
+                    delete sortedCinemas[cinema.cinema_id].start_time;
+                    delete sortedCinemas[cinema.cinema_id].end_time;
+                    delete sortedCinemas[cinema.cinema_id].hall_name;
+                    delete sortedCinemas[cinema.cinema_id].hall_description;
+                }else {
+                    sortedCinemas[cinema.cinema_id].slots.push({
+                        start_time: cinema.start_time,
+                        end_time: cinema.end_time,
+                        hall_name: cinema.hall_name,
+                        hall_descripton: cinema.hall_description,
+                    })
+                }
+            });
+            return respond(true,200,sortedCinemas,res);
         }
     }catch(err){
         next(err);
@@ -88,6 +114,6 @@ const toggleCinemaStatus = async (req,res,next)=>{
 module.exports = {
     add_cinema,
     signin,
-    getCinemas, 
+    getCinemasForMovie, 
     toggleCinemaStatus
 };

@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post("/addCinema", isAuth(), isAllowed(["admin"]), validate(cinemasSchemas.addCinema,"body"), cinemasController.add_cinema);
 router.post("/signinCinema", validate(cinemasSchemas.signin,"body"), cinemasController.signin);
-router.post("/getCinemasForMovie", validate(cinemasSchemas.getCinemas,"body"), cinemasController.getCinemas);
+router.post("/getCinemasForMovie", validate(cinemasSchemas.getCinemasForMovie,"body"), cinemasController.getCinemasForMovie);
 router.patch("/toggleCinemaStatus", isAuth(), isAllowed(['admin']), validate(cinemasSchemas.toggleCinemaStatus, 'body'), cinemasController.toggleCinemaStatus)
 
 module.exports = router;
