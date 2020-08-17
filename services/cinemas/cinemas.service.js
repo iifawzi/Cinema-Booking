@@ -17,11 +17,11 @@ exports.addCinema = async (cinemaData)=>{
 };
 // to get cinema's data
 exports.getCinemaData = async (username)=>{
-    const userData = await db.query("SELECT cinemas.*, areas.area_ar,areas.area_en,countries.country_ar,countries.country_en from cinemas INNER JOIN areas ON areas.area_id = cinemas.area_id INNER JOIN countries ON countries.country_id = areas.country_id WHERE cinemas.username = ?", {
+    const cinemaData = await db.query("SELECT cinemas.*, areas.area_ar,areas.area_en,countries.country_ar,countries.country_en from cinemas INNER JOIN areas ON areas.area_id = cinemas.area_id INNER JOIN countries ON countries.country_id = areas.country_id WHERE cinemas.username = ?", {
         replacements: [username],
         type: Sequelize.QueryTypes.SELECT,
     });
-    return userData[0];
+    return cinemaData[0];
 }
 
 // To add delete specific cinema, mostly used in tests

@@ -75,24 +75,20 @@ describe("/api/movies", async()=>{
     });
 
 
-    // describe("/getMoviesInCity", ()=>{
-    //     it ("Should respond 400 if schema validation fails", async()=>{
-    //         const res = await request(app)
-    //             .post("/api/movies/getMoviesInCity")
-    //             .send({
-    //                 "city": "port said",
-    //             });
-    //         expect(res.statusCode).equals(400);
-    //     });
-    //     it ("Should respond 200 if got movies successfully", async()=>{ // will return empty data if no movies found in this city, country
-    //         const res = await request(app)
-    //             .post("/api/movies/getMoviesInCity")
-    //             .send({
-    //                 "city": "port said",
-    //                 "country": "egypt"
-    //             });
-    //         expect(res.statusCode).equals(200);
-    //     });
+    describe("/getMoviesInArea", ()=>{
+        it ("Should respond 400 if schema validation fails", async()=>{
+            const res = await request(app)
+                .post("/api/movies/getMoviesInArea")
+            expect(res.statusCode).equals(400);
+        });
+        it ("Should respond 200 if got movies successfully", async()=>{ // will return empty data if no movies found in this city, country
+            const res = await request(app)
+                .post("/api/movies/getMoviesInArea")
+                .send({
+                    "area_id": 1,
+                });
+            expect(res.statusCode).equals(200);
+        });
 
-    // });
+    });
 });

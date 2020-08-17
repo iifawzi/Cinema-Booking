@@ -34,6 +34,10 @@ const cinemasModel = db.define("cinemas", {
     area_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+            model:"areas", 
+            key: "area_id"
+        }
     },
     latitude : {
         type:Sequelize.DECIMAL,

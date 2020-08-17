@@ -10,9 +10,8 @@ const addMovie = Joi.object({
     duration: Joi.number().required()
 });
 
-const moviesInCity = Joi.object({
-    city: Joi.string().required(),
-    country: Joi.string().required(),
+const moviesInArea = Joi.object({
+    area_id: Joi.number().required()
 });
 
 const deleteMovie = Joi.object({
@@ -22,5 +21,5 @@ const deleteMovie = Joi.object({
 module.exports = {
     addMovie,
     deleteMovie,
-    moviesInCity
+    moviesInArea
 };
