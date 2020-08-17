@@ -273,7 +273,7 @@
 					},
 					"response": [
 						{
-							"name": "signin user",
+							"name": "signin",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
@@ -331,15 +331,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "454"
+									"value": "529"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"1c6-mwp42hPEI9tk8bidEnAWTBpjEjI\""
+									"value": "W/\"211-hZr0mk35ZD0uxqIFKaAWMYrcDOM\""
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 09 Jul 2020 22:04:51 GMT"
+									"value": "Mon, 17 Aug 2020 18:37:35 GMT"
 								},
 								{
 									"key": "Connection",
@@ -347,7 +347,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"user_id\": 13,\n        \"phone_number\": \"01090243799\",\n        \"first_name\": \"fawzi\",\n        \"last_name\": \"essam\",\n        \"country\": \"egypt\",\n        \"city\": \"portsaid\",\n        \"wallet\": 0,\n        \"firebase_token\": \"93484893983498\",\n        \"refresh_token\": \"41e553cbd60fe02aec0e575e350b3982\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEzLCJpYXQiOjE1OTQzMzIyOTEsImV4cCI6MTU5NDM3NTQ5MX0.EUgO0wpAQNjiieE40EzqdTLewEqf5OWibt99-U1U5HI\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"user_id\": 41,\n        \"phone_number\": \"01090243799\",\n        \"first_name\": \"fawzi\",\n        \"last_name\": \"essam\",\n        \"wallet\": 0,\n        \"firebase_token\": \"93484893983498\",\n        \"refresh_token\": \"32c424abbf557b258c787bc3bf350e6a\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjQxLCJyb2xlIjoidXNlciIsImlhdCI6MTU5NzY4OTQ1NSwiZXhwIjoxNTk3NzMyNjU1fQ.8G0k-0tmXkjybt6lE_Oj5UGORabPjk0vETJEH1B7D-Q\"\n    }\n}"
 						}
 					]
 				},
@@ -365,7 +365,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"phone_number\":\"01090243799\",\n    \"first_name\":\"fawzi\",\n    \"last_name\":\"essam\",\n    \"country\":\"egypt\",\n    \"city\":\"portsaid\",\n    \"firebase_token\":\"93484893983498\"\n}",
+							"raw": "{\n    \"phone_number\":\"01090243799\",\n    \"first_name\":\"fawzi\",\n    \"last_name\":\"essam\",\n    \"area_id\": 65,\n    \"firebase_token\":\"93484893983498\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -386,7 +386,7 @@
 					},
 					"response": [
 						{
-							"name": "signup user",
+							"name": "signup",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
@@ -399,7 +399,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"phone_number\":\"01090243795\",\n    \"first_name\":\"fawzi\",\n    \"last_name\":\"essam\",\n    \"country\":\"egypt\",\n    \"city\":\"portsaid\",\n    \"firebase_token\":\"93484893983498\"\n}",
+									"raw": "{\n    \"phone_number\":\"01090243799\",\n    \"first_name\":\"fawzi\",\n    \"last_name\":\"essam\",\n    \"area_id\": 65,\n    \"firebase_token\":\"93484893983498\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -444,15 +444,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "559"
+									"value": "529"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"22f-7HISzp22kJtWk5+gNHqVxhqr2OY\""
+									"value": "W/\"211-+pvwOXvv31MqCu+2JAQrcaAiBg8\""
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 09 Jul 2020 20:06:16 GMT"
+									"value": "Mon, 17 Aug 2020 18:44:12 GMT"
 								},
 								{
 									"key": "Connection",
@@ -460,7 +460,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"latitude\": 0,\n        \"longitude\": 0,\n        \"wallet\": 0,\n        \"user_id\": 44,\n        \"phone_number\": \"01090243795\",\n        \"first_name\": \"fawzi\",\n        \"last_name\": \"essam\",\n        \"country\": \"egypt\",\n        \"city\": \"portsaid\",\n        \"firebase_token\": \"93484893983498\",\n        \"refresh_token\": \"9336763ce1bb99f2706cecaf0f4d0324\",\n        \"updatedAt\": \"2020-07-09T20:06:16.912Z\",\n        \"createdAt\": \"2020-07-09T20:06:16.912Z\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5NSIsInVzZXJfaWQiOjQ0LCJpYXQiOjE1OTQzMjUxNzYsImV4cCI6MTU5NDM2ODM3Nn0.pagVw5VMRVi2m4c7EeaZyYwdPgtTffoUSCYYUce8tcw\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"user_id\": 43,\n        \"phone_number\": \"01090243799\",\n        \"first_name\": \"fawzi\",\n        \"last_name\": \"essam\",\n        \"wallet\": 0,\n        \"firebase_token\": \"93484893983498\",\n        \"refresh_token\": \"34d2b6eac163ee9b72b3c48e3709db70\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjQzLCJyb2xlIjoidXNlciIsImlhdCI6MTU5NzY4OTg1MiwiZXhwIjoxNTk3NzMzMDUyfQ.wzK0mEtug4x7yaE3nGFM9WKPOhLDMX6QRTOA-OiPzf4\"\n    }\n}"
 						}
 					]
 				},
@@ -2066,7 +2066,7 @@
 	],
 	"variable": [
 		{
-			"id": "623ade98-f132-4994-a986-cc6f582784f7",
+			"id": "6a2bad4a-cb07-4d24-ac41-914c70b83a49",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}

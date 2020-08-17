@@ -989,11 +989,10 @@ definitions:
    signup_body:
     type: "object"
     example: 
-      phone_number: 01090243795
+      phone_number: 01090243799
       first_name: fawzi
       last_name: essam
-      country: egypt
-      city: portsaid
+      area_id: 65
       firebase_token: '93484893983498'
    signup_response:
     type: "object"
@@ -1001,17 +1000,18 @@ definitions:
       status: true
       message: success
       data:
-        user_id: 13
-        phone_number: 01090243795
+        user_id: 43
+        phone_number: 01090243799
         first_name: fawzi
         last_name: essam
-        country: egypt
-        city: portsaid
         wallet: 0
         firebase_token: '93484893983498'
-        refresh_token: 41e553cbd60fe02aec0e575e350b3982
-        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjEzLCJpYXQiOjE1OTQzMzIyOTEsImV4cCI6MTU5NDM3NTQ5MX0.EUgO0wpAQNjiieE40EzqdTLewEqf5OWibt99-U1U5HI
-      
+        refresh_token: 34d2b6eac163ee9b72b3c48e3709db70
+        area_ar: بورسعيد
+        area_en: Port Said
+        country_ar: مصر
+        country_en: Egypt
+        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjQzLCJyb2xlIjoidXNlciIsImlhdCI6MTU5NzY4OTg1MiwiZXhwIjoxNTk3NzMzMDUyfQ.wzK0mEtug4x7yaE3nGFM9WKPOhLDMX6QRTOA-OiPzf4
    error_409:
     type: "object"
     description: "CONFLICT"
