@@ -770,8 +770,7 @@ definitions:
       status: true
       message: success
       data:
-        '2':
-          cinema_id: 2
+        - cinema_id: 32
           cinema_logo: logo.png
           cinema_description: the best in thew world
           cinema_name: El Crwan
@@ -782,11 +781,16 @@ definitions:
               hall_descripton: The best hall in the world
             - start_time: '2020-08-28T23:30:00Z'
               hall_name: VIP-2
-              hall_descripton: The best hall in the world
-            - start_time: '2020-08-28T19:30:00Z'
-              hall_name: VIP-2
-              hall_descripton: The best hall in the world
-      
+              hall_descripton: best of best
+        - cinema_id: 33
+          cinema_logo: logo.png
+          cinema_description: the best in thew world
+          cinema_name: El Crwan
+          contact_number: 01090243795
+          slots:
+            - start_time: '2020-08-28T23:30:00Z'
+              hall_name: normal3
+              hall_descripton: best of best
    getMoviesInArea_body:
     type: "object"
     example: 

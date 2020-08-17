@@ -90,7 +90,8 @@ const getCinemasForMovie = async (req,res,next)=>{
                     })
                 }
             });
-            return respond(true,200,sortedCinemas,res);
+
+            return respond(true,200,Object.values(sortedCinemas),res);
         }
     }catch(err){
         next(err);

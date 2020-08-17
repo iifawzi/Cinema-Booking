@@ -819,7 +819,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"area_id\": 1,\n    \"movie_id\": 1,\n    \"date\": \"2020-08-28\"\n}",
+							"raw": "{\n    \"area_id\": 56,\n    \"movie_id\": 16,\n    \"date\": \"2020-08-28\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -853,7 +853,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"area_id\": 1,\n    \"movie_id\": 1,\n    \"date\": \"2020-08-28\"\n}",
+									"raw": "{\n    \"area_id\": 56,\n    \"movie_id\": 16,\n    \"date\": \"2020-08-28\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -898,15 +898,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "516"
+									"value": "641"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"204-IccLFVnXojctUFXImO1g/5EhJ0Q\""
+									"value": "W/\"281-blavbe0nZJuw/np9eqhzo++GLeM\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 17 Aug 2020 22:09:46 GMT"
+									"value": "Mon, 17 Aug 2020 23:15:20 GMT"
 								},
 								{
 									"key": "Connection",
@@ -914,7 +914,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"2\": {\n            \"cinema_id\": 2,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-1\",\n                    \"hall_descripton\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"hall_descripton\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T19:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"hall_descripton\": \"The best hall in the world\"\n                }\n            ]\n        }\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 32,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-1\",\n                    \"hall_descripton\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"hall_descripton\": \"best of best\"\n                }\n            ]\n        },\n        {\n            \"cinema_id\": 33,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"normal3\",\n                    \"hall_descripton\": \"best of best\"\n                }\n            ]\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -1499,7 +1499,7 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc2ODMwNzAsImV4cCI6MTU5NzcyNjI3MH0.FtqsP7zSYKe_7fyWSRcBAp78W91dKbcopnlC3jB-8R8"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc3MDUzNjQsImV4cCI6MTU5Nzc0ODU2NH0.n9pF3z0NqaJ_rvS_Vh9ThV0xqEwO0EARopLSHA9n7kA"
 							}
 						],
 						"body": {
@@ -1616,12 +1616,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc2ODMwNzAsImV4cCI6MTU5NzcyNjI3MH0.FtqsP7zSYKe_7fyWSRcBAp78W91dKbcopnlC3jB-8R8"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc3MDUzNjQsImV4cCI6MTU5Nzc0ODU2NH0.n9pF3z0NqaJ_rvS_Vh9ThV0xqEwO0EARopLSHA9n7kA"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"country_id\": 46,\n\"area_ar\": \"بورسعيد\", \n\"area_en\": \"Port Said\" \n}",
+							"raw": "{\n\"country_id\": 61,\n\"area_ar\": \"بورسعيد\", \n\"area_en\": \"Port Said\" \n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2066,7 +2066,7 @@
 	],
 	"variable": [
 		{
-			"id": "ee7c5dd6-b8fe-446a-9c67-bea5e7685755",
+			"id": "00ce1b27-78ab-4607-b731-f07e13b79f44",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}
