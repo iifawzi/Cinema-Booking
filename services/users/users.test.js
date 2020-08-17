@@ -49,6 +49,7 @@ describe("/api/users",async()=>{
                     "firebase_token":"93484893983498"
                 });
             expect(res.statusCode).equals(201);
+            await userService.deleteUser("01090243796");
             await deleteArea(area_id);
             await deleteCountry(country_id);
         });
@@ -82,7 +83,17 @@ describe("/api/users",async()=>{
                     "area_id":area_id,
                     "firebase_token":"93484893983498"
                 });
-            expect(res.statusCode).equals(409);
+            expect(res.statusCode).equals(201);
+            res = await request(app)
+            .post("/api/users/signup")
+            .send({
+                "phone_number":"01090243796",
+                "first_name":"fawzi",
+                "last_name":"essam",
+                "area_id":area_id,
+                "firebase_token":"93484893983498"
+            });
+        expect(res.statusCode).equals(409);
             await userService.deleteUser("01090243796");
             await deleteArea(area_id);
             await deleteCountry(country_id);
