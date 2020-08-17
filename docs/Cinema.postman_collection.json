@@ -1499,7 +1499,7 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjYxLCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1NTUxOTI2LCJleHAiOjE1OTU1OTUxMjZ9._eSr5OlqG4vkES4G2bEIcK_bWqyVGO0GdePmzCpMKJo"
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc2ODMwNzAsImV4cCI6MTU5NzcyNjI3MH0.FtqsP7zSYKe_7fyWSRcBAp78W91dKbcopnlC3jB-8R8"
 							}
 						],
 						"body": {
@@ -1599,6 +1599,123 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"country_id\": 7,\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\",\n        \"updatedAt\": \"2020-08-17T15:45:26.617Z\",\n        \"createdAt\": \"2020-08-17T15:45:26.617Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "areas",
+			"item": [
+				{
+					"name": "addArea",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc2ODMwNzAsImV4cCI6MTU5NzcyNjI3MH0.FtqsP7zSYKe_7fyWSRcBAp78W91dKbcopnlC3jB-8R8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"country_id\": 46,\n\"area_ar\": \"بورسعيد\", \n\"area_en\": \"Port Said\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/areas/addArea",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"areas",
+								"addArea"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addArea",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc2ODMwNzAsImV4cCI6MTU5NzcyNjI3MH0.FtqsP7zSYKe_7fyWSRcBAp78W91dKbcopnlC3jB-8R8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"country_id\": 46,\n\"area_ar\": \"بورسعيد\", \n\"area_en\": \"Port Said\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/areas/addArea",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"areas",
+										"addArea"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "200"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c8-69mNOFZUd4R4kxoABHVanoipplw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 17 Aug 2020 16:53:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"area_id\": 29,\n        \"country_id\": 46,\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"updatedAt\": \"2020-08-17T16:53:30.435Z\",\n        \"createdAt\": \"2020-08-17T16:53:30.435Z\"\n    }\n}"
 						}
 					]
 				}
@@ -1949,7 +2066,7 @@
 	],
 	"variable": [
 		{
-			"id": "5ce8cadd-beca-48e8-9f42-fedd135c18a7",
+			"id": "623ade98-f132-4994-a986-cc6f582784f7",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}
