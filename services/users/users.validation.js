@@ -3,8 +3,7 @@ const signup = Joi.object({
     phone_number: Joi.string().required(),
     first_name: Joi.string().required(),
     last_name: Joi.string().required(),
-    country: Joi.string().required(),
-    city: Joi.string().required(),
+    area_id: Joi.number().required(),
     firebase_token: Joi.string().required(),
 });
 const signin = Joi.object({

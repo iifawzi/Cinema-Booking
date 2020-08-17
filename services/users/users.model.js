@@ -20,12 +20,8 @@ const usersModel = db.define("users", {
         type:Sequelize.STRING,
         allowNull: false,
     },
-    country : {
-        type:Sequelize.STRING,
-        allowNull: false,
-    },
-    city : {
-        type:Sequelize.STRING,
+    area_id : {
+        type:Sequelize.INTEGER,
         allowNull: false,
     },
     latitude : {
