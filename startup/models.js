@@ -4,3 +4,4 @@ const {cinemasModel} = require("../services/cinemas/index");
 const {reservationsModel} = require("../services/reservations/index");
 const {hallsModel} = require("../services/halls/index");
 const {slotsModel} = require("../services/slots/index");
+const {countriesModel} = require("../services/countries/index");
