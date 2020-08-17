@@ -8,8 +8,7 @@ const addCinema = Joi.object({
     username: Joi.string().required(),
     contact_number: Joi.string().required(),
     password: Joi.string().required(),
-    country: Joi.string().required(), 
-    city: Joi.string().required(), 
+    area_id: Joi.number().required(),
 });
 
 const signin = Joi.object({

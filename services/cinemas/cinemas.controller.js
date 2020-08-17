@@ -19,13 +19,15 @@ const add_cinema = async (req,res,next)=>{
         cinemaData.refresh_token = refresh_token;
         const cinema = await cinemasServices.addCinema(cinemaData);
         if (cinema){
-            delete cinema.createdAt;
-            delete cinema.updatedAt;
-            delete cinema.refresh_token;
-            delete cinema.password;
-            delete cinema.latitude; // not used untill now.
-            delete cinema.longitude; // not used untill now.
-            return respond(true,201,cinema,res);
+            const getCinemaData = await cinemasServices.getCinemaData(cinemaData.username);
+            delete getCinemaData.createdAt;
+            delete getCinemaData.updatedAt;
+            delete getCinemaData.refresh_token;
+            delete getCinemaData.area_id;
+            delete getCinemaData.password;
+            delete getCinemaData.latitude; // not used untill now.
+            delete getCinemaData.longitude; // not used untill now.
+            return respond(true,201,getCinemaData,res);
         }
     }catch(err){
         next(err);
@@ -35,7 +37,7 @@ const add_cinema = async (req,res,next)=>{
 const signin = async (req,res,next)=>{
     try {
         const {username, password} = req.body;
-        const cinemaUser = await cinemasServices.isCinemaUserExists(username);
+        const cinemaUser = await cinemasServices.getCinemaData(username);
         if (!cinemaUser){
             throw new ErrorHandler(401, "Username is not registered");
         }
@@ -44,6 +46,7 @@ const signin = async (req,res,next)=>{
             delete cinemaUser.updatedAt;
             delete cinemaUser.createdAt;
             delete cinemaUser.password; 
+            delete cinemaUser.area_id;
             delete cinemaUser.latitude; // not used untill now.
             delete cinemaUser.longitude; // not used untill now.
             const payLoad = cinemaTokenPayLoad(cinemaUser.username,cinemaUser.cinema_id,"cinema");

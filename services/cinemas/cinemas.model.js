@@ -31,12 +31,8 @@ const cinemasModel = db.define("cinemas", {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    country: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
-    city: {
-        type: Sequelize.STRING,
+    area_id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
     },
     latitude : {
@@ -70,7 +66,7 @@ const cinemasModel = db.define("cinemas", {
             unique: true,
         },
         {
-            fields: ["country","city", "cinema_status"],
+            fields: ["area_id", "cinema_status"],
         },
     ]
 });
