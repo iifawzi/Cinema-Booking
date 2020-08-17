@@ -1,7 +1,6 @@
 const request = require("supertest");
 const app = require("../../server");
 const userService = require("./users.service");
-const {deleteArea} = require("../areas");
 const {deleteCountry} = require("../countries");
 const { createToken } = require("../../helpers/jwt");
 let expect = require("chai").expect;
@@ -50,7 +49,6 @@ describe("/api/users",async()=>{
                 });
             expect(res.statusCode).equals(201);
             await userService.deleteUser("01090243796");
-            await deleteArea(area_id);
             await deleteCountry(country_id);
         });
         it("Should respond 409 if Phone is already registered", async () => {
@@ -95,7 +93,6 @@ describe("/api/users",async()=>{
             });
         expect(res.statusCode).equals(409);
             await userService.deleteUser("01090243796");
-            await deleteArea(area_id);
             await deleteCountry(country_id);
         });
     });
@@ -152,7 +149,6 @@ describe("/api/users",async()=>{
                 });
             expect(res.statusCode).equals(200);
             await userService.deleteUser("01090243796");
-            await deleteArea(area_id);
             await deleteCountry(country_id);
         });
     });
@@ -224,7 +220,6 @@ describe("/api/users",async()=>{
                 });
             expect(res.statusCode).equals(401);
             await userService.deleteUser("01090243796");
-            await deleteArea(area_id);
             await deleteCountry(country_id);
         });
         it("Should respond 200 if token updated successfully", async ()=>{
@@ -268,7 +263,6 @@ describe("/api/users",async()=>{
                 });
             expect(res.statusCode).equals(200);
             await userService.deleteUser("01090243796");
-            await deleteArea(area_id);
             await deleteCountry(country_id);
         });
     });

@@ -4,6 +4,7 @@ const { createToken } = require("../../helpers/jwt");
 const {deleteSlot} = require("./slots.service");
 const {deleteHall} = require("../halls");
 const { deleteCinema } = require("../cinemas/");
+const {deleteCountry} = require("../countries");
 const { deleteMovie } = require("../movies/");
 let expect = require("chai").expect;
 
@@ -28,9 +29,29 @@ describe("/api/slots", async()=>{
         });
         it ("Should respond 201 if created successfully", async()=>{
             const adminToken = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
+            const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
             let res = await request(app)
+            .post("/api/countries/addCountry")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_ar": "السعودية", 
+                "country_en": "Saudi Arabia"
+            });
+            expect(res.statusCode).equals(201);
+            const country_id = res.body.data.country_id;
+            res = await request(app)
+            .post("/api/areas/addArea")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_id": country_id, 
+                "area_ar": "بورسعيد",
+                "area_en": "Port Said"
+            });
+            expect(res.statusCode).equals(201);
+            const area_id = res.body.data.area_id;
+            res = await request(app)
                 .post("/api/cinemas/addCinema")
-                .set({authorization: "Bearer "+adminToken})
+                .set({authorization: "Bearer "+token})
                 .send({
                     "cinema_name": "El Crwan",
                     "cinema_description": "the best in the world",
@@ -38,8 +59,7 @@ describe("/api/slots", async()=>{
                     "username": "crowann", 
                     "password": "12qwaszx",
                     "contact_number": "01090243795",
-                    "country":"Egypt",
-                    "city": "Port Said"
+                    "area_id": area_id,
                 });
             expect(res.statusCode).equals(201);
             const cinemaId = res.body.data.cinema_id;
@@ -87,13 +107,34 @@ describe("/api/slots", async()=>{
             await deleteHall(hallId);
             await deleteMovie(movieId);
             await deleteCinema(cinemaId);
+            await deleteCountry(country_id);
         });
 
         it ("Should respond 409 if There's an slot at the entered duration", async()=>{
             const adminToken = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
+            const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
             let res = await request(app)
+            .post("/api/countries/addCountry")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_ar": "السعودية", 
+                "country_en": "Saudi Arabia"
+            });
+            expect(res.statusCode).equals(201);
+            const country_id = res.body.data.country_id;
+            res = await request(app)
+            .post("/api/areas/addArea")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_id": country_id, 
+                "area_ar": "بورسعيد",
+                "area_en": "Port Said"
+            });
+            expect(res.statusCode).equals(201);
+            const area_id = res.body.data.area_id;
+            res = await request(app)
                 .post("/api/cinemas/addCinema")
-                .set({authorization: "Bearer "+adminToken})
+                .set({authorization: "Bearer "+token})
                 .send({
                     "cinema_name": "El Crwan",
                     "cinema_description": "the best in the world",
@@ -101,8 +142,7 @@ describe("/api/slots", async()=>{
                     "username": "crowann", 
                     "password": "12qwaszx",
                     "contact_number": "01090243795",
-                    "country":"Egypt",
-                    "city": "Port Said"
+                    "area_id": area_id,
                 });
             expect(res.statusCode).equals(201);
             const cinemaId = res.body.data.cinema_id;
@@ -191,6 +231,7 @@ describe("/api/slots", async()=>{
             await deleteHall(hallId);
             await deleteCinema(cinemaId);
             await deleteMovie(movieId);
+            await deleteCountry(country_id);
         });
     });
 
@@ -217,9 +258,29 @@ describe("/api/slots", async()=>{
         });
         it ("Should respond 200 if update the slot's status successfully", async()=>{ 
             const adminToken = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
+            const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
             let res = await request(app)
+            .post("/api/countries/addCountry")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_ar": "السعودية", 
+                "country_en": "Saudi Arabia"
+            });
+            expect(res.statusCode).equals(201);
+            const country_id = res.body.data.country_id;
+            res = await request(app)
+            .post("/api/areas/addArea")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_id": country_id, 
+                "area_ar": "بورسعيد",
+                "area_en": "Port Said"
+            });
+            expect(res.statusCode).equals(201);
+            const area_id = res.body.data.area_id;
+            res = await request(app)
                 .post("/api/cinemas/addCinema")
-                .set({authorization: "Bearer "+adminToken})
+                .set({authorization: "Bearer "+token})
                 .send({
                     "cinema_name": "El Crwan",
                     "cinema_description": "the best in the world",
@@ -227,8 +288,7 @@ describe("/api/slots", async()=>{
                     "username": "crowann", 
                     "password": "12qwaszx",
                     "contact_number": "01090243795",
-                    "country":"Egypt",
-                    "city": "Port Said"
+                    "area_id": area_id,
                 });
             expect(res.statusCode).equals(201);
             const cinemaId = res.body.data.cinema_id;
@@ -283,6 +343,7 @@ describe("/api/slots", async()=>{
             await deleteHall(hall_id);
             await deleteCinema(cinemaId);
             await deleteMovie(movieId);
+            await deleteCountry(country_id);
         });
 
     });
