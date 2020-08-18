@@ -914,7 +914,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 32,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-1\",\n                    \"hall_descripton\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"hall_descripton\": \"best of best\"\n                }\n            ]\n        },\n        {\n            \"cinema_id\": 33,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"normal3\",\n                    \"hall_descripton\": \"best of best\"\n                }\n            ]\n        }\n    ]\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 32,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-1\",\n                    \"hall_description\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        },\n        {\n            \"cinema_id\": 33,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"normal3\",\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -2064,9 +2064,31 @@
 			"protocolProfileBehavior": {}
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2080e74b-f8d6-4862-8e10-2f8d1650aa24",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "788eaee3-897d-4e2b-8615-69bafcd1ee2f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "00ce1b27-78ab-4607-b731-f07e13b79f44",
+			"id": "2b866208-c356-4463-bfed-84ca2c7e755a",
 			"key": "BASE",
 			"value": "localhost:3000"
 		}
