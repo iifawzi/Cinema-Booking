@@ -28,7 +28,7 @@ const moviesModel = db.define("movies", {
         allowNull: false,
     },
     rate: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.DECIMAL,
         allowNull: false,
     },
 });
