@@ -7,5 +7,6 @@ const areasSchemas = require("./areas.validation");
 const router = express.Router();
 
 router.post("/addArea", isAuth(), isAllowed(['admin']), validate(areasSchemas.addArea, 'body'), areasController.addArea);
+router.get("/getAreas", areasController.getAreas);
 
 module.exports = router;

@@ -18,6 +18,18 @@ const addArea = async (req,res,next)=>{
     }
 }
 
+const getAreas = async (req,res,next)=>{
+    try {
+        const areas = await areasServices.getAreas();
+        if (areas){
+            return respond(true,200,areas,res);
+        }
+    }catch(err){
+        next(err);
+    }
+}
+
 module.exports = {
     addArea,
+    getAreas
 }
