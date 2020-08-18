@@ -1718,6 +1718,130 @@
 							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"area_id\": 29,\n        \"country_id\": 46,\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"updatedAt\": \"2020-08-17T16:53:30.435Z\",\n        \"createdAt\": \"2020-08-17T16:53:30.435Z\"\n    }\n}"
 						}
 					]
+				},
+				{
+					"name": "getAreas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/areas/getAreas",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"areas",
+								"getAreas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAreas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"type": "text",
+										"value": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/areas/getAreas",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"areas",
+										"getAreas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"6b-LjfVgGMgZRRYsA8EzkHlNU5Grvs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 18 Aug 2020 13:03:25 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"area_id\": 1,\n            \"area_ar\": \"بورسعيد\",\n            \"area_en\": \"Port Said\"\n        }\n    ]\n}"
+						}
+					]
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -2088,9 +2212,14 @@
 	],
 	"variable": [
 		{
-			"id": "2b866208-c356-4463-bfed-84ca2c7e755a",
+			"id": "e7fd726e-28f2-4ff4-8f7b-8b01be425845",
 			"key": "BASE",
 			"value": "localhost:3000"
+		},
+		{
+			"id": "453102f9-1d82-4e93-8deb-d42602865828",
+			"key": "ehgzly.herokuapp.com",
+			"value": ""
 		}
 	],
 	"protocolProfileBehavior": {}

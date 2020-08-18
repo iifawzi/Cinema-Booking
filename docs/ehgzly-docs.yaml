@@ -10,6 +10,19 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /getAreas:
+    get:
+      tags:
+      - "areas"
+      summary: "to get the areas where there's movies avaliable"
+      description: ""
+      produces:
+      - "application/json"
+      responses:
+        '200':
+          description: 200 (Success)
+          schema:
+            $ref: '#/definitions/getAreas_response'
   /addArea:
     post:
       tags:
@@ -675,6 +688,21 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   getAreas_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        - area_id: 1
+          area_ar: بورسعيد
+          area_en: Port Said
+        - area_id: 2
+          area_ar: القاهرة
+          area_en: Cairo
+        - area_id: 3
+          area_ar: الاسماعيلية
+          area_en: Ismalia
    addArea_body:
     type: "object"
     example: 
