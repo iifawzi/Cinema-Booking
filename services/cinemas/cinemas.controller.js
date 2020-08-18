@@ -86,7 +86,7 @@ const getCinemasForMovie = async (req,res,next)=>{
                         start_time: cinema.start_time,
                         end_time: cinema.end_time,
                         hall_name: cinema.hall_name,
-                        hall_descripton: cinema.hall_description,
+                        hall_description: cinema.hall_description,
                     })
                 }
             });
