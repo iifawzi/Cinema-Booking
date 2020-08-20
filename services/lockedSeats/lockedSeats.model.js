@@ -14,7 +14,8 @@ const lockedSeatsModel = db.define("lockedSeats",{
         references: {
             model: "slots", 
             key: "slot_id"
-        }
+        },
+        onDelete: "CASCADE"
     },
     hall_id: {
         type: Sequelize.INTEGER,
@@ -22,7 +23,8 @@ const lockedSeatsModel = db.define("lockedSeats",{
         references: {
             model: "halls", 
             key: "hall_id"
-        }
+        },
+        onDelete: "CASCADE"
     },
     seat_position: {
         type: Sequelize.STRING,
