@@ -1,6 +1,5 @@
 const Joi = require("@hapi/joi");
 
-
 const lockSeat = Joi.alternatives().try(
     Joi.object({
         seat_position: Joi.string().required(), 
