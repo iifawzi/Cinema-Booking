@@ -2,8 +2,6 @@ const lockedSeatsServices  = require("./lockedSeats.service");
 const respond = require("../../helpers/respond");
 const { ErrorHandler } = require("../../helpers/error");
 
-
-
 const lockSeat = async (req,res,next)=>{
     try {
         const seatData = req.body; 
