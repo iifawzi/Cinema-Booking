@@ -9,6 +9,7 @@ const {hallsRouter} = require("../services/halls");
 const {slotsRouter} = require("../services/slots");
 const {countriesRouter} = require("../services/countries");
 const {areasRouter} = require("../services/areas");
+const {lockedSeatsRouter} = require("../services/lockedSeats");
 const isAllowed = require("../middlewares/is-allowed");
 // Routes:
 router.get("/welcome", isAuth(),isAllowed(["admin","moderator"]),(req, res) => {
@@ -25,6 +26,7 @@ router.use("/halls", hallsRouter);
 router.use("/slots", slotsRouter);
 router.use("/countries", countriesRouter);
 router.use("/areas", areasRouter);
+router.use("/lockedSeats", lockedSeatsRouter);
 
 
 module.exports = router;
