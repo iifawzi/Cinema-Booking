@@ -3,7 +3,6 @@ const router = express.Router();
 const validate = require("../../helpers/validation");
 const usersSchema = require("./users.validation");
 const usersController = require("./users.controller");
-const isAuth = require("../../middlewares/is-auth");
 
 
 

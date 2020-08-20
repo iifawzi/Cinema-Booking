@@ -11,6 +11,7 @@ const {countriesRouter} = require("../services/countries");
 const {areasRouter} = require("../services/areas");
 const {lockedSeatsRouter} = require("../services/lockedSeats");
 const {corridorsRouter} = require("../services/corridors");
+const {ticketsRouter} = require("../services/tickets");
 const isAllowed = require("../middlewares/is-allowed");
 // Routes:
 router.get("/welcome", isAuth(),isAllowed(["admin","moderator"]),(req, res) => {
@@ -29,6 +30,7 @@ router.use("/countries", countriesRouter);
 router.use("/areas", areasRouter);
 router.use("/lockedSeats", lockedSeatsRouter);
 router.use("/corridors", corridorsRouter);
+router.use("/tickets", ticketsRouter);
 
 
 module.exports = router;
