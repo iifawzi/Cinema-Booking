@@ -7,3 +7,4 @@ const {slotsModel} = require("../services/slots/index");
 const {countriesModel} = require("../services/countries/index");
 const {areasModel} = require("../services/areas/index");
 const {lockedSeatsModel} = require("../services/lockedSeats/index");
+const {corridorsModel} = require("../services/corridors/index");

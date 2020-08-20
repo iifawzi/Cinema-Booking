@@ -2303,6 +2303,123 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "corridors",
+			"item": [
+				{
+					"name": "addCorridor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjU4LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTUwMzg1LCJleHAiOjE1OTc5OTM1ODV9.9mVtCvM-7nfKMe53hwPpGl_h1R1HDS5S1PdoPvhUiF0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"hall_id\": 41,\n\"corridor_number\": 1,\n\"direction\": \"row\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/corridors/addCorridor",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"corridors",
+								"addCorridor"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addCorridor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjU4LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTUwMzg1LCJleHAiOjE1OTc5OTM1ODV9.9mVtCvM-7nfKMe53hwPpGl_h1R1HDS5S1PdoPvhUiF0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"hall_id\": 41,\n\"corridor_number\": 1,\n\"direction\": \"row\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/corridors/addCorridor",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"corridors",
+										"addCorridor"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-rAoFg2eRrByeSnsMbpwwoMOM7sw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Aug 2020 19:07:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"corridor_id\": 11,\n        \"hall_id\": 41,\n        \"corridor_number\": 1,\n        \"direction\": \"row\",\n        \"updatedAt\": \"2020-08-20T19:07:13.228Z\",\n        \"createdAt\": \"2020-08-20T19:07:13.228Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"event": [
@@ -2329,12 +2446,12 @@
 	],
 	"variable": [
 		{
-			"id": "6cf4ac4d-3186-4b7d-89f0-c541a1710343",
+			"id": "42211365-79ad-4164-a16e-7d196e6a7d75",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "1342d5bf-d76d-4700-8d13-40cda21e04ef",
+			"id": "46ace4c8-84bc-4257-9d70-ff0d09a9bf45",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}
