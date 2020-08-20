@@ -2186,6 +2186,123 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "lockedSeats",
+			"item": [
+				{
+					"name": "lockSeat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjc0LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTQ2OTU0LCJleHAiOjE1OTc5OTAxNTR9.siSWNu_CweYPz4ZiLTyOJ_kHosA5DSOtHe84I1aEZ0E"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"seat_position\": \"A1\",\n\"hall_id\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/lockedSeats/lockSeat",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"lockedSeats",
+								"lockSeat"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "lockSeat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjc0LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTQ2OTU0LCJleHAiOjE1OTc5OTAxNTR9.siSWNu_CweYPz4ZiLTyOJ_kHosA5DSOtHe84I1aEZ0E"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"seat_position\": \"A1\",\n\"slot_id\": 31\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/lockedSeats/lockSeat",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"lockedSeats",
+										"lockSeat"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-04LMbJlVwffHlHHKIXaLJU0bAbA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Aug 2020 18:09:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": null,\n        \"lockedSeat_id\": 25,\n        \"seat_position\": \"A1\",\n        \"slot_id\": 31,\n        \"updatedAt\": \"2020-08-20T18:09:29.557Z\",\n        \"createdAt\": \"2020-08-20T18:09:29.557Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"event": [
@@ -2212,12 +2329,12 @@
 	],
 	"variable": [
 		{
-			"id": "e7fd726e-28f2-4ff4-8f7b-8b01be425845",
+			"id": "6cf4ac4d-3186-4b7d-89f0-c541a1710343",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "453102f9-1d82-4e93-8deb-d42602865828",
+			"id": "1342d5bf-d76d-4700-8d13-40cda21e04ef",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}
