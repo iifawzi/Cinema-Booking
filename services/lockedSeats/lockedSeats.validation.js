@@ -10,9 +10,7 @@ const lockSeat = Joi.alternatives().try(
         seat_position: Joi.string().required(), 
         slot_id: Joi.number().required(),
     }),
-  ).messages({
-    'alternatives.base': `"a" should be a type of 'text'`,
-  });
+  );
 
 module.exports = {
     lockSeat,
