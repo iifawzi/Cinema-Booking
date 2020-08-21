@@ -93,7 +93,7 @@ const getCinemasForMovie = async (req,res,next)=>{
                         slot_id: cinema.slot_id
                     })
                 }
-m             });
+          });
 
             return respond(true,200,Object.values(sortedCinemas),res);
         }
