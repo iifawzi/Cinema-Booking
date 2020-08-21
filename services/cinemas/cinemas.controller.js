@@ -74,6 +74,8 @@ const getCinemasForMovie = async (req,res,next)=>{
                             end_time: cinema.end_time,
                             hall_name: cinema.hall_name,
                             hall_descripton: cinema.hall_description,
+                            hall_id: cinema.hall_id,
+                            slot_id: cinema.slot_id
                         }
                         ]
                     }
@@ -87,9 +89,11 @@ const getCinemasForMovie = async (req,res,next)=>{
                         end_time: cinema.end_time,
                         hall_name: cinema.hall_name,
                         hall_description: cinema.hall_description,
+                        hall_id: cinema.hall_id,
+                        slot_id: cinema.slot_id
                     })
                 }
-            });
+m             });
 
             return respond(true,200,Object.values(sortedCinemas),res);
         }

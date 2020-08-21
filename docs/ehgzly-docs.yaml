@@ -991,9 +991,13 @@ definitions:
           slots:
             - start_time: '2020-08-28T23:30:00Z'
               hall_name: VIP-1
+              slot_id: 1
+              hall_id: 12
               hall_description: The best hall in the world
             - start_time: '2020-08-28T23:30:00Z'
               hall_name: VIP-2
+              slot_id: 1
+              hall_id: 12
               hall_description: best of best
         - cinema_id: 33
           cinema_logo: logo.png
@@ -1003,6 +1007,8 @@ definitions:
           slots:
             - start_time: '2020-08-28T23:30:00Z'
               hall_name: normal3
+              slot_id: 1
+              hall_id: 12
               hall_description: best of best
    getMoviesInArea_body:
     type: "object"
