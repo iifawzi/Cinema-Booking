@@ -1048,7 +1048,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"left_chairs\": 30,\n                \"right_chairs\": 30,\n                \"center_chairs\": 40,\n                \"hall_status\": false\n}",
+							"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"rowsNumber\": 30,\n                \"columnsNumber\": 30,\n                \"hall_status\": false\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1081,7 +1081,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"left_chairs\": 30,\n                \"right_chairs\": 30,\n                \"center_chairs\": 40,\n                \"hall_status\": false\n}",
+									"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"rowsNumber\": 30,\n                \"columnsNumber\": 30,\n                \"hall_status\": false\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1142,7 +1142,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": 74,\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"left_chairs\": 30,\n        \"right_chairs\": 30,\n        \"center_chairs\": 40,\n        \"hall_status\": false,\n        \"cinema_id\": 143\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": 74,\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"rowsNumber\": 30,\n        \"columnsNumber\": 30,\n        \"hall_status\": false,\n        \"cinema_id\": 143\n    }\n}"
 						}
 					]
 				},
@@ -2420,6 +2420,123 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "tickets",
+			"item": [
+				{
+					"name": "addTicket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjM4LCJyb2xlIjoidXNlciIsImlhdCI6MTU5Nzk2NTM3NCwiZXhwIjoxNTk4MDA4NTc0fQ.p9Pv0GXemcSC9NMGoMAOIJCZdA20t2HKKZFSG9KQGIo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"slot_id\": 37,\n\"seat_position\": \"A9\",\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/tickets/addTicket",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"addTicket"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addTicket",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjM4LCJyb2xlIjoidXNlciIsImlhdCI6MTU5Nzk2NTM3NCwiZXhwIjoxNTk4MDA4NTc0fQ.p9Pv0GXemcSC9NMGoMAOIJCZdA20t2HKKZFSG9KQGIo"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"slot_id\": 37,\n\"seat_position\": \"A9\",\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/tickets/addTicket",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"tickets",
+										"addTicket"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "229"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e5-73/QHMaVlO5H+6oMFD4s1hevzTY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Aug 2020 23:16:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"ticket_id\": 8,\n        \"slot_id\": 37,\n        \"seat_position\": \"A9\",\n        \"reservation_date\": \"2020-06-01T20:00:00.000Z\",\n        \"user_id\": 38,\n        \"updatedAt\": \"2020-08-20T23:16:35.309Z\",\n        \"createdAt\": \"2020-08-20T23:16:35.309Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"event": [
@@ -2446,12 +2563,12 @@
 	],
 	"variable": [
 		{
-			"id": "42211365-79ad-4164-a16e-7d196e6a7d75",
+			"id": "74307ed9-77ed-4083-9fb6-c9a8f1610235",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "46ace4c8-84bc-4257-9d70-ff0d09a9bf45",
+			"id": "34bd1d36-f536-4b6b-8c47-81ad22ce7343",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

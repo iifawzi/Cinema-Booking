@@ -73,9 +73,8 @@ describe("/api/lockedSeats", async()=>{
                 .send({
                     "hall_name": "VIP-1", 
                     "hall_description": "The best hall in the world",
-                    "left_chairs": 30,
-                    "right_chairs": 30,
-                    "center_chairs": 40,
+                    "rowsNumber": 30,
+                    "columnsNumber": 30,
                     "hall_status": false
                 });
             expect(res.statusCode).equals(201);
@@ -172,9 +171,8 @@ describe("/api/lockedSeats", async()=>{
                 .send({
                     "hall_name": "VIP-1", 
                     "hall_description": "The best hall in the world",
-                    "left_chairs": 30,
-                    "right_chairs": 30,
-                    "center_chairs": 40,
+                    "rowsNumber": 30,
+                    "columnsNumber": 30,
                     "hall_status": false
                 });
             expect(res.statusCode).equals(201);

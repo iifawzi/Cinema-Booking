@@ -23,20 +23,13 @@ const hallsModel = db.define("halls", {
             key: 'cinema_id'
           },
     },
-    left_chairs: {
+    rowsNumber: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        defaultValue: 0,
     },
-    right_chairs: {
+    columnsNumber: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        defaultValue: 0,
-    },
-    center_chairs: {        
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 0,
     },
     hall_status: {
         type: Sequelize.BOOLEAN,
