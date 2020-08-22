@@ -30,6 +30,13 @@ const lockedSeatsModel = db.define("lockedSeats",{
         type: Sequelize.STRING,
         allowNull: false
     }, 
+}, 
+{
+    indexes: [
+        {
+            fields: ["slot_id","hall_id","seat_position"],
+        }
+    ]
 });
 
 
