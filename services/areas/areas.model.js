@@ -24,7 +24,13 @@ const areasModel = db.define("areas", {
         type: Sequelize.STRING, 
         allowNull: false
     }
-
+}, 
+{
+    indexes: [
+        {
+            fields: ["country_id", "area_ar", "area_en"],
+        }
+    ]
 })
 
 module.exports = areasModel;

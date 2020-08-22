@@ -54,6 +54,9 @@ const slotsModel = db.define("slots", {
         {
             fields: ["movie_id", "hall_id"],
         },
+        {
+            fields: ["slot_status"]
+        }
     ]
 });
 
