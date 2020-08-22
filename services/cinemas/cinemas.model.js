@@ -72,6 +72,9 @@ const cinemasModel = db.define("cinemas", {
         {
             fields: ["cinema_status", "area_id"],
         },
+        {
+            fields: ["area_id"],
+        }
     ]
 });
 
