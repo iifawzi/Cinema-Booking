@@ -42,7 +42,7 @@ exports.checkIfBusy = async (hall_id, start_date,start_time, end_time)=>{
                     ]}
             ]},
     ]
-    }});
+    }, attributes: ["slot_id"]});
     if (slot){
         return slot.dataValues;
     }else {
