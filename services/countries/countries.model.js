@@ -15,7 +15,13 @@ const countriesModel = db.define("countries", {
         type: Sequelize.STRING, 
         allowNull: false
     }
-
+}, 
+{
+    indexes: [
+        {
+            fields: ["country_ar", "country_en"],
+        }
+    ]
 })
 
 module.exports = countriesModel;
