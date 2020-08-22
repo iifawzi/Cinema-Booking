@@ -3,7 +3,7 @@ const { Op } = require("sequelize");
 const {db} = require("../../startup/db");
 const Sequelize = require("sequelize");
 exports.getArea = async ({country_id,area_ar, area_en})=>{
-    const area = await areasModel.findOne({where:{  [Op.and]: [{country_id}, {[Op.or]: [{area_ar}, {area_en}]}] }});
+    const area = await areasModel.findOne({where:{  [Op.and]: [{country_id}, {[Op.or]: [{area_ar}, {area_en}]}] }, attributes: ['area_id']});
     if (area){
         return area.dataValues;
     }else {
