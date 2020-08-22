@@ -6,14 +6,14 @@ exports.checkIfBusy = async (hall_id, start_date,start_time, end_time)=>{
     console.log(start_time);
     const slot = await slotsModel.findOne({where:{
         [Op.and]:[
+            {hall_id: {
+                [Op.eq]: hall_id,
+            }},
             {start_date: {
             [Op.lte]: start_date,
         }},
             {end_date: {
             [Op.gte]: start_date,
-        }},
-        {hall_id: {
-            [Op.eq]: hall_id,
         }},
         {[Op.or]: [
             {[Op.and]: [ // get any slot that will start at  [ entered start_time =< start_time < entered end_time  ] 

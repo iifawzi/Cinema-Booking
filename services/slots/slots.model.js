@@ -49,7 +49,7 @@ const slotsModel = db.define("slots", {
 }, {
     indexes: [
         {
-            fields: ["start_date", "end_date", "hall_id", "start_time", "end_time"],
+            fields: ["hall_id","start_date", "end_date", "start_time", "end_time"],
         },
         {
             fields: ["movie_id", "hall_id"],
