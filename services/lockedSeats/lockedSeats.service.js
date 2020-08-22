@@ -3,7 +3,7 @@ const {Op} = require("sequelize");
 
 // to check if seat is already locked (using slot_id only or hall_id only)
 exports.isLocked = async (seatData)=>{
-    const isLocked = await lockedSeatsModel.findOne({where: seatData});
+    const isLocked = await lockedSeatsModel.findOne({where: seatData, attributes: ["lockedSeat_id"]});
     if (isLocked){
         return isLocked.dataValues;
     }else {
@@ -13,7 +13,7 @@ exports.isLocked = async (seatData)=>{
 
 // to check if seat is locked (checking using both hall and slot id) will be used when booking new seat
 exports.isSeatLocked = async (slot_id, hall_id, seat_position)=>{
-    const isLocked = await lockedSeatsModel.findOne({where: {[Op.or]: [{slot_id}, {hall_id}], seat_position}});
+    const isLocked = await lockedSeatsModel.findOne({where: {[Op.or]: [{slot_id}, {hall_id}], seat_position}, attributes: ["lockedSeat_id"]});
     if (isLocked){
         return isLocked.dataValues;
     }else {
