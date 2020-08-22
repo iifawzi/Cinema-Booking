@@ -39,7 +39,7 @@ const toggleSlotStatus = async (req,res,next)=>{
     }
 }
 
-const getSlotSeats = async (req,res,next)=>{
+const getSlotSeats = async (req,res,next)=>{ // it's not tested in the slots service, the last function wchich is slotSeats is tested using stress test
     try {
         const requestData = req.body;
         const hall = getHall(['rowsNumber', 'columnsNumber'], requestData.hall_id); // get rows number and columns number for specific hall.
