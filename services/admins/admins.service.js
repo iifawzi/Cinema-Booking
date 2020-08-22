@@ -3,7 +3,7 @@ const {encryptPassword} = require("../../helpers/bcrypt");
 
 // To check if username is already exists or not
 exports.isAdminExists = async (username)=>{
-    const admin = await adminsModel.findOne({where:{username}});
+    const admin = await adminsModel.findOne({where:{username}, attributes: ['username', "admin_id","password"]});
     if(admin){
         return admin.dataValues;
     }else {
