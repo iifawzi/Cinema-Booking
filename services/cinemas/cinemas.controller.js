@@ -20,13 +20,7 @@ const add_cinema = async (req,res,next)=>{
         const cinema = await cinemasServices.addCinema(cinemaData);
         if (cinema){
             const getCinemaData = await cinemasServices.getCinemaData(cinemaData.username);
-            delete getCinemaData.createdAt;
-            delete getCinemaData.updatedAt;
             delete getCinemaData.refresh_token;
-            delete getCinemaData.area_id;
-            delete getCinemaData.password;
-            delete getCinemaData.latitude; // not used untill now.
-            delete getCinemaData.longitude; // not used untill now.
             return respond(true,201,getCinemaData,res);
         }
     }catch(err){
@@ -43,12 +37,6 @@ const signin = async (req,res,next)=>{
         }
         const passwordIsSame = await decryptPassword(password,cinemaUser.password);
         if (passwordIsSame){
-            delete cinemaUser.updatedAt;
-            delete cinemaUser.createdAt;
-            delete cinemaUser.password; 
-            delete cinemaUser.area_id;
-            delete cinemaUser.latitude; // not used untill now.
-            delete cinemaUser.longitude; // not used untill now.
             const payLoad = cinemaTokenPayLoad(cinemaUser.username,cinemaUser.cinema_id,"cinema");
             const token = createToken(payLoad);
             return respond(true,200,{...cinemaUser,token},res);
