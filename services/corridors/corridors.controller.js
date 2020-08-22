@@ -5,7 +5,7 @@ const { ErrorHandler } = require("../../helpers/error");
 const addCorridor = async (req,res,next)=>{
     try {
         const corridorData = req.body;
-        const isExist = await corridorsServices.getCorridor(corridorData);
+        const isExist = await corridorsServices.getCorridor(corridorData.hall_id,corridorData.corridor_number,corridorData.direction);
         if (isExist) {
             throw new ErrorHandler(409, "This Corridor is already exist");
         }

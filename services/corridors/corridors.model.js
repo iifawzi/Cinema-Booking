@@ -25,6 +25,13 @@ const corridorsModel = db.define("corridors",{
         type: Sequelize.INTEGER,
         allowNull: false
     }, 
+}, 
+{
+    indexes: [
+        {
+            fields: ["hall_id","corridor_number","direction"]
+        }
+    ]
 });
 
 
