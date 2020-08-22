@@ -1,7 +1,7 @@
 const  countriesModel  = require("./countries.model");
 const { Op } = require("sequelize");
 exports.getCountry = async ({country_ar, country_en})=>{
-    const country = await countriesModel.findOne({where:{  [Op.or]: [ { country_ar },{ country_en }]}});
+    const country = await countriesModel.findOne({where:{  [Op.or]: [ { country_ar },{ country_en }]}, attributes: ["country_id"]});
     if (country){
         return country.dataValues;
     }else {
