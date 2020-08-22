@@ -8,6 +8,17 @@ exports.getHallByCinemaAndName = async (cinema_id, hall_name)=>{
         return hall;
     }
 };
+
+// to get hall's data: 
+exports.getHall = async (attributes, hall_id)=>{
+    const hall = await hallsModel.findOne({where: {hall_id}, attributes: [...attributes]});
+    if (hall){
+        return hall.dataValues;
+    }else {
+        return hall;
+    }
+}
+
 // To Add a hall: 
 exports.createHall = async (hallData)=>{
     const hall = await hallsModel.create(hallData);

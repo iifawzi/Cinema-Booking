@@ -1,8 +1,9 @@
 const hallsModel = require("./halls.model");
 const hallsRouter = require("./halls.route");
-const {deleteHall} = require("./halls.service");
+const {deleteHall, getHall} = require("./halls.service");
 module.exports = {
     hallsModel,
     hallsRouter,
-    deleteHall
+    deleteHall,
+    getHall
 };

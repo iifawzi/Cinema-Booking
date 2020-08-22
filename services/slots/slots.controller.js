@@ -1,7 +1,12 @@
 const slotsServices  = require("./slots.service");
 const respond = require("../../helpers/respond");
+const lettersGenerator = require("../../helpers/letters");
+const seatsGenerator = require("../../helpers/seats");
 const { ErrorHandler } = require("../../helpers/error");
-
+const {getHall} = require("../halls");
+const {getLockedSeats} = require("../lockedSeats");
+const {getCorridors} = require("../corridors");
+const {getTickets} = require("../tickets");
 const add_slot = async (req,res,next)=>{
     try {
     const slotData = req.body;
@@ -34,8 +39,34 @@ const toggleSlotStatus = async (req,res,next)=>{
     }
 }
 
+const getSlotSeats = async (req,res,next)=>{
+    try {
+        const requestData = req.body;
+        const hall = getHall(['rowsNumber', 'columnsNumber'], requestData.hall_id);
+        const locked =  getLockedSeats(['seat_position'], requestData.hall_id, requestData.slot_id);
+        const corridors = getCorridors(['direction', 'corridor_number'], requestData.hall_id);
+        const tickets = getTickets(['seat_position'], requestData.slot_id, requestData.reservation_date);
+        Promise.all([hall,locked,corridors,tickets]).then(seats=>{
+            const {rowsNumber, columnsNumber} = seats[0];
+            const lockedSeats = seats[1].map(seat=>seat.seat_position);
+            const rowsCorridors = seats[2].filter(corridor=>corridor.direction === 'row').map(rowCorridor=>rowCorridor.corridor_number);
+            const columnsCorridors = seats[2].filter(corridor=>corridor.direction === 'column').map(columnCorridor=>columnCorridor.corridor_number);
+            const bookedSeats = seats[3].map(seat=>seat.seat_position);
+            const letters = lettersGenerator(rowsNumber);
+            const slotSeats = seatsGenerator(letters,rowsNumber,columnsNumber,rowsCorridors,columnsCorridors,bookedSeats,lockedSeats);
+            return respond(true,200,slotSeats,res);
+
+        }).catch(err=>{
+            next(err);
+        })
+    }catch(err){
+        next(err);
+    }
+}
+
 
 module.exports = {
     add_slot,
-    toggleSlotStatus
+    toggleSlotStatus, 
+    getSlotSeats
 }

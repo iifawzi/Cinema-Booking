@@ -818,6 +818,7 @@ definitions:
     type: "object"
     example: 
       slot_id: 6
+      hall_id: 10
       seat_position: A1
       reservation_date: '2020-06-07'
    addTicket_response:

@@ -9,6 +9,13 @@ exports.getCorridor = async (corridorData)=>{
         return corridor;
     }
 }
+
+// to get corridors of specific hall
+exports.getCorridors = async (attributes,hall_id)=>{
+    const corridors = await corridorsModel.findAll({where: {hall_id}, attributes: [...attributes], raw: true});
+    return corridors;
+}
+
 // to add a new corridor
 exports.addCorridor = async(corridorData)=>{
     const addedCorridor = await corridorsModel.create(corridorData);
