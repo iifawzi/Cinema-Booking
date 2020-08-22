@@ -2,7 +2,7 @@ const  corridorsModel  = require("./corridors.model");
 
 // to get the corridor data mostly used to check if already exists when attempt to add a new corridor: 
 exports.getCorridor = async (hall_id,corridor_number,direction)=>{
-    const corridor = await corridorsModel.findOne({where: {hall_id,corridor_number,direction}});
+    const corridor = await corridorsModel.findOne({where: {hall_id,corridor_number,direction}, attributes: ["corridor_id"]});
     if (corridor){
         return corridor.dataValues
     }else {
