@@ -17,12 +17,6 @@ const signup = async (req,res,next)=>{
         const createdUser = await usersServices.createNewUser(userData);
         if (createdUser){
             const getUserData = await usersServices.getUserData(userData.phone_number);
-            delete getUserData.updatedAt;
-            delete getUserData.createdAt;
-            delete getUserData.blocked; 
-            delete getUserData.area_id; 
-            delete getUserData.latitude; // not used untill now.
-            delete getUserData.longitude; // not used untill now.
             const payLoad = userTokenPayLoad(getUserData.phone_number, getUserData.user_id,"user")
             const token = createToken(payLoad);
             return respond(true,201,{...getUserData,token},res);
@@ -42,12 +36,6 @@ const signin = async (req,res,next)=>{
         if (userExist.blocked === true) {
             throw new ErrorHandler(403,"User with this Phone number is blocked");
         }
-        delete userExist.updatedAt;
-        delete userExist.createdAt;
-        delete userExist.blocked; 
-        delete userExist.area_id; 
-        delete userExist.latitude; // not used untill now.
-        delete userExist.longitude; // not used untill now.
         const payLoad = userTokenPayLoad(userExist.phone_number, userExist.user_id,"user")
         const token = createToken(payLoad);
         return respond(true,200,{...userExist,token},res);
