@@ -1,7 +1,7 @@
 const ticketsModel = require("./tickets.model");
 
-exports.getTicket = async (ticketData)=>{
-    const ticket = await ticketsModel.findOne({where: ticketData});
+exports.getTicket = async (slot_id,reservation_date,seat_position)=>{
+    const ticket = await ticketsModel.findOne({where: {slot_id,reservation_date,seat_position}});
     if (ticket){
         return ticket.dataValues;
     }else {

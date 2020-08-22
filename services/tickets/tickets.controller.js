@@ -10,7 +10,7 @@ const addTicket = async (req,res,next)=>{
             throw new ErrorHandler(409,"This seat is locked");
         }
         delete ticketData.hall_id;
-        const isExist = await ticketsServices.getTicket(ticketData)
+        const isExist = await ticketsServices.getTicket(ticketData.slot_id, ticketData.reservation_date,ticketData.seat_position);
         if (isExist){
             throw new ErrorHandler(409,"This seat is already booked");
         }

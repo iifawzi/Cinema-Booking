@@ -33,6 +33,12 @@ const ticketsModel = db.define("tickets", {
         type: Sequelize.DATE,
         allowNull: false,
     }
+}, {
+    indexes: [
+        {
+            fields: ["slot_id", "reservation_date","seat_position"],
+        }
+    ],
 });
 
 module.exports = ticketsModel;
