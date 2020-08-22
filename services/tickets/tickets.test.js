@@ -116,6 +116,7 @@ describe("/api/tickets", async()=>{
             .send({
                 "seat_position": "A1",
                 "slot_id": slotId,
+                "hall_id": hallId,
                 "reservation_date": "2020-07-25"
             });
             expect(res.statusCode).equals(201);
