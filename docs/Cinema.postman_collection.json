@@ -1375,6 +1375,117 @@
 					]
 				},
 				{
+					"name": "getSlotSeats",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjE0LCJyb2xlIjoidXNlciIsImlhdCI6MTU5ODEwMDY4MCwiZXhwIjoxNTk4MTQzODgwfQ.3R95mrnDlul5dcplyvHlfNzlJaprkwB8KHIIj6ERCME"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hall_id\": 23,\n    \"slot_id\": 13,\n    \"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/slots/getSlotSeats",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"slots",
+								"getSlotSeats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getSlotSeats",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjE0LCJyb2xlIjoidXNlciIsImlhdCI6MTU5ODEwMDY4MCwiZXhwIjoxNTk4MTQzODgwfQ.3R95mrnDlul5dcplyvHlfNzlJaprkwB8KHIIj6ERCME"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"hall_id\": 23,\n    \"slot_id\": 13,\n    \"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/slots/getSlotSeats",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"slots",
+										"getSlotSeats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "481"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e1-e3XUfwHvCi1IolnNs+Qktst/HHE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 22 Aug 2020 14:37:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"key\": \"A\",\n            \"seats\": [\n                \"A1\",\n                0,\n                0,\n                \"A2\",\n                0\n            ]\n        },\n        \"\",\n        {\n            \"key\": \"B\",\n            \"seats\": [\n                \"B1\",\n                \"B2\",\n                0,\n                \"B3\",\n                \"B4\"\n            ]\n        },\n        {\n            \"key\": \"C\",\n            \"seats\": [\n                \"C1\",\n                \"C2\",\n                0,\n                \"C3\",\n                \"C4\"\n            ]\n        },\n        {\n            \"key\": \"D\",\n            \"seats\": [\n                \"D1\",\n                \"D2\",\n                0,\n                \"D3\",\n                \"D4\"\n            ]\n        },\n        {\n            \"key\": \"E\",\n            \"seats\": [\n                \"E1\",\n                \"E2\",\n                0,\n                \"E3\",\n                \"E4\"\n            ]\n        },\n        {\n            \"key\": \"F\",\n            \"seats\": [\n                \"F1\",\n                \"F2\",\n                0,\n                \"F3\",\n                \"F4\"\n            ]\n        },\n        {\n            \"key\": \"G\",\n            \"seats\": [\n                \"G1\",\n                \"G2\",\n                0,\n                \"G3\",\n                \"G4\"\n            ]\n        },\n        {\n            \"key\": \"H\",\n            \"seats\": [\n                \"H1\",\n                \"H2\",\n                0,\n                \"H3\",\n                \"H4\"\n            ]\n        },\n        {\n            \"key\": \"I\",\n            \"seats\": [\n                \"I1\",\n                \"I2\",\n                0,\n                \"I3\",\n                \"I4\"\n            ]\n        },\n        {\n            \"key\": \"J\",\n            \"seats\": [\n                \"J1\",\n                \"J2\",\n                0,\n                \"J3\",\n                \"J4\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
 					"name": "toggleSlotStatus",
 					"request": {
 						"method": "PATCH",
@@ -2432,12 +2543,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjM4LCJyb2xlIjoidXNlciIsImlhdCI6MTU5Nzk2NTM3NCwiZXhwIjoxNTk4MDA4NTc0fQ.p9Pv0GXemcSC9NMGoMAOIJCZdA20t2HKKZFSG9KQGIo"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjE0LCJyb2xlIjoidXNlciIsImlhdCI6MTU5ODEwMDY4MCwiZXhwIjoxNTk4MTQzODgwfQ.3R95mrnDlul5dcplyvHlfNzlJaprkwB8KHIIj6ERCME"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"slot_id\": 37,\n\"seat_position\": \"A9\",\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+							"raw": "{\n\"slot_id\": 13,\n\"hall_id\": 1,\n\"seat_position\": \"A5\",\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2470,7 +2581,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"slot_id\": 37,\n\"seat_position\": \"A9\",\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+									"raw": "{\n\"slot_id\": 13,\n\"hall_id\": 1,\n\"seat_position\": \"A5\",\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2563,12 +2674,12 @@
 	],
 	"variable": [
 		{
-			"id": "d474847c-3773-4508-8d1a-7babcfb6fe51",
+			"id": "0ebcc2b0-dc16-4651-ad25-a07d3433f24c",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "6b3c5b82-cad6-4c37-bcc2-b474759f1d8d",
+			"id": "20e7a377-42f3-46e8-b906-724d2fae4210",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}
