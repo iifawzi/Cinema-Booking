@@ -1,7 +1,7 @@
 const  hallsModel  = require("./halls.model");
 // To check if hall's name exists by cinema_id: 
 exports.getHallByCinemaAndName = async (cinema_id, hall_name)=>{
-    const hall = await hallsModel.findOne({where:{cinema_id,hall_name}});
+    const hall = await hallsModel.findOne({where:{cinema_id,hall_name}, attributes: ["hall_id"]});
     if (hall){
         return hall.dataValues;
     }else {
