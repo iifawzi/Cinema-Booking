@@ -21,6 +21,7 @@ const add_cinema = async (req,res,next)=>{
         if (cinema){
             const getCinemaData = await cinemasServices.getCinemaData(cinemaData.username);
             delete getCinemaData.refresh_token;
+            delete getCinemaData.password;
             return respond(true,201,getCinemaData,res);
         }
     }catch(err){
@@ -37,6 +38,7 @@ const signin = async (req,res,next)=>{
         }
         const passwordIsSame = await decryptPassword(password,cinemaUser.password);
         if (passwordIsSame){
+            delete cinemaUser.password;
             const payLoad = cinemaTokenPayLoad(cinemaUser.username,cinemaUser.cinema_id,"cinema");
             const token = createToken(payLoad);
             return respond(true,200,{...cinemaUser,token},res);
