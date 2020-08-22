@@ -13,7 +13,7 @@ const sequelize = new Sequelize(
 
 const initDatabase = async ()=>{
     try {
-        // await sequelize.sync({force:true}); // to force the tables to update " when ( add / delete / update ) models"
+        // await sequelize.sync({force:true}); // to force the tables to update " when ( add / delete / update ) models" `
         await sequelize.sync();
         console.log("Connection has been established successfully.");
     } catch (error) {
