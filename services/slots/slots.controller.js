@@ -42,10 +42,10 @@ const toggleSlotStatus = async (req,res,next)=>{
 const getSlotSeats = async (req,res,next)=>{
     try {
         const requestData = req.body;
-        const hall = getHall(['rowsNumber', 'columnsNumber'], requestData.hall_id);
-        const locked =  getLockedSeats(['seat_position'], requestData.hall_id, requestData.slot_id);
-        const corridors = getCorridors(['direction', 'corridor_number'], requestData.hall_id);
-        const tickets = getTickets(['seat_position'], requestData.slot_id, requestData.reservation_date);
+        const hall = getHall(['rowsNumber', 'columnsNumber'], requestData.hall_id); // get rows number and columns number for specific hall.
+        const locked =  getLockedSeats(['seat_position'], requestData.hall_id, requestData.slot_id); // get all locked seats for the slot and the hall
+        const corridors = getCorridors(['direction', 'corridor_number'], requestData.hall_id); // get the corridors for both directions row and column
+        const tickets = getTickets(['seat_position'], requestData.slot_id, requestData.reservation_date); // get the booked seats from the tickets model
         Promise.all([hall,locked,corridors,tickets]).then(seats=>{
             const {rowsNumber, columnsNumber} = seats[0];
             const lockedSeats = seats[1].map(seat=>seat.seat_position);
@@ -55,7 +55,6 @@ const getSlotSeats = async (req,res,next)=>{
             const letters = lettersGenerator(rowsNumber);
             const slotSeats = seatsGenerator(letters,rowsNumber,columnsNumber,rowsCorridors,columnsCorridors,bookedSeats,lockedSeats);
             return respond(true,200,slotSeats,res);
-
         }).catch(err=>{
             next(err);
         })
