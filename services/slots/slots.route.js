@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post("/addSlot", isAuth(), isAllowed(["cinema"]), validate(slotsSchemas.addSlot,"body"), slotsController.add_slot);
 router.patch("/toggleSlotStatus", isAuth(), isAllowed(['cinema']), validate(slotsSchemas.toggleSlotStatus, 'body'), slotsController.toggleSlotStatus)
-router.post("/getSlotSeats", isAuth(), isAllowed(['user']), validate(slotsSchemas.getSlotSeats, 'body'), slotsController.getSlotSeats)
+router.post("/getSlotSeats", validate(slotsSchemas.getSlotSeats, 'body'), slotsController.getSlotSeats)
 
 
 module.exports = router;
