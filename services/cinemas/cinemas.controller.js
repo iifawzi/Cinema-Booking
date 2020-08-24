@@ -70,13 +70,13 @@ const getCinemasForMovie = async (req,res,next)=>{
                         }
                         ]
                     }
-                    // delete sortedCinemas[cinema.cinema_id].start_time;
-                    // delete sortedCinemas[cinema.cinema_id].end_time;
-                    // delete sortedCinemas[cinema.cinema_id].hall_name;
-                    // delete sortedCinemas[cinema.cinema_id].hall_description;
-                    // delete sortedCinemas[cinema.cinema_id].hall_id;
-                    // delete sortedCinemas[cinema.cinema_id].slot_id;
-                    // delete sortedCinemas[cinema.cinema_id].ticket_price;
+                    delete sortedCinemas[cinema.cinema_id].start_time;
+                    delete sortedCinemas[cinema.cinema_id].end_time;
+                    delete sortedCinemas[cinema.cinema_id].hall_name;
+                    delete sortedCinemas[cinema.cinema_id].hall_description;
+                    delete sortedCinemas[cinema.cinema_id].hall_id;
+                    delete sortedCinemas[cinema.cinema_id].slot_id;
+                    delete sortedCinemas[cinema.cinema_id].ticket_price;
                 }else {
                     sortedCinemas[cinema.cinema_id].slots.push({
                         start_time: cinema.start_time,
