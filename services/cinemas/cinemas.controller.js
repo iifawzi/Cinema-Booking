@@ -62,6 +62,7 @@ const getCinemasForMovie = async (req,res,next)=>{
                         slots: [{
                             start_time: cinema.start_time,
                             end_time: cinema.end_time,
+                            ticket_price: cinema.ticket_price,
                             hall_name: cinema.hall_name,
                             hall_descripton: cinema.hall_description,
                             hall_id: cinema.hall_id,
@@ -73,10 +74,14 @@ const getCinemasForMovie = async (req,res,next)=>{
                     delete sortedCinemas[cinema.cinema_id].end_time;
                     delete sortedCinemas[cinema.cinema_id].hall_name;
                     delete sortedCinemas[cinema.cinema_id].hall_description;
+                    delete sortedCinemas[cinema.cinema_id].hall_id;
+                    delete sortedCinemas[cinema.cinema_id].slot_id;
+                    delete sortedCinemas[cinema.cinema_id].ticket_price;
                 }else {
                     sortedCinemas[cinema.cinema_id].slots.push({
                         start_time: cinema.start_time,
                         end_time: cinema.end_time,
+                        ticket_price: cinema.ticket_price,
                         hall_name: cinema.hall_name,
                         hall_description: cinema.hall_description,
                         hall_id: cinema.hall_id,

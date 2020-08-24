@@ -1154,6 +1154,7 @@ definitions:
      end_date: '2020-07-30'
      start_time: '23:30:00'
      end_time: '23:55:00'
+     ticket_price: 150
      slot_status: false
    addSlot_response:
     type: "object"
@@ -1168,6 +1169,7 @@ definitions:
         end_date: '2020-07-30'
         start_time: '23:30:00'
         end_time: '23:55:00'
+        ticket_price: 150
         slot_status: false
    addHall_body:
     type: "object"
