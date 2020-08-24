@@ -25,6 +25,10 @@ const slotsModel = db.define("slots", {
           },
           onDelete:"CASCADE"
     },
+    ticket_price: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    },
     start_date: {
         type: Sequelize.DATEONLY,
         allowNull: false,

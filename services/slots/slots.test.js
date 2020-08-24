@@ -14,16 +14,12 @@ describe("/api/slots", async()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
             const token = createToken({username: "crownn", cinema_id: 1,role:"cinema"});
             const res = await request(app)
-                .post("/api/halls/addHall")
+                .post("/api/slots/addSlot")
                 .set({authorization: "Bearer "+token})
                 .send({
                     "movie_id": 1,
                     "hall_id": 1,
-                    "hall_description": "The best hall in the world",
                     "start_date": "2020-07-24",
-                    "end_date": "2020-07-30",
-                    "start_time": "23:30:00",
-                    "hall_status": false
                 });
             expect(res.statusCode).equals(400);
         });
@@ -99,6 +95,7 @@ describe("/api/slots", async()=>{
                     "end_date": "2020-07-30",
                     "start_time": "23:30:00",
                     "end_time": "23:55:00",
+                    "ticket_price": 150,
                     "slot_status": false
                 });
             expect(res.statusCode).equals(201);
@@ -181,6 +178,7 @@ describe("/api/slots", async()=>{
                     "end_date": "2020-07-30",
                     "start_time": "21:00:00",
                     "end_time": "22:00:00",
+                    "ticket_price": 150,
                     "slot_status": false
                 });
             expect(res.statusCode).equals(201);
@@ -196,6 +194,7 @@ describe("/api/slots", async()=>{
                     "end_date": "2020-07-30",
                     "start_time": "21:30:00",
                     "end_time": "23:00:00",
+                    "ticket_price": 150,
                     "slot_status": false
                 });
             expect(res.statusCode).equals(409);
@@ -209,6 +208,7 @@ describe("/api/slots", async()=>{
                 "end_date": "2020-07-30",
                 "start_time": "19:00:00",
                 "end_time": "23:30:00",
+                "ticket_price": 150,
                 "slot_status": false
             });
         expect(res.statusCode).equals(409);
@@ -222,6 +222,7 @@ describe("/api/slots", async()=>{
                 "end_date": "2020-07-30",
                 "start_time": "19:00:00",
                 "end_time": "23:00:00",
+                "ticket_price": 150,
                 "slot_status": false
             });
         expect(res.statusCode).equals(409);
@@ -326,6 +327,7 @@ describe("/api/slots", async()=>{
                     "end_date": "2020-07-30",
                     "start_time": "21:30:00",
                     "end_time": "23:00:00",
+                    "ticket_price": 150,
                     "slot_status": false
                 });
             const slotId = res.body.data.slot_id;

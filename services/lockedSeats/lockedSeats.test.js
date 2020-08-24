@@ -102,6 +102,7 @@ describe("/api/lockedSeats", async()=>{
                     "end_date": "2020-07-30",
                     "start_time": "23:30:00",
                     "end_time": "23:55:00",
+                    "ticket_price": 150,
                     "slot_status": false
                 });
             expect(res.statusCode).equals(201);
@@ -200,6 +201,7 @@ describe("/api/lockedSeats", async()=>{
                     "end_date": "2020-07-30",
                     "start_time": "23:30:00",
                     "end_time": "23:55:00",
+                    "ticket_price": 150,
                     "slot_status": false
                 });
             expect(res.statusCode).equals(201);
