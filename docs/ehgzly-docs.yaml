@@ -1105,11 +1105,13 @@ definitions:
               slot_id: 1
               hall_id: 12
               hall_description: The best hall in the world
+              ticket_price: 150
             - start_time: '2020-08-28T23:30:00Z'
               hall_name: VIP-2
               slot_id: 1
               hall_id: 12
               hall_description: best of best
+              ticket_price: 150
         - cinema_id: 33
           cinema_logo: logo.png
           cinema_description: the best in thew world
@@ -1121,6 +1123,7 @@ definitions:
               slot_id: 1
               hall_id: 12
               hall_description: best of best
+              ticket_price: 150
    getMoviesInArea_body:
     type: "object"
     example: 

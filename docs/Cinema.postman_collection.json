@@ -914,7 +914,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 32,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-1\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"hall_description\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        },\n        {\n            \"cinema_id\": 33,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"normal3\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        }\n    ]\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 32,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-1\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"ticket_price\": 150,\n                    \"hall_description\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"ticket_price\": 150,\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        },\n        {\n            \"cinema_id\": 33,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"normal3\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"ticket_price\": 150,\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -1276,7 +1276,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"movie_id\": 1,\n    \"hall_id\": 1,\n    \"start_date\": \"2020-07-24\",\n    \"end_date\": \"2020-07-30\",\n    \"start_time\": \"23:30:00\",\n    \"end_time\": \"23:55:00\",\n    \"slot_status\": false\n}",
+							"raw": "{\n    \"movie_id\": 1,\n    \"hall_id\": 1,\n    \"start_date\": \"2020-07-24\",\n    \"end_date\": \"2020-07-30\",\n    \"start_time\": \"23:30:00\",\n    \"end_time\": \"23:55:00\",\n    \"ticket_price\": 150,\n    \"slot_status\": false\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1309,7 +1309,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"movie_id\": 1,\n    \"hall_id\": 1,\n    \"start_date\": \"2020-07-24\",\n    \"end_date\": \"2020-07-30\",\n    \"start_time\": \"23:30:00\",\n    \"end_time\": \"23:55:00\",\n    \"slot_status\": false\n}",
+									"raw": "{\n    \"movie_id\": 1,\n    \"hall_id\": 1,\n    \"start_date\": \"2020-07-24\",\n    \"end_date\": \"2020-07-30\",\n    \"start_time\": \"23:30:00\",\n    \"end_time\": \"23:55:00\",\n    \"ticket_price\": 150,\n    \"slot_status\": false\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1370,7 +1370,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"slot_id\": 22,\n        \"movie_id\": 1,\n        \"hall_id\": 1,\n        \"start_date\": \"2020-07-24\",\n        \"end_date\": \"2020-07-30\",\n        \"start_time\": \"23:30:00\",\n        \"end_time\": \"23:55:00\",\n        \"slot_status\": false\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"slot_id\": 22,\n        \"movie_id\": 1,\n        \"hall_id\": 1,\n        \"start_date\": \"2020-07-24\",\n        \"end_date\": \"2020-07-30\",\n        \"start_time\": \"23:30:00\",\n        \"ticket_price\": 150,\n        \"end_time\": \"23:55:00\",\n        \"slot_status\": false\n    }\n}"
 						}
 					]
 				},
@@ -2674,12 +2674,12 @@
 	],
 	"variable": [
 		{
-			"id": "0ebcc2b0-dc16-4651-ad25-a07d3433f24c",
+			"id": "4c3fcf74-4c5b-4007-9215-c4c809cf60cc",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "20e7a377-42f3-46e8-b906-724d2fae4210",
+			"id": "074a1689-05da-4d49-a38b-97e092090206",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}
