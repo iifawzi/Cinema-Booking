@@ -12,14 +12,15 @@ module.exports = (letters,rowsNumber,columnNumber,rowCorridors,columnCorridors,b
         }
        for (let j=1;j<=columnNumber;j++){
            if (columnCorridors.includes(j)){ // if seat's column is corridor fill its position in the array with zero
-            seats[i]["seats"].push(0);
+            seats[i-1]["seats"].push(0);
            }else if (lockedSeats.includes(letters[0]+j)){ // if the seat is closed fill its position with zero
-            seats[i]["seats"].push(0);
+            seats[i-1]["seats"].push(0);
+            startNumber++
            }else if (bookedSeats.includes(letters[0]+j)){ // if the seat is closed fill its position with one
-            seats[i]["seats"].push(1);
+            seats[i-1]["seats"].push(1);
             startNumber++
            }else {
-            seats[i]["seats"].push(letters[0]+startNumber); // if not closed or booked or in the corridor - fill its position in array with the seat name which consists of (LETTER `refers to the row` AND COLUMN NUMBER )
+            seats[i-1]["seats"].push(letters[0]+startNumber); // if not closed or booked or in the corridor - fill its position in array with the seat name which consists of (LETTER `refers to the row` AND COLUMN NUMBER )
             startNumber++
         }
        }
