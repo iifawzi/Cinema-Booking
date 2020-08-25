@@ -2,7 +2,7 @@
 
 module.exports = (letters,rowsNumber,columnNumber,rowCorridors,columnCorridors,bookedSeats,lockedSeats)=>{
     const seats = [];
-    for(let i=0;i<=rowsNumber;i++){
+    for(let i=0;i<rowsNumber;i++){
         let startNumber = 1;
         if (rowCorridors.includes(i)){
             seats.push(''); // this indicates that it's a row
