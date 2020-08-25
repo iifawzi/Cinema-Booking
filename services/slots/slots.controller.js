@@ -52,6 +52,7 @@ const getSlotSeats = async (req,res,next)=>{ // it's not tested in the slots ser
             const rowsCorridors = seats[2].filter(corridor=>corridor.direction === 'row').map(rowCorridor=>rowCorridor.corridor_number);
             const columnsCorridors = seats[2].filter(corridor=>corridor.direction === 'column').map(columnCorridor=>columnCorridor.corridor_number);
             const bookedSeats = seats[3].map(seat=>seat.seat_position);
+            console.log(bookedSeats);
             const letters = lettersGenerator(rowsNumber);
             const slotSeats = seatsGenerator(letters,rowsNumber,columnsNumber,rowsCorridors,columnsCorridors,bookedSeats,lockedSeats);
             return respond(true,200,slotSeats,res);
