@@ -10,7 +10,7 @@ module.exports = (letters,rowsNumber,columnNumber,rowCorridors,columnCorridors,b
         }else {
             seats.push({key: letters[0], seats: []}); // push an object with a row key which is a letter and empty array which will be used below to fill the seats
         }
-       for (let j=0;j<columnNumber;j++){
+       for (let j=1;j<=columnNumber;j++){
            if (columnCorridors.includes(j)){ // if seat's column is corridor fill its position in the array with zero
             seats[i]["seats"].push(0);
            }else if (lockedSeats.includes(letters[0]+j)){ // if the seat is closed fill its position with zero
