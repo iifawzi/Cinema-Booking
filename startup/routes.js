@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const isAuth = require("../middlewares/is-auth");
-const {usersRouter} = require("../services/users/index");
+const {usersRouter} = require("../services/users");
 const {moviesRouter} = require("../services/movies");
 const {cinemasRouter} = require("../services/cinemas");
 const {adminsRouter} = require("../services/admins");
@@ -12,6 +12,7 @@ const {areasRouter} = require("../services/areas");
 const {lockedSeatsRouter} = require("../services/lockedSeats");
 const {corridorsRouter} = require("../services/corridors");
 const {ticketsRouter} = require("../services/tickets");
+const {cinemaAccountsRouter} = require("../services/cinemaAccounts");
 const isAllowed = require("../middlewares/is-allowed");
 // Routes:
 router.get("/welcome", isAuth(),isAllowed(["admin","moderator"]),(req, res) => {
@@ -31,6 +32,7 @@ router.use("/areas", areasRouter);
 router.use("/lockedSeats", lockedSeatsRouter);
 router.use("/corridors", corridorsRouter);
 router.use("/tickets", ticketsRouter);
+router.use("/cinemaAccounts",cinemaAccountsRouter);
 
 
 module.exports = router;
