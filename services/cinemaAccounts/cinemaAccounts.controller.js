@@ -29,6 +29,29 @@ const addAccount = async (req,res,next)=>{
     }
 };
 
+
+const signin = async (req,res,next)=>{
+    try {
+        const {username, password} = req.body;
+        const cinemaUser = await cinemaAccountsServices.getAccountData(username);
+        if (!cinemaUser){
+            throw new ErrorHandler(401, "Username is not registered");
+        }
+        const passwordIsSame = await decryptPassword(password,cinemaUser.password);
+        if (passwordIsSame){
+            delete cinemaUser.password;
+            const payLoad = cinemaTokenPayLoad(cinemaUser.username,cinemaUser.cinema_id,cinemaUser.role);
+            const token = createToken(payLoad);
+            return respond(true,200,{...cinemaUser,token},res);
+        }
+    }catch(err){
+        next(err);
+    }
+};
+
+
+
 module.exports = {
     addAccount,
+    signin
 }

@@ -9,6 +9,12 @@ const addAccount = Joi.object({
     role: Joi.string().valid('csuperadmin','cadmin','cmoderator').required(),
 });
 
+const signin = Joi.object({
+    username: Joi.string().required(),
+    password: Joi.string().required()
+})
+
 module.exports = {
     addAccount,
+    signin
 }
