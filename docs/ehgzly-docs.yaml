@@ -10,6 +10,39 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /refreshToken:
+    post:
+      tags:
+      - "cinemaAccounts"
+      summary: "To get a new token for specific account"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "Required Information to update the token"
+        required: true
+        schema:
+          $ref: "#/definitions/refresh_token_body"
+      responses:
+        '200':
+          description: 200 (Success - account's token is updated successfully)
+          schema:
+            $ref: '#/definitions/refresh_token_response'
+        '401':
+          description: 401 (Unauthorized - Token is invalid or not provided - check the message -)
+          schema:
+            $ref: '#/definitions/error_401'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
   /signinCinema:
     post:
       tags:
