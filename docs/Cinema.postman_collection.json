@@ -594,7 +594,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\",\n    \"area_id\": 1,\n    \"contact_number\": \"01090243795\"\n}",
+							"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"area_id\": 1,\n    \"contact_number\": \"01090243795\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -627,7 +627,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\",\n    \"area_id\": 1,\n    \"contact_number\": \"01090243795\"\n}",
+									"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"area_id\": 1,\n    \"contact_number\": \"01090243795\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -688,120 +688,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 3,\n        \"cinema_name\": \"El Crwan\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"username\": \"crowann\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\"\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "signinCinema",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "",
-								"type": "text",
-								"value": "",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{BASE}}/api/cinemas/signinCinema",
-							"host": [
-								"{{BASE}}"
-							],
-							"path": [
-								"api",
-								"cinemas",
-								"signinCinema"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "signinCinema",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "",
-										"type": "text",
-										"value": "",
-										"disabled": true
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"username\": \"crowann\", \n    \"password\": \"12qwaszx\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE}}/api/cinemas/signinCinema",
-									"host": [
-										"{{BASE}}"
-									],
-									"path": [
-										"api",
-										"cinemas",
-										"signinCinema"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Access-Control-Allow-Methods",
-									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-								},
-								{
-									"key": "Access-Control-Allow-Headers",
-									"value": "Content-Type, Authorization"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "617"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"269-OvvAD0TPJ0p8vFkO8RJBNLJJ0WU\""
-								},
-								{
-									"key": "Date",
-									"value": "Mon, 17 Aug 2020 19:19:27 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 3,\n        \"cinema_name\": \"El Crwan\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"username\": \"crowann\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"refresh_token\": \"2f1f54555820ddd4ed96e56e7723f9f1\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjMsInJvbGUiOiJjaW5lbWEiLCJpYXQiOjE1OTc2OTE5NjcsImV4cCI6MTU5NzczNTE2N30.__cWFq09eHcqcHzIue9plTxExrhihUcRLP9MiT2GLIM\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 3,\n        \"cinema_name\": \"El Crwan\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\"\n    }\n}"
 						}
 					]
 				},
@@ -1026,6 +913,236 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 165,\n        \"cinema_status\": true,\n        \"updatedAt\": \"2020-08-13T08:57:31.404Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "cinemaAccounts",
+			"item": [
+				{
+					"name": "addAccount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTg3NDY2ODksImV4cCI6MTU5ODc4OTg4OX0.9Yb4POeLPDa9eVSmPjluKWHMQevMjRfewWsYSa7p9Uc"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"cinema_id\": 109,\n\"username\": \"fawzi\",\n\"password\": \"01090243795\",\n\"role\": \"csuperadmin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/cinemaAccounts/addAccount",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"cinemaAccounts",
+								"addAccount"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addAccount",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTg3NDY2ODksImV4cCI6MTU5ODc4OTg4OX0.9Yb4POeLPDa9eVSmPjluKWHMQevMjRfewWsYSa7p9Uc"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"cinema_id\": 109,\n\"username\": \"fawzi\",\n\"password\": \"01090243795\",\n\"role\": \"csuperadmin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/cinemaAccounts/addAccount",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"cinemaAccounts",
+										"addAccount"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "200"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c8-vHUPwNt36a+rfBWImbdwVazEhZ0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Aug 2020 00:18:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinemaAccount_id\": 19,\n        \"cinema_id\": 109,\n        \"username\": \"fawzi\",\n        \"role\": \"csuperadmin\",\n        \"updatedAt\": \"2020-08-30T00:18:47.752Z\",\n        \"createdAt\": \"2020-08-30T00:18:47.752Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "signinCinema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"fawzi\", \n    \"password\": \"01090243795\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/cinemaAccounts/signinCinema",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"cinemaAccounts",
+								"signinCinema"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signinCinema",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"type": "text",
+										"value": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"fawzi\", \n    \"password\": \"01090243795\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/cinemaAccounts/signinCinema",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"cinemaAccounts",
+										"signinCinema"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "652"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28c-0RpnjYrjJO3GVk9nghR9ghgjrHI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Aug 2020 00:46:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinemaAccount_id\": 19,\n        \"username\": \"fawzi\",\n        \"role\": \"csuperadmin\",\n        \"cinema_id\": 109,\n        \"refresh_token\": \"fcfe3698a58a1aaf137202d98eb36ba1\",\n        \"cinema_name\": \"El Crwan\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhd3ppIiwiY2luZW1hX2lkIjoxMDksInJvbGUiOjE5LCJpYXQiOjE1OTg3NDgzOTcsImV4cCI6MTU5ODc5MTU5N30.EDsy2iNH6Sef8dqayzSMDo_POJSUQWrgpK1hUvRRDng\"\n    }\n}"
 						}
 					]
 				}
@@ -2674,12 +2791,12 @@
 	],
 	"variable": [
 		{
-			"id": "4c3fcf74-4c5b-4007-9215-c4c809cf60cc",
+			"id": "a51209fb-2f70-4e1a-84d6-9c9423293a14",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "074a1689-05da-4d49-a38b-97e092090206",
+			"id": "121e8cc1-00bc-439e-861c-7594377beb5c",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

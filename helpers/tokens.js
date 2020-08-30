@@ -14,10 +14,11 @@ const adminTokenPayLoad = (username,admin_id,role)=>{
     }
 }
 
-const cinemaTokenPayLoad = (username,cinema_id,role)=>{
+const cinemaTokenPayLoad = (username,cinema_id,account_id,role)=>{
     return {
         username,
         cinema_id,
+        account_id,
         role,
     }
 }

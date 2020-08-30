@@ -10,6 +10,84 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /signinCinema:
+    post:
+      tags:
+      - "cinemaAccounts"
+      summary: "to signin a cinema"
+      consumes:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to signin"
+        required: true
+        schema:
+          $ref: "#/definitions/signinCinema_body"
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"   
+      responses:
+        '201':
+          description: 201 (Created)
+          schema:
+            $ref: '#/definitions/signinCinema_response'
+        '401':
+          description: 401 (Unauthorized - token's error)
+          schema:
+            $ref: '#/definitions/error_401'
+        '403':
+          description: 403 (Forbidden - Your aren't authorized)
+          schema:
+            $ref: '#/definitions/error_403'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
+        '409':
+          description: 409 (CONFLICT - This username is already registered)
+          schema:
+            $ref: '#/definitions/error_409'
+  /addAccount:
+    post:
+      tags:
+      - "cinemaAccounts"
+      summary: "to get add an admin account for cinema"
+      consumes:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to add an account"
+        required: true
+        schema:
+          $ref: "#/definitions/addAccount_body"
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"   
+      responses:
+        '201':
+          description: 201 (Created)
+          schema:
+            $ref: '#/definitions/addAccount_response'
+        '401':
+          description: 401 (Unauthorized - token's error)
+          schema:
+            $ref: '#/definitions/error_401'
+        '403':
+          description: 403 (Forbidden - Your aren't authorized)
+          schema:
+            $ref: '#/definitions/error_403'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
+        '409':
+          description: 409 (CONFLICT - This username is already registered)
+          schema:
+            $ref: '#/definitions/error_409'
   /getSlotSeats:
     post:
       tags:
@@ -24,10 +102,6 @@ paths:
         required: true
         schema:
           $ref: "#/definitions/getSlotSeats_body"
-      - in: "header"
-        name: "authorization"
-        required: true
-        type: "string"   
       responses:
         '201':
           description: 200 (Success)
@@ -632,36 +706,6 @@ paths:
           description: 409 (CONFLICT - username is already registered)
           schema:
             $ref: '#/definitions/error_409'
-  /signinCinema:
-    post:
-      tags:
-      - "cinemas"
-      summary: "signin for Cinema's accounts"
-      description: ""
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "Required Information to signin"
-        required: true
-        schema:
-          $ref: "#/definitions/signin_cinema_body"
-      responses:
-        '200':
-          description: 200 (Success - signin successfully)
-          schema:
-            $ref: '#/definitions/signin_cinema_response'
-        '401':
-          description: 401 (Unauthorized - Username is not registered or Password is incorrect)
-          schema:
-            $ref: '#/definitions/error_401'
-        '400':
-          description: 400 (Bad Request - input is incorrect or missing)
-          schema:
-            $ref: '#/definitions/error_400'
   /addCinema:
     post:
       tags:
@@ -841,6 +885,52 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   signinCinema_body:
+    type: "object"
+    example: 
+      username: fawzi
+      password: 01090243795
+   signinCinema_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        cinemaAccount_id: 19
+        username: fawzi
+        role: csuperadmin
+        cinema_id: 109
+        refresh_token: fcfe3698a58a1aaf137202d98eb36ba1
+        cinema_name: El Crwan
+        cinema_logo: logo.png
+        cinema_description: the best in thew world
+        contact_number: 01090243795
+        cinema_status: 0
+        last_checkout: '1999-03-20T21:00:00.000Z'
+        area_ar: بورسعيد
+        area_en: Port Said
+        country_ar: مصر
+        country_en: Egypt
+        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhd3ppIiwiY2luZW1hX2lkIjoxMDksInJvbGUiOjE5LCJpYXQiOjE1OTg3NDgzOTcsImV4cCI6MTU5ODc5MTU5N30.EDsy2iNH6Sef8dqayzSMDo_POJSUQWrgpK1hUvRRDng
+   addAccount_body:
+    type: "object"
+    example: 
+      cinema_id: 109
+      username: fawzi
+      password: 01090243795
+      role: csuperadmin
+   addAccount_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        cinemaAccount_id: 19
+        cinema_id: 109
+        username: fawzi
+        role: csuperadmin
+        updatedAt: '2020-08-30T00:18:47.752Z'
+        createdAt: '2020-08-30T00:18:47.752Z'
    getSlotSeats_body:
     type: "object"
     example: 
@@ -1231,39 +1321,12 @@ definitions:
         last_name: Abdulfattah
         username: iifawzi
         role: admin
-   signin_cinema_body:
-    type: "object"
-    example: 
-     username: crowann
-     password: 12qwaszx
-   signin_cinema_response:
-    type: "object"
-    example: 
-      status: true
-      message: success
-      data:
-        cinema_id: 3
-        cinema_name: El Crwan
-        cinema_logo: logo.png
-        cinema_description: the best in thew world
-        contact_number: 01090243795
-        username: crowann
-        cinema_status: 0
-        last_checkout: '1999-03-20T21:00:00.000Z'
-        refresh_token: 2f1f54555820ddd4ed96e56e7723f9f1
-        area_ar: بورسعيد
-        area_en: Port Said
-        country_ar: مصر
-        country_en: Egypt
-        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjMsInJvbGUiOiJjaW5lbWEiLCJpYXQiOjE1OTc2OTE5NjcsImV4cCI6MTU5NzczNTE2N30.__cWFq09eHcqcHzIue9plTxExrhihUcRLP9MiT2GLIM
    add_cinema_body:
     type: "object"
     example: 
      cinema_name: El Crwan
      cinema_description: the best in thew world
      cinema_logo: logo.png
-     username: crowann
-     password: 12qwaszx
      area_id: 1
      contact_number: 01090243795
    add_cinema_response:
@@ -1277,7 +1340,6 @@ definitions:
         cinema_logo: logo.png
         cinema_description: the best in thew world
         contact_number: 01090243795
-        username: crowann
         cinema_status: 0
         last_checkout: '1999-03-20T21:00:00.000Z'
         area_ar: بورسعيد

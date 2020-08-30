@@ -8,7 +8,7 @@ const cinemaAccountsSchemas = require("./cinemaAccounts.validation");
 
 
 router.post("/addAccount",isAuth(),isAllowed(["csuperadmin","admin"]),validate(cinemaAccountsSchemas.addAccount,'body'),cinemaAccountsController.addAccount);
-router.post("/signin", validate(cinemaAccountsSchemas.signin,"body"), cinemaAccountsController.signin);
+router.post("/signinCinema", validate(cinemaAccountsSchemas.signin,"body"), cinemaAccountsController.signin);
 
 
 module.exports = router;

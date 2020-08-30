@@ -40,7 +40,7 @@ const signin = async (req,res,next)=>{
         const passwordIsSame = await decryptPassword(password,cinemaUser.password);
         if (passwordIsSame){
             delete cinemaUser.password;
-            const payLoad = cinemaTokenPayLoad(cinemaUser.username,cinemaUser.cinema_id,cinemaUser.role);
+            const payLoad = cinemaTokenPayLoad(cinemaUser.username,cinemaUser.cinema_id,cinemaUser.cinemaAccount_id,cinemaUser.role);
             const token = createToken(payLoad);
             return respond(true,200,{...cinemaUser,token},res);
         }
