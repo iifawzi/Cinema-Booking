@@ -126,8 +126,6 @@ describe("/api/cinemaAccounts", async()=>{
     });
 
 
-
-
     describe("/signinCinema", ()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
             const res = await request(app)
@@ -206,6 +204,159 @@ describe("/api/cinemaAccounts", async()=>{
                     "password": "12qwaszx",
                 });
             expect(res.statusCode).equals(401);
+        });
+    });
+
+    describe("/refreshToken", ()=>{
+        it ("Should respond 400 if schema validation fails", async()=>{
+            const res = await request(app)
+                .post("/api/cinemaAccounts/refreshToken")
+                .send({
+                });
+            expect(res.statusCode).equals(400);
+        });
+        it ("Should respond 401 if token is not found", async()=>{
+            const res = await request(app)
+                .post("/api/cinemaAccounts/refreshToken")
+                .send({
+                    "refresh_token":"a0bd58db7f30ad61f35eb9ead30e55d3"
+                    });
+            expect(res.statusCode).equals(401);
+        });
+        it ("Should respond 401 if token is invalid", async()=>{
+            const res = await request(app)
+                .post("/api/cinemaAccounts/refreshToken")
+                .set({authorization: "Bearer "+ "djkdjkjdkjdkjdjkdjkdkjdkjdkjkjd"})
+                .send({
+                    "refresh_token":"a0bd58db7f30ad61f35eb9ead30e55d3"
+                    });
+            expect(res.statusCode).equals(401);
+        });
+        it ("Should respond 401 if refresh_token not match the account_id which is stored in token - in db", async()=>{
+            const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
+            const cinemaToken = createToken({account_id: 23,username: 'fawzi', cinema_id: 1,role:"csuperadmin"});
+            let res = await request(app)
+            .post("/api/countries/addCountry")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_ar": "السعودية", 
+                "country_en": "Saudi Arabia"
+            });
+            expect(res.statusCode).equals(201);
+            const country_id = res.body.data.country_id;
+            res = await request(app)
+            .post("/api/areas/addArea")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_id": country_id, 
+                "area_ar": "بورسعيد",
+                "area_en": "Port Said"
+            });
+            expect(res.statusCode).equals(201);
+            const area_id = res.body.data.area_id;
+            res = await request(app)
+                .post("/api/cinemas/addCinema")
+                .set({authorization: "Bearer "+token})
+                .send({
+                    "cinema_name": "El Crwan",
+                    "cinema_description": "the best in the world",
+                    "cinema_logo": "www.imagelink.com",
+                    "contact_number": "01090243795",
+                    "area_id": area_id,
+                });
+            expect(res.statusCode).equals(201);
+            const cinema_id = res.body.data.cinema_id;
+            res = await request(app)
+            .post("/api/cinemaAccounts/addAccount")
+            .set({authorization: "Bearer "+cinemaToken})
+            .send({
+                "username": "cinemaa", 
+                "password": "12qwaszx",
+                "role": "csuperadmin",
+                "cinema_id": cinema_id,
+            });
+            expect(res.statusCode).equals(201);
+            res = await request(app)
+                .post("/api/cinemaAccounts/signinCinema")
+                .send({
+                    "username": "cinemaa", 
+                    "password": "12qwaszx",
+                });
+            expect(res.statusCode).equals(200);
+            const refreshToken = res.body.data.refresh_token;
+            res = await request(app)
+            .post("/api/cinemaAccounts/refreshToken")
+            .set({authorization: "Bearer "+cinemaToken})
+            .send({
+                "refresh_token":refreshToken
+                });
+        expect(res.statusCode).equals(401);
+            await deleteCinema(cinema_id);
+            await deleteCountry(country_id);
+        });
+
+        it ("Should respond 200 if new token is generated successfully", async()=>{
+            const token = createToken({phone_number: "01090243795", admin_id: 1,role:"admin"});
+            const cinemaToken = createToken({account_id: 23,username: 'fawzi', cinema_id: 1,role:"csuperadmin"});
+            let res = await request(app)
+            .post("/api/countries/addCountry")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_ar": "السعودية", 
+                "country_en": "Saudi Arabia"
+            });
+            expect(res.statusCode).equals(201);
+            const country_id = res.body.data.country_id;
+            res = await request(app)
+            .post("/api/areas/addArea")
+            .set({authorization: "Bearer "+ token})
+            .send({
+                "country_id": country_id, 
+                "area_ar": "بورسعيد",
+                "area_en": "Port Said"
+            });
+            expect(res.statusCode).equals(201);
+            const area_id = res.body.data.area_id;
+            res = await request(app)
+                .post("/api/cinemas/addCinema")
+                .set({authorization: "Bearer "+token})
+                .send({
+                    "cinema_name": "El Crwan",
+                    "cinema_description": "the best in the world",
+                    "cinema_logo": "www.imagelink.com",
+                    "contact_number": "01090243795",
+                    "area_id": area_id,
+                });
+            expect(res.statusCode).equals(201);
+            const cinema_id = res.body.data.cinema_id;
+            res = await request(app)
+            .post("/api/cinemaAccounts/addAccount")
+            .set({authorization: "Bearer "+cinemaToken})
+            .send({
+                "username": "cinemaa", 
+                "password": "12qwaszx",
+                "role": "csuperadmin",
+                "cinema_id": cinema_id,
+            });
+            expect(res.statusCode).equals(201);
+            res = await request(app)
+                .post("/api/cinemaAccounts/signinCinema")
+                .send({
+                    "username": "cinemaa", 
+                    "password": "12qwaszx",
+                });
+            expect(res.statusCode).equals(200);
+            const refreshToken = res.body.data.refresh_token;
+            const accountToken = res.body.data.token;
+            res = await request(app)
+            .post("/api/cinemaAccounts/refreshToken")
+            .set({authorization: "Bearer "+accountToken})
+            .send({
+                "refresh_token":refreshToken,
+                });
+            expect(res.statusCode).equals(200);
+            await deleteCinema(cinema_id);
+            await deleteCountry(country_id);
         });
     });
 });

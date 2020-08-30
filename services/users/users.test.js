@@ -163,14 +163,6 @@ describe("/api/users",async()=>{
                 });
             expect(res.statusCode).equals(401);
         });
-        it("Should respond 401 if token is not found", async ()=>{
-            const res = await request(app)
-                .post("/api/users/refresh_token")
-                .send({
-                    "refresh_token":"4987478947894879jydkhjdkjhdkjh",
-                });
-            expect(res.statusCode).equals(401);
-        });
         it("Should respond 401 if token is invalid", async ()=>{
             const res = await request(app)
                 .post("/api/users/refresh_token")

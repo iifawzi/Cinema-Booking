@@ -24,3 +24,10 @@ exports.getAccountData = async (username)=>{
     });
     return accountData[0];
 }
+
+
+// This service to check if refresh token belongs to account_id (getting account's data by user_id and refresh_token): 
+exports.checkRefreshToken = async (cinemaAccount_id, refresh_token)=>{
+    const accountData =  await cinemaAccountsModel.findOne({where: {refresh_token,cinemaAccount_id}, attributes: ["cinemaAccount_id", "cinema_id",'username','role']});
+    return accountData;
+};

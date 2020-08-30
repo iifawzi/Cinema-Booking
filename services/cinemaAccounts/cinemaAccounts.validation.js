@@ -14,7 +14,12 @@ const signin = Joi.object({
     password: Joi.string().required()
 })
 
+const refreshToken = Joi.object({
+    refresh_token: Joi.string().required(),
+});
+
 module.exports = {
     addAccount,
-    signin
+    signin,
+    refreshToken
 }
