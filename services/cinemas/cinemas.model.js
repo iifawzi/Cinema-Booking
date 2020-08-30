@@ -22,15 +22,7 @@ const cinemasModel = db.define("cinemas", {
     contact_number:{
         type: Sequelize.STRING,
         allowNull: false,
-    },
-    username: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
-    password: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
+    },  
     area_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -59,16 +51,8 @@ const cinemasModel = db.define("cinemas", {
         allowNull: false,
         defaultValue: "1999-03-20T23:00:00",
     },
-    refresh_token: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    }
 }, {
     indexes: [
-        {
-            fields: ["username"],
-            unique: true,
-        },
         {
             fields: ["cinema_status", "area_id"],
         },

@@ -48,8 +48,6 @@ describe("/api/cinemaAccounts", async()=>{
                     "cinema_name": "El Crwan",
                     "cinema_description": "the best in the world",
                     "cinema_logo": "www.imagelink.com",
-                    "username": "crowann", 
-                    "password": "12qwaszx",
                     "contact_number": "01090243795",
                     "area_id": area_id,
                 });
@@ -97,8 +95,6 @@ describe("/api/cinemaAccounts", async()=>{
                     "cinema_name": "El Crwan",
                     "cinema_description": "the best in the world",
                     "cinema_logo": "www.imagelink.com",
-                    "username": "crowann", 
-                    "password": "12qwaszx",
                     "contact_number": "01090243795",
                     "area_id": area_id,
                 });
@@ -170,8 +166,6 @@ describe("/api/cinemaAccounts", async()=>{
                     "cinema_name": "El Crwan",
                     "cinema_description": "the best in the world",
                     "cinema_logo": "www.imagelink.com",
-                    "username": "crowann", 
-                    "password": "12qwaszx",
                     "contact_number": "01090243795",
                     "area_id": area_id,
                 });

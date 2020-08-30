@@ -25,6 +25,10 @@ const cinemaAccounts = db.define("cinemaAccounts", {
         type: Sequelize.STRING,
         allowNull: false,
     },
+    refresh_token: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
     role: {
         type: Sequelize.ENUM("csuperadmin",'cadmin','cmoderator'),
         allowNull: false,

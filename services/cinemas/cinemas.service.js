@@ -1,24 +1,17 @@
 const  cinemasModel  = require("./cinemas.model");
 const {db} = require("../../startup/db");
 const Sequelize = require("sequelize");
-// To check if username is already exists or not
-exports.isCinemaUserExists = async (username)=>{
-    const cinemaUser = await cinemasModel.findOne({where:{username}, attributes: ['cinema_id']});
-    if (cinemaUser){
-        return cinemaUser.dataValues;
-    }else {
-        return cinemaUser;
-    }
-};
+
+
 // To add new cinema will be used from control panel
 exports.addCinema = async (cinemaData)=>{
     const cinema =  await cinemasModel.create(cinemaData);
     return cinema.dataValues;
 };
 // to get cinema's data
-exports.getCinemaData = async (username)=>{
-    const cinemaData = await db.query("SELECT cinemas.cinema_id,cinemas.username,cinemas.refresh_token,cinemas.password,cinemas.cinema_name,cinemas.cinema_logo,cinemas.cinema_description,cinemas.contact_number,cinemas.cinema_status,cinemas.last_checkout, areas.area_ar,areas.area_en,countries.country_ar,countries.country_en from cinemas INNER JOIN areas ON areas.area_id = cinemas.area_id INNER JOIN countries ON countries.country_id = areas.country_id WHERE cinemas.username = ?", {
-        replacements: [username],
+exports.getCinemaData = async (cinema_id)=>{
+    const cinemaData = await db.query("SELECT cinemas.cinema_id,cinemas.cinema_name,cinemas.cinema_logo,cinemas.cinema_description,cinemas.contact_number,cinemas.cinema_status,cinemas.last_checkout, areas.area_ar,areas.area_en,countries.country_ar,countries.country_en from cinemas INNER JOIN areas ON areas.area_id = cinemas.area_id INNER JOIN countries ON countries.country_id = areas.country_id WHERE cinemas.cinema_id = ?", {
+        replacements: [cinema_id],
         type: Sequelize.QueryTypes.SELECT,
     });
     return cinemaData[0];
