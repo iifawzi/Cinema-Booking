@@ -18,7 +18,7 @@ exports.addAccount = async (cinemaData)=>{
 };
 // to get account's cinema's data
 exports.getAccountData = async (username)=>{
-    const accountData = await db.query("SELECT cinemas.cinema_id,cinemaAccounts.username,cinemas.refresh_token,cinemaAccounts.password,cinemas.cinema_name,cinemas.cinema_logo,cinemas.cinema_description,cinemas.contact_number,cinemas.cinema_status,cinemas.last_checkout, areas.area_ar,areas.area_en,countries.country_ar,countries.country_en from cinemaAccounts INNER JOIN cinemas ON cinemas.cinema_id = cinemaAccounts.cinema_id INNER JOIN areas ON areas.area_id = cinemas.area_id INNER JOIN countries ON countries.country_id = areas.country_id WHERE cinemaAccounts.username = ?", {
+    const accountData = await db.query("SELECT cinemaAccounts.username,cinemaAccounts.password,cinemaAccounts.role,cinemas.cinema_id,cinemas.refresh_token,cinemas.cinema_name,cinemas.cinema_logo,cinemas.cinema_description,cinemas.contact_number,cinemas.cinema_status,cinemas.last_checkout, areas.area_ar,areas.area_en,countries.country_ar,countries.country_en from cinemaAccounts INNER JOIN cinemas ON cinemas.cinema_id = cinemaAccounts.cinema_id INNER JOIN areas ON areas.area_id = cinemas.area_id INNER JOIN countries ON countries.country_id = areas.country_id WHERE cinemaAccounts.username = ?", {
         replacements: [username],
         type: Sequelize.QueryTypes.SELECT,
     });
