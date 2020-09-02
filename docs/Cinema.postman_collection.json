@@ -589,12 +589,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTc2OTE3ODIsImV4cCI6MTU5NzczNDk4Mn0.qKULvEIgJa-4A9HAoVxtMLJ-ApQPD3pFaewZXs6UvCI"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTg4MTY3OTYsImV4cCI6MTU5ODgyMDM5Nn0.o7dStVvW2lRjJTIDysKvQgwJWWLmzE14Zfn_Iub8Kl0"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"area_id\": 1,\n    \"contact_number\": \"01090243795\"\n}",
+							"raw": "{\n    \"cinema_en\": \"El Crwan\",\n    \"cinema_ar\": \"الكروان\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"area_id\": 53,\n    \"contact_number\": \"01090243795\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -627,7 +627,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"cinema_name\": \"El Crwan\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"area_id\": 1,\n    \"contact_number\": \"01090243795\"\n}",
+									"raw": "{\n    \"cinema_en\": \"El Crwan\",\n    \"cinema_ar\": \"الكروان\",\n    \"cinema_description\": \"the best in thew world\",\n    \"cinema_logo\": \"logo.png\",\n    \"area_id\": 1,\n    \"contact_number\": \"01090243795\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -688,7 +688,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 3,\n        \"cinema_name\": \"El Crwan\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 3,\n        \"cinema_en\": \"El Crwan\",\n        \"cinema_ar\": \"الكروان\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\"\n    }\n}"
 						}
 					]
 				},
@@ -801,7 +801,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 32,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-1\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"ticket_price\": 150,\n                    \"hall_description\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"ticket_price\": 150,\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        },\n        {\n            \"cinema_id\": 33,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_name\": \"El Crwan\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"normal3\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"ticket_price\": 150,\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        }\n    ]\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"cinema_id\": 32,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_en\": \"El Crwan\",\n            \"cinema_ar\": \"الكروان\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-1\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"ticket_price\": 150,\n                    \"hall_description\": \"The best hall in the world\"\n                },\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"VIP-2\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"ticket_price\": 150,\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        },\n        {\n            \"cinema_id\": 33,\n            \"cinema_logo\": \"logo.png\",\n            \"cinema_description\": \"the best in thew world\",\n            \"cinema_en\": \"El Crwan\",\n            \"cinema_ar\": \"الكروان\",\n            \"contact_number\": \"01090243795\",\n            \"slots\": [\n                {\n                    \"start_time\": \"2020-08-28T23:30:00Z\",\n                    \"hall_name\": \"normal3\",\n                    \"slot_id\": 1,\n                    \"hall_id\": 12,\n                    \"ticket_price\": 150,\n                    \"hall_description\": \"best of best\"\n                }\n            ]\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -1034,7 +1034,7 @@
 					]
 				},
 				{
-					"name": "signinCinema",
+					"name": "signinAccount",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -1055,14 +1055,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE}}/api/cinemaAccounts/signinCinema",
+							"raw": "{{BASE}}/api/cinemaAccounts/signinAccount",
 							"host": [
 								"{{BASE}}"
 							],
 							"path": [
 								"api",
 								"cinemaAccounts",
-								"signinCinema"
+								"signinAccount"
 							]
 						}
 					},
@@ -1089,14 +1089,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{BASE}}/api/cinemaAccounts/signinCinema",
+									"raw": "{{BASE}}/api/cinemaAccounts/signinAccount",
 									"host": [
 										"{{BASE}}"
 									],
 									"path": [
 										"api",
 										"cinemaAccounts",
-										"signinCinema"
+										"signinAccount"
 									]
 								}
 							},
@@ -1142,7 +1142,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinemaAccount_id\": 19,\n        \"username\": \"fawzi\",\n        \"role\": \"csuperadmin\",\n        \"cinema_id\": 109,\n        \"refresh_token\": \"fcfe3698a58a1aaf137202d98eb36ba1\",\n        \"cinema_name\": \"El Crwan\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhd3ppIiwiY2luZW1hX2lkIjoxMDksInJvbGUiOjE5LCJpYXQiOjE1OTg3NDgzOTcsImV4cCI6MTU5ODc5MTU5N30.EDsy2iNH6Sef8dqayzSMDo_POJSUQWrgpK1hUvRRDng\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinemaAccount_id\": 19,\n        \"username\": \"fawzi\",\n        \"role\": \"csuperadmin\",\n        \"cinema_id\": 109,\n        \"refresh_token\": \"fcfe3698a58a1aaf137202d98eb36ba1\",\n        \"cinema_en\": \"El Crwan\",\n        \"cinema_ar\": \"الكروان\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhd3ppIiwiY2luZW1hX2lkIjoxMDksInJvbGUiOjE5LCJpYXQiOjE1OTg3NDgzOTcsImV4cCI6MTU5ODc5MTU5N30.EDsy2iNH6Sef8dqayzSMDo_POJSUQWrgpK1hUvRRDng\"\n    }\n}"
 						}
 					]
 				},
@@ -2902,12 +2902,12 @@
 	],
 	"variable": [
 		{
-			"id": "bb59a746-8279-4c05-b62f-ff818b9c7d08",
+			"id": "5a6099b1-fb40-4456-9be7-21f42ac6c5d5",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "cf7185a3-1af7-4193-a317-88860ff25b86",
+			"id": "b5daa4a9-966c-451d-9d65-9b9eca947abc",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

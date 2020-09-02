@@ -7,7 +7,11 @@ const cinemasModel = db.define("cinemas", {
         autoIncrement: true,
         primaryKey: true,
     },
-    cinema_name: {
+    cinema_ar: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    cinema_en: {
         type: Sequelize.STRING,
         allowNull: false,
     },

@@ -2,7 +2,8 @@ const Joi = require("@hapi/joi");
 
 
 const addCinema = Joi.object({
-    cinema_name: Joi.string().required(),
+    cinema_ar: Joi.string().required(),
+    cinema_en: Joi.string().required(),
     cinema_description: Joi.string().required(),
     cinema_logo: Joi.string().required(),
     contact_number: Joi.string().required(),

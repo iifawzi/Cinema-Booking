@@ -15,7 +15,8 @@ describe("/api/cinemaAccounts", async()=>{
                 .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
-                    "cinema_name": "El Crwan",
+                    "cinema_en": "El Crwan",
+                    "cinema_ar": "الكروان",
                 });
             expect(res.statusCode).equals(400);
         });
@@ -45,7 +46,8 @@ describe("/api/cinemaAccounts", async()=>{
                 .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
-                    "cinema_name": "El Crwan",
+                    "cinema_en": "El Crwan",
+                    "cinema_ar": "الكروان",
                     "cinema_description": "the best in the world",
                     "cinema_logo": "www.imagelink.com",
                     "contact_number": "01090243795",
@@ -92,7 +94,8 @@ describe("/api/cinemaAccounts", async()=>{
                 .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
-                    "cinema_name": "El Crwan",
+                    "cinema_en": "El Crwan",
+                    "cinema_ar": "الكروان",
                     "cinema_description": "the best in the world",
                     "cinema_logo": "www.imagelink.com",
                     "contact_number": "01090243795",
@@ -161,7 +164,8 @@ describe("/api/cinemaAccounts", async()=>{
                 .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
-                    "cinema_name": "El Crwan",
+                    "cinema_en": "El Crwan",
+                    "cinema_ar": "الكروان",
                     "cinema_description": "the best in the world",
                     "cinema_logo": "www.imagelink.com",
                     "contact_number": "01090243795",
@@ -258,7 +262,8 @@ describe("/api/cinemaAccounts", async()=>{
                 .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
-                    "cinema_name": "El Crwan",
+                    "cinema_en": "El Crwan",
+                    "cinema_ar": "الكروان",
                     "cinema_description": "the best in the world",
                     "cinema_logo": "www.imagelink.com",
                     "contact_number": "01090243795",
@@ -321,7 +326,8 @@ describe("/api/cinemaAccounts", async()=>{
                 .post("/api/cinemas/addCinema")
                 .set({authorization: "Bearer "+token})
                 .send({
-                    "cinema_name": "El Crwan",
+                    "cinema_en": "El Crwan",
+                    "cinema_ar": "الكروان",
                     "cinema_description": "the best in the world",
                     "cinema_logo": "www.imagelink.com",
                     "contact_number": "01090243795",

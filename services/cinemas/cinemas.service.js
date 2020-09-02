@@ -10,7 +10,7 @@ exports.addCinema = async (cinemaData)=>{
 };
 // to get cinema's data
 exports.getCinemaData = async (cinema_id)=>{
-    const cinemaData = await db.query("SELECT cinemas.cinema_id,cinemas.cinema_name,cinemas.cinema_logo,cinemas.cinema_description,cinemas.contact_number,cinemas.cinema_status,cinemas.last_checkout, areas.area_ar,areas.area_en,countries.country_ar,countries.country_en from cinemas INNER JOIN areas ON areas.area_id = cinemas.area_id INNER JOIN countries ON countries.country_id = areas.country_id WHERE cinemas.cinema_id = ?", {
+    const cinemaData = await db.query("SELECT cinemas.cinema_id,cinemas.cinema_ar,cinema_en,cinemas.cinema_logo,cinemas.cinema_description,cinemas.contact_number,cinemas.cinema_status,cinemas.last_checkout, areas.area_ar,areas.area_en,countries.country_ar,countries.country_en from cinemas INNER JOIN areas ON areas.area_id = cinemas.area_id INNER JOIN countries ON countries.country_id = areas.country_id WHERE cinemas.cinema_id = ?", {
         replacements: [cinema_id],
         type: Sequelize.QueryTypes.SELECT,
     });
@@ -24,7 +24,7 @@ exports.deleteCinema = async (cinema_id)=>{
 };
 // Get the cinemas which has specific movie, in specific city.
 exports.getCinemasForMovie = async (area_id,movie_id,date)=>{
-    const getCinemas = await db.query("SELECT CONCAT(:insertedDate,'T', slots.start_time,'Z') as start_time,halls.hall_id,slots.slot_id,slots.ticket_price,halls.hall_name,halls.hall_description,cinemas.cinema_id, cinemas.cinema_logo, cinemas.cinema_description, cinemas.cinema_name, cinemas.contact_number FROM cinemas INNER JOIN halls ON halls.cinema_id = cinemas.cinema_id INNER JOIN slots ON halls.hall_id = slots.hall_id INNER JOIN movies ON movies.movie_id = slots.movie_id where cinemas.area_id = :area_id AND movies.movie_id = :movie_id AND cinemas.cinema_status = true AND halls.hall_status = true AND slots.slot_status = true AND slots.start_date <= :insertedDate AND slots.end_date >= :insertedDate AND CONCAT(:insertedDate,'T', slots.start_time,'Z') > :currentDate ", {
+    const getCinemas = await db.query("SELECT CONCAT(:insertedDate,'T', slots.start_time,'Z') as start_time,halls.hall_id,slots.slot_id,slots.ticket_price,halls.hall_name,halls.hall_description,cinemas.cinema_id, cinemas.cinema_logo, cinemas.cinema_description, cinemas.cinema_ar,cinema_en, cinemas.contact_number FROM cinemas INNER JOIN halls ON halls.cinema_id = cinemas.cinema_id INNER JOIN slots ON halls.hall_id = slots.hall_id INNER JOIN movies ON movies.movie_id = slots.movie_id where cinemas.area_id = :area_id AND movies.movie_id = :movie_id AND cinemas.cinema_status = true AND halls.hall_status = true AND slots.slot_status = true AND slots.start_date <= :insertedDate AND slots.end_date >= :insertedDate AND CONCAT(:insertedDate,'T', slots.start_time,'Z') > :currentDate ", {
         replacements: {insertedDate: date,area_id,movie_id,currentDate: new Date().toISOString()},
         type: Sequelize.QueryTypes.SELECT,
     });
