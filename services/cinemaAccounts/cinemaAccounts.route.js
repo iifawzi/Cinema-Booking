@@ -8,7 +8,7 @@ const cinemaAccountsSchemas = require("./cinemaAccounts.validation");
 
 
 router.post("/addAccount",isAuth(),isAllowed(["csuperadmin","admin"]),validate(cinemaAccountsSchemas.addAccount,'body'),cinemaAccountsController.addAccount);
-router.post("/signinCinema", validate(cinemaAccountsSchemas.signin,"body"), cinemaAccountsController.signin);
+router.post("/signinAccount", validate(cinemaAccountsSchemas.signin,"body"), cinemaAccountsController.signin);
 router.post("/refreshToken",validate(cinemaAccountsSchemas.refreshToken,"body") ,cinemaAccountsController.refreshToken);
 
 

@@ -33,6 +33,17 @@ const cinemaAccounts = db.define("cinemaAccounts", {
         type: Sequelize.ENUM("csuperadmin",'cadmin','cmoderator'),
         allowNull: false,
     }
-});
+}, 
+{
+    indexes: [
+        {
+            fields: ["username"],
+        },
+        {
+            fields: ["refresh_token",'cinemaAccount_id'],
+        }
+    ]
+}
+);
 
 module.exports = cinemaAccounts;

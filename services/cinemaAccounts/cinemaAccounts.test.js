@@ -126,10 +126,10 @@ describe("/api/cinemaAccounts", async()=>{
     });
 
 
-    describe("/signinCinema", ()=>{
+    describe("/signinAccount", ()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
             const res = await request(app)
-                .post("/api/cinemaAccounts/signinCinema")
+                .post("/api/cinemaAccounts/signinAccount")
                 .send({
                     "username": "crowann", 
                 });
@@ -180,14 +180,14 @@ describe("/api/cinemaAccounts", async()=>{
             });
             expect(res.statusCode).equals(201);
             res = await request(app)
-                .post("/api/cinemaAccounts/signinCinema")
+                .post("/api/cinemaAccounts/signinAccount")
                 .send({
                     "username": "cinemaa", 
                     "password": "12qwaszx",
                 });
             expect(res.statusCode).equals(200);
             res = await request(app)
-                .post("/api/cinemaAccounts/signinCinema")
+                .post("/api/cinemaAccounts/signinAccount")
                 .send({
                     "username": "cinemaa", 
                     "password": "qwaszx",
@@ -198,7 +198,7 @@ describe("/api/cinemaAccounts", async()=>{
         });
         it ("Should respond 401 if username is not registered", async()=>{
             const res = await request(app)
-                .post("/api/cinemaAccounts/signinCinema")
+                .post("/api/cinemaAccounts/signinAccount")
                 .send({
                     "username": "fawzi", 
                     "password": "12qwaszx",
@@ -277,7 +277,7 @@ describe("/api/cinemaAccounts", async()=>{
             });
             expect(res.statusCode).equals(201);
             res = await request(app)
-                .post("/api/cinemaAccounts/signinCinema")
+                .post("/api/cinemaAccounts/signinAccount")
                 .send({
                     "username": "cinemaa", 
                     "password": "12qwaszx",
@@ -340,7 +340,7 @@ describe("/api/cinemaAccounts", async()=>{
             });
             expect(res.statusCode).equals(201);
             res = await request(app)
-                .post("/api/cinemaAccounts/signinCinema")
+                .post("/api/cinemaAccounts/signinAccount")
                 .send({
                     "username": "cinemaa", 
                     "password": "12qwaszx",
