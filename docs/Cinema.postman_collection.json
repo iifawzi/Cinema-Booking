@@ -930,12 +930,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTg3NDY2ODksImV4cCI6MTU5ODc4OTg4OX0.9Yb4POeLPDa9eVSmPjluKWHMQevMjRfewWsYSa7p9Uc"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjMsImFjY291bnRfaWQiOjMsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE1OTkwNjc4NzksImV4cCI6MTU5OTA4OTQ3OX0.aJEB-kORxwPpMZjQLcvCZ8dcEwCEMWtmoHwpSwxEM5c"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"cinema_id\": 109,\n\"username\": \"fawzi\",\n\"password\": \"01090243795\",\n\"role\": \"csuperadmin\"\n}",
+							"raw": "{\n\"cinema_id\": 4,\n\"username\": \"fawzi\",\n\"name_ar\": \"فوزي عصام عبدالفتاح\",\n\"name_en\": \"Fawzi E. Abdulfattah\",\n\"phone_number\":\"01090243795\",\n\"password\": \"12qwaszx\",\n\"role\": \"csuperadmin\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -963,12 +963,12 @@
 									{
 										"key": "authorization",
 										"type": "text",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImFkbWluX2lkIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE1OTg3NDY2ODksImV4cCI6MTU5ODc4OTg4OX0.9Yb4POeLPDa9eVSmPjluKWHMQevMjRfewWsYSa7p9Uc"
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjMsImFjY291bnRfaWQiOjMsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE1OTkwNjc4NzksImV4cCI6MTU5OTA4OTQ3OX0.aJEB-kORxwPpMZjQLcvCZ8dcEwCEMWtmoHwpSwxEM5c"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"cinema_id\": 109,\n\"username\": \"fawzi\",\n\"password\": \"01090243795\",\n\"role\": \"csuperadmin\"\n}",
+									"raw": "{\n\"cinema_id\": 4,\n\"username\": \"fawzi\",\n\"name_ar\": \"فوزي عصام عبدالفتاح\",\n\"name_en\": \"Fawzi E. Abdulfattah\",\n\"phone_number\":\"01090243795\",\n\"password\": \"12qwaszx\",\n\"role\": \"csuperadmin\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1013,15 +1013,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "200"
+									"value": "308"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"c8-vHUPwNt36a+rfBWImbdwVazEhZ0\""
+									"value": "W/\"134-twpMNWTFakAhxH3LInzhqDHaBKE\""
 								},
 								{
 									"key": "Date",
-									"value": "Sun, 30 Aug 2020 00:18:47 GMT"
+									"value": "Wed, 02 Sep 2020 17:34:02 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1029,7 +1029,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinemaAccount_id\": 19,\n        \"cinema_id\": 109,\n        \"username\": \"fawzi\",\n        \"role\": \"csuperadmin\",\n        \"updatedAt\": \"2020-08-30T00:18:47.752Z\",\n        \"createdAt\": \"2020-08-30T00:18:47.752Z\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinemaAccount_id\": 5,\n        \"cinema_id\": 4,\n        \"username\": \"fawzi\",\n        \"name_ar\": \"فوزي عصام عبدالفتاح\",\n        \"name_en\": \"Fawzi E. Abdulfattah\",\n        \"phone_number\": \"01090243795\",\n        \"role\": \"csuperadmin\",\n        \"updatedAt\": \"2020-09-02T17:34:02.547Z\",\n        \"createdAt\": \"2020-09-02T17:34:02.547Z\"\n    }\n}"
 						}
 					]
 				},
@@ -1047,7 +1047,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"fawzi\", \n    \"password\": \"01090243795\"\n}",
+							"raw": "{\n    \"username\": \"cinemaa\", \n    \"password\": \"12qwaszx\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1068,7 +1068,7 @@
 					},
 					"response": [
 						{
-							"name": "signinCinema",
+							"name": "signinAccount",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
@@ -1081,7 +1081,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"username\": \"fawzi\", \n    \"password\": \"01090243795\"\n}",
+									"raw": "{\n    \"username\": \"cinemaa\", \n    \"password\": \"12qwaszx\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1126,15 +1126,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "652"
+									"value": "577"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"28c-0RpnjYrjJO3GVk9nghR9ghgjrHI\""
+									"value": "W/\"241-TdF+eNBWjXZRmC4DCJ4hLDD1iH8\""
 								},
 								{
 									"key": "Date",
-									"value": "Sun, 30 Aug 2020 00:46:37 GMT"
+									"value": "Wed, 02 Sep 2020 17:31:19 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1142,7 +1142,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinemaAccount_id\": 19,\n        \"username\": \"fawzi\",\n        \"role\": \"csuperadmin\",\n        \"cinema_id\": 109,\n        \"refresh_token\": \"fcfe3698a58a1aaf137202d98eb36ba1\",\n        \"cinema_en\": \"El Crwan\",\n        \"cinema_ar\": \"الكروان\",\n        \"cinema_logo\": \"logo.png\",\n        \"cinema_description\": \"the best in thew world\",\n        \"contact_number\": \"01090243795\",\n        \"cinema_status\": 0,\n        \"last_checkout\": \"1999-03-20T21:00:00.000Z\",\n        \"area_ar\": \"بورسعيد\",\n        \"area_en\": \"Port Said\",\n        \"country_ar\": \"مصر\",\n        \"country_en\": \"Egypt\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhd3ppIiwiY2luZW1hX2lkIjoxMDksInJvbGUiOjE5LCJpYXQiOjE1OTg3NDgzOTcsImV4cCI6MTU5ODc5MTU5N30.EDsy2iNH6Sef8dqayzSMDo_POJSUQWrgpK1hUvRRDng\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"cinema_id\": 3,\n        \"cinemaAccount_id\": 3,\n        \"name_ar\": \"فوزي عصام عبدالفتاح\",\n        \"name_en\": \"Fawzi E. Abdulfattah\",\n        \"phone_number\": \"01090243795\",\n        \"role\": \"csuperadmin\",\n        \"refresh_token\": \"30271c5200fcf23d40a3ea5b7ca935bf\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjMsImFjY291bnRfaWQiOjMsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE1OTkwNjc4NzksImV4cCI6MTU5OTA4OTQ3OX0.aJEB-kORxwPpMZjQLcvCZ8dcEwCEMWtmoHwpSwxEM5c\"\n    }\n}"
 						}
 					]
 				},
@@ -1154,12 +1154,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhd3ppIiwiY2luZW1hX2lkIjo0OSwiYWNjb3VudF9pZCI6MTAsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTU5ODgwMzMxOSwiZXhwIjoxNTk4ODA2OTE5fQ.FxY3L1Xaof5NNvUlQLhS68Nfnfl76uh_lqPbcuku_-E"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjMsImFjY291bnRfaWQiOjMsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE1OTkwNjc4NzksImV4cCI6MTU5OTA4OTQ3OX0.aJEB-kORxwPpMZjQLcvCZ8dcEwCEMWtmoHwpSwxEM5c"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"refresh_token\":\"a0bd58db7f30ad61f35eb9ead30e55d3\"\n}",
+							"raw": "{\n\"refresh_token\":\"30271c5200fcf23d40a3ea5b7ca935bf\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1187,12 +1187,12 @@
 									{
 										"key": "authorization",
 										"type": "text",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhd3ppIiwiY2luZW1hX2lkIjo0OSwiYWNjb3VudF9pZCI6MTAsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTU5ODgwMzMxOSwiZXhwIjoxNTk4ODA2OTE5fQ.FxY3L1Xaof5NNvUlQLhS68Nfnfl76uh_lqPbcuku_-E"
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjMsImFjY291bnRfaWQiOjMsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE1OTkwNjc4NzksImV4cCI6MTU5OTA4OTQ3OX0.aJEB-kORxwPpMZjQLcvCZ8dcEwCEMWtmoHwpSwxEM5c"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"refresh_token\":\"a0bd58db7f30ad61f35eb9ead30e55d3\"\n}",
+									"raw": "{\n\"refresh_token\":\"30271c5200fcf23d40a3ea5b7ca935bf\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1237,15 +1237,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "278"
+									"value": "387"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"116-vYWNrKFuMnho7ZbRX+nzctf7iPk\""
+									"value": "W/\"183-O86xNJ8Jms+titivUBUQyS81xhw\""
 								},
 								{
 									"key": "Date",
-									"value": "Sun, 30 Aug 2020 16:04:33 GMT"
+									"value": "Wed, 02 Sep 2020 17:31:48 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1253,7 +1253,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhd3ppIiwiY2luZW1hX2lkIjo0OSwiYWNjb3VudF9pZCI6MTAsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTU5ODgwMzQ3MywiZXhwIjoxNTk4ODA3MDczfQ.9eHi44zrOeeaC-utCUMzJVdJomep4VkWowsgerp3l24\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNpbmVtYWEiLCJjaW5lbWFfaWQiOjMsImFjY291bnRfaWQiOjMsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE1OTkwNjc5MDgsImV4cCI6MTU5OTA4OTUwOH0.2MKEx0TQSaMjTusahDYBbGo-0lrlDVhsyOpJiQ0roFw\"\n    }\n}"
 						}
 					]
 				}
@@ -2902,12 +2902,12 @@
 	],
 	"variable": [
 		{
-			"id": "5a6099b1-fb40-4456-9be7-21f42ac6c5d5",
+			"id": "958eb492-0758-4ca2-8e17-bc10f22f21ed",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "b5daa4a9-966c-451d-9d65-9b9eca947abc",
+			"id": "bfc42edc-4412-445e-b4b8-ac997b6e96c7",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

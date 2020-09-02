@@ -61,6 +61,9 @@ describe("/api/cinemaAccounts", async()=>{
                 .send({
                     "username": "cinemaa", 
                     "password": "12qwaszx",
+                    "name_ar":"فوزي عصام عبدالفتاح",
+                    "name_en":"Fawzi E. Abdulfattah",
+                    "phone_number": "01090243795",
                     "role": "csuperadmin",
                     "cinema_id": cinemaId,
                 });
@@ -109,6 +112,9 @@ describe("/api/cinemaAccounts", async()=>{
                 .send({
                     "username": "cinemaa", 
                     "password": "12qwaszx",
+                    "name_ar":"فوزي عصام عبدالفتاح",
+                    "name_en":"Fawzi E. Abdulfattah",
+                    "phone_number": "01090243795",
                     "role": "csuperadmin",
                     "cinema_id": cinemaId,
                 });
@@ -119,6 +125,9 @@ describe("/api/cinemaAccounts", async()=>{
                 .send({
                     "username": "cinemaa", 
                     "password": "12qwaszx",
+                    "name_ar":"فوزي عصام عبدالفتاح",
+                    "name_en":"Fawzi E. Abdulfattah",
+                    "phone_number": "01090243795",
                     "role": "csuperadmin",
                     "cinema_id": cinemaId,
                 });
@@ -179,6 +188,9 @@ describe("/api/cinemaAccounts", async()=>{
             .send({
                 "username": "cinemaa", 
                 "password": "12qwaszx",
+                "name_ar":"فوزي عصام عبدالفتاح",
+                "name_en":"Fawzi E. Abdulfattah",
+                "phone_number": "01090243795",
                 "role": "csuperadmin",
                 "cinema_id": cinema_id,
             });
@@ -277,6 +289,9 @@ describe("/api/cinemaAccounts", async()=>{
             .send({
                 "username": "cinemaa", 
                 "password": "12qwaszx",
+                "name_ar":"فوزي عصام عبدالفتاح",
+                "name_en":"Fawzi E. Abdulfattah",
+                "phone_number": "01090243795",
                 "role": "csuperadmin",
                 "cinema_id": cinema_id,
             });
@@ -341,6 +356,9 @@ describe("/api/cinemaAccounts", async()=>{
             .send({
                 "username": "cinemaa", 
                 "password": "12qwaszx",
+                "name_ar":"فوزي عصام عبدالفتاح",
+                "name_en":"Fawzi E. Abdulfattah",
+                "phone_number": "01090243795",
                 "role": "csuperadmin",
                 "cinema_id": cinema_id,
             });

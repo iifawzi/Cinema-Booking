@@ -5,6 +5,9 @@ const Joi = require("@hapi/joi");
 const addAccount = Joi.object({
     cinema_id: Joi.number().required(),
     username: Joi.string().required(),
+    name_ar: Joi.string().required(),
+    name_en: Joi.string().required(),
+    phone_number: Joi.string().required(),
     password:Joi.string().required(),
     role: Joi.string().valid('csuperadmin','cadmin','cmoderator').required(),
 });

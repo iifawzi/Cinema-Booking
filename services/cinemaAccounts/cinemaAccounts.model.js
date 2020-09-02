@@ -21,6 +21,18 @@ const cinemaAccounts = db.define("cinemaAccounts", {
         type: Sequelize.STRING,
         allowNull: false,
     },
+    name_ar: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    name_en: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    phone_number: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
     password: {
         type: Sequelize.STRING,
         allowNull: false,

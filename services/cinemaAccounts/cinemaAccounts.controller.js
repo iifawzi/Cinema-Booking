@@ -33,14 +33,14 @@ const addAccount = async (req,res,next)=>{
 const signin = async (req,res,next)=>{
     try {
         const {username, password} = req.body;
-        const cinemaUser = await cinemaAccountsServices.getAccountData(username);
+        const cinemaUser = await cinemaAccountsServices.isExists(username);
         if (!cinemaUser){
             throw new ErrorHandler(401, "Username is not registered");
         }
         const passwordIsSame = await decryptPassword(password,cinemaUser.password);
         if (passwordIsSame){
             delete cinemaUser.password;
-            const payLoad = cinemaTokenPayLoad(cinemaUser.username,cinemaUser.cinema_id,cinemaUser.cinemaAccount_id,cinemaUser.role);
+            const payLoad = cinemaTokenPayLoad(cinemaUser.username,cinemaUser.cinema_id,cinemaUser.cinemaAccount_id,cinemaUser.name_ar,cinemaUser.name_en,cinemaUser.role);
             const token = createToken(payLoad);
             return respond(true,200,{...cinemaUser,token},res);
         }
@@ -74,7 +74,7 @@ const refreshToken = async (req,res,next)=>{
                 if (!account){
                     throw new ErrorHandler(401, "User is not Authenticated - No matching");
                 }
-                const payLoad = cinemaTokenPayLoad(account.username, account.cinema_id,account.cinemaAccount_id,account.role);
+                const payLoad = cinemaTokenPayLoad(account.username, account.cinema_id,account.cinemaAccount_id,account.name_ar,account.name_en,account.role);
                 const newToken = createToken(payLoad);
                 return respond(true,200,{token: newToken},res);
             }else {

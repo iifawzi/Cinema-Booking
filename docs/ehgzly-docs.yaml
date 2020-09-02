@@ -929,29 +929,23 @@ definitions:
       status: true
       message: success
       data:
-        cinemaAccount_id: 19
-        username: fawzi
+        cinema_id: 3
+        cinemaAccount_id: 3
+        name_ar: فوزي عصام عبدالفتاح
+        name_en: Fawzi E. Abdulfattah
+        phone_number: 01090243795
         role: csuperadmin
-        cinema_id: 109
-        refresh_token: fcfe3698a58a1aaf137202d98eb36ba1
-        cinema_en: El Crwan
-        cinema_ar: الكروان
-        cinema_logo: logo.png
-        cinema_description: the best in thew world
-        contact_number: 01090243795
-        cinema_status: 0
-        last_checkout: '1999-03-20T21:00:00.000Z'
-        area_ar: بورسعيد
-        area_en: Port Said
-        country_ar: مصر
-        country_en: Egypt
-        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhd3ppIiwiY2luZW1hX2lkIjoxMDksInJvbGUiOjE5LCJpYXQiOjE1OTg3NDgzOTcsImV4cCI6MTU5ODc5MTU5N30.EDsy2iNH6Sef8dqayzSMDo_POJSUQWrgpK1hUvRRDng
+        refresh_token: 30271c5200fcf23d40a3ea5b7ca935bf
+        token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjMsImFjY291bnRfaWQiOjMsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE1OTkwNjc4NzksImV4cCI6MTU5OTA4OTQ3OX0.aJEB-kORxwPpMZjQLcvCZ8dcEwCEMWtmoHwpSwxEM5c
    addAccount_body:
     type: "object"
     example: 
-      cinema_id: 109
+      cinema_id: 4
       username: fawzi
-      password: 01090243795
+      name_ar: فوزي عصام عبدالفتاح
+      name_en: Fawzi E. Abdulfattah
+      phone_number: 01090243795
+      password: 12qwaszx
       role: csuperadmin
    addAccount_response:
     type: "object"
@@ -959,12 +953,15 @@ definitions:
       status: true
       message: success
       data:
-        cinemaAccount_id: 19
-        cinema_id: 109
+        cinemaAccount_id: 5
+        cinema_id: 4
         username: fawzi
+        name_ar: فوزي عصام عبدالفتاح
+        name_en: Fawzi E. Abdulfattah
+        phone_number: 01090243795
         role: csuperadmin
-        updatedAt: '2020-08-30T00:18:47.752Z'
-        createdAt: '2020-08-30T00:18:47.752Z'
+        updatedAt: '2020-09-02T17:34:02.547Z'
+        createdAt: '2020-09-02T17:34:02.547Z'
    getSlotSeats_body:
     type: "object"
     example: 
