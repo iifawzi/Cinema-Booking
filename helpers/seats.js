@@ -8,13 +8,13 @@ module.exports = (letters,rows_number,columns_number,rowCorridors,columnCorridor
         if (rowCorridors.includes(i)){
             seats.push({
                 uniqueRowNumber: i,
+                realRowNumber: -1, // corridor.
                 name: "RowCorridor",
                 seats: [],
-                realRowNumber: -1, // corridor.
             }); // this indicates that it's a row
             continue;
         }else {
-            seats.push({uniqueRowNumber: i,name: letters[0], seats: [],realRowNumber: realRowNumber+1}); // push an object with a row key which is a letter and empty array which will be used below to fill the seats
+            seats.push({uniqueRowNumber: i,realRowNumber: realRowNumber+1,name: letters[0], seats: []}); // push an object with a row key which is a letter and empty array which will be used below to fill the seats
             realRowNumber++;
         }
        for (let j=1;j<=columns_number;j++){
