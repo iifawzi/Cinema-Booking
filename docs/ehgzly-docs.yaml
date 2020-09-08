@@ -975,6 +975,7 @@ definitions:
       message: success
       data:
         - uniqueRowNumber: 1
+          realRowNumber: 1
           name: A
           seats:
             - uniqueColumnNumber: 1
@@ -1002,8 +1003,8 @@ definitions:
               name: A5
               seatRow: 1
               seatColumn: 5
-          realRowNumber: 1
         - uniqueRowNumber: 2
+          realRowNumber: 2
           name: B
           seats:
             - uniqueColumnNumber: 1
@@ -1031,8 +1032,8 @@ definitions:
               name: B5
               seatRow: 2
               seatColumn: 5
-          realRowNumber: 2
         - uniqueRowNumber: 3
+          realRowNumber: 3
           name: C
           seats:
             - uniqueColumnNumber: 1
@@ -1060,8 +1061,8 @@ definitions:
               name: C5
               seatRow: 3
               seatColumn: 5
-          realRowNumber: 3
         - uniqueRowNumber: 4
+          realRowNumber: 4
           name: D
           seats:
             - uniqueColumnNumber: 1
@@ -1089,12 +1090,12 @@ definitions:
               name: D5
               seatRow: 4
               seatColumn: 5
-          realRowNumber: 4
         - uniqueRowNumber: 5
+          realRowNumber: -1
           name: RowCorridor
           seats: []
-          realRowNumber: -1
         - uniqueRowNumber: 6
+          realRowNumber: 5
           name: E
           seats:
             - uniqueColumnNumber: 1
@@ -1122,8 +1123,8 @@ definitions:
               name: E5
               seatRow: 5
               seatColumn: 5
-          realRowNumber: 5
         - uniqueRowNumber: 7
+          realRowNumber: 6
           name: F
           seats:
             - uniqueColumnNumber: 1
@@ -1151,8 +1152,8 @@ definitions:
               name: F5
               seatRow: 6
               seatColumn: 5
-          realRowNumber: 6
         - uniqueRowNumber: 8
+          realRowNumber: 7
           name: G
           seats:
             - uniqueColumnNumber: 1
@@ -1180,12 +1181,12 @@ definitions:
               name: G5
               seatRow: 7
               seatColumn: 5
-          realRowNumber: 7
         - uniqueRowNumber: 9
+          realRowNumber: -1
           name: RowCorridor
           seats: []
-          realRowNumber: -1
         - uniqueRowNumber: 10
+          realRowNumber: 8
           name: H
           seats:
             - uniqueColumnNumber: 1
@@ -1213,7 +1214,7 @@ definitions:
               name: H5
               seatRow: 8
               seatColumn: 5
-          realRowNumber: 8
+      
    addTicket_body:
     type: "object"
     example: 
