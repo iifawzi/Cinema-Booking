@@ -5,12 +5,12 @@ const {isSeatLocked} = require("../lockedSeats");
 const addTicket = async (req,res,next)=>{
     try {
         const ticketData = req.body;
-        const isLocked = await isSeatLocked(ticketData.slot_id, ticketData.hall_id,ticketData.seat_position);
+        const isLocked = await isSeatLocked(ticketData.slot_id, ticketData.hall_id,ticketData.row,ticketData.column);
         if (isLocked){
             throw new ErrorHandler(409,"This seat is locked");
         }
         delete ticketData.hall_id;
-        const isExist = await ticketsServices.getTicket(ticketData.slot_id, ticketData.reservation_date,ticketData.seat_position);
+        const isExist = await ticketsServices.getTicket(ticketData.slot_id, ticketData.reservation_date,ticketData.row,ticketData.column);
         if (isExist){
             throw new ErrorHandler(409,"This seat is already booked");
         }

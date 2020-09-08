@@ -25,8 +25,12 @@ const ticketsModel = db.define("tickets", {
         },
         onDelete: "CASCADE"
     },
-    seat_position: {
-        type: Sequelize.STRING,
+    row: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    }, 
+    column: {
+        type: Sequelize.INTEGER,
         allowNull: false,
     }, 
     reservation_date: {
@@ -36,7 +40,7 @@ const ticketsModel = db.define("tickets", {
 }, {
     indexes: [
         {
-            fields: ["slot_id", "reservation_date","seat_position"],
+            fields: ["slot_id", "reservation_date","row", "column"],
         }
     ],
 });

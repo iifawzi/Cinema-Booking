@@ -12,8 +12,8 @@ exports.isLocked = async (seatData)=>{
 }
 
 // to check if seat is locked (checking using both hall and slot id) will be used when booking new seat
-exports.isSeatLocked = async (slot_id, hall_id, seat_position)=>{
-    const isLocked = await lockedSeatsModel.findOne({where: {[Op.or]: [{slot_id}, {hall_id}], seat_position}, attributes: ["lockedSeat_id"]});
+exports.isSeatLocked = async (slot_id, hall_id,row,column)=>{
+    const isLocked = await lockedSeatsModel.findOne({where: {[Op.or]: [{slot_id}, {hall_id}], row,column}, attributes: ["lockedSeat_id"]});
     if (isLocked){
         return isLocked.dataValues;
     }else {
@@ -23,7 +23,7 @@ exports.isSeatLocked = async (slot_id, hall_id, seat_position)=>{
 
 // to get seats' data 
 exports.getLockedSeats = async (attributes, hall_id, slot_id)=>{
-    const seats = lockedSeatsModel.findAll({where: {[Op.or]: [{slot_id}, {hall_id}]}, attributes: [...attributes], group: ["seat_position"],raw: true});
+    const seats = lockedSeatsModel.findAll({where: {[Op.or]: [{slot_id}, {hall_id}]}, attributes: [...attributes], group: ["row", "column"],raw: true});
     return seats;
 }
 

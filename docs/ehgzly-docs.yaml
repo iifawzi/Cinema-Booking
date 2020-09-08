@@ -1050,20 +1050,23 @@ definitions:
     example: 
       slot_id: 6
       hall_id: 10
-      seat_position: A1
+      row: 1,
+      column: 2,
       reservation_date: '2020-06-07'
    addTicket_response:
     type: "object"
     example: 
-      status: true
-      message: success
-      data:
-        corridor_id: 11
-        hall_id: 41
-        corridor_number: 1
-        direction: row
-        updatedAt: '2020-08-20T19:07:13.228Z'
-        createdAt: '2020-08-20T19:07:13.228Z'
+     status: true
+     message: success
+     data:
+       ticket_id: 8
+       slot_id: 37
+       row: 1,
+       column: 2,
+       reservation_date: '2020-06-01T20:00:00.000Z'
+       user_id: 38
+       updatedAt: '2020-08-20T23:16:35.309Z'
+       createdAt: '2020-08-20T23:16:35.309Z'
    addCorridor_body:
     type: "object"
     properties:
@@ -1091,7 +1094,8 @@ definitions:
    lockSeat_body:
     type: "object"
     example: 
-      seat_position: A1
+      row: 5,
+      column: 10
       hall_id: 50
    lockSeat_response:
     type: "object"
@@ -1101,7 +1105,8 @@ definitions:
       data:
         slot_id: null
         lockedSeat_id: 26
-        seat_position: A1
+        row: 5,
+        column: 10
         hall_id: 50
         updatedAt: '2020-08-20T18:10:19.944Z'
         createdAt: '2020-08-20T18:10:19.944Z'

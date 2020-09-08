@@ -17,14 +17,15 @@ describe("/api/lockedSeats", async()=>{
             .post("/api/lockedSeats/lockSeat")
             .set({authorization: "Bearer "+ token})
             .send({
-                "seat_position": "A1",
+                "row": 1,
             });
             expect(res.statusCode).equals(400);
             res = await request(app)
             .post("/api/lockedSeats/lockSeat")
             .set({authorization: "Bearer "+ token})
             .send({
-                "seat_position": "A1",
+                "row": 1,
+                "column": 10,
                 "seat_id": 1,
                 "hall_id": 8
             });
@@ -110,7 +111,8 @@ describe("/api/lockedSeats", async()=>{
             .post("/api/lockedSeats/lockSeat")
             .set({authorization: "Bearer "+ cinemaToken})
             .send({
-                "seat_position": "A1",
+                "row": 1,
+                "column": 10,
                 "slot_id": slotId,
             });
             expect(res.statusCode).equals(201);
@@ -118,7 +120,8 @@ describe("/api/lockedSeats", async()=>{
             .post("/api/lockedSeats/lockSeat")
             .set({authorization: "Bearer "+ cinemaToken})
             .send({
-                "seat_position": "A1",
+                "row": 1,
+                "column": 10,
                 "hall_id": hallId,
             });
             expect(res.statusCode).equals(201);
@@ -208,7 +211,8 @@ describe("/api/lockedSeats", async()=>{
             .post("/api/lockedSeats/lockSeat")
             .set({authorization: "Bearer "+ cinemaToken})
             .send({
-                "seat_position": "A1",
+                "row": 1,
+                "column": 10,
                 "slot_id": slotId,
             });
             expect(res.statusCode).equals(201);
@@ -216,7 +220,8 @@ describe("/api/lockedSeats", async()=>{
             .post("/api/lockedSeats/lockSeat")
             .set({authorization: "Bearer "+ cinemaToken})
             .send({
-                "seat_position": "A1",
+                "row": 1,
+                "column": 10,
                 "hall_id": hallId,
             });
             expect(res.statusCode).equals(201);
@@ -224,7 +229,8 @@ describe("/api/lockedSeats", async()=>{
             .post("/api/lockedSeats/lockSeat")
             .set({authorization: "Bearer "+ cinemaToken})
             .send({
-                "seat_position": "A1",
+                "row": 1,
+                "column": 10,
                 "slot_id": slotId,
             });
             expect(res.statusCode).equals(409);
@@ -232,7 +238,8 @@ describe("/api/lockedSeats", async()=>{
             .post("/api/lockedSeats/lockSeat")
             .set({authorization: "Bearer "+ cinemaToken})
             .send({
-                "seat_position": "A1",
+                "row": 1,
+                "column": 10,
                 "hall_id": hallId,
             });
             expect(res.statusCode).equals(409);

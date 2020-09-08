@@ -1047,7 +1047,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"cinemaa\", \n    \"password\": \"12qwaszx\"\n}",
+							"raw": "{\n    \"username\": \"fawzi\", \n    \"password\": \"12qwaszx\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1081,7 +1081,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"username\": \"cinemaa\", \n    \"password\": \"12qwaszx\"\n}",
+									"raw": "{\n    \"username\": \"fawzi\", \n    \"password\": \"12qwaszx\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2542,7 +2542,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"seat_position\": \"A1\",\n\"hall_id\": 50\n}",
+							"raw": "{\n\"row\": 1,\n\"column\": 2,\n\"hall_id\": 50\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2575,7 +2575,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"seat_position\": \"A1\",\n\"slot_id\": 31\n}",
+									"raw": "{\n\"row\": 1,\n\"column\": 2,\n\"slot_id\": 31\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2636,7 +2636,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": null,\n        \"lockedSeat_id\": 25,\n        \"seat_position\": \"A1\",\n        \"slot_id\": 31,\n        \"updatedAt\": \"2020-08-20T18:09:29.557Z\",\n        \"createdAt\": \"2020-08-20T18:09:29.557Z\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": null,\n        \"row\": 1,\n        \"column\": 2,\n        \"slot_id\": 31,\n        \"updatedAt\": \"2020-08-20T18:09:29.557Z\",\n        \"createdAt\": \"2020-08-20T18:09:29.557Z\"\n    }\n}"
 						}
 					]
 				}
@@ -2776,7 +2776,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"slot_id\": 13,\n\"hall_id\": 1,\n\"seat_position\": \"A5\",\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+							"raw": "{\n\"slot_id\": 13,\n\"hall_id\": 1,\n\"row\": 1,\n\"column\": 2,\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2809,7 +2809,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"slot_id\": 13,\n\"hall_id\": 1,\n\"seat_position\": \"A5\",\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+									"raw": "{\n\"slot_id\": 13,\n\"hall_id\": 1,\n\"row\": 1,\n\"column\": 2,\n\"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2870,7 +2870,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"ticket_id\": 8,\n        \"slot_id\": 37,\n        \"seat_position\": \"A9\",\n        \"reservation_date\": \"2020-06-01T20:00:00.000Z\",\n        \"user_id\": 38,\n        \"updatedAt\": \"2020-08-20T23:16:35.309Z\",\n        \"createdAt\": \"2020-08-20T23:16:35.309Z\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"ticket_id\": 8,\n        \"slot_id\": 37,\n        \"row\": 1,\n        \"column\": 2,\n        \"reservation_date\": \"2020-06-01T20:00:00.000Z\",\n        \"user_id\": 38,\n        \"updatedAt\": \"2020-08-20T23:16:35.309Z\",\n        \"createdAt\": \"2020-08-20T23:16:35.309Z\"\n    }\n}"
 						}
 					]
 				}
@@ -2902,12 +2902,12 @@
 	],
 	"variable": [
 		{
-			"id": "958eb492-0758-4ca2-8e17-bc10f22f21ed",
+			"id": "a2412f3c-7569-44f2-9c66-275112baeb56",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "bfc42edc-4412-445e-b4b8-ac997b6e96c7",
+			"id": "82448737-0d2c-400c-8ac7-56fe012a98d3",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

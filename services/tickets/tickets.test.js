@@ -18,7 +18,7 @@ describe("/api/tickets", async()=>{
             .post("/api/tickets/addTicket")
             .set({authorization: "Bearer "+ token})
             .send({
-                "seat_position": "A1",
+                "row": 1,
                 "slot_id": 1,
             });
             expect(res.statusCode).equals(400);
@@ -114,7 +114,8 @@ describe("/api/tickets", async()=>{
             .post("/api/tickets/addTicket")
             .set({authorization: "Bearer "+ userToken})
             .send({
-                "seat_position": "A1",
+                "row": 1,
+                "column": 10,
                 "slot_id": slotId,
                 "hall_id": hallId,
                 "reservation_date": "2020-07-25"

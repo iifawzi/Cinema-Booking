@@ -26,15 +26,19 @@ const lockedSeatsModel = db.define("lockedSeats",{
         },
         onDelete: "CASCADE"
     },
-    seat_position: {
-        type: Sequelize.STRING,
+    row: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    column: {
+        type: Sequelize.INTEGER,
         allowNull: false
     }, 
 }, 
 {
     indexes: [
         {
-            fields: ["slot_id","hall_id","seat_position"],
+            fields: ["slot_id","hall_id","row","column"],
         }
     ]
 });
