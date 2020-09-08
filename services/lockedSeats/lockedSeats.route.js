@@ -6,6 +6,6 @@ const lockedSeatsController = require("./lockedSeats.controller");
 const lockedSeatsSchemas = require("./lockedSeats.validation");
 const router = express.Router();
 
-router.post("/lockSeat", isAuth(), isAllowed(['cinema']), validate(lockedSeatsSchemas.lockSeat, 'body'), lockedSeatsController.lockSeat);
+router.post("/lockSeat", isAuth(), isAllowed(['csuperadmin']), validate(lockedSeatsSchemas.lockSeat, 'body'), lockedSeatsController.lockSeat);
 
 module.exports = router;

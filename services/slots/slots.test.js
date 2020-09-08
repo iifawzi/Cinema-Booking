@@ -12,7 +12,7 @@ describe("/api/slots", async()=>{
 
     describe("/addSlot", ()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
-            const token = createToken({username: "crownn", cinema_id: 1,role:"cinema"});
+            const token = createToken({username: "crownn", cinema_id: 1,role:"csuperadmin"});
             const res = await request(app)
                 .post("/api/slots/addSlot")
                 .set({authorization: "Bearer "+token})
@@ -58,15 +58,15 @@ describe("/api/slots", async()=>{
                 });
             expect(res.statusCode).equals(201);
             const cinemaId = res.body.data.cinema_id;
-            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"cinema"});
+            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"csuperadmin"});
             res = await request(app)
                 .post("/api/halls/addHall")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
                     "hall_name": "VIP-1", 
                     "hall_description": "The best hall in the world",
-                    "rowsNumber": 30,
-                    "columnsNumber": 30,
+                    "rows_number": 30,
+                    "columns_number": 30,
                     "hall_status": false
                 });
             expect(res.statusCode).equals(201);
@@ -140,15 +140,15 @@ describe("/api/slots", async()=>{
                 });
             expect(res.statusCode).equals(201);
             const cinemaId = res.body.data.cinema_id;
-            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"cinema"});
+            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"csuperadmin"});
             res = await request(app)
                 .post("/api/halls/addHall")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
                     "hall_name": "VIP-1", 
                     "hall_description": "The best hall in the world",
-                    "rowsNumber": 30,
-                    "columnsNumber": 30,
+                    "rows_number": 30,
+                    "columns_number": 30,
                     "hall_status": false
                 });
             expect(res.statusCode).equals(201);
@@ -234,7 +234,7 @@ describe("/api/slots", async()=>{
 
     describe("/toggleSlotStatus", ()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
-            const token = createToken({phone_number: "01090243795", cinema_id: 1,role:"cinema"});
+            const token = createToken({phone_number: "01090243795", cinema_id: 1,role:"csuperadmin"});
             const res = await request(app)
                 .patch("/api/slots/toggleSlotStatus")
                 .set({authorization: "Bearer "+token})
@@ -244,7 +244,7 @@ describe("/api/slots", async()=>{
             expect(res.statusCode).equals(400);
         });
         it ("Should respond 404 if hall is not found", async()=>{ 
-            const token = createToken({phone_number: "01090243795", cinema_id: 1,role:"cinema"});
+            const token = createToken({phone_number: "01090243795", cinema_id: 1,role:"csuperadmin"});
             const res = await request(app)
                 .patch("/api/slots/toggleSlotStatus")
                 .set({authorization: "Bearer "+token})
@@ -288,15 +288,15 @@ describe("/api/slots", async()=>{
                 });
             expect(res.statusCode).equals(201);
             const cinemaId = res.body.data.cinema_id;
-            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"cinema"});
+            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"csuperadmin"});
             res = await request(app)
                 .post("/api/halls/addHall")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
                     "hall_name": "VIP-1", 
                     "hall_description": "The best hall in the world",
-                    "rowsNumber": 30,
-                    "columnsNumber": 30,
+                    "rows_number": 30,
+                    "columns_number": 30,
                     "hall_status": false
                 });
             expect(res.statusCode).equals(201);

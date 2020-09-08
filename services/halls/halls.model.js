@@ -23,11 +23,11 @@ const hallsModel = db.define("halls", {
             key: 'cinema_id'
           },
     },
-    rowsNumber: {
+    rows_number: {
         type: Sequelize.INTEGER,
         allowNull: false,
     },
-    columnsNumber: {
+    columns_number: {
         type: Sequelize.INTEGER,
         allowNull: false,
     },

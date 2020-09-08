@@ -974,77 +974,246 @@ definitions:
       status: true
       message: success
       data:
-        - key: A
+        - uniqueRowNumber: 1
+          name: A
           seats:
-            - A1
-            - 0
-            - 0
-            - A2
-            - 0
-        - ''
-        - key: B
+            - uniqueColumnNumber: 1
+              status: available
+              name: A1
+              seatRow: 1
+              seatColumn: 1
+            - uniqueColumnNumber: 2
+              status: available
+              name: A2
+              seatRow: 1
+              seatColumn: 2
+            - uniqueColumnNumber: 3
+              status: available
+              name: A3
+              seatRow: 1
+              seatColumn: 3
+            - uniqueColumnNumber: 4
+              status: available
+              name: A4
+              seatRow: 1
+              seatColumn: 4
+            - uniqueColumnNumber: 5
+              status: available
+              name: A5
+              seatRow: 1
+              seatColumn: 5
+          realRowNumber: 1
+        - uniqueRowNumber: 2
+          name: B
           seats:
-            - B1
-            - B2
-            - 0
-            - B3
-            - B4
-        - key: C
+            - uniqueColumnNumber: 1
+              status: available
+              name: B1
+              seatRow: 2
+              seatColumn: 1
+            - uniqueColumnNumber: 2
+              status: available
+              name: B2
+              seatRow: 2
+              seatColumn: 2
+            - uniqueColumnNumber: 3
+              status: available
+              name: B3
+              seatRow: 2
+              seatColumn: 3
+            - uniqueColumnNumber: 4
+              status: available
+              name: B4
+              seatRow: 2
+              seatColumn: 4
+            - uniqueColumnNumber: 5
+              status: available
+              name: B5
+              seatRow: 2
+              seatColumn: 5
+          realRowNumber: 2
+        - uniqueRowNumber: 3
+          name: C
           seats:
-            - C1
-            - C2
-            - 0
-            - C3
-            - C4
-        - key: D
+            - uniqueColumnNumber: 1
+              status: available
+              name: C1
+              seatRow: 3
+              seatColumn: 1
+            - uniqueColumnNumber: 2
+              status: available
+              name: C2
+              seatRow: 3
+              seatColumn: 2
+            - uniqueColumnNumber: 3
+              status: available
+              name: C3
+              seatRow: 3
+              seatColumn: 3
+            - uniqueColumnNumber: 4
+              status: available
+              name: C4
+              seatRow: 3
+              seatColumn: 4
+            - uniqueColumnNumber: 5
+              status: available
+              name: C5
+              seatRow: 3
+              seatColumn: 5
+          realRowNumber: 3
+        - uniqueRowNumber: 4
+          name: D
           seats:
-            - D1
-            - D2
-            - 0
-            - D3
-            - D4
-        - key: E
+            - uniqueColumnNumber: 1
+              status: available
+              name: D1
+              seatRow: 4
+              seatColumn: 1
+            - uniqueColumnNumber: 2
+              status: available
+              name: D2
+              seatRow: 4
+              seatColumn: 2
+            - uniqueColumnNumber: 3
+              status: available
+              name: D3
+              seatRow: 4
+              seatColumn: 3
+            - uniqueColumnNumber: 4
+              status: available
+              name: D4
+              seatRow: 4
+              seatColumn: 4
+            - uniqueColumnNumber: 5
+              status: available
+              name: D5
+              seatRow: 4
+              seatColumn: 5
+          realRowNumber: 4
+        - uniqueRowNumber: 5
+          name: RowCorridor
+          seats: []
+          realRowNumber: -1
+        - uniqueRowNumber: 6
+          name: E
           seats:
-            - E1
-            - E2
-            - 0
-            - E3
-            - E4
-        - key: F
+            - uniqueColumnNumber: 1
+              status: available
+              name: E1
+              seatRow: 5
+              seatColumn: 1
+            - uniqueColumnNumber: 2
+              status: available
+              name: E2
+              seatRow: 5
+              seatColumn: 2
+            - uniqueColumnNumber: 3
+              status: available
+              name: E3
+              seatRow: 5
+              seatColumn: 3
+            - uniqueColumnNumber: 4
+              status: available
+              name: E4
+              seatRow: 5
+              seatColumn: 4
+            - uniqueColumnNumber: 5
+              status: available
+              name: E5
+              seatRow: 5
+              seatColumn: 5
+          realRowNumber: 5
+        - uniqueRowNumber: 7
+          name: F
           seats:
-            - F1
-            - F2
-            - 0
-            - F3
-            - F4
-        - key: G
+            - uniqueColumnNumber: 1
+              status: available
+              name: F1
+              seatRow: 6
+              seatColumn: 1
+            - uniqueColumnNumber: 2
+              status: available
+              name: F2
+              seatRow: 6
+              seatColumn: 2
+            - uniqueColumnNumber: 3
+              status: available
+              name: F3
+              seatRow: 6
+              seatColumn: 3
+            - uniqueColumnNumber: 4
+              status: available
+              name: F4
+              seatRow: 6
+              seatColumn: 4
+            - uniqueColumnNumber: 5
+              status: available
+              name: F5
+              seatRow: 6
+              seatColumn: 5
+          realRowNumber: 6
+        - uniqueRowNumber: 8
+          name: G
           seats:
-            - G1
-            - G2
-            - 0
-            - G3
-            - G4
-        - key: H
+            - uniqueColumnNumber: 1
+              status: available
+              name: G1
+              seatRow: 7
+              seatColumn: 1
+            - uniqueColumnNumber: 2
+              status: available
+              name: G2
+              seatRow: 7
+              seatColumn: 2
+            - uniqueColumnNumber: 3
+              status: available
+              name: G3
+              seatRow: 7
+              seatColumn: 3
+            - uniqueColumnNumber: 4
+              status: available
+              name: G4
+              seatRow: 7
+              seatColumn: 4
+            - uniqueColumnNumber: 5
+              status: available
+              name: G5
+              seatRow: 7
+              seatColumn: 5
+          realRowNumber: 7
+        - uniqueRowNumber: 9
+          name: RowCorridor
+          seats: []
+          realRowNumber: -1
+        - uniqueRowNumber: 10
+          name: H
           seats:
-            - H1
-            - H2
-            - 0
-            - H3
-            - H4
-        - key: I
-          seats:
-            - I1
-            - I2
-            - 0
-            - I3
-            - I4
-        - key: J
-          seats:
-            - J1
-            - J2
-            - 0
-            - J3
-            - J4
+            - uniqueColumnNumber: 1
+              status: available
+              name: H1
+              seatRow: 8
+              seatColumn: 1
+            - uniqueColumnNumber: 2
+              status: available
+              name: H2
+              seatRow: 8
+              seatColumn: 2
+            - uniqueColumnNumber: 3
+              status: available
+              name: H3
+              seatRow: 8
+              seatColumn: 3
+            - uniqueColumnNumber: 4
+              status: available
+              name: H4
+              seatRow: 8
+              seatColumn: 4
+            - uniqueColumnNumber: 5
+              status: available
+              name: H5
+              seatRow: 8
+              seatColumn: 5
+          realRowNumber: 8
    addTicket_body:
     type: "object"
     example: 
@@ -1307,8 +1476,8 @@ definitions:
     example: 
      hall_name: "VIP-1"
      hall_description: "the best hall in the world"
-     rowsNumber: 30,
-     columnsNumber: 30,
+     rows_number: 30,
+     columns_number: 30,
      hall_status: false
    addHall_response:
     type: "object"
@@ -1321,8 +1490,8 @@ definitions:
         hall_name: VIP-1
         hall_description: "the best hall in the world"
         cinema_id: 14
-        rowsNumber: 30,
-        columnsNumber: 30,
+        rows_number: 30,
+        columns_number: 30,
    signin_admin_body:
     type: "object"
     example: 

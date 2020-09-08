@@ -57,15 +57,15 @@ describe("/api/tickets", async()=>{
                 });
             expect(res.statusCode).equals(201);
             const cinemaId = res.body.data.cinema_id;
-            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"cinema"});
+            const cinemaToken = createToken({username: "crownn", cinema_id: cinemaId,role:"csuperadmin"});
             res = await request(app)
                 .post("/api/halls/addHall")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
                     "hall_name": "VIP-1", 
                     "hall_description": "The best hall in the world",
-                    "rowsNumber": 30,
-                    "columnsNumber": 30,
+                    "rows_number": 30,
+                    "columns_number": 30,
                     "hall_status": false
                 });
             expect(res.statusCode).equals(201);

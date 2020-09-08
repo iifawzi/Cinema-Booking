@@ -1,27 +1,58 @@
 // this helper will be used to generate the array which will be used to draw the seats structure
 
-module.exports = (letters,rowsNumber,columnNumber,rowCorridors,columnCorridors,bookedSeats,lockedSeats)=>{
+module.exports = (letters,rows_number,columns_number,rowCorridors,columnCorridors,lockedSeats,bookedSeats = [])=>{
     const seats = [];
-    for(let i=1;i<=rowsNumber;i++){
-        let startNumber = 1;
+    let realRowNumber = 0; // this will be used, to increment manually, to be able to follow the real numbers of rows (without corridors) - zero because it will increase in the rows Lopp, for first time it should be 1, so going to columns loop with 1, if started with 1, it will be go to the columns loop with 2.. so in the rows Loop when row, we added 1 manually
+    for(let i=1;i<=rows_number;i++){
+        let realColumnNumber = 1; // this will be used, to increment manually, to be able to follow the real numbers of columns (without corridors)
         if (rowCorridors.includes(i)){
-            seats.push(''); // this indicates that it's a row
+            seats.push({
+                uniqueRowNumber: i,
+                name: "RowCorridor",
+                seats: [],
+                realRowNumber: -1, // corridor.
+            }); // this indicates that it's a row
             continue;
         }else {
-            seats.push({key: letters[0], seats: []}); // push an object with a row key which is a letter and empty array which will be used below to fill the seats
+            seats.push({uniqueRowNumber: i,name: letters[0], seats: [],realRowNumber: realRowNumber+1}); // push an object with a row key which is a letter and empty array which will be used below to fill the seats
+            realRowNumber++;
         }
-       for (let j=1;j<=columnNumber;j++){
-           if (columnCorridors.includes(j)){ // if seat's column is corridor fill its position in the array with zero
-            seats[i-1]["seats"].push(0);
-           }else if (lockedSeats.includes(letters[0]+startNumber)){ // if the seat is closed fill its position with one
-            seats[i-1]["seats"].push(1);
-            startNumber++
-           }else if (bookedSeats.includes(letters[0]+startNumber)){ // if the seat is booked fill its position with one
-            seats[i-1]["seats"].push(1);
-            startNumber++
-           }else {
-            seats[i-1]["seats"].push(letters[0]+startNumber); // if not closed or booked or in the corridor - fill its position in array with the seat name which consists of (LETTER `refers to the row` AND COLUMN NUMBER )
-            startNumber++
+       for (let j=1;j<=columns_number;j++){
+           if (columnCorridors.includes(j)){ // if seat's column is corridor
+            seats[i-1]["seats"].push({
+                uniqueColumnNumber: j,
+                status: "columnCorridor",
+                name: 'columnCorridor', 
+                seatRow: -1, 
+                seatColumn: -1,
+            });
+           }else if (lockedSeats.findIndex(locked=> locked.row === realRowNumber && locked.column === realColumnNumber) !== -1){ // if the seat is locked 
+            seats[i-1]["seats"].push({
+                uniqueColumnNumber: j,
+                status: "closed",
+                name: letters[0]+realColumnNumber, 
+                seatRow: realRowNumber, 
+                seatColumn: realColumnNumber,
+            });
+            realColumnNumber++
+           }else if (bookedSeats.findIndex(booked=> booked.row === realRowNumber && booked.column === realColumnNumber) !== -1){ // if the seat is booked 
+            seats[i-1]["seats"].push({
+                uniqueColumnNumber: j,
+                status: "booked",
+                name: letters[0]+realColumnNumber, 
+                seatRow: realRowNumber, 
+                seatColumn: realColumnNumber,
+            });
+            realColumnNumber++
+           }else { // so, it's available
+            seats[i-1]["seats"].push({
+                uniqueColumnNumber: j,
+                status: "available",
+                name: letters[0]+realColumnNumber, 
+                seatRow: realRowNumber, 
+                seatColumn: realColumnNumber,
+            }); 
+            realColumnNumber++
         }
        }
        letters.shift();

@@ -3,8 +3,8 @@ const Joi = require("@hapi/joi");
 const addHall = Joi.object({
     hall_name: Joi.string().required(),
     hall_status: Joi.boolean().required(),
-    rowsNumber: Joi.number(),
-    columnsNumber: Joi.number(),
+    rows_number: Joi.number().required(),
+    columns_number: Joi.number().required(),
     hall_description: Joi.string(),
 });
 

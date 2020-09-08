@@ -1271,12 +1271,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE0Mywicm9sZSI6ImNpbmVtYSIsImlhdCI6MTU5NzMxMzA5NiwiZXhwIjoxNTk3MzU2Mjk2fQ.HTI5draGumY-Ir0lixTjnX0Yn2QZnD7BiEW4Sk3w0qs"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjU1LCJhY2NvdW50X2lkIjoyMCwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTU5OTU5NDM5NSwiZXhwIjoxNTk5NjE1OTk1fQ.M3TkAQG8sbvwPuRxx1333ef2r9xvg5UumoDWyOlU_7c"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"rowsNumber\": 30,\n                \"columnsNumber\": 30,\n                \"hall_status\": false\n}",
+							"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"rows_number\": 30,\n                \"columns_number\": 30,\n                \"hall_status\": false\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1309,7 +1309,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"rowsNumber\": 30,\n                \"columnsNumber\": 30,\n                \"hall_status\": false\n}",
+									"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"rows_number\": 30,\n                \"columns_number\": 30,\n                \"hall_status\": false\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1370,7 +1370,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": 74,\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"rowsNumber\": 30,\n        \"columnsNumber\": 30,\n        \"hall_status\": false,\n        \"cinema_id\": 143\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": 74,\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"rows_number\": 30,\n        \"columns_number\": 30,\n        \"hall_status\": false,\n        \"cinema_id\": 143\n    }\n}"
 						}
 					]
 				},
@@ -1610,12 +1610,13 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjE0LCJyb2xlIjoidXNlciIsImlhdCI6MTU5ODEwMDY4MCwiZXhwIjoxNTk4MTQzODgwfQ.3R95mrnDlul5dcplyvHlfNzlJaprkwB8KHIIj6ERCME"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjU1LCJhY2NvdW50X2lkIjoyMCwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTU5OTU5NDM5NSwiZXhwIjoxNTk5NjE1OTk1fQ.M3TkAQG8sbvwPuRxx1333ef2r9xvg5UumoDWyOlU_7c",
+								"disabled": true
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"hall_id\": 23,\n    \"slot_id\": 13,\n    \"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+							"raw": "{\n    \"hall_id\": 34,\n    \"slot_id\": 13,\n    \"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1643,12 +1644,13 @@
 									{
 										"key": "authorization",
 										"type": "text",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwMTA5MDI0Mzc5OSIsInVzZXJfaWQiOjE0LCJyb2xlIjoidXNlciIsImlhdCI6MTU5ODEwMDY4MCwiZXhwIjoxNTk4MTQzODgwfQ.3R95mrnDlul5dcplyvHlfNzlJaprkwB8KHIIj6ERCME"
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjU1LCJhY2NvdW50X2lkIjoyMCwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTU5OTU5NDM5NSwiZXhwIjoxNTk5NjE1OTk1fQ.M3TkAQG8sbvwPuRxx1333ef2r9xvg5UumoDWyOlU_7c",
+										"disabled": true
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"hall_id\": 23,\n    \"slot_id\": 13,\n    \"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
+									"raw": "{\n    \"hall_id\": 34,\n    \"slot_id\": 13,\n    \"reservation_date\": \"2020-06-01T20:00:00Z\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1693,15 +1695,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "481"
+									"value": "4079"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"1e1-e3XUfwHvCi1IolnNs+Qktst/HHE\""
+									"value": "W/\"fef-mAw770b8q4FDUvA+OBODtL6aQqA\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 22 Aug 2020 14:37:37 GMT"
+									"value": "Tue, 08 Sep 2020 19:57:59 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1709,7 +1711,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"key\": \"A\",\n            \"seats\": [\n                \"A1\",\n                0,\n                0,\n                \"A2\",\n                0\n            ]\n        },\n        \"\",\n        {\n            \"key\": \"B\",\n            \"seats\": [\n                \"B1\",\n                \"B2\",\n                0,\n                \"B3\",\n                \"B4\"\n            ]\n        },\n        {\n            \"key\": \"C\",\n            \"seats\": [\n                \"C1\",\n                \"C2\",\n                0,\n                \"C3\",\n                \"C4\"\n            ]\n        },\n        {\n            \"key\": \"D\",\n            \"seats\": [\n                \"D1\",\n                \"D2\",\n                0,\n                \"D3\",\n                \"D4\"\n            ]\n        },\n        {\n            \"key\": \"E\",\n            \"seats\": [\n                \"E1\",\n                \"E2\",\n                0,\n                \"E3\",\n                \"E4\"\n            ]\n        },\n        {\n            \"key\": \"F\",\n            \"seats\": [\n                \"F1\",\n                \"F2\",\n                0,\n                \"F3\",\n                \"F4\"\n            ]\n        },\n        {\n            \"key\": \"G\",\n            \"seats\": [\n                \"G1\",\n                \"G2\",\n                0,\n                \"G3\",\n                \"G4\"\n            ]\n        },\n        {\n            \"key\": \"H\",\n            \"seats\": [\n                \"H1\",\n                \"H2\",\n                0,\n                \"H3\",\n                \"H4\"\n            ]\n        },\n        {\n            \"key\": \"I\",\n            \"seats\": [\n                \"I1\",\n                \"I2\",\n                0,\n                \"I3\",\n                \"I4\"\n            ]\n        },\n        {\n            \"key\": \"J\",\n            \"seats\": [\n                \"J1\",\n                \"J2\",\n                0,\n                \"J3\",\n                \"J4\"\n            ]\n        }\n    ]\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"uniqueRowNumber\": 1,\n            \"name\": \"A\",\n            \"seats\": [\n                {\n                    \"uniqueColumnNumber\": 1,\n                    \"status\": \"available\",\n                    \"name\": \"A1\",\n                    \"seatRow\": 1,\n                    \"seatColumn\": 1\n                },\n                {\n                    \"uniqueColumnNumber\": 2,\n                    \"status\": \"available\",\n                    \"name\": \"A2\",\n                    \"seatRow\": 1,\n                    \"seatColumn\": 2\n                },\n                {\n                    \"uniqueColumnNumber\": 3,\n                    \"status\": \"available\",\n                    \"name\": \"A3\",\n                    \"seatRow\": 1,\n                    \"seatColumn\": 3\n                },\n                {\n                    \"uniqueColumnNumber\": 4,\n                    \"status\": \"available\",\n                    \"name\": \"A4\",\n                    \"seatRow\": 1,\n                    \"seatColumn\": 4\n                },\n                {\n                    \"uniqueColumnNumber\": 5,\n                    \"status\": \"available\",\n                    \"name\": \"A5\",\n                    \"seatRow\": 1,\n                    \"seatColumn\": 5\n                }\n            ],\n            \"realRowNumber\": 1\n        },\n        {\n            \"uniqueRowNumber\": 2,\n            \"name\": \"B\",\n            \"seats\": [\n                {\n                    \"uniqueColumnNumber\": 1,\n                    \"status\": \"available\",\n                    \"name\": \"B1\",\n                    \"seatRow\": 2,\n                    \"seatColumn\": 1\n                },\n                {\n                    \"uniqueColumnNumber\": 2,\n                    \"status\": \"available\",\n                    \"name\": \"B2\",\n                    \"seatRow\": 2,\n                    \"seatColumn\": 2\n                },\n                {\n                    \"uniqueColumnNumber\": 3,\n                    \"status\": \"available\",\n                    \"name\": \"B3\",\n                    \"seatRow\": 2,\n                    \"seatColumn\": 3\n                },\n                {\n                    \"uniqueColumnNumber\": 4,\n                    \"status\": \"available\",\n                    \"name\": \"B4\",\n                    \"seatRow\": 2,\n                    \"seatColumn\": 4\n                },\n                {\n                    \"uniqueColumnNumber\": 5,\n                    \"status\": \"available\",\n                    \"name\": \"B5\",\n                    \"seatRow\": 2,\n                    \"seatColumn\": 5\n                }\n            ],\n            \"realRowNumber\": 2\n        },\n        {\n            \"uniqueRowNumber\": 3,\n            \"name\": \"C\",\n            \"seats\": [\n                {\n                    \"uniqueColumnNumber\": 1,\n                    \"status\": \"available\",\n                    \"name\": \"C1\",\n                    \"seatRow\": 3,\n                    \"seatColumn\": 1\n                },\n                {\n                    \"uniqueColumnNumber\": 2,\n                    \"status\": \"available\",\n                    \"name\": \"C2\",\n                    \"seatRow\": 3,\n                    \"seatColumn\": 2\n                },\n                {\n                    \"uniqueColumnNumber\": 3,\n                    \"status\": \"available\",\n                    \"name\": \"C3\",\n                    \"seatRow\": 3,\n                    \"seatColumn\": 3\n                },\n                {\n                    \"uniqueColumnNumber\": 4,\n                    \"status\": \"available\",\n                    \"name\": \"C4\",\n                    \"seatRow\": 3,\n                    \"seatColumn\": 4\n                },\n                {\n                    \"uniqueColumnNumber\": 5,\n                    \"status\": \"available\",\n                    \"name\": \"C5\",\n                    \"seatRow\": 3,\n                    \"seatColumn\": 5\n                }\n            ],\n            \"realRowNumber\": 3\n        },\n        {\n            \"uniqueRowNumber\": 4,\n            \"name\": \"D\",\n            \"seats\": [\n                {\n                    \"uniqueColumnNumber\": 1,\n                    \"status\": \"available\",\n                    \"name\": \"D1\",\n                    \"seatRow\": 4,\n                    \"seatColumn\": 1\n                },\n                {\n                    \"uniqueColumnNumber\": 2,\n                    \"status\": \"available\",\n                    \"name\": \"D2\",\n                    \"seatRow\": 4,\n                    \"seatColumn\": 2\n                },\n                {\n                    \"uniqueColumnNumber\": 3,\n                    \"status\": \"available\",\n                    \"name\": \"D3\",\n                    \"seatRow\": 4,\n                    \"seatColumn\": 3\n                },\n                {\n                    \"uniqueColumnNumber\": 4,\n                    \"status\": \"available\",\n                    \"name\": \"D4\",\n                    \"seatRow\": 4,\n                    \"seatColumn\": 4\n                },\n                {\n                    \"uniqueColumnNumber\": 5,\n                    \"status\": \"available\",\n                    \"name\": \"D5\",\n                    \"seatRow\": 4,\n                    \"seatColumn\": 5\n                }\n            ],\n            \"realRowNumber\": 4\n        },\n        {\n            \"uniqueRowNumber\": 5,\n            \"name\": \"RowCorridor\",\n            \"seats\": [],\n            \"realRowNumber\": -1\n        },\n        {\n            \"uniqueRowNumber\": 6,\n            \"name\": \"E\",\n            \"seats\": [\n                {\n                    \"uniqueColumnNumber\": 1,\n                    \"status\": \"available\",\n                    \"name\": \"E1\",\n                    \"seatRow\": 5,\n                    \"seatColumn\": 1\n                },\n                {\n                    \"uniqueColumnNumber\": 2,\n                    \"status\": \"available\",\n                    \"name\": \"E2\",\n                    \"seatRow\": 5,\n                    \"seatColumn\": 2\n                },\n                {\n                    \"uniqueColumnNumber\": 3,\n                    \"status\": \"available\",\n                    \"name\": \"E3\",\n                    \"seatRow\": 5,\n                    \"seatColumn\": 3\n                },\n                {\n                    \"uniqueColumnNumber\": 4,\n                    \"status\": \"available\",\n                    \"name\": \"E4\",\n                    \"seatRow\": 5,\n                    \"seatColumn\": 4\n                },\n                {\n                    \"uniqueColumnNumber\": 5,\n                    \"status\": \"available\",\n                    \"name\": \"E5\",\n                    \"seatRow\": 5,\n                    \"seatColumn\": 5\n                }\n            ],\n            \"realRowNumber\": 5\n        },\n        {\n            \"uniqueRowNumber\": 7,\n            \"name\": \"F\",\n            \"seats\": [\n                {\n                    \"uniqueColumnNumber\": 1,\n                    \"status\": \"available\",\n                    \"name\": \"F1\",\n                    \"seatRow\": 6,\n                    \"seatColumn\": 1\n                },\n                {\n                    \"uniqueColumnNumber\": 2,\n                    \"status\": \"available\",\n                    \"name\": \"F2\",\n                    \"seatRow\": 6,\n                    \"seatColumn\": 2\n                },\n                {\n                    \"uniqueColumnNumber\": 3,\n                    \"status\": \"available\",\n                    \"name\": \"F3\",\n                    \"seatRow\": 6,\n                    \"seatColumn\": 3\n                },\n                {\n                    \"uniqueColumnNumber\": 4,\n                    \"status\": \"available\",\n                    \"name\": \"F4\",\n                    \"seatRow\": 6,\n                    \"seatColumn\": 4\n                },\n                {\n                    \"uniqueColumnNumber\": 5,\n                    \"status\": \"available\",\n                    \"name\": \"F5\",\n                    \"seatRow\": 6,\n                    \"seatColumn\": 5\n                }\n            ],\n            \"realRowNumber\": 6\n        },\n        {\n            \"uniqueRowNumber\": 8,\n            \"name\": \"G\",\n            \"seats\": [\n                {\n                    \"uniqueColumnNumber\": 1,\n                    \"status\": \"available\",\n                    \"name\": \"G1\",\n                    \"seatRow\": 7,\n                    \"seatColumn\": 1\n                },\n                {\n                    \"uniqueColumnNumber\": 2,\n                    \"status\": \"available\",\n                    \"name\": \"G2\",\n                    \"seatRow\": 7,\n                    \"seatColumn\": 2\n                },\n                {\n                    \"uniqueColumnNumber\": 3,\n                    \"status\": \"available\",\n                    \"name\": \"G3\",\n                    \"seatRow\": 7,\n                    \"seatColumn\": 3\n                },\n                {\n                    \"uniqueColumnNumber\": 4,\n                    \"status\": \"available\",\n                    \"name\": \"G4\",\n                    \"seatRow\": 7,\n                    \"seatColumn\": 4\n                },\n                {\n                    \"uniqueColumnNumber\": 5,\n                    \"status\": \"available\",\n                    \"name\": \"G5\",\n                    \"seatRow\": 7,\n                    \"seatColumn\": 5\n                }\n            ],\n            \"realRowNumber\": 7\n        },\n        {\n            \"uniqueRowNumber\": 9,\n            \"name\": \"RowCorridor\",\n            \"seats\": [],\n            \"realRowNumber\": -1\n        },\n        {\n            \"uniqueRowNumber\": 10,\n            \"name\": \"H\",\n            \"seats\": [\n                {\n                    \"uniqueColumnNumber\": 1,\n                    \"status\": \"available\",\n                    \"name\": \"H1\",\n                    \"seatRow\": 8,\n                    \"seatColumn\": 1\n                },\n                {\n                    \"uniqueColumnNumber\": 2,\n                    \"status\": \"available\",\n                    \"name\": \"H2\",\n                    \"seatRow\": 8,\n                    \"seatColumn\": 2\n                },\n                {\n                    \"uniqueColumnNumber\": 3,\n                    \"status\": \"available\",\n                    \"name\": \"H3\",\n                    \"seatRow\": 8,\n                    \"seatColumn\": 3\n                },\n                {\n                    \"uniqueColumnNumber\": 4,\n                    \"status\": \"available\",\n                    \"name\": \"H4\",\n                    \"seatRow\": 8,\n                    \"seatColumn\": 4\n                },\n                {\n                    \"uniqueColumnNumber\": 5,\n                    \"status\": \"available\",\n                    \"name\": \"H5\",\n                    \"seatRow\": 8,\n                    \"seatColumn\": 5\n                }\n            ],\n            \"realRowNumber\": 8\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -2902,12 +2904,12 @@
 	],
 	"variable": [
 		{
-			"id": "a2412f3c-7569-44f2-9c66-275112baeb56",
+			"id": "df285fe6-fbb1-451a-a71b-7116ed0dec83",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "82448737-0d2c-400c-8ac7-56fe012a98d3",
+			"id": "17a2a491-c38a-49c0-985a-87a8348bde80",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}
