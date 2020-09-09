@@ -58,7 +58,7 @@ const getSlotSeats = async (req,res,next)=>{ // it's not tested in the slots ser
             const bookedSeats = response[3];
 
             const letters = lettersGenerator(rows_number);
-            const slotSeats = seatsGenerator(letters,rows_number,columns_number,rowsCorridors,columnsCorridors,bookedSeats,lockedSeats);
+            const slotSeats = seatsGenerator(letters,rows_number,columns_number,rowsCorridors,columnsCorridors,lockedSeats,bookedSeats);
             return respond(true,200,slotSeats,res);
         }).catch(err=>{
             next(err);
