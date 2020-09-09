@@ -984,25 +984,50 @@ definitions:
               seatRow: 1
               seatColumn: 1
             - uniqueColumnNumber: 2
-              status: available
+              status: locked
               name: A2
               seatRow: 1
               seatColumn: 2
             - uniqueColumnNumber: 3
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 4
               status: available
               name: A3
               seatRow: 1
               seatColumn: 3
-            - uniqueColumnNumber: 4
+            - uniqueColumnNumber: 5
               status: available
               name: A4
               seatRow: 1
               seatColumn: 4
-            - uniqueColumnNumber: 5
+            - uniqueColumnNumber: 6
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 7
               status: available
               name: A5
               seatRow: 1
               seatColumn: 5
+            - uniqueColumnNumber: 8
+              status: available
+              name: A6
+              seatRow: 1
+              seatColumn: 6
+            - uniqueColumnNumber: 9
+              status: available
+              name: A7
+              seatRow: 1
+              seatColumn: 7
+            - uniqueColumnNumber: 10
+              status: available
+              name: A8
+              seatRow: 1
+              seatColumn: 8
         - uniqueRowNumber: 2
           realRowNumber: 2
           name: B
@@ -1018,20 +1043,45 @@ definitions:
               seatRow: 2
               seatColumn: 2
             - uniqueColumnNumber: 3
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 4
               status: available
               name: B3
               seatRow: 2
               seatColumn: 3
-            - uniqueColumnNumber: 4
+            - uniqueColumnNumber: 5
               status: available
               name: B4
               seatRow: 2
               seatColumn: 4
-            - uniqueColumnNumber: 5
+            - uniqueColumnNumber: 6
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 7
               status: available
               name: B5
               seatRow: 2
               seatColumn: 5
+            - uniqueColumnNumber: 8
+              status: available
+              name: B6
+              seatRow: 2
+              seatColumn: 6
+            - uniqueColumnNumber: 9
+              status: available
+              name: B7
+              seatRow: 2
+              seatColumn: 7
+            - uniqueColumnNumber: 10
+              status: available
+              name: B8
+              seatRow: 2
+              seatColumn: 8
         - uniqueRowNumber: 3
           realRowNumber: 3
           name: C
@@ -1047,20 +1097,45 @@ definitions:
               seatRow: 3
               seatColumn: 2
             - uniqueColumnNumber: 3
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 4
               status: available
               name: C3
               seatRow: 3
               seatColumn: 3
-            - uniqueColumnNumber: 4
+            - uniqueColumnNumber: 5
               status: available
               name: C4
               seatRow: 3
               seatColumn: 4
-            - uniqueColumnNumber: 5
+            - uniqueColumnNumber: 6
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 7
               status: available
               name: C5
               seatRow: 3
               seatColumn: 5
+            - uniqueColumnNumber: 8
+              status: available
+              name: C6
+              seatRow: 3
+              seatColumn: 6
+            - uniqueColumnNumber: 9
+              status: available
+              name: C7
+              seatRow: 3
+              seatColumn: 7
+            - uniqueColumnNumber: 10
+              status: available
+              name: C8
+              seatRow: 3
+              seatColumn: 8
         - uniqueRowNumber: 4
           realRowNumber: 4
           name: D
@@ -1076,20 +1151,45 @@ definitions:
               seatRow: 4
               seatColumn: 2
             - uniqueColumnNumber: 3
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 4
               status: available
               name: D3
               seatRow: 4
               seatColumn: 3
-            - uniqueColumnNumber: 4
+            - uniqueColumnNumber: 5
               status: available
               name: D4
               seatRow: 4
               seatColumn: 4
-            - uniqueColumnNumber: 5
+            - uniqueColumnNumber: 6
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 7
               status: available
               name: D5
               seatRow: 4
               seatColumn: 5
+            - uniqueColumnNumber: 8
+              status: available
+              name: D6
+              seatRow: 4
+              seatColumn: 6
+            - uniqueColumnNumber: 9
+              status: available
+              name: D7
+              seatRow: 4
+              seatColumn: 7
+            - uniqueColumnNumber: 10
+              status: available
+              name: D8
+              seatRow: 4
+              seatColumn: 8
         - uniqueRowNumber: 5
           realRowNumber: -1
           name: RowCorridor
@@ -1109,20 +1209,45 @@ definitions:
               seatRow: 5
               seatColumn: 2
             - uniqueColumnNumber: 3
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 4
               status: available
               name: E3
               seatRow: 5
               seatColumn: 3
-            - uniqueColumnNumber: 4
+            - uniqueColumnNumber: 5
               status: available
               name: E4
               seatRow: 5
               seatColumn: 4
-            - uniqueColumnNumber: 5
+            - uniqueColumnNumber: 6
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 7
               status: available
               name: E5
               seatRow: 5
               seatColumn: 5
+            - uniqueColumnNumber: 8
+              status: available
+              name: E6
+              seatRow: 5
+              seatColumn: 6
+            - uniqueColumnNumber: 9
+              status: available
+              name: E7
+              seatRow: 5
+              seatColumn: 7
+            - uniqueColumnNumber: 10
+              status: available
+              name: E8
+              seatRow: 5
+              seatColumn: 8
         - uniqueRowNumber: 7
           realRowNumber: 6
           name: F
@@ -1138,20 +1263,45 @@ definitions:
               seatRow: 6
               seatColumn: 2
             - uniqueColumnNumber: 3
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 4
               status: available
               name: F3
               seatRow: 6
               seatColumn: 3
-            - uniqueColumnNumber: 4
+            - uniqueColumnNumber: 5
               status: available
               name: F4
               seatRow: 6
               seatColumn: 4
-            - uniqueColumnNumber: 5
+            - uniqueColumnNumber: 6
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 7
               status: available
               name: F5
               seatRow: 6
               seatColumn: 5
+            - uniqueColumnNumber: 8
+              status: available
+              name: F6
+              seatRow: 6
+              seatColumn: 6
+            - uniqueColumnNumber: 9
+              status: available
+              name: F7
+              seatRow: 6
+              seatColumn: 7
+            - uniqueColumnNumber: 10
+              status: available
+              name: F8
+              seatRow: 6
+              seatColumn: 8
         - uniqueRowNumber: 8
           realRowNumber: 7
           name: G
@@ -1167,20 +1317,45 @@ definitions:
               seatRow: 7
               seatColumn: 2
             - uniqueColumnNumber: 3
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 4
               status: available
               name: G3
               seatRow: 7
               seatColumn: 3
-            - uniqueColumnNumber: 4
+            - uniqueColumnNumber: 5
               status: available
               name: G4
               seatRow: 7
               seatColumn: 4
-            - uniqueColumnNumber: 5
+            - uniqueColumnNumber: 6
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 7
               status: available
               name: G5
               seatRow: 7
               seatColumn: 5
+            - uniqueColumnNumber: 8
+              status: available
+              name: G6
+              seatRow: 7
+              seatColumn: 6
+            - uniqueColumnNumber: 9
+              status: available
+              name: G7
+              seatRow: 7
+              seatColumn: 7
+            - uniqueColumnNumber: 10
+              status: available
+              name: G8
+              seatRow: 7
+              seatColumn: 8
         - uniqueRowNumber: 9
           realRowNumber: -1
           name: RowCorridor
@@ -1200,20 +1375,45 @@ definitions:
               seatRow: 8
               seatColumn: 2
             - uniqueColumnNumber: 3
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 4
               status: available
               name: H3
               seatRow: 8
               seatColumn: 3
-            - uniqueColumnNumber: 4
+            - uniqueColumnNumber: 5
               status: available
               name: H4
               seatRow: 8
               seatColumn: 4
-            - uniqueColumnNumber: 5
+            - uniqueColumnNumber: 6
+              status: columnCorridor
+              name: columnCorridor
+              seatRow: -1
+              seatColumn: -1
+            - uniqueColumnNumber: 7
               status: available
               name: H5
               seatRow: 8
               seatColumn: 5
+            - uniqueColumnNumber: 8
+              status: available
+              name: H6
+              seatRow: 8
+              seatColumn: 6
+            - uniqueColumnNumber: 9
+              status: available
+              name: H7
+              seatRow: 8
+              seatColumn: 7
+            - uniqueColumnNumber: 10
+              status: locked
+              name: H8
+              seatRow: 8
+              seatColumn: 8
       
    addTicket_body:
     type: "object"
