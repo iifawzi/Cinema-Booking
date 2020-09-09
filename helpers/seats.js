@@ -29,7 +29,7 @@ module.exports = (letters,rows_number,columns_number,rowCorridors,columnCorridor
            }else if (lockedSeats.findIndex(locked=> locked.row === realRowNumber && locked.column === realColumnNumber) !== -1){ // if the seat is locked 
             seats[i-1]["seats"].push({
                 uniqueColumnNumber: j,
-                status: "closed",
+                status: "locked",
                 name: letters[0]+realColumnNumber, 
                 seatRow: realRowNumber, 
                 seatColumn: realColumnNumber,
