@@ -1446,21 +1446,31 @@ definitions:
         - "row"
         - "column"
     example: 
-      hall_id: 41
-      corridor_number: 1
-      direction: row
+     corridors:
+       - hall_id: 34
+         corridor_number: 1
+         direction: row
+       - hall_id: 34
+         corridor_number: 2
+         direction: row
    addCorridor_response:
     type: "object"
     example: 
       status: true
       message: success
       data:
-        corridor_id: 11
-        hall_id: 41
-        corridor_number: 1
-        direction: row
-        updatedAt: '2020-08-20T19:07:13.228Z'
-        createdAt: '2020-08-20T19:07:13.228Z'
+        - corridor_id: 29
+          hall_id: 34
+          corridor_number: 1
+          direction: row
+          createdAt: '2020-09-14T07:38:57.517Z'
+          updatedAt: '2020-09-14T07:38:57.517Z'
+        - corridor_id: null
+          hall_id: 34
+          corridor_number: 2
+          direction: row
+          createdAt: '2020-09-14T07:38:57.517Z'
+          updatedAt: '2020-09-14T07:38:57.517Z'
    lockSeat_body:
     type: "object"
     example: 
