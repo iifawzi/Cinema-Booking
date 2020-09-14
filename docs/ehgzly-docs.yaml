@@ -186,7 +186,7 @@ paths:
           description: 409 (CONFLICT - This seat is already booked OR this seat is locked)
           schema:
             $ref: '#/definitions/error_409'
-  /addCorridor:
+  /addCorridors:
     post:
       tags:
       - "corridors"
@@ -202,7 +202,7 @@ paths:
         description: "needed Information to add a corridor"
         required: true
         schema:
-          $ref: "#/definitions/addCorridor_body"
+          $ref: "#/definitions/addCorridors_body"
       - in: "header"
         name: "authorization"
         required: true
@@ -211,7 +211,7 @@ paths:
         '201':
           description: 201 (Created)
           schema:
-            $ref: '#/definitions/addCorridor_response'
+            $ref: '#/definitions/addCorridors_response'
         '401':
           description: 401 (Unauthorized - token's error)
           schema:
@@ -1437,7 +1437,7 @@ definitions:
        user_id: 38
        updatedAt: '2020-08-20T23:16:35.309Z'
        createdAt: '2020-08-20T23:16:35.309Z'
-   addCorridor_body:
+   addCorridors_body:
     type: "object"
     properties:
       direction:
@@ -1453,7 +1453,7 @@ definitions:
        - hall_id: 34
          corridor_number: 2
          direction: row
-   addCorridor_response:
+   addCorridors_response:
     type: "object"
     example: 
       status: true
