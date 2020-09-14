@@ -6,6 +6,6 @@ const corridorsController = require("./corridors.controller");
 const corridorsSchemas = require("./corridors.validation");
 const router = express.Router();
 
-router.post("/addCorridor", isAuth(), isAllowed(['csuperadmin']), validate(corridorsSchemas.addCorridor, 'body'), corridorsController.addCorridor);
+router.post("/addCorridors", isAuth(), isAllowed(['csuperadmin']), validate(corridorsSchemas.addCorridors, 'body'), corridorsController.addCorridors);
 
 module.exports = router;
