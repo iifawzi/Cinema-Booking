@@ -2657,19 +2657,19 @@
 			"name": "corridors",
 			"item": [
 				{
-					"name": "addCorridors",
+					"name": "addCorridor",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjU1LCJhY2NvdW50X2lkIjoyMCwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDA2NjQwMSwiZXhwIjoxNjAwMDg4MDAxfQ.ygVUBDZwxm_M5euVT0WasBw7wNxzdhX6RVLd2SVB5qA"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjU4LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTUwMzg1LCJleHAiOjE1OTc5OTM1ODV9.9mVtCvM-7nfKMe53hwPpGl_h1R1HDS5S1PdoPvhUiF0"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"corridors\": [\n        {\"hall_id\": 34,\"corridor_number\": 1,\"direction\": \"row\"},\n        {\"hall_id\": 34,\"corridor_number\": 2,\"direction\": \"row\"}\n        ]\n\n}",
+							"raw": "{\n\"hall_id\": 41,\n\"corridor_number\": 1,\n\"direction\": \"row\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2677,32 +2677,32 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE}}/api/corridors/addCorridors",
+							"raw": "{{BASE}}/api/corridors/addCorridor",
 							"host": [
 								"{{BASE}}"
 							],
 							"path": [
 								"api",
 								"corridors",
-								"addCorridors"
+								"addCorridor"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "addCorridors",
+							"name": "addCorridor",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
 									{
 										"key": "authorization",
 										"type": "text",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjU1LCJhY2NvdW50X2lkIjoyMCwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDA2NjQwMSwiZXhwIjoxNjAwMDg4MDAxfQ.ygVUBDZwxm_M5euVT0WasBw7wNxzdhX6RVLd2SVB5qA"
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjU4LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTUwMzg1LCJleHAiOjE1OTc5OTM1ODV9.9mVtCvM-7nfKMe53hwPpGl_h1R1HDS5S1PdoPvhUiF0"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"corridors\": [\n        {\"hall_id\": 34,\"corridor_number\": 1,\"direction\": \"row\"},\n        {\"hall_id\": 34,\"corridor_number\": 2,\"direction\": \"row\"}\n        ]\n\n}",
+									"raw": "{\n\"hall_id\": 41,\n\"corridor_number\": 1,\n\"direction\": \"row\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2710,14 +2710,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{BASE}}/api/corridors/addCorridors",
+									"raw": "{{BASE}}/api/corridors/addCorridor",
 									"host": [
 										"{{BASE}}"
 									],
 									"path": [
 										"api",
 										"corridors",
-										"addCorridors"
+										"addCorridor"
 									]
 								}
 							},
@@ -2747,15 +2747,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "342"
+									"value": "190"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"156-RIDMsFP/GOPyS0D2/EX+nCr4QMU\""
+									"value": "W/\"be-rAoFg2eRrByeSnsMbpwwoMOM7sw\""
 								},
 								{
 									"key": "Date",
-									"value": "Mon, 14 Sep 2020 07:38:57 GMT"
+									"value": "Thu, 20 Aug 2020 19:07:13 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2763,7 +2763,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"corridor_id\": 29,\n            \"hall_id\": 34,\n            \"corridor_number\": 1,\n            \"direction\": \"row\",\n            \"createdAt\": \"2020-09-14T07:38:57.517Z\",\n            \"updatedAt\": \"2020-09-14T07:38:57.517Z\"\n        },\n        {\n            \"corridor_id\": null,\n            \"hall_id\": 34,\n            \"corridor_number\": 2,\n            \"direction\": \"row\",\n            \"createdAt\": \"2020-09-14T07:38:57.517Z\",\n            \"updatedAt\": \"2020-09-14T07:38:57.517Z\"\n        }\n    ]\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"corridor_id\": 11,\n        \"hall_id\": 41,\n        \"corridor_number\": 1,\n        \"direction\": \"row\",\n        \"updatedAt\": \"2020-08-20T19:07:13.228Z\",\n        \"createdAt\": \"2020-08-20T19:07:13.228Z\"\n    }\n}"
 						}
 					]
 				}
@@ -2912,12 +2912,12 @@
 	],
 	"variable": [
 		{
-			"id": "33e54ec3-185e-448c-88f1-47c62e1a39cc",
+			"id": "7a370212-bbac-423b-80dc-6f800482816e",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "09a91b62-c0a5-4394-9cfe-bdba803ee775",
+			"id": "db7a287e-fc39-45c5-8bbe-df6745ea23c8",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

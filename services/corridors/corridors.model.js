@@ -10,7 +10,7 @@ const corridorsModel = db.define("corridors",{
     },
     hall_id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        defaultValue: null,
         references: {
             model: "halls", 
             key: "hall_id"
@@ -19,7 +19,7 @@ const corridorsModel = db.define("corridors",{
     },
     direction: {
         type: Sequelize.ENUM("row", "column"),
-        allowNull: false
+        defaultValue: null,
     },
     corridor_number: {
         type: Sequelize.INTEGER,
@@ -29,8 +29,7 @@ const corridorsModel = db.define("corridors",{
 {
     indexes: [
         {
-            fields: ["hall_id","corridor_number","direction"],
-            unique: true,
+            fields: ["hall_id","corridor_number","direction"]
         }
     ]
 });
