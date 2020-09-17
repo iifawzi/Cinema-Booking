@@ -1,18 +1,22 @@
 const Joi = require("@hapi/joi");
 
-const lockSeat = Joi.alternatives().try(
+const lockSeats = 
     Joi.object({
-        row: Joi.number().required(), 
-        column: Joi.number().required(), 
-        hall_id: Joi.number().required(),
-    }),
-    Joi.object({
-        row: Joi.number().required(), 
-        column: Joi.number().required(), 
-        slot_id: Joi.number().required(),
-    }),
-  );
+        seats: Joi.array().items(
+        Joi.alternatives().try(
+            {
+            row: Joi.number().required(), 
+            column: Joi.number().required(), 
+            hall_id: Joi.number().required(),
+            },
+            {
+            row: Joi.number().required(), 
+            column: Joi.number().required(), 
+            slot_id: Joi.number().required(),
+            }
+        )).required()
+    });
 
 module.exports = {
-    lockSeat,
+    lockSeats,
 }

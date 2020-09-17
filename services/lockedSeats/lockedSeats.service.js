@@ -28,7 +28,7 @@ exports.getLockedSeats = async (attributes, hall_id, slot_id)=>{
 }
 
 // to lock a seat
-exports.lockSeat = async (seatData)=>{
-    const lockedSeat = await lockedSeatsModel.create(seatData);
-        return lockedSeat.dataValues;
+exports.lockSeats = async (seats)=>{
+    const lockedSeats = await lockedSeatsModel.bulkCreate(seats);
+        return lockedSeats;
 }

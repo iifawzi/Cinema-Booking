@@ -2540,19 +2540,19 @@
 			"name": "lockedSeats",
 			"item": [
 				{
-					"name": "lockSeat",
+					"name": "lockSeats",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjU1LCJhY2NvdW50X2lkIjoyMCwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDEwODM2NSwiZXhwIjoxNjAwMTI5OTY1fQ.PS-ThOFTeEBXJVsoR1HHXNuBr4k5X3BVfftghhvTidI"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDMzMzAyNSwiZXhwIjoxNjAwMzU0NjI1fQ.UAQ7TGIt9x5DIRtYJkuJ4Gp1nhmUcNoK_zPCke7cYmk"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"seats\": [\n        {\n            \"row\": 1,\n            \"column\": 2,\n            \"hall_id\": 50\n        }\n    ]\n}",
+							"raw": "{\n    \"seats\": [\n        {\n            \"row\": 2,\n            \"column\": 2,\n            \"hall_id\": 28\n        },\n        {\n            \"row\": 3,\n            \"column\": 2,\n            \"hall_id\": 28\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2573,19 +2573,19 @@
 					},
 					"response": [
 						{
-							"name": "lockSeat",
+							"name": "lockSeats",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
 									{
 										"key": "authorization",
 										"type": "text",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjc0LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTQ2OTU0LCJleHAiOjE1OTc5OTAxNTR9.siSWNu_CweYPz4ZiLTyOJ_kHosA5DSOtHe84I1aEZ0E"
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDMzMzAyNSwiZXhwIjoxNjAwMzU0NjI1fQ.UAQ7TGIt9x5DIRtYJkuJ4Gp1nhmUcNoK_zPCke7cYmk"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"row\": 1,\n\"column\": 2,\n\"slot_id\": 31\n}",
+									"raw": "{\n    \"seats\": [\n        {\n            \"row\": 2,\n            \"column\": 2,\n            \"hall_id\": 28\n        },\n        {\n            \"row\": 3,\n            \"column\": 2,\n            \"hall_id\": 28\n        }\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2593,14 +2593,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{BASE}}/api/lockedSeats/lockSeat",
+									"raw": "{{BASE}}/api/lockedSeats/lockSeats",
 									"host": [
 										"{{BASE}}"
 									],
 									"path": [
 										"api",
 										"lockedSeats",
-										"lockSeat"
+										"lockSeats"
 									]
 								}
 							},
@@ -2630,15 +2630,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "190"
+									"value": "189"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"be-04LMbJlVwffHlHHKIXaLJU0bAbA\""
+									"value": "W/\"bd-gB9qnHhjNojnJXsaiwuvMMRmpv4\""
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 20 Aug 2020 18:09:29 GMT"
+									"value": "Thu, 17 Sep 2020 08:57:50 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2646,7 +2646,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": null,\n        \"row\": 1,\n        \"column\": 2,\n        \"slot_id\": 31,\n        \"updatedAt\": \"2020-08-20T18:09:29.557Z\",\n        \"createdAt\": \"2020-08-20T18:09:29.557Z\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"slot_id\": null,\n            \"lockedSeat_id\": 9,\n            \"row\": 2,\n            \"column\": 2,\n            \"hall_id\": 28,\n            \"createdAt\": \"2020-09-17T08:57:50.025Z\",\n            \"updatedAt\": \"2020-09-17T08:57:50.025Z\"\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -2912,12 +2912,12 @@
 	],
 	"variable": [
 		{
-			"id": "f52828b4-3485-4568-a348-1d0d17c30b33",
+			"id": "72ddaab3-79ca-46fc-bff0-1f12e6c4fddd",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "0a05d771-5e47-433b-afeb-af327bd889be",
+			"id": "30b83712-4397-4e55-8d40-9f94ab88d140",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

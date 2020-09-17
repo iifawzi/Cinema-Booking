@@ -39,6 +39,7 @@ const lockedSeatsModel = db.define("lockedSeats",{
     indexes: [
         {
             fields: ["slot_id","hall_id","row","column"],
+            unique: true,
         }
     ]
 });

@@ -7,7 +7,7 @@ const getUniqueArray = require("../../helpers/getUniqueArray");
 const addCorridors = async (req,res,next)=>{
     try {
         const corridors = req.body.corridors;
-        const filteredCorridors = getUniqueArray(corridors,"direction", "corridor_number");
+        const filteredCorridors = getUniqueArray(corridors,"direction", "corridor_number"); // to delete dublications
         const addedCorridors = await corridorsServices.addCorridors(filteredCorridors);
         if (addedCorridors){
             return respond(true,201,addedCorridors,res);

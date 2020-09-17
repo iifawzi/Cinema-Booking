@@ -228,7 +228,7 @@ paths:
           description: 409 (CONFLICT - This corridor is already exist)
           schema:
             $ref: '#/definitions/error_409'
-  /lockSeat:
+  /lockSeats:
     post:
       tags:
       - "lockedSeats"
@@ -244,7 +244,7 @@ paths:
         description: "needed Information to lock a seat"
         required: true
         schema:
-          $ref: "#/definitions/lockSeat_body"
+          $ref: "#/definitions/lockSeats_body"
       - in: "header"
         name: "authorization"
         required: true
@@ -253,7 +253,7 @@ paths:
         '201':
           description: 201 (Created)
           schema:
-            $ref: '#/definitions/lockSeat_response'
+            $ref: '#/definitions/lockSeats_response'
         '401':
           description: 401 (Unauthorized - token's error)
           schema:
@@ -1474,25 +1474,29 @@ definitions:
           direction: row
           createdAt: '2020-09-17T07:20:29.915Z'
           updatedAt: '2020-09-17T07:20:29.915Z'
-   lockSeat_body:
+   lockSeats_body:
     type: "object"
     example: 
-      row: 5,
-      column: 10
-      hall_id: 50
-   lockSeat_response:
+     seats:
+       - row: 2
+         column: 2
+         hall_id: 28
+       - row: 3
+         column: 2
+         hall_id: 28
+   lockSeats_response:
     type: "object"
     example: 
       status: true
       message: success
       data:
-        slot_id: null
-        lockedSeat_id: 26
-        row: 5,
-        column: 10
-        hall_id: 50
-        updatedAt: '2020-08-20T18:10:19.944Z'
-        createdAt: '2020-08-20T18:10:19.944Z'
+        - slot_id: null
+          lockedSeat_id: 9
+          row: 2
+          column: 2
+          hall_id: 28
+          createdAt: '2020-09-17T08:57:50.025Z'
+          updatedAt: '2020-09-17T08:57:50.025Z'
    getAreas_response:
     type: "object"
     example: 
