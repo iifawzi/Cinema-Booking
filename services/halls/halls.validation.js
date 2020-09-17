@@ -12,10 +12,15 @@ const toggleHallStatus= Joi.object({
     hall_id: Joi.number().required(),
 });
 
+const deleteHall = Joi.object({
+    hall_id: Joi.number().required(),
+})
+
 
 module.exports = {
     addHall,
-    toggleHallStatus
+    toggleHallStatus,
+    deleteHall
 }
 
 

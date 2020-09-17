@@ -1484,6 +1484,117 @@
 							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": 74,\n        \"hall_status\": false,\n        \"updatedAt\": \"2020-08-13T10:06:38.193Z\"\n    }\n}"
 						}
 					]
+				},
+				{
+					"name": "deleteHall",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDM0MTE3OSwiZXhwIjoxNjAwMzYyNzc5fQ.XU_y5zWVAhRwkZ9Jr1MNrI5J1q1N3of5yUYB11I8V78"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"hall_id\": 45\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/halls/deleteHall",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"halls",
+								"deleteHall"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteHall",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDM0MTE3OSwiZXhwIjoxNjAwMzYyNzc5fQ.XU_y5zWVAhRwkZ9Jr1MNrI5J1q1N3of5yUYB11I8V78"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"hall_id\": 45\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/halls/deleteHall",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"halls",
+										"deleteHall"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-d2FFrGIR920RZQ5c3bmCDJuUdaI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Sep 2020 11:36:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": 1\n}"
+						}
+					]
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -2912,12 +3023,12 @@
 	],
 	"variable": [
 		{
-			"id": "72ddaab3-79ca-46fc-bff0-1f12e6c4fddd",
+			"id": "8f8dd680-a124-4c48-a69e-9a48ba581d30",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "30b83712-4397-4e55-8d40-9f94ab88d140",
+			"id": "34664d8b-63b9-4a39-935b-0decc5f4558c",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}
