@@ -17,7 +17,7 @@ exports.getCorridors = async (attributes,hall_id)=>{
 }
 
 // to add a new corridor
-exports.addCorridor = async(corridorData)=>{
-    const addedCorridor = await corridorsModel.create(corridorData);
-    return addedCorridor;
+exports.addCorridors = async(corridors)=>{
+    const addedCorridors = await corridorsModel.bulkCreate(corridors);
+    return addedCorridors;
 }

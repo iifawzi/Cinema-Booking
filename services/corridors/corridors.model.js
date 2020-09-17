@@ -29,7 +29,8 @@ const corridorsModel = db.define("corridors",{
 {
     indexes: [
         {
-            fields: ["hall_id","corridor_number","direction"]
+            fields: ["hall_id","corridor_number","direction"],
+            unique: true,
         }
     ]
 });

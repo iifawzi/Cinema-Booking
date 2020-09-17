@@ -1,17 +1,16 @@
 const corridorsServices  = require("./corridors.service");
 const respond = require("../../helpers/respond");
 const { ErrorHandler } = require("../../helpers/error");
+const getUniqueArray = require("../../helpers/getUniqueArray");
 
-const addCorridor = async (req,res,next)=>{
+// will be used when making the hall for the first time: 
+const addCorridors = async (req,res,next)=>{
     try {
-        const corridorData = req.body;
-        const isExist = await corridorsServices.getCorridor(corridorData.hall_id,corridorData.corridor_number,corridorData.direction);
-        if (isExist) {
-            throw new ErrorHandler(409, "This Corridor is already exist");
-        }
-        const addedCorridor = await corridorsServices.addCorridor(corridorData);
-        if (addedCorridor){
-            return respond(true,201,addedCorridor,res);
+        const corridors = req.body.corridors;
+        const filteredCorridors = getUniqueArray(corridors,"direction", "corridor_number");
+        const addedCorridors = await corridorsServices.addCorridors(filteredCorridors);
+        if (addedCorridors){
+            return respond(true,201,addedCorridors,res);
         }
     }catch(err){
         next(err);
@@ -19,5 +18,5 @@ const addCorridor = async (req,res,next)=>{
 }
 
 module.exports = {
-    addCorridor,
+    addCorridors,
 }

@@ -2547,12 +2547,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjc0LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTQ2OTU0LCJleHAiOjE1OTc5OTAxNTR9.siSWNu_CweYPz4ZiLTyOJ_kHosA5DSOtHe84I1aEZ0E"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjU1LCJhY2NvdW50X2lkIjoyMCwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDEwODM2NSwiZXhwIjoxNjAwMTI5OTY1fQ.PS-ThOFTeEBXJVsoR1HHXNuBr4k5X3BVfftghhvTidI"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"row\": 1,\n\"column\": 2,\n\"hall_id\": 50\n}",
+							"raw": "{\n    \"seats\": [\n        {\n            \"row\": 1,\n            \"column\": 2,\n            \"hall_id\": 50\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2560,14 +2560,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE}}/api/lockedSeats/lockSeat",
+							"raw": "{{BASE}}/api/lockedSeats/lockSeats",
 							"host": [
 								"{{BASE}}"
 							],
 							"path": [
 								"api",
 								"lockedSeats",
-								"lockSeat"
+								"lockSeats"
 							]
 						}
 					},
@@ -2657,19 +2657,19 @@
 			"name": "corridors",
 			"item": [
 				{
-					"name": "addCorridor",
+					"name": "addCorridors",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjU4LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTUwMzg1LCJleHAiOjE1OTc5OTM1ODV9.9mVtCvM-7nfKMe53hwPpGl_h1R1HDS5S1PdoPvhUiF0"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjg3LCJhY2NvdW50X2lkIjoyNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDMyNzA3MCwiZXhwIjoxNjAwMzQ4NjcwfQ.J2FhjUmUyDzrZGsnabsTz3apdwUA3Dzs8K2-ApexfHQ"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"hall_id\": 41,\n\"corridor_number\": 1,\n\"direction\": \"row\"\n}",
+							"raw": "{\n    \"corridors\": [\n        {\"hall_id\": 51,\"corridor_number\": 3,\"direction\": \"row\"},\n        {\"hall_id\": 51,\"corridor_number\": 4,\"direction\": \"row\"},\n        {\"hall_id\": 51,\"corridor_number\": 4,\"direction\": \"row\"}\n        ]\n\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2677,32 +2677,32 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE}}/api/corridors/addCorridor",
+							"raw": "{{BASE}}/api/corridors/addCorridors",
 							"host": [
 								"{{BASE}}"
 							],
 							"path": [
 								"api",
 								"corridors",
-								"addCorridor"
+								"addCorridors"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "addCorridor",
+							"name": "addCorridors",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
 									{
 										"key": "authorization",
 										"type": "text",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjU4LCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk3OTUwMzg1LCJleHAiOjE1OTc5OTM1ODV9.9mVtCvM-7nfKMe53hwPpGl_h1R1HDS5S1PdoPvhUiF0"
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjg3LCJhY2NvdW50X2lkIjoyNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDMyNzA3MCwiZXhwIjoxNjAwMzQ4NjcwfQ.J2FhjUmUyDzrZGsnabsTz3apdwUA3Dzs8K2-ApexfHQ"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"hall_id\": 41,\n\"corridor_number\": 1,\n\"direction\": \"row\"\n}",
+									"raw": "{\n    \"corridors\": [\n        {\"hall_id\": 51,\"corridor_number\": 3,\"direction\": \"row\"},\n        {\"hall_id\": 51,\"corridor_number\": 4,\"direction\": \"row\"},\n        {\"hall_id\": 51,\"corridor_number\": 4,\"direction\": \"row\"}\n        ]\n\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2710,14 +2710,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{BASE}}/api/corridors/addCorridor",
+									"raw": "{{BASE}}/api/corridors/addCorridors",
 									"host": [
 										"{{BASE}}"
 									],
 									"path": [
 										"api",
 										"corridors",
-										"addCorridor"
+										"addCorridors"
 									]
 								}
 							},
@@ -2747,15 +2747,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "190"
+									"value": "339"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"be-rAoFg2eRrByeSnsMbpwwoMOM7sw\""
+									"value": "W/\"153-iesZL7naHJbt1rpdJF9Lo25zfaU\""
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 20 Aug 2020 19:07:13 GMT"
+									"value": "Thu, 17 Sep 2020 07:20:29 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2763,7 +2763,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"corridor_id\": 11,\n        \"hall_id\": 41,\n        \"corridor_number\": 1,\n        \"direction\": \"row\",\n        \"updatedAt\": \"2020-08-20T19:07:13.228Z\",\n        \"createdAt\": \"2020-08-20T19:07:13.228Z\"\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"corridor_id\": 9,\n            \"hall_id\": 51,\n            \"corridor_number\": 3,\n            \"direction\": \"row\",\n            \"createdAt\": \"2020-09-17T07:20:29.915Z\",\n            \"updatedAt\": \"2020-09-17T07:20:29.915Z\"\n        },\n        {\n            \"corridor_id\": 10,\n            \"hall_id\": 51,\n            \"corridor_number\": 4,\n            \"direction\": \"row\",\n            \"createdAt\": \"2020-09-17T07:20:29.915Z\",\n            \"updatedAt\": \"2020-09-17T07:20:29.915Z\"\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -2912,12 +2912,12 @@
 	],
 	"variable": [
 		{
-			"id": "7a370212-bbac-423b-80dc-6f800482816e",
+			"id": "f52828b4-3485-4568-a348-1d0d17c30b33",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "db7a287e-fc39-45c5-8bbe-df6745ea23c8",
+			"id": "0a05d771-5e47-433b-afeb-af327bd889be",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

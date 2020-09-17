@@ -186,7 +186,7 @@ paths:
           description: 409 (CONFLICT - This seat is already booked OR this seat is locked)
           schema:
             $ref: '#/definitions/error_409'
-  /addCorridor:
+  /addCorridors:
     post:
       tags:
       - "corridors"
@@ -202,7 +202,7 @@ paths:
         description: "needed Information to add a corridor"
         required: true
         schema:
-          $ref: "#/definitions/addCorridor_body"
+          $ref: "#/definitions/addCorridors_body"
       - in: "header"
         name: "authorization"
         required: true
@@ -211,7 +211,7 @@ paths:
         '201':
           description: 201 (Created)
           schema:
-            $ref: '#/definitions/addCorridor_response'
+            $ref: '#/definitions/addCorridors_response'
         '401':
           description: 401 (Unauthorized - token's error)
           schema:
@@ -1437,7 +1437,7 @@ definitions:
        user_id: 38
        updatedAt: '2020-08-20T23:16:35.309Z'
        createdAt: '2020-08-20T23:16:35.309Z'
-   addCorridor_body:
+   addCorridors_body:
     type: "object"
     properties:
       direction:
@@ -1446,21 +1446,34 @@ definitions:
         - "row"
         - "column"
     example: 
-      hall_id: 41
-      corridor_number: 1
-      direction: row
-   addCorridor_response:
+     corridors:
+       - hall_id: 51
+         corridor_number: 3
+         direction: row
+       - hall_id: 51
+         corridor_number: 4
+         direction: row
+       - hall_id: 51
+         corridor_number: 4
+         direction: row
+   addCorridors_response:
     type: "object"
     example: 
       status: true
       message: success
       data:
-        corridor_id: 11
-        hall_id: 41
-        corridor_number: 1
-        direction: row
-        updatedAt: '2020-08-20T19:07:13.228Z'
-        createdAt: '2020-08-20T19:07:13.228Z'
+        - corridor_id: 9
+          hall_id: 51
+          corridor_number: 3
+          direction: row
+          createdAt: '2020-09-17T07:20:29.915Z'
+          updatedAt: '2020-09-17T07:20:29.915Z'
+        - corridor_id: 10
+          hall_id: 51
+          corridor_number: 4
+          direction: row
+          createdAt: '2020-09-17T07:20:29.915Z'
+          updatedAt: '2020-09-17T07:20:29.915Z'
    lockSeat_body:
     type: "object"
     example: 
