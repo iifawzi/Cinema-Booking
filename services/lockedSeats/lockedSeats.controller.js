@@ -7,7 +7,9 @@ const getUniqueArray = require("../../helpers/getUniqueArray");
 const lockSeats = async (req,res,next)=>{
     try {
         const seats = req.body.seats; 
-        const filteredSeats = getUniqueArray(seats); // to delete dublications
+        console.log(seats);
+        const filteredSeats = getUniqueArray(seats, 'row', 'column'); // to delete dublications
+        console.log(filteredSeats);
         const lockedSeats = await lockedSeatsServices.lockSeats(filteredSeats);
         if (lockedSeats) {
             return respond(true,201,lockedSeats,res);
