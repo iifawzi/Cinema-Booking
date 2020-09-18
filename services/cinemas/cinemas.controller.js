@@ -34,7 +34,7 @@ const getCinemasForMovie = async (req,res,next)=>{
                             end_time: cinema.end_time,
                             ticket_price: cinema.ticket_price,
                             hall_name: cinema.hall_name,
-                            hall_descripton: cinema.hall_description,
+                            hall_description: cinema.hall_description,
                             hall_id: cinema.hall_id,
                             slot_id: cinema.slot_id
                         }
