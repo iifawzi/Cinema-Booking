@@ -2,6 +2,16 @@ const hallsServices  = require("./halls.service");
 const respond = require("../../helpers/respond");
 const { ErrorHandler } = require("../../helpers/error");
 
+const getHalls = async (req,res,next)=>{
+    try {
+        const cinema_id = req.requester.cinema_id;
+        const halls = await hallsServices.getHalls(cinema_id);
+        return respond(true,200,halls,res);
+    }catch(err){
+        next(err);
+    }
+}
+
 const add_hall = async (req,res,next)=>{
     try {
         const hallData = req.body;
@@ -51,6 +61,7 @@ const deleteHall = async (req,res,next)=>{
 }
 
 module.exports = {
+    getHalls,
     add_hall,
     toggleHallStatus,
     deleteHall

@@ -1595,6 +1595,120 @@
 							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": 1\n}"
 						}
 					]
+				},
+				{
+					"name": "halls",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDQxNzY1OSwiZXhwIjoxNjAwNDM5MjU5fQ.vqr96lBWUhoUNFnAm9hUoQSQY-ys7se5jgm__3IBwgo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/halls/",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"halls",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "halls",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDQxNzY1OSwiZXhwIjoxNjAwNDM5MjU5fQ.vqr96lBWUhoUNFnAm9hUoQSQY-ys7se5jgm__3IBwgo"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/halls/",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"halls",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "437"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b5-Gd3vMAwEYE61/gdReCMvzO7rs1w\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Sep 2020 08:58:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"hall_id\": 71,\n            \"hall_name\": \"الفرسان\",\n            \"hall_status\": false\n        },\n        {\n            \"hall_id\": 74,\n            \"hall_name\": \"المرجان\",\n            \"hall_status\": false\n        },\n        {\n            \"hall_id\": 72,\n            \"hall_name\": \"VIP-1\",\n            \"hall_status\": false\n        },\n        {\n            \"hall_id\": 73,\n            \"hall_name\": \"VIP-2\",\n            \"hall_status\": false\n        },\n        {\n            \"hall_id\": 28,\n            \"hall_name\": \"VIP-3\",\n            \"hall_status\": false\n        },\n        {\n            \"hall_id\": 70,\n            \"hall_name\": \"VIP-4\",\n            \"hall_status\": false\n        },\n        {\n            \"hall_id\": 75,\n            \"hall_name\": \"VIP-5\",\n            \"hall_status\": false\n        }\n    ]\n}"
+						}
+					]
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -3023,12 +3137,12 @@
 	],
 	"variable": [
 		{
-			"id": "8f8dd680-a124-4c48-a69e-9a48ba581d30",
+			"id": "d0752846-b30c-4bdb-8e03-16b180798908",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "34664d8b-63b9-4a39-935b-0decc5f4558c",
+			"id": "a8703929-5abb-42b8-ae01-6033a33b2900",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

@@ -8,6 +8,16 @@ let expect = require("chai").expect;
 
 describe("/api/halls", async()=>{
  
+    describe("/", ()=>{
+        it ("Should respond 200 if got successfully", async()=>{
+            const token = createToken({username: "crownn", cinema_id: 1,role:"csuperadmin"});
+            const res = await request(app)
+                .get("/api/halls/")
+                .set({authorization: "Bearer "+token})
+            expect(res.statusCode).equals(200);
+        });
+    });
+
     describe("/addHall", ()=>{
         it ("Should respond 400 if schema validation fails", async()=>{
             const token = createToken({username: "crownn", cinema_id: 1,role:"csuperadmin"});

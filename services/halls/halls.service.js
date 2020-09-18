@@ -9,6 +9,12 @@ exports.getHallByCinemaAndName = async (cinema_id, hall_name)=>{
     }
 };
 
+// to get all halls of specific cinema: 
+exports.getHalls = async (cinema_id)=>{
+   const halls = await hallsModel.findAll({where: {cinema_id}, attributes: ['hall_id', 'hall_name', 'hall_status']});
+   return halls;
+}
+
 // to get hall's data: 
 exports.getHall = async (attributes, hall_id)=>{
     const hall = await hallsModel.findOne({where: {hall_id}, attributes: [...attributes]});

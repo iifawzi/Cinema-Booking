@@ -10,6 +10,31 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /:
+    get:
+      tags:
+      - "halls"
+      summary: "to get halls of specific cinema"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"   
+      responses:
+        '200':
+          description: 200 (Success)
+          schema:
+            $ref: '#/definitions/getHalls_response'
+        '401':
+          description: 401 (Unauthorized - token's error)
+          schema:
+            $ref: '#/definitions/error_401'
+        '403':
+          description: 403 (Forbidden - Your aren't authorized)
+          schema:
+            $ref: '#/definitions/error_403'
   /deleteHall:
     delete:
       tags:
@@ -902,7 +927,7 @@ paths:
       summary: "Signup a new user"
       description: ""
       consumes:
-      - "application/json"
+      - "application/json"  
       produces:
       - "application/json"
       parameters:
@@ -960,6 +985,33 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   getHalls_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        - hall_id: 71
+          hall_name: المرجان
+          hall_status: false
+        - hall_id: 74
+          hall_name: VIP-3
+          hall_status: false
+        - hall_id: 72
+          hall_name: VIP-2
+          hall_status: false
+        - hall_id: 73
+          hall_name: VIP-1
+          hall_status: false
+        - hall_id: 28
+          hall_name: الانسان
+          hall_status: false
+        - hall_id: 70
+          hall_name: المرجان
+          hall_status: false
+        - hall_id: 75
+          hall_name: الفرسان
+          hall_status: false
    deleteHall_body:
     type: "object"
     example: 
