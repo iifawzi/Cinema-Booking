@@ -26,9 +26,3 @@ exports.getLockedSeats = async (attributes, hall_id, slot_id)=>{
     const seats = lockedSeatsModel.findAll({where: {[Op.or]: [{slot_id}, {hall_id}]}, attributes: [...attributes], group: ["row", "column"],raw: true});
     return seats;
 }
-
-// to lock a seat
-exports.lockSeats = async (seats)=>{
-    const lockedSeats = await lockedSeatsModel.bulkCreate(seats);
-        return lockedSeats;
-}

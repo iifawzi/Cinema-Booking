@@ -1271,12 +1271,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjU1LCJhY2NvdW50X2lkIjoyMCwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTU5OTU5NDM5NSwiZXhwIjoxNTk5NjE1OTk1fQ.M3TkAQG8sbvwPuRxx1333ef2r9xvg5UumoDWyOlU_7c"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDYwNTU3NiwiZXhwIjoxNjAwNjI3MTc2fQ.TyriIHWQtTPhylRVXqYHFG3UZM5HeI0mYnZNRjyAZA8"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"rows_number\": 30,\n                \"columns_number\": 30,\n                \"hall_status\": false\n}",
+							"raw": "{\n    \"hallInfo\": {\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"rows_number\": 30,\n        \"columns_number\": 30,\n        \"hall_status\": false\n    },\n    \"corridorsInfo\": [\n        {\n            \"corridor_number\": 3,\n            \"direction\": \"row\"\n        },\n        {\n            \"corridor_number\": 4,\n            \"direction\": \"column\"\n        }\n    ],\n    \"lockedSeatsInfo\": [\n        {\n            \"row\": 2,\n            \"column\": 2\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1304,12 +1304,12 @@
 									{
 										"key": "authorization",
 										"type": "text",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjE0Mywicm9sZSI6ImNpbmVtYSIsImlhdCI6MTU5NzMxMzA5NiwiZXhwIjoxNTk3MzU2Mjk2fQ.HTI5draGumY-Ir0lixTjnX0Yn2QZnD7BiEW4Sk3w0qs"
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDYwNTU3NiwiZXhwIjoxNjAwNjI3MTc2fQ.TyriIHWQtTPhylRVXqYHFG3UZM5HeI0mYnZNRjyAZA8"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n                \"hall_name\": \"VIP-1\", \n                \"hall_description\": \"The best hall in the world\",\n                \"rows_number\": 30,\n                \"columns_number\": 30,\n                \"hall_status\": false\n}",
+									"raw": "{\n    \"hallInfo\": {\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"rows_number\": 30,\n        \"columns_number\": 30,\n        \"hall_status\": false\n    },\n    \"corridorsInfo\": [\n        {\n            \"corridor_number\": 3,\n            \"direction\": \"row\"\n        },\n        {\n            \"corridor_number\": 4,\n            \"direction\": \"column\"\n        }\n    ],\n    \"lockedSeatsInfo\": [\n        {\n            \"row\": 2,\n            \"column\": 2\n        }\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1354,15 +1354,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "215"
+									"value": "756"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"d7-p2Y30tbLEuNxpVj4XVTrNiZ5gKg\""
+									"value": "W/\"2f4-RAyDOBf86JTveEXPiZmirekJ+vw\""
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 13 Aug 2020 10:06:23 GMT"
+									"value": "Sun, 20 Sep 2020 13:27:36 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1370,7 +1370,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": 74,\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"rows_number\": 30,\n        \"columns_number\": 30,\n        \"hall_status\": false,\n        \"cinema_id\": 143\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_id\": 148,\n        \"hall_name\": \"VIP-1\",\n        \"hall_description\": \"The best hall in the world\",\n        \"rows_number\": 30,\n        \"columns_number\": 30,\n        \"hall_status\": false,\n        \"cinema_id\": 49,\n        \"updatedAt\": \"2020-09-20T13:27:36.696Z\",\n        \"createdAt\": \"2020-09-20T13:27:36.696Z\",\n        \"corridors\": [\n            {\n                \"corridor_id\": 394,\n                \"corridor_number\": 3,\n                \"direction\": \"row\",\n                \"hall_id\": 148,\n                \"createdAt\": \"2020-09-20T13:27:36.707Z\",\n                \"updatedAt\": \"2020-09-20T13:27:36.707Z\"\n            },\n            {\n                \"corridor_id\": 395,\n                \"corridor_number\": 4,\n                \"direction\": \"column\",\n                \"hall_id\": 148,\n                \"createdAt\": \"2020-09-20T13:27:36.707Z\",\n                \"updatedAt\": \"2020-09-20T13:27:36.707Z\"\n            }\n        ],\n        \"lockedSeats\": [\n            {\n                \"slot_id\": null,\n                \"lockedSeat_id\": 71,\n                \"row\": 2,\n                \"column\": 2,\n                \"hall_id\": 148,\n                \"createdAt\": \"2020-09-20T13:27:36.710Z\",\n                \"updatedAt\": \"2020-09-20T13:27:36.710Z\"\n            }\n        ]\n    }\n}"
 						}
 					]
 				},
@@ -2762,240 +2762,6 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "lockedSeats",
-			"item": [
-				{
-					"name": "lockSeats",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "authorization",
-								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDMzMzAyNSwiZXhwIjoxNjAwMzU0NjI1fQ.UAQ7TGIt9x5DIRtYJkuJ4Gp1nhmUcNoK_zPCke7cYmk"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"seats\": [\n        {\n            \"row\": 2,\n            \"column\": 2,\n            \"hall_id\": 28\n        },\n        {\n            \"row\": 3,\n            \"column\": 2,\n            \"hall_id\": 28\n        }\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{BASE}}/api/lockedSeats/lockSeats",
-							"host": [
-								"{{BASE}}"
-							],
-							"path": [
-								"api",
-								"lockedSeats",
-								"lockSeats"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "lockSeats",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "authorization",
-										"type": "text",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDMzMzAyNSwiZXhwIjoxNjAwMzU0NjI1fQ.UAQ7TGIt9x5DIRtYJkuJ4Gp1nhmUcNoK_zPCke7cYmk"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"seats\": [\n        {\n            \"row\": 2,\n            \"column\": 2,\n            \"hall_id\": 28\n        },\n        {\n            \"row\": 3,\n            \"column\": 2,\n            \"hall_id\": 28\n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE}}/api/lockedSeats/lockSeats",
-									"host": [
-										"{{BASE}}"
-									],
-									"path": [
-										"api",
-										"lockedSeats",
-										"lockSeats"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Access-Control-Allow-Methods",
-									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-								},
-								{
-									"key": "Access-Control-Allow-Headers",
-									"value": "Content-Type, Authorization"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "189"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"bd-gB9qnHhjNojnJXsaiwuvMMRmpv4\""
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 17 Sep 2020 08:57:50 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"slot_id\": null,\n            \"lockedSeat_id\": 9,\n            \"row\": 2,\n            \"column\": 2,\n            \"hall_id\": 28,\n            \"createdAt\": \"2020-09-17T08:57:50.025Z\",\n            \"updatedAt\": \"2020-09-17T08:57:50.025Z\"\n        }\n    ]\n}"
-						}
-					]
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "corridors",
-			"item": [
-				{
-					"name": "addCorridors",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "authorization",
-								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjg3LCJhY2NvdW50X2lkIjoyNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDMyNzA3MCwiZXhwIjoxNjAwMzQ4NjcwfQ.J2FhjUmUyDzrZGsnabsTz3apdwUA3Dzs8K2-ApexfHQ"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"corridors\": [\n        {\"hall_id\": 51,\"corridor_number\": 3,\"direction\": \"row\"},\n        {\"hall_id\": 51,\"corridor_number\": 4,\"direction\": \"row\"},\n        {\"hall_id\": 51,\"corridor_number\": 4,\"direction\": \"row\"}\n        ]\n\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{BASE}}/api/corridors/addCorridors",
-							"host": [
-								"{{BASE}}"
-							],
-							"path": [
-								"api",
-								"corridors",
-								"addCorridors"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "addCorridors",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "authorization",
-										"type": "text",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjg3LCJhY2NvdW50X2lkIjoyNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDMyNzA3MCwiZXhwIjoxNjAwMzQ4NjcwfQ.J2FhjUmUyDzrZGsnabsTz3apdwUA3Dzs8K2-ApexfHQ"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"corridors\": [\n        {\"hall_id\": 51,\"corridor_number\": 3,\"direction\": \"row\"},\n        {\"hall_id\": 51,\"corridor_number\": 4,\"direction\": \"row\"},\n        {\"hall_id\": 51,\"corridor_number\": 4,\"direction\": \"row\"}\n        ]\n\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE}}/api/corridors/addCorridors",
-									"host": [
-										"{{BASE}}"
-									],
-									"path": [
-										"api",
-										"corridors",
-										"addCorridors"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Access-Control-Allow-Methods",
-									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-								},
-								{
-									"key": "Access-Control-Allow-Headers",
-									"value": "Content-Type, Authorization"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "339"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"153-iesZL7naHJbt1rpdJF9Lo25zfaU\""
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 17 Sep 2020 07:20:29 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"corridor_id\": 9,\n            \"hall_id\": 51,\n            \"corridor_number\": 3,\n            \"direction\": \"row\",\n            \"createdAt\": \"2020-09-17T07:20:29.915Z\",\n            \"updatedAt\": \"2020-09-17T07:20:29.915Z\"\n        },\n        {\n            \"corridor_id\": 10,\n            \"hall_id\": 51,\n            \"corridor_number\": 4,\n            \"direction\": \"row\",\n            \"createdAt\": \"2020-09-17T07:20:29.915Z\",\n            \"updatedAt\": \"2020-09-17T07:20:29.915Z\"\n        }\n    ]\n}"
-						}
-					]
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
 			"name": "tickets",
 			"item": [
 				{
@@ -3137,12 +2903,12 @@
 	],
 	"variable": [
 		{
-			"id": "d0752846-b30c-4bdb-8e03-16b180798908",
+			"id": "a5a0bc00-d2da-4255-b3e7-63f3b36e0620",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "a8703929-5abb-42b8-ae01-6033a33b2900",
+			"id": "7cddc2d0-8c94-44d7-8cc1-6a343baeaee5",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

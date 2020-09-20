@@ -7,7 +7,7 @@ const hallsSchemas = require("./halls.validation");
 const router = express.Router();
 
 router.get("/", isAuth(), isAllowed(["csuperadmin"]), hallsController.getHalls);
-router.post("/addHall", isAuth(), isAllowed(["csuperadmin"]), validate(hallsSchemas.addHall,"body"), hallsController.add_hall);
+router.post("/addHall", isAuth(), isAllowed(["csuperadmin"]), validate(hallsSchemas.addHall,"body"), hallsController.addHall);
 router.patch("/toggleHallStatus", isAuth(), isAllowed(['csuperadmin']), validate(hallsSchemas.toggleHallStatus, 'body'), hallsController.toggleHallStatus);
 router.delete("/deleteHall", isAuth(), isAllowed(['csuperadmin']), validate(hallsSchemas.deleteHall,"body"), hallsController.deleteHall)
 

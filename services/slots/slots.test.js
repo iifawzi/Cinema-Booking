@@ -63,11 +63,25 @@ describe("/api/slots", async()=>{
                 .post("/api/halls/addHall")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
-                    "hall_name": "VIP-1", 
-                    "hall_description": "The best hall in the world",
-                    "rows_number": 30,
-                    "columns_number": 30,
-                    "hall_status": false
+                    "hallInfo": {
+                        "hall_name": "VIP-1",
+                        "hall_description": "The best hall in the world",
+                        "rows_number": 30,
+                        "columns_number": 30,
+                        "hall_status": false
+                    },
+                    "corridorsInfo": [
+                        {
+                            "corridor_number": 3,
+                            "direction": "row"
+                        }
+                    ],
+                    "lockedSeatsInfo": [
+                        {
+                            "row": 2,
+                            "column": 2
+                        }
+                    ]
                 });
             expect(res.statusCode).equals(201);
             const hallId = res.body.data.hall_id;
@@ -145,11 +159,25 @@ describe("/api/slots", async()=>{
                 .post("/api/halls/addHall")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
-                    "hall_name": "VIP-1", 
-                    "hall_description": "The best hall in the world",
-                    "rows_number": 30,
-                    "columns_number": 30,
-                    "hall_status": false
+                    "hallInfo": {
+                        "hall_name": "VIP-1",
+                        "hall_description": "The best hall in the world",
+                        "rows_number": 30,
+                        "columns_number": 30,
+                        "hall_status": false
+                    },
+                    "corridorsInfo": [
+                        {
+                            "corridor_number": 3,
+                            "direction": "row"
+                        }
+                    ],
+                    "lockedSeatsInfo": [
+                        {
+                            "row": 2,
+                            "column": 2
+                        }
+                    ]
                 });
             expect(res.statusCode).equals(201);
             const hallId = res.body.data.hall_id;
@@ -293,11 +321,25 @@ describe("/api/slots", async()=>{
                 .post("/api/halls/addHall")
                 .set({authorization: "Bearer "+cinemaToken})
                 .send({
-                    "hall_name": "VIP-1", 
-                    "hall_description": "The best hall in the world",
-                    "rows_number": 30,
-                    "columns_number": 30,
-                    "hall_status": false
+                    "hallInfo": {
+                        "hall_name": "VIP-1",
+                        "hall_description": "The best hall in the world",
+                        "rows_number": 30,
+                        "columns_number": 30,
+                        "hall_status": false
+                    },
+                    "corridorsInfo": [
+                        {
+                            "corridor_number": 3,
+                            "direction": "row"
+                        }
+                    ],
+                    "lockedSeatsInfo": [
+                        {
+                            "row": 2,
+                            "column": 2
+                        }
+                    ]
                 });
             expect(res.statusCode).equals(201);
             const hall_id = res.body.data.hall_id;
