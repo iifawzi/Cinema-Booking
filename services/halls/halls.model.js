@@ -43,8 +43,12 @@ const hallsModel = db.define("halls", {
             unique: true,
         },
         {
-            fields: ["hall_status"],
+            fields: ["cinema_id", "hall_id"],
         },
+        {
+            fields: ["hall_status"],
+        }
+       
     ]
 });
 

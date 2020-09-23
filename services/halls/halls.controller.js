@@ -2,6 +2,8 @@ const hallsServices  = require("./halls.service");
 const respond = require("../../helpers/respond");
 const { ErrorHandler } = require("../../helpers/error");
 const getUniqueArray = require("../../helpers/getUniqueArray");
+const {getLockedSeats} = require("../lockedSeats");
+const {getCorridors} = require("../corridors");
 
 const getHalls = async (req,res,next)=>{
     try {
@@ -63,9 +65,39 @@ const addHall = async (req,res,next)=>{
     }
 }
 
+// this will be used to get all of the hall's related data such as (corridors, locked seats, etc..) used for cinema's control panel
+const getHall = async (req,res,next)=>{
+    try {
+        const {cinema_id} = req.requester;
+        const {hall_id} = req.body;
+        const hall = await hallsServices.getHallByCinema(['hall_name', 'hall_description','rows_number', 'columns_number', 'hall_status'], hall_id,cinema_id);
+        const locked =  getLockedSeats(['row', 'column'], hall_id, -1); // get all locked seats of the hall
+        const corridors = getCorridors(['direction', 'corridor_number'], hall_id); // get the corridors for both directions row and column
+        Promise.all([hall,locked,corridors]).then(response=>{
+            // if hall not found, it will return `null`: 
+            if (!response[0]) {
+                throw new ErrorHandler(404, "hall is not found");
+            }
+            const hall = response[0];
+            const lockedSeats = response[1];
+            const rowsCorridors = response[2].filter(corridor=>corridor.direction === 'row').map(rowCorridor=>rowCorridor.corridor_number);
+            const columnsCorridors = response[2].filter(corridor=>corridor.direction === 'column').map(columnCorridor=>columnCorridor.corridor_number);
+            hall.lockedSeats = lockedSeats;
+            hall.row_corridors = rowsCorridors;
+            hall.column_corridors = columnsCorridors;
+            return respond(true,200,hall,res);
+        }).catch(err=>{
+            next(err);
+        })
+
+    }catch(err){
+        next(err);
+    }
+}
 module.exports = {
     getHalls,
     addHall,
     toggleHallStatus,
     deleteHall,
+    getHall,
 }

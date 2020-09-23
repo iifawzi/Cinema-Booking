@@ -39,11 +39,16 @@ const deleteHall = Joi.object({
     hall_id: Joi.number().required(),
 })
 
+const getHall = Joi.object({
+    hall_id: Joi.number().required()
+})
+
 
 module.exports = {
     addHall,
     toggleHallStatus,
-    deleteHall
+    deleteHall,
+    getHall
 }
 
 

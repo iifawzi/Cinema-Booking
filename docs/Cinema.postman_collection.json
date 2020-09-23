@@ -1375,6 +1375,117 @@
 					]
 				},
 				{
+					"name": "getHall",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDg1NDY3NywiZXhwIjoxNjAwODc2Mjc3fQ.SthWrjXn6pp1P0aSfGHCq2-W5GJKNRw6-ju0icgVrlw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hall_id\": 163\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/halls/getHall",
+							"host": [
+								"{{BASE}}"
+							],
+							"path": [
+								"api",
+								"halls",
+								"getHall"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getHall",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDg1NDY3NywiZXhwIjoxNjAwODc2Mjc3fQ.SthWrjXn6pp1P0aSfGHCq2-W5GJKNRw6-ju0icgVrlw"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"hall_id\": 163\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/halls/getHall",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"halls",
+										"getHall"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "325"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"145-dF31zBDk1AModTihLJMIDomRCfk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Sep 2020 09:59:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_name\": \"قاعه الفرسان\",\n        \"hall_description\": \"احسن قاعه فالعالم.\",\n        \"rows_number\": 9,\n        \"columns_number\": 26,\n        \"hall_status\": false,\n        \"lockedSeats\": [\n            {\n                \"row\": 1,\n                \"column\": 2\n            },\n            {\n                \"row\": 4,\n                \"column\": 4\n            },\n            {\n                \"row\": 4,\n                \"column\": 5\n            }\n        ],\n        \"row_corridors\": [\n            3,\n            6\n        ],\n        \"column_corridors\": [\n            5,\n            9,\n            15,\n            20\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
 					"name": "toggleHallStatus",
 					"request": {
 						"method": "PATCH",
@@ -2903,12 +3014,12 @@
 	],
 	"variable": [
 		{
-			"id": "a5a0bc00-d2da-4255-b3e7-63f3b36e0620",
+			"id": "43bc952f-2eb4-472e-b53b-4e08bd1fb7b2",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "7cddc2d0-8c94-44d7-8cc1-6a343baeaee5",
+			"id": "b7b6be79-cc5b-414c-9ea4-a6d0134d2194",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

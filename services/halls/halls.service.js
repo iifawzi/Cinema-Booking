@@ -36,6 +36,15 @@ exports.getHall = async (attributes, hall_id)=>{
     }
 }
 
+// to get hall's data using hall_id and cinema_id: 
+exports.getHallByCinema = async (attributes, hall_id, cinema_id)=>{
+    const hall = await hallsModel.findOne({where: {cinema_id,hall_id}, attributes: [...attributes]});
+    if (hall){
+        return hall.dataValues;
+    }else {
+        return hall;
+    }
+}
 
 // to delete a hall, mostly used in tests
 exports.deleteHall = async (hall_id)=>{
