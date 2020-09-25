@@ -23,6 +23,6 @@ exports.isSeatLocked = async (slot_id, hall_id,row,column)=>{
 
 // to get seats' data 
 exports.getLockedSeats = async (attributes, hall_id, slot_id)=>{
-    const seats = lockedSeatsModel.findAll({where: {[Op.or]: [{slot_id}, {hall_id}]}, attributes: [...attributes], group: ["row", "column"],raw: true});
+    const seats = lockedSeatsModel.findAll({where: {[Op.or]: [{slot_id}, {hall_id}]}, attributes: [...attributes],raw: true});
     return seats;
 }

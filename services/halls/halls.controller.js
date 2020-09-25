@@ -71,8 +71,8 @@ const getHall = async (req,res,next)=>{
         const {cinema_id} = req.requester;
         const {hall_id} = req.body;
         const hall = await hallsServices.getHallByCinema(['hall_name', 'hall_description','rows_number', 'columns_number', 'hall_status'], hall_id,cinema_id);
-        const locked =  getLockedSeats(['row', 'column'], hall_id, -1); // get all locked seats of the hall
-        const corridors = getCorridors(['direction', 'corridor_number'], hall_id); // get the corridors for both directions row and column
+        const locked =  getLockedSeats(['lockedSeat_id','row', 'column'], hall_id, -1); // get all locked seats of the hall
+        const corridors = getCorridors(['corridor_id','direction', 'corridor_number'], hall_id); // get the corridors for both directions row and column
         Promise.all([hall,locked,corridors]).then(response=>{
             // if hall not found, it will return `null`: 
             if (!response[0]) {
@@ -80,8 +80,18 @@ const getHall = async (req,res,next)=>{
             }
             const hall = response[0];
             const lockedSeats = response[1];
-            const rowsCorridors = response[2].filter(corridor=>corridor.direction === 'row').map(rowCorridor=>rowCorridor.corridor_number);
-            const columnsCorridors = response[2].filter(corridor=>corridor.direction === 'column').map(columnCorridor=>columnCorridor.corridor_number);
+            const rowsCorridors = response[2].filter(corridor=>corridor.direction === 'row').map(rowCorridor=>{
+                return {
+                    corridor_id: rowCorridor.corridor_id,
+                    corridor_number: rowCorridor.corridor_number
+                }
+            });
+            const columnsCorridors = response[2].filter(corridor=>corridor.direction === 'column').map(columnCorridor=>{
+               return {
+                corridor_id: columnCorridor.corridor_id,
+                corridor_number: columnCorridor.corridor_number
+               }
+            });
             hall.lockedSeats = lockedSeats;
             hall.row_corridors = rowsCorridors;
             hall.column_corridors = columnsCorridors;

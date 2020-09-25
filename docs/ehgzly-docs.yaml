@@ -950,26 +950,40 @@ definitions:
       status: true
       message: success
       data:
-        hall_name: قاعه الفرسان
+        hall_name: الفرسان
         hall_description: احسن قاعه فالعالم.
-        rows_number: 9
-        columns_number: 26
-        hall_status: false
+        rows_number: 4
+        columns_number: 18
+        hall_status: true
         lockedSeats:
-          - row: 1
+          - lockedSeat_id: 98
+            row: 1
             column: 2
-          - row: 4
+          - lockedSeat_id: 99
+            row: 1
+            column: 3
+          - lockedSeat_id: 100
+            row: 1
             column: 4
-          - row: 4
-            column: 5
+          - lockedSeat_id: 103
+            row: 1
+            column: 11
+          - lockedSeat_id: 102
+            row: 2
+            column: 11
+          - lockedSeat_id: 101
+            row: 3
+            column: 10
         row_corridors:
-          - 3
-          - 6
+          - corridor_id: 507
+            corridor_number: 2
         column_corridors:
-          - 5
-          - 9
-          - 15
-          - 20
+          - corridor_id: 504
+            corridor_number: 5
+          - corridor_id: 505
+            corridor_number: 9
+          - corridor_id: 506
+            corridor_number: 13
    getHalls_response:
     type: "object"
     example: 

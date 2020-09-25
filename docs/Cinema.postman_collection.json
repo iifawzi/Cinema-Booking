@@ -1382,12 +1382,12 @@
 							{
 								"key": "Authorization",
 								"type": "text",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDg1NDY3NywiZXhwIjoxNjAwODc2Mjc3fQ.SthWrjXn6pp1P0aSfGHCq2-W5GJKNRw6-ju0icgVrlw"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMTAzMzIwMiwiZXhwIjoxNjAxMDU0ODAyfQ.WbKy2OC41V03rXDzW8X4-PHOQWQb3b8PlTfhVjEzvyA"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"hall_id\": 163\n}",
+							"raw": "{\n    \"hall_id\": 167\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1415,7 +1415,7 @@
 									{
 										"key": "Authorization",
 										"type": "text",
-										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMDg1NDY3NywiZXhwIjoxNjAwODc2Mjc3fQ.SthWrjXn6pp1P0aSfGHCq2-W5GJKNRw6-ju0icgVrlw"
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjQ5LCJhY2NvdW50X2lkIjoxNiwibmFtZV9hciI6ItmB2YjYstmKINi52LXYp9mFINi52KjYr9in2YTZgdiq2KfYrSIsIm5hbWVfZW4iOiJGYXd6aSBFLiBBYmR1bGZhdHRhaCIsInJvbGUiOiJjc3VwZXJhZG1pbiIsImlhdCI6MTYwMTAzMzIwMiwiZXhwIjoxNjAxMDU0ODAyfQ.WbKy2OC41V03rXDzW8X4-PHOQWQb3b8PlTfhVjEzvyA"
 									}
 								],
 								"body": {
@@ -1481,7 +1481,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_name\": \"قاعه الفرسان\",\n        \"hall_description\": \"احسن قاعه فالعالم.\",\n        \"rows_number\": 9,\n        \"columns_number\": 26,\n        \"hall_status\": false,\n        \"lockedSeats\": [\n            {\n                \"row\": 1,\n                \"column\": 2\n            },\n            {\n                \"row\": 4,\n                \"column\": 4\n            },\n            {\n                \"row\": 4,\n                \"column\": 5\n            }\n        ],\n        \"row_corridors\": [\n            3,\n            6\n        ],\n        \"column_corridors\": [\n            5,\n            9,\n            15,\n            20\n        ]\n    }\n}"
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"hall_name\": \"الفرسان\",\n        \"hall_description\": \"احسن قاعه فالعالم.\",\n        \"rows_number\": 4,\n        \"columns_number\": 18,\n        \"hall_status\": true,\n        \"lockedSeats\": [\n            {\n                \"lockedSeat_id\": 98,\n                \"row\": 1,\n                \"column\": 2\n            },\n            {\n                \"lockedSeat_id\": 99,\n                \"row\": 1,\n                \"column\": 3\n            },\n            {\n                \"lockedSeat_id\": 100,\n                \"row\": 1,\n                \"column\": 4\n            },\n            {\n                \"lockedSeat_id\": 103,\n                \"row\": 1,\n                \"column\": 11\n            },\n            {\n                \"lockedSeat_id\": 102,\n                \"row\": 2,\n                \"column\": 11\n            },\n            {\n                \"lockedSeat_id\": 101,\n                \"row\": 3,\n                \"column\": 10\n            }\n        ],\n        \"row_corridors\": [\n            {\n                \"corridor_id\": 507,\n                \"corridor_number\": 2\n            }\n        ],\n        \"column_corridors\": [\n            {\n                \"corridor_id\": 504,\n                \"corridor_number\": 5\n            },\n            {\n                \"corridor_id\": 505,\n                \"corridor_number\": 9\n            },\n            {\n                \"corridor_id\": 506,\n                \"corridor_number\": 13\n            }\n        ]\n    }\n}"
 						}
 					]
 				},
@@ -3014,12 +3014,12 @@
 	],
 	"variable": [
 		{
-			"id": "43bc952f-2eb4-472e-b53b-4e08bd1fb7b2",
+			"id": "0273bbc5-dabd-4d01-99a8-de30f1442158",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "b7b6be79-cc5b-414c-9ea4-a6d0134d2194",
+			"id": "70c0ed4e-a098-49fc-849a-11a9453b0cd6",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}
