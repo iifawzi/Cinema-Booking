@@ -70,7 +70,7 @@ const getHall = async (req,res,next)=>{
     try {
         const {cinema_id} = req.requester;
         const {hall_id} = req.body;
-        const hall = await hallsServices.getHallByCinema(['hall_name', 'hall_description','rows_number', 'columns_number', 'hall_status'], hall_id,cinema_id);
+        const hall =  hallsServices.getHallByCinema(['hall_name', 'hall_description','rows_number', 'columns_number', 'hall_status'], hall_id,cinema_id);
         const locked =  getLockedSeats(['lockedSeat_id','row', 'column'], hall_id, -1); // get all locked seats of the hall
         const corridors = getCorridors(['corridor_id','direction', 'corridor_number'], hall_id); // get the corridors for both directions row and column
         Promise.all([hall,locked,corridors]).then(response=>{
@@ -104,10 +104,29 @@ const getHall = async (req,res,next)=>{
         next(err);
     }
 }
+
+
+// will be used to update the hall.    // not tested ('it's tested using the control panel')
+const updateHall = async (req,res,next)=>{
+    try {
+        const {hall_id,hallInfo, newLockedSeats,deletedLockedSeats,deletedCorridors,newCorridors} = req.body;
+        const cinema_id = req.requester.cinema_id;
+        const isExist =  hallsServices.getHallByCinema(['hall_id'], hall_id,cinema_id);
+        if (!isExist) {
+            throw new ErrorHandler(404,"This Hall is not found");
+        }
+
+        const updatedData = await hallsServices.updateHall(hall_id,hallInfo, newLockedSeats,deletedLockedSeats,deletedCorridors,newCorridors);
+        return respond(true,201,updatedData,res);
+    } catch (err) {
+      next(err);
+    }
+}
 module.exports = {
     getHalls,
     addHall,
     toggleHallStatus,
     deleteHall,
     getHall,
+    updateHall
 }

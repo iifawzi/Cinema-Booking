@@ -114,3 +114,38 @@ exports.addHall = async (hallInfo,corridorsInfo,lockedSeatsInfo)=>{
     }
 
 }
+
+
+
+// this transaction will be used to update the hall: 
+exports.updateHall = async (hall_id,hallInfo, newLockedSeats,deletedLockedSeats,deletedCorridors,newCorridors)=>{
+
+    try{
+        const results = await db.transaction(async (t) => {
+            // Step 1 : update hall's info.
+        
+        const hall = await hallsModel.update(hallInfo, {where: {hall_id}, transaction: t});
+
+        if (deletedCorridors.length > 0){
+            const delCorridors = await corridorsModel.destroy({ where: { corridor_id: deletedCorridors }, transaction: t})
+        }
+        if (deletedLockedSeats.length > 0){
+            const delLockedSeats = await lockedSeatsModel.destroy({ where: { lockedSeat_id: deletedLockedSeats }, transaction: t})
+        }
+
+        const corridors = await corridorsModel.bulkCreate(newCorridors,{transaction: t});
+        const lockedSeats = await lockedSeatsModel.bulkCreate(newLockedSeats,{transaction: t})
+
+        return []
+
+        });
+
+        // When here: Data is commited.
+        return results;
+
+    }catch(err){
+        // When here: Data is rolledback.
+        throw new ErrorHandler(500,err);
+    }
+
+}
