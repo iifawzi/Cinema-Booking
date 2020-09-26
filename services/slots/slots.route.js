@@ -7,7 +7,7 @@ const slotsSchemas = require("./slots.validation");
 const router = express.Router();
 
 
-router.post("/addSlot", isAuth(), isAllowed(["csuperadmin"]), validate(slotsSchemas.addSlot,"body"), slotsController.add_slot);
+router.post("/addSlot", validate(slotsSchemas.addSlot,"body"), slotsController.add_slot);
 router.patch("/toggleSlotStatus", isAuth(), isAllowed(['csuperadmin']), validate(slotsSchemas.toggleSlotStatus, 'body'), slotsController.toggleSlotStatus)
 router.post("/getSlotSeats", validate(slotsSchemas.getSlotSeats, 'body'), slotsController.getSlotSeats)
 

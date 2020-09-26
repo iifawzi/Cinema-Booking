@@ -10,6 +10,45 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /updateHall:
+    patch:
+      tags:
+      - "halls"
+      summary: "to update hall's information or hall's seats"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to update"
+        required: true
+        schema:
+         $ref: "#/definitions/updateHall_body"
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"   
+      responses:
+        '200':
+          description: 200 (Success)
+          schema:
+            $ref: '#/definitions/updateHall_response'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
+        '401':
+          description: 401 (Unauthorized - token's error)
+          schema:
+            $ref: '#/definitions/error_401'
+        '403':
+          description: 403 (Forbidden - Your aren't authorized)
+          schema:
+            $ref: '#/definitions/error_403'
+        '404':
+          description: 404 (Not Found - Hall is not found)
+          schema:
+            $ref: '#/definitions/error_404'
   /getHall:
     post:
       tags:
@@ -940,6 +979,30 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   updateHall_body:
+    type: "object"
+    example: 
+      hall_id: 167
+      hallInfo:
+        hall_name: teddkjdkjdjkdstkjjkkj
+      newLockedSeats:
+        - hall_id: 167
+          row: 21
+          column: 2
+      newCorridors:
+        - hall_id: 167
+          corridor_number: 11
+          direction: row
+      deletedLockedSeats:
+        - 103
+      deletedCorridors:
+        - 507
+   updateHall_response:
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data: []
    getHall_body:
     type: "object"
     example: 
@@ -1711,10 +1774,8 @@ definitions:
     example: 
      movie_id: 1
      hall_id: 1
-     start_date: '2020-07-24'
-     end_date: '2020-07-30'
-     start_time: '23:30:00'
-     end_time: '23:55:00'
+     start_time: '202030:00T20:00:00Z'
+     end_time: '23:30:00T20:00:00'
      ticket_price: 150
      slot_status: false
    addSlot_response:
@@ -1726,10 +1787,8 @@ definitions:
         slot_id: 22
         movie_id: 1
         hall_id: 1
-        start_date: '2020-07-24'
-        end_date: '2020-07-30'
-        start_time: '23:30:00'
-        end_time: '23:55:00'
+        start_time: '2020-09-26T19:00:00Z'
+        end_time: '2020-09-26T20:01:00Z'
         ticket_price: 150
         slot_status: false
    addHall_body:

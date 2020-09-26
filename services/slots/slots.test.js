@@ -19,7 +19,7 @@ describe("/api/slots", async()=>{
                 .send({
                     "movie_id": 1,
                     "hall_id": 1,
-                    "start_date": "2020-07-24",
+                    "start_time": "2020-09-26T20:00:00Z",
                 });
             expect(res.statusCode).equals(400);
         });
@@ -104,10 +104,8 @@ describe("/api/slots", async()=>{
                 .send({
                     "movie_id": movieId,
                     "hall_id": hallId,
-                    "start_date": "2020-07-24",
-                    "end_date": "2020-07-30",
-                    "start_time": "23:30:00",
-                    "end_time": "23:55:00",
+                    "start_time": "2020-09-26T20:00:00Z",
+                    "end_time": "2020-09-26T22:00:00Z",
                     "ticket_price": 150,
                     "slot_status": false
                 });
@@ -200,10 +198,8 @@ describe("/api/slots", async()=>{
                 .send({
                     "movie_id": movieId,
                     "hall_id": hallId,
-                    "start_date": "2020-07-24",
-                    "end_date": "2020-07-30",
-                    "start_time": "21:00:00",
-                    "end_time": "22:00:00",
+                    "start_time": "2020-09-26T20:00:00Z",
+                    "end_time": "2020-09-26T22:00:00Z",
                     "ticket_price": 150,
                     "slot_status": false
                 });
@@ -216,10 +212,8 @@ describe("/api/slots", async()=>{
                 .send({
                     "movie_id": movieId,
                     "hall_id": hallId,
-                    "start_date": "2020-07-25",
-                    "end_date": "2020-07-30",
-                    "start_time": "21:30:00",
-                    "end_time": "23:00:00",
+                    "start_time": "2020-09-26T19:00:00Z",
+                    "end_time": "2020-09-26T20:01:00Z",
                     "ticket_price": 150,
                     "slot_status": false
                 });
@@ -230,10 +224,8 @@ describe("/api/slots", async()=>{
             .send({
                 "movie_id": movieId,
                 "hall_id": hallId,
-                "start_date": "2020-07-24",
-                "end_date": "2020-07-30",
-                "start_time": "19:00:00",
-                "end_time": "23:30:00",
+                "start_time": "2020-09-26T20:30:00Z",
+                "end_time": "2020-09-26T22:00:00Z",
                 "ticket_price": 150,
                 "slot_status": false
             });
@@ -244,10 +236,8 @@ describe("/api/slots", async()=>{
             .send({
                 "movie_id": movieId,
                 "hall_id": hallId,
-                "start_date": "2020-07-24",
-                "end_date": "2020-07-30",
-                "start_time": "19:00:00",
-                "end_time": "23:00:00",
+                "start_time": "2020-09-26T18:00:00Z",
+                "end_time": "2020-09-26T22:00:00Z",
                 "ticket_price": 150,
                 "slot_status": false
             });
@@ -362,10 +352,8 @@ describe("/api/slots", async()=>{
                 .send({
                     "movie_id": movieId,
                     "hall_id": hall_id,
-                    "start_date": "2020-07-25",
-                    "end_date": "2020-07-30",
-                    "start_time": "21:30:00",
-                    "end_time": "23:00:00",
+                    "start_time": "2020-09-26T20:00:00Z",
+                    "end_time": "2020-09-26T22:00:00Z",
                     "ticket_price": 150,
                     "slot_status": false
                 });

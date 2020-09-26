@@ -29,20 +29,12 @@ const slotsModel = db.define("slots", {
         type: Sequelize.INTEGER,
         allowNull: false,
     },
-    start_date: {
-        type: Sequelize.DATEONLY,
-        allowNull: false,
-    },
-    end_date: {
-        type: Sequelize.DATEONLY,
-        allowNull: false,
-    },
     start_time: {
-        type: Sequelize.TIME,
+        type: Sequelize.DATE,
         allowNull: false,
     },
     end_time: {
-        type: Sequelize.TIME,
+        type: Sequelize.DATE,
         allowNull: false,
     },
     slot_status: {
@@ -53,7 +45,7 @@ const slotsModel = db.define("slots", {
 }, {
     indexes: [
         {
-            fields: ["hall_id","start_date", "end_date", "start_time", "end_time"],
+            fields: ["hall_id", "start_time", "end_time"],
         },
         {
             fields: ["movie_id", "hall_id"],

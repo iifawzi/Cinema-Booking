@@ -103,10 +103,8 @@ describe("/api/tickets", async()=>{
                 .send({
                     "movie_id": movieId,
                     "hall_id": hallId,
-                    "start_date": "2020-07-24",
-                    "end_date": "2020-07-30",
-                    "start_time": "23:30:00",
-                    "end_time": "23:55:00",
+                    "start_time": "2020-09-26T20:00:00Z",
+                    "end_time": "2020-09-26T22:00:00Z",
                     "ticket_price": 150,
                     "slot_status": false
                 });
