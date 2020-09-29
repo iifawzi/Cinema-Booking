@@ -68,9 +68,21 @@ const getSlotSeats = async (req,res,next)=>{ // it's not tested in the slots ser
     }
 }
 
+const getSlots = async (req,res,next)=>{
+    try {
+        const cinema_id = req.requester.cinema_id;
+        const {hall_id} = req.body;
+        const slots = await slotsServices.getSlots(cinema_id,hall_id);
+        return respond(true,200,slots,res);       
+    }catch(err){
+        next(err);
+    }
+}
+
 
 module.exports = {
     add_slot,
     toggleSlotStatus, 
-    getSlotSeats
+    getSlotSeats,
+    getSlots
 }

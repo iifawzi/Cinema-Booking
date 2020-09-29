@@ -20,8 +20,14 @@ const getSlotSeats = Joi.object({
     reservation_date: Joi.date().required(),
 });
 
+// hall_id will be used if i want the slots of specific hall, otherwise get all slots of cinema.
+const getSlots = Joi.object({
+    hall_id: Joi.number(),
+});
+
 module.exports = {
     addSlot,
     toggleSlotStatus,
-    getSlotSeats
+    getSlotSeats,
+    getSlots
 }

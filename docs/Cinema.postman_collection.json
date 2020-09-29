@@ -1907,12 +1907,12 @@
 							{
 								"key": "authorization",
 								"type": "text",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjYxLCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1NTUxOTI2LCJleHAiOjE1OTU1OTUxMjZ9._eSr5OlqG4vkES4G2bEIcK_bWqyVGO0GdePmzCpMKJo"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjEsImFjY291bnRfaWQiOjEsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE2MDEzOTI3OTEsImV4cCI6MTYwMTQxNDM5MX0.7C1loAcxivuqxxd3ykXOxhpBHVH7WS-Ri0PMlTG-q0g"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"movie_id\": 1,\n    \"hall_id\": 1,\n    \"start_time\": \"202030:00T20:00:00Z\",\n    \"end_time\": \"23:30:00T20:00:00\",\n    \"ticket_price\": 150,\n    \"slot_status\": false\n}",
+							"raw": "{\n    \"movie_id\": 1,\n    \"hall_id\": 1,\n    \"start_time\": \"2020-09-29T20:00:00Z\",\n    \"end_time\": \"2020-09-29T21:00:00\",\n    \"ticket_price\": 150,\n    \"slot_status\": false\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1931,84 +1931,41 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "addSlot",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "authorization",
-										"type": "text",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNyb3dhbm4iLCJjaW5lbWFfaWQiOjYxLCJyb2xlIjoiY2luZW1hIiwiaWF0IjoxNTk1NTUxOTI2LCJleHAiOjE1OTU1OTUxMjZ9._eSr5OlqG4vkES4G2bEIcK_bWqyVGO0GdePmzCpMKJo"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"movie_id\": 1,\n    \"hall_id\": 1,\n    \"start_date\": \"2020-07-24\",\n    \"end_date\": \"2020-07-30\",\n    \"start_time\": \"23:30:00\",\n    \"end_time\": \"23:55:00\",\n    \"ticket_price\": 150,\n    \"slot_status\": false\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE}}/api/slots/addSlot",
-									"host": [
-										"{{BASE}}"
-									],
-									"path": [
-										"api",
-										"slots",
-										"addSlot"
-									]
+					"response": []
+				},
+				{
+					"name": "getSlots",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjEsImFjY291bnRfaWQiOjEsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE2MDEzOTI1OTYsImV4cCI6MTYwMTQxNDE5Nn0.5YThaVam1Pez91VP80-LUO9CBWUFqexCc4zHTZQE6R8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hall_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Access-Control-Allow-Methods",
-									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-								},
-								{
-									"key": "Access-Control-Allow-Headers",
-									"value": "Content-Type, Authorization"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "198"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"c6-anLyMhp7bXdnq3lVjgcStpOVvG4\""
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 24 Jul 2020 02:52:42 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE}}/api/slots/getSlots",
+							"host": [
+								"{{BASE}}"
 							],
-							"cookie": [],
-							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"slot_id\": 22,\n        \"movie_id\": 1,\n        \"hall_id\": 1,\n        \"start_time\": \"2020-09-26T19:00:00Z\",\n        \"end_time\": \"2020-09-26T20:01:00Z\",\n        \"ticket_price\": 150,\n        \"slot_status\": false\n    }\n}"
+							"path": [
+								"api",
+								"slots",
+								"getSlots"
+							]
 						}
-					]
+					},
+					"response": []
 				},
 				{
 					"name": "getSlotSeats",
@@ -3086,12 +3043,12 @@
 	],
 	"variable": [
 		{
-			"id": "1acbfc17-afc1-4d90-8c9e-a42ad3fb3cb2",
+			"id": "345c2526-88ae-44cf-bd15-75830c164e8f",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "8ba4f5e3-2492-45ea-be7a-847696f2cfc1",
+			"id": "e8acbe74-2113-4bff-8e92-edc470c48179",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}

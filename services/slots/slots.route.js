@@ -8,8 +8,9 @@ const router = express.Router();
 
 
 router.post("/addSlot", validate(slotsSchemas.addSlot,"body"), slotsController.add_slot);
-router.patch("/toggleSlotStatus", isAuth(), isAllowed(['csuperadmin']), validate(slotsSchemas.toggleSlotStatus, 'body'), slotsController.toggleSlotStatus)
-router.post("/getSlotSeats", validate(slotsSchemas.getSlotSeats, 'body'), slotsController.getSlotSeats)
+router.patch("/toggleSlotStatus", isAuth(), isAllowed(['csuperadmin']), validate(slotsSchemas.toggleSlotStatus, 'body'), slotsController.toggleSlotStatus);
+router.post("/getSlotSeats", validate(slotsSchemas.getSlotSeats, 'body'), slotsController.getSlotSeats);
+router.post("/getSlots", isAuth(), isAllowed(['csuperadmin']),validate(slotsSchemas.getSlots,'body'),slotsController.getSlots);
 
 
 module.exports = router;

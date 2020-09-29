@@ -375,4 +375,27 @@ describe("/api/slots", async()=>{
     });
 
 
+    describe("/getSlots", ()=>{
+        it ("Should respond 400 if schema validation fails", async()=>{
+            const token = createToken({phone_number: "01090243795", cinema_id: 1,role:"csuperadmin"});
+            const res = await request(app)
+                .post("/api/slots/getSlots")
+                .set({authorization: "Bearer "+token})
+                .send({
+                    "slot_id": 1, 
+                });
+            expect(res.statusCode).equals(400);
+        });
+        it ("Should respond 200 if respond with slots sueccessfully", async()=>{  // will respond with empty data if no slots found.
+            const token = createToken({phone_number: "01090243795", cinema_id: 1,role:"csuperadmin"});
+            const res = await request(app)
+                .post("/api/slots/getSlots")
+                .set({authorization: "Bearer "+token})
+                .send({
+                    "hall_id": 1
+                });
+            expect(res.statusCode).equals(200);
+        });
+    });
+
 });

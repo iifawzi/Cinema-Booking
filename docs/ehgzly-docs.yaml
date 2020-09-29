@@ -10,6 +10,41 @@ info:
 host: ehgzly.herokuapp.com
 basePath: /api
 paths:
+  /getSlots:
+    post:
+      tags:
+      - "slots"
+      summary: "to get the slots of cinema or specific hall."
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "needed Information to get the slots"
+        required: true
+        schema:
+         $ref: "#/definitions/getSlots_body"
+      - in: "header"
+        name: "authorization"
+        required: true
+        type: "string"   
+      responses:
+        '200':
+          description: 200 (Success)
+          schema:
+            $ref: '#/definitions/getSlots_response'
+        '400':
+          description: 400 (Bad Request - input is incorrect or missing)
+          schema:
+            $ref: '#/definitions/error_400'
+        '401':
+          description: 401 (Unauthorized - token's error)
+          schema:
+            $ref: '#/definitions/error_401'
+        '403':
+          description: 403 (Forbidden - Your aren't authorized)
+          schema:
+            $ref: '#/definitions/error_403'
   /updateHall:
     patch:
       tags:
@@ -979,6 +1014,28 @@ paths:
           schema:
             $ref: '#/definitions/error_400'
 definitions:
+   getSlots_body:
+    type: "object"
+    example: 
+      hall_id: 1
+   getSlots_response: 
+    type: "object"
+    example: 
+      status: true
+      message: success
+      data:
+        - slot_id: 1
+          start_time: '2020-09-29T20:00:00.000Z'
+          end_time: '2020-09-29T19:00:00.000Z'
+          slot_status: 0
+          ticket_price: 150
+          hall_name: قاعه زيزو
+          hall_id: 1
+          movie_name: The biggest one2
+          cover: 'https://www.google.com2'
+          description: The best movie ever2
+          category: action
+          rate: '4'
    updateHall_body:
     type: "object"
     example: 
@@ -1774,8 +1831,8 @@ definitions:
     example: 
      movie_id: 1
      hall_id: 1
-     start_time: '202030:00T20:00:00Z'
-     end_time: '23:30:00T20:00:00'
+     start_time: '2020-09-29T20:00:00Z'
+     end_time: '2020-09-29T21:00:00'
      ticket_price: 150
      slot_status: false
    addSlot_response:
