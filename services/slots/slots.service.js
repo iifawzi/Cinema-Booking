@@ -71,7 +71,7 @@ exports.toggleStatus = async (slot_id)=>{
 // will be used to get all slots of specific hall, or all the slots of cinema. 
 exports.getSlots = async (cinema_id,hall_id)=>{
     if (!hall_id){
-        const slots = await db.query("SELECT slots.slot_id,slots.start_time,slots.end_time,slots.slot_status,slots.ticket_price,halls.hall_name,halls.hall_id,movies.movie_name,movies.cover,movies.description,movies.category,movies.rate FROM slots INNER JOIN halls ON slots.hall_id = halls.hall_id, INNER JOIN movies ON slots.movie_id = movies.movie_id INNER JOIN cinemas ON halls.cinema_id = cinemas.cinema_id WHERE cinemas.cinema_id = ?",{
+        const slots = await db.query("SELECT slots.slot_id,slots.start_time,slots.end_time,slots.slot_status,slots.ticket_price,halls.hall_name,halls.hall_id,movies.movie_name,movies.cover,movies.description,movies.category,movies.rate FROM slots INNER JOIN halls ON slots.hall_id = halls.hall_id INNER JOIN movies ON slots.movie_id = movies.movie_id INNER JOIN cinemas ON halls.cinema_id = cinemas.cinema_id WHERE cinemas.cinema_id = ?",{
             type: Sequelize.QueryTypes.SELECT,
             replacements: [cinema_id],
         })
