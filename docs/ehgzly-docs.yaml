@@ -1025,17 +1025,18 @@ definitions:
       message: success
       data:
         - slot_id: 1
-          start_time: '2020-09-29T20:00:00.000Z'
-          end_time: '2020-09-29T19:00:00.000Z'
-          slot_status: 0
-          ticket_price: 150
-          hall_name: قاعه زيزو
-          hall_id: 1
-          movie_name: The biggest one2
-          cover: 'https://www.google.com2'
-          description: The best movie ever2
+          start_time: '2020-10-05T14:57:07.000Z'
+          end_time: '2020-10-05T16:57:07.000Z'
+          slot_status: 1
+          ticket_price: 50
+          hall_name: dd
+          hall_id: 4
+          movie_name: White house down
+          cover: 'https://m.media-amazon.com/images/M/MV5BYmI5ZGIxOGMtMjcwMS00Yzk3LWE0YWUtMzc5YTFhNGQ4OWZmXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg'
+          description: 'While on a tour of the White House with his young daughter, a Capitol policeman springs into action to save his child and protect the president from a heavily armed group of paramilitary invaders.'
           category: action
           rate: '4'
+          duration: 150
    updateHall_body:
     type: "object"
     example: 

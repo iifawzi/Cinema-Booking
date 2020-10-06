@@ -1965,7 +1965,84 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "getSlots",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaW5lbWFfaWQiOjEsImFjY291bnRfaWQiOjEsIm5hbWVfYXIiOiLZgdmI2LLZiiDYudi12KfZhSDYudio2K_Yp9mE2YHYqtin2K0iLCJuYW1lX2VuIjoiRmF3emkgRS4gQWJkdWxmYXR0YWgiLCJyb2xlIjoiY3N1cGVyYWRtaW4iLCJpYXQiOjE2MDIwMDQxMjgsImV4cCI6MTYwMjAyNTcyOH0.nRBSojDxm_Pc3xeNj3K9eN7U9DWmjrXkO0q2E-QeCbY"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"hall_id\": 4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE}}/api/slots/getSlots",
+									"host": [
+										"{{BASE}}"
+									],
+									"path": [
+										"api",
+										"slots",
+										"getSlots"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "626"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"272-63IlNrAkrndDiCzRIv0hYvk59rA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Oct 2020 17:08:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"slot_id\": 1,\n            \"start_time\": \"2020-10-05T14:57:07.000Z\",\n            \"end_time\": \"2020-10-05T16:57:07.000Z\",\n            \"slot_status\": 1,\n            \"ticket_price\": 50,\n            \"hall_name\": \"dd\",\n            \"hall_id\": 4,\n            \"movie_name\": \"White house down\",\n            \"cover\": \"https://m.media-amazon.com/images/M/MV5BYmI5ZGIxOGMtMjcwMS00Yzk3LWE0YWUtMzc5YTFhNGQ4OWZmXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg\",\n            \"description\": \"While on a tour of the White House with his young daughter, a Capitol policeman springs into action to save his child and protect the president from a heavily armed group of paramilitary invaders.\",\n            \"category\": \"action\",\n            \"rate\": \"4\",\n            \"duration\": 150\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "getSlotSeats",
@@ -3043,12 +3120,12 @@
 	],
 	"variable": [
 		{
-			"id": "345c2526-88ae-44cf-bd15-75830c164e8f",
+			"id": "78a6260e-c01b-4b5a-92c7-d78f79e57ce4",
 			"key": "BASE",
 			"value": "localhost:3000"
 		},
 		{
-			"id": "e8acbe74-2113-4bff-8e92-edc470c48179",
+			"id": "be190cf6-d0cd-4cf6-b46c-4f4605971f56",
 			"key": "ehgzly.herokuapp.com",
 			"value": ""
 		}
